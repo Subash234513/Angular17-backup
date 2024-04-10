@@ -109,11 +109,11 @@
               <mat-form-field class="nwidth">
                 <mat-label>Pincode</mat-label>
                 <input type="text" placeholder="Search Pincode" matInput formControlName="pincode" required
-                  autocomplete="off" [matAutocomplete]="pinlistCon"
+                  autocomplete="off" [matAutocomplete]="pinlistCon" (selectionchange)="onPincodeSelected($event)"
                   (focusout)="getpincodedata(address.get('pincode').value)"
                   (keyup)=" getpincodedata(address.get('pincode').value)" #pincodeInputCon>
-                <mat-autocomplete #pincodeinfoCon #pinlistCon="matAutocomplete" [displayWith]="getpincodeinterface">
-                  <mat-option *ngFor="let d of pincodelist" [value]="d" (focusout)="getpinlistfocus(d)">
+                <mat-autocomplete #pincodeinfoCon #pinlistCon="matAutocomplete" [displayWith]="getpincodeinterface" (optionSelected)='getpinlistfocus($event.option.value)'>
+                  <mat-option *ngFor="let d of pincodelist" [value]="d" (blur)="getpinlistfocus(d)">
                     {{d.no}}</mat-option>
                 </mat-autocomplete>
               </mat-form-field>
@@ -253,8 +253,8 @@
                 <input type="text" placeholder="Search Pincode" matInput formControlName="pincode" required
                   autocomplete="off" [matAutocomplete]="pinlistCons"
                   (keyup)=" getpincodedata(addresse.get('pincode').value)" #pincodeInputCons>
-                <mat-autocomplete #pincodeinfoCons #pinlistCons="matAutocomplete" [displayWith]="getpincodeinterface">
-                  <mat-option *ngFor="let d of pincodelist" [value]="d" (focusout)="getpinlistfocuss(d)">
+                <mat-autocomplete #pincodeinfoCons #pinlistCons="matAutocomplete" [displayWith]="getpincodeinterface" (optionSelected)="getpinlistfocuss($event.option.value)">
+                  <mat-option *ngFor="let d of pincodelist" [value]="d" (blur)="getpinlistfocuss(d)">
                     {{d.no}}</mat-option>
                 </mat-autocomplete>
               </mat-form-field>
@@ -272,7 +272,7 @@
               <div class="width2">
                 <mat-form-field>
                   <mat-label>State</mat-label>
-                  <input matInput formControlName="state" [readonly]="addressEditReadonly">
+                  <input matInput formControlName="state" >
                 </mat-form-field>
               </div>
             </div>
