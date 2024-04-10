@@ -289,7 +289,7 @@
             </div>
           </div>
           <div class="row" *ngIf="!fileupdate">
-            <div  class="col-sm-5" style="margin-left: 2%;">
+            <div  class="col-sm-10">
               <div class="cus-attachCard" *ngIf="reuploadfileArr?.file_name !== null">
                 <!-- H -->
                 <span>{{ reuploadfileArr?.file_name }}</span>
@@ -317,7 +317,7 @@
           </div>
           <div class="row" *ngIf="fileupdate">
             <div class="col-sm-4">
-              <mat-form-field style="margin-left: 7%;">
+              <mat-form-field >
               <mat-label>Select Upload File</mat-label>
               <mat-select formControlName="filetype">
                 <mat-option *ngFor="let ftype of fileTypes" [value]="ftype.id">
