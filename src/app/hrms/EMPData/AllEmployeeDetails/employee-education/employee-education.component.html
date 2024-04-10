@@ -68,8 +68,13 @@
         <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: large;"><b>Education
             Details</b>
         </h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons
+        <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons 
           style="color: white;opacity: 1;">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton style="background-color: transparent;
+        font-size: x-large;
+        margin-top: -1%;">
           <span aria-hidden="true">&times;</span>
         </button>
 
@@ -236,9 +241,9 @@
                   <div class="cus-aSearchBtnDiv">
                     <div>
                       <button class="btn btn-primary insidePopup" id="saveEdu" *ngIf="addingMode" (click)="onSubmitss()"
-                        style="background-color: #044063;">Save</button>
+                        style="background-color: #044063;    margin-left: 86%;">Save</button>
                       <button class="btn btn-dark insidePopup" id="saveEdu" *ngIf="!addingMode" (click)="onUpdateValue()"
-                        style="background-color: #044063;">Update</button>
+                        style="background-color: #044063;    margin-left: 86%;">Update</button>
                     </div>
                   </div>
                 </div>

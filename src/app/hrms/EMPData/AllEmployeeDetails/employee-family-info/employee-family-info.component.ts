@@ -80,9 +80,7 @@ export class EmployeeFamilyInfoComponent implements OnInit {
      this.getEmpFamilyDetails();
      this.getRelationshipDropdown();
      this.getEmployeeBasicDetails();
-
      this.getEmployee();
-
   }
   EmpBasicDetails:any;
   getEmployeeBasicDetails(){
@@ -96,18 +94,6 @@ export class EmployeeFamilyInfoComponent implements OnInit {
    }
    )
  }
-  // Emprole:any;
-
-  // getEmpRoleValidation(){
-  //   this.hrmsService.getEmployeeRoleValidation().subscribe(results => {
-  //     this.Emprole = results;
-  //     // this.EmpBankDetails.reverse();
-  //     console.log("role validation", results)
-  //     console.log("role validation", this.Emprole.hr_admin)
-  //   }
-  //   )
-  // }
-
   getRelationshipDropdown() {
     this.hrmsService.getrelationship('relationship')
       .subscribe(results => {
@@ -125,7 +111,6 @@ export class EmployeeFamilyInfoComponent implements OnInit {
   selectedId:any
   onSelectionChange(event: any): void {
     const selectedText = event.value.id;
-    // this.selectedId = this.RelationshipList.find(rel => rel.text === selectedText)?.id;
     this.selectedId=event.value
     console.log('Selected ID:', this.selectedId);
   }
@@ -153,8 +138,8 @@ export class EmployeeFamilyInfoComponent implements OnInit {
   }
   formattedPostDate:any;
   formatPostDate(date: string): string {
-    this.formattedPostDate = this.datePipe.transform(new Date(date), 'yyyy-MM-dd');
-    return this.formattedPostDate || ''; // Handle the case when formatting fails
+    this.formattedPostDate = this.formatDates(date);
+    return this.formattedPostDate || ''; 
   }
   formattedDate: string = this.formatPostDate('Thu Nov 16 2023 00:00:00 GMT+0530 (India Standard Time)');
   selectedItem: any;
@@ -385,5 +370,23 @@ keyPressNumbers(event) {
   } else {
     return true;
   }
+}
+
+formatDates(date: any): string {
+  // Check if the input is a valid date string
+  if (!(date instanceof Date) && isNaN(Date.parse(date))) {
+    throw new Error('Invalid date input');
+  }
+
+  // Convert the input to a Date object
+  const inputDate = date instanceof Date ? date : new Date(date);
+
+  // Extract components
+  const year = inputDate.getFullYear();
+  const month = ('0' + (inputDate.getMonth() + 1)).slice(-2); // Month is zero-based
+  const day = ('0' + inputDate.getDate()).slice(-2);
+
+  // Construct and return the formatted date string
+  return `${year}-${month}-${day}`;
 }
 }
