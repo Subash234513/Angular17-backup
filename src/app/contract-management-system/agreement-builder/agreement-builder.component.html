@@ -89,7 +89,7 @@
 
 
                     <div class="col">
-                        <button mat-raised-button data-toggle="modal" data-target="#exampleModalPreview"
+                        <button mat-raised-button data-bs-toggle="modal" data-bs-target="#exampleModalPreview"
                             (click)="previewContent()">Preview</button>
                     </div>
                     <div class="col">
@@ -144,7 +144,7 @@
                         <div class="modal-header" style="background:#c1e2f6;">
                             <h2 class="modal-title" id="exampleModalLabel">
                                 Preview</h2>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -219,8 +219,8 @@
 
 
 
-                    <button id="myCheck" type="button" class="btn btn-primary" #closebutton1 data-toggle="modal"
-                        data-target="#exampleModal" style="display: none;">
+                    <button id="myCheck" type="button" class="btn btn-primary" #closebutton1 data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" style="display: none;">
                         Launch demo modal
                     </button>
 
@@ -232,7 +232,7 @@
                                 <div class="modal-header">
                                     <h3 class="modal-title" id="exampleModalLabel" style="background-color: lightgreen">
                                         {{title}}</h3>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
@@ -261,10 +261,10 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" (click)="SuperscriptCommentsSubmit('close')"
-                                        class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     <button *ngIf="LatestVersion == this.VersionDataForm.value" type="button"
                                         (click)="SuperscriptCommentsSubmit('comment')" class="btn btn-primary"
-                                        data-dismiss="modal">Comment</button>
+                                        data-bs-dismiss="modal">Comment</button>
                                 </div>
                             </div>
                         </div>

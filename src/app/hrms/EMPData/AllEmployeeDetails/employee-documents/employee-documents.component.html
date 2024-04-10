@@ -75,10 +75,10 @@
           <div class="col">
             <div class="card cardFile">
               <div class="card-body">
-                <!-- <button class="btn btn-dark" data-toggle="modal" data-target="#docsModal">
+                <!-- <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#docsModal">
                   <mat-icon>library_add</mat-icon>
                 </button> -->
-                <button type="button" [disabled]="!canUploadFiles()" data-toggle="modal" data-target="#docsModal"
+                <button type="button" [disabled]="!canUploadFiles()" data-bs-toggle="modal" data-bs-target="#docsModal"
                   class="btn btn-dark">Upload Files</button>
 
                 <!--pan card files-->
@@ -88,8 +88,8 @@
                       <h3>{{ document.type.name }}</h3>
                       <div class="d-flex flex-wrap">
                         <div class="order-3 p-2 cardMarg" *ngFor="let file of document.file"> <mat-icon
-                            (click)="viewfile(file.file_id, file.file_name)" data-toggle="modal"
-                            data-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
+                            (click)="viewfile(file.file_id, file.file_name)" data-bs-toggle="modal"
+                            data-bs-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
                             <!-- <mat-icon  style="margin-left: 7px;" (click)="onDownload(file.file_id, file.file_name)">archive</mat-icon> -->
                           <mat-icon  style="margin-left: 7px;" (click)="onDelete(file.id)">highlight_off</mat-icon>
                         </div>
@@ -107,8 +107,8 @@
                       <h3>{{ document.type.name }}</h3>
                       <div class="d-flex flex-wrap">
                         <div class="order-3 p-2 cardMarg" *ngFor="let file of document.file"> <mat-icon
-                            (click)="viewfile(file.file_id, file.file_name)" data-toggle="modal"
-                            data-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
+                            (click)="viewfile(file.file_id, file.file_name)" data-bs-toggle="modal"
+                            data-bs-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
                             <!-- <mat-icon  style="margin-left: 7px;" (click)="onDownload(file.file_id, file.file_name)">archive</mat-icon> -->
                           <mat-icon  style="margin-left: 7px;" (click)="onDelete(file.id)">highlight_off</mat-icon>
 
@@ -127,8 +127,8 @@
                       <h3>{{ document.type.name }}</h3>
                       <div class="d-flex flex-wrap">
                         <div class="order-3 p-2 cardMarg" *ngFor="let file of document.file"> <mat-icon
-                            (click)="viewfile(file.file_id, file.file_name)" data-toggle="modal"
-                            data-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
+                            (click)="viewfile(file.file_id, file.file_name)" data-bs-toggle="modal"
+                            data-bs-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
                             <!-- <mat-icon  style="margin-left: 7px;" (click)="onDownload(file.file_id, file.file_name)">archive</mat-icon> -->
                           <mat-icon   style="margin-left: 7px;" (click)="onDelete(file.id)">highlight_off</mat-icon>
                         </div>
@@ -145,8 +145,8 @@
                       <h3>{{ document.type.name }}</h3>
                       <div class="d-flex flex-wrap">
                         <div class="order-3 p-2 cardMarg" *ngFor="let file of document.file"> <mat-icon
-                            (click)="viewfile(file.file_id, file.file_name)" data-toggle="modal"
-                            data-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
+                            (click)="viewfile(file.file_id, file.file_name)" data-bs-toggle="modal"
+                            data-bs-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
                             <!-- <mat-icon  style="margin-left: 7px;" (click)="onDownload(file.file_id, file.file_name)">archive</mat-icon> -->
                           <mat-icon style="margin-left: 7px;" (click)="onDelete(file.id)">highlight_off</mat-icon>
                         </div>
@@ -163,8 +163,8 @@
                       <h3>{{ document.type.name }}</h3>
                       <div class="d-flex flex-wrap">
                         <div class="order-3 p-2 cardMarg" *ngFor="let file of document.file"> <mat-icon
-                            (click)="viewfile(file.file_id, file.file_name)" data-toggle="modal"
-                            data-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
+                            (click)="viewfile(file.file_id, file.file_name)" data-bs-toggle="modal"
+                            data-bs-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
                             <!-- <mat-icon  style="margin-left: 7px;" (click)="onDownload(file.file_id, file.file_name)">archive</mat-icon> -->
                           <mat-icon style="margin-left: 7px;" (click)="onDelete(file.id)">highlight_off</mat-icon>
                         </div>
@@ -182,8 +182,8 @@
                       <h3>{{ document.type.name }}</h3>
                       <div class="d-flex flex-wrap">
                         <div class="order-3 p-2 cardMarg" *ngFor="let file of document.file"> <mat-icon
-                            (click)="viewfile(file.file_id, file.file_name)" data-toggle="modal"
-                            data-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
+                            (click)="viewfile(file.file_id, file.file_name)" data-bs-toggle="modal"
+                            data-bs-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
                             <!-- <mat-icon  style="margin-left: 7px;" (click)="onDownload(file.file_id, file.file_name)">archive</mat-icon> -->
                           <mat-icon style="margin-left: 7px;" (click)="onDelete(file.id)">highlight_off</mat-icon>
                         </div>
@@ -200,8 +200,8 @@
                       <h3>{{ document.type.name }}</h3>
                       <div class="d-flex flex-wrap">
                         <div class="order-3 p-2 cardMarg" *ngFor="let file of document.file"> <mat-icon
-                            (click)="viewfile(file.file_id, file.file_name)" data-toggle="modal"
-                            data-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
+                            (click)="viewfile(file.file_id, file.file_name)" data-bs-toggle="modal"
+                            data-bs-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
                             <!-- <mat-icon  style="margin-left: 7px;" (click)="onDownload(file.file_id, file.file_name)">archive</mat-icon> -->
                           <mat-icon style="margin-left: 7px;" (click)="onDelete(file.id)">highlight_off</mat-icon>
                         </div>
@@ -219,8 +219,8 @@
                       <h3>{{ document.type.name }}</h3>
                       <div class="d-flex flex-wrap">
                         <div class="order-3 p-2 cardMarg" *ngFor="let file of document.file"> <mat-icon
-                            (click)="viewfile(file.file_id, file.file_name)" data-toggle="modal"
-                            data-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
+                            (click)="viewfile(file.file_id, file.file_name)" data-bs-toggle="modal"
+                            data-bs-target="#viewDownload">assignment</mat-icon>{{ file.file_name }}
                             <!-- <mat-icon  style="margin-left: 7px;" (click)="onDownload(file.file_id, file.file_name)">archive</mat-icon> -->
                           <mat-icon  style="margin-left: 7px;" (click)="onDelete(file.id)">highlight_off</mat-icon>
                         </div>
@@ -301,7 +301,7 @@
 
 
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
           #closebutton>
           <span aria-hidden="true">&times;</span>
         </button>
@@ -363,7 +363,7 @@
         <mat-icon  style="margin-left: 7%;
         font-size: 25px; cursor: pointer;" (click)="onDownload()">cloud_download</mat-icon>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closebutton style="color: white; opacity: 1;">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closebutton style="color: white; opacity: 1;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

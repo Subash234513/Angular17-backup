@@ -77,18 +77,18 @@
     <div style="margin-left: 40%;">
           
             <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;"
-                data-toggle="modal" data-target="#ccbsModal" (click)="getquestion()"  ><i class="fa fa-arrow-up" aria-hidden="true">Audit Checklist</i>
+                data-bs-toggle="modal" data-bs-target="#ccbsModal" (click)="getquestion()"  ><i class="fa fa-arrow-up" aria-hidden="true">Audit Checklist</i>
             </button> 
         
                    
             <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;margin-left: 50px;"
-                 data-toggle="modal" data-target="#data" (click)="getdedup()"><i class="fa fa-arrow-up" aria-hidden="true">Dedupe Check</i>
+                 data-bs-toggle="modal" data-bs-target="#data" (click)="getdedup()"><i class="fa fa-arrow-up" aria-hidden="true">Dedupe Check</i>
             </button>   
         
         
             <button type="button" class="btn btn-outline-primary"
-                style="border-radius:40px;height: 44px; margin-top: 12px;margin-left: 50px;" data-toggle="modal"
-                data-target="#viewtran" (click)="viewtrn()"><i class="fa fa-arrow-up" aria-hidden="true">View Transaction </i>
+                style="border-radius:40px;height: 44px; margin-top: 12px;margin-left: 50px;" data-bs-toggle="modal"
+                data-bs-target="#viewtran" (click)="viewtrn()"><i class="fa fa-arrow-up" aria-hidden="true">View Transaction </i>
             </button>
         
 
@@ -99,7 +99,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29)">
             <h2 class="modal-title" style="text-align:center;margin-left:45%">Dedupe</h2>
-            <button class="close" type="button" data-dismiss="modal">x</button>                
+            <button class="close" type="button" data-bs-dismiss="modal">x</button>                
             </div>
             <div class="modal-body">
                 <pre>EXACT_MATCH</pre>
@@ -272,7 +272,7 @@
                 </div>
             </div>
             <div class="modal-footer"  class="col-md-12 text-center" style="margin-bottom: 2%;">
-                <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;text-align:center ;" data-dismiss="modal" >Back</button>
+                <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;text-align:center ;" data-bs-dismiss="modal" >Back</button>
             </div>
 
         </div>
@@ -286,7 +286,7 @@
          <div class="modal-content">
              <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align:center">
                  <h2 class="modal-title" style="text-align:center;margin-left:36%">Audit Checklist</h2>
-                 <button type="button" class="close" #auditclose data-dismiss="modal" aria-label="Close">
+                 <button type="button" class="close" #auditclose data-bs-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button>
              </div>
@@ -302,7 +302,7 @@
                      <tr *ngFor="let dt of data;let i=index">
                      <td>{{i+1}}</td>
                      <td>{{dt.question}}</td>
-                     <td>  <div class="btn-group btn-group-toggle" data-toggle="buttons"  >
+                     <td>  <div class="btn-group btn-group-toggle" data-bs-toggle="buttons"  >
                          <label class="btn btn-outline-success" [ngClass]="(dt.value==1)? 'active': ''">
                            <input type="radio" name="options" id="option1" autocomplete="off"   (click)="ok(i,dt)" > Ok
                            </label>
@@ -321,10 +321,10 @@
                  <mat-label>Remarks</mat-label>
                  <input matInput [formControl]="rem" autocomplete="off" required>
              </mat-form-field>
-             <button type="submit" data-dismiss="modal" [disabled]="((rem.invalid==true) || (cli==true))" class="btn btn-outline-danger"  style="border-radius:35px;height: 40px;margin-left: 100px;" (click)="bounce()">Bounce</button>        </div>
+             <button type="submit" data-bs-dismiss="modal" [disabled]="((rem.invalid==true) || (cli==true))" class="btn btn-outline-danger"  style="border-radius:35px;height: 40px;margin-left: 100px;" (click)="bounce()">Bounce</button>        </div>
              <div >    
                 <button  mat-raised-button class="btn btn-success btn-lg float-right" [disabled] = "disables()" style="margin-right: 10px;" (click)="submitted()">Submit</button>
-                <button  mat-raised-button data-dismiss="modal" class="btn-lg float-right" style="margin-right: 20px;">Back</button> 
+                <button  mat-raised-button data-bs-dismiss="modal" class="btn-lg float-right" style="margin-right: 20px;">Back</button> 
              </div>
      </div>
      </div>
@@ -337,7 +337,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align:center">
                 <h2 class="modal-title" style="text-align:center;margin-left:42%">View Transaction</h2>
-            <button class="close" type="button" data-dismiss="modal">x</button>      
+            <button class="close" type="button" data-bs-dismiss="modal">x</button>      
             </div>
             <div>
                 <table class="table table-bordered" style="width: 100%;text-align: center;">
@@ -382,7 +382,7 @@
                         <td>Employee Name:{{this.name}}</td>
                         <td>Branch Name :{{this.branch}}</td>
                      </tr>
-                     <tr><td colspan="3"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-dismiss="modal" >Back</button></td></tr>
+                     <tr><td colspan="3"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-bs-dismiss="modal" >Back</button></td></tr>
                 </table>
             </div>
              
@@ -547,7 +547,7 @@
                                        matTooltip="Add CCBS"
                                        (click)="addccbs(section,DebitDetailForm.value,i)"
                                        style="border-radius:40px;margin-left:5px;color: mediumblue;"
-                                       data-toggle="modal" data-target="#createccbsdetails"><span
+                                       data-bs-toggle="modal" data-bs-target="#createccbsdetails"><span
                                            class="fa fa-arrow-right"></span></button> 
                                </td>
                             </tr>
@@ -939,9 +939,9 @@
                                         </mat-option>
                                         <ng-container *ngIf="!isLoading">
                                             <mat-option *ngFor="let pay of PaymodeList" [value]="pay"
-                                            (click)="CreditDessss(pay,creditindex)" data-toggle="modal" 
+                                            (click)="CreditDessss(pay,creditindex)" data-bs-toggle="modal" 
                                             [disabled]="(payableSelected === true && pay.gl_flag === 'Payable') || (pay.name=='LIQ' && checkAdvance == false)"
-                                            data-target="#createmodalforpopup" required>
+                                            data-bs-target="#createmodalforpopup" required>
                                                 {{pay.name}}
                                             </mat-option>
                                         </ng-container>
@@ -1232,7 +1232,7 @@
                 </td>
                 <td>
                         <button *ngIf="sampleentrybutton"  type="button"  class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-left: 30px;"
-                        (click)="beforeent()" data-toggle="modal" data-target="#beforeentry"  ><i class="fa fa-arrow-up" aria-hidden="true" >Sample Entry</i>
+                        (click)="beforeent()" data-bs-toggle="modal" data-bs-target="#beforeentry"  ><i class="fa fa-arrow-up" aria-hidden="true" >Sample Entry</i>
                             </button>
 
                 </td>
@@ -1405,7 +1405,7 @@
                                        matTooltip="Add CCBS" 
                                        (click)="addccbs(section,DebitDetailForm.value,i)"
                                        style="border-radius:40px;margin-left:5px;color: mediumblue;"
-                                       data-toggle="modal" data-target="#createccbsdetails"><span
+                                       data-bs-toggle="modal" data-bs-target="#createccbsdetails"><span
                                            class="fa fa-arrow-right"></span></button> 
                                </td>
                             </tr>
@@ -1454,7 +1454,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:rgba(23, 204, 23, 0.288);">
                     <h2 class="modal-title" style="color:black ;">Credit GL</h2>
-                    <button type="button" #closebuttons class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" #closebuttons class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -1518,7 +1518,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background: #21cbe5">
                     <h2 class="modal-title" style="color:black ;text-align: center;">PPX Details</h2>
-                    <button type="button" class="close" #closeppxbutton data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" #closeppxbutton data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -1649,7 +1649,7 @@
                 <div class="modal-header" style="background:#21cbe5">
                     <h2 style="margin-left: 4px;;font-weight:bold;">CCBS Details (Inward Header No: {{inwardHdrNo}}, Cr No: {{crno}})  </h2>
                    
-                    <button type="button" class="close" #ccbsclose data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" #ccbsclose data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -1779,7 +1779,7 @@
                                         </button>
                                         <button type="button"
                                             style="border-radius:40px;margin-left:15px;font-family: 'Times New Roman', Times, serif;"
-                                            class="btn btn-outline-primary" data-dismiss="modal" (click)="ccbsbacks()">
+                                            class="btn btn-outline-primary" data-bs-dismiss="modal" (click)="ccbsbacks()">
                                             Back</button>
                                     </td>
                                 </tr>
@@ -1904,7 +1904,7 @@ id="beforeentry">
     <div class="modal-content">
         <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align:center">
             <h2 class="modal-title" style="text-align:center;margin-left:42%">Sample Entry</h2>
-        <button class="close" type="button" data-dismiss="modal">x</button>
+        <button class="close" type="button" data-bs-dismiss="modal">x</button>
         </div>
         <div>
             <table class="table table-bordered" style="width: 100%;text-align: center;">
@@ -1929,7 +1929,7 @@ id="beforeentry">
                     </ng-container>
                 </tr>
             </table>
-            <div style="margin-left: 50%;margin-bottom: 2%;"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-dismiss="modal" >Back</button></div>
+            <div style="margin-left: 50%;margin-bottom: 2%;"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-bs-dismiss="modal" >Back</button></div>
         </div>
     </div>
 </div>

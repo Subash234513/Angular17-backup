@@ -129,8 +129,8 @@
             <mat-form-field style="color: #044063; width: 112px;margin-top: -16px;">
               <mat-label>Action</mat-label>
               <mat-select>
-                <mat-option *ngFor="let i of typeList" [value]="i" (click)="checkAndOpenPopup(i)" data-toggle="modal"
-                  data-target="#showModals" matTooltip="{{ i.text }}">
+                <mat-option *ngFor="let i of typeList" [value]="i" (click)="checkAndOpenPopup(i)" data-bs-toggle="modal"
+                  data-bs-target="#showModals" matTooltip="{{ i.text }}">
                   {{ i.text }}
                 </mat-option>
               </mat-select>
@@ -155,7 +155,7 @@
                   <br/>
                 </span>
                 <span>
-                  <button class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+                  <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                     Ended</button>
                     <br/>
                 </span> -->
@@ -363,7 +363,7 @@
       <div class="modal-content">
         <div class="modal-header" style="background-color: #044063;color: white;">
           <h2 class="modal-title">MOM</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;">
             <span aria-hidden="true" #closeModal>&times;</span>
           </button>
         </div>
@@ -380,10 +380,10 @@
           </div>
         </form>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clickback()" data-dismiss="modal">
+          <button type="button" class="btn btn-secondary" (click)="clickback()" data-bs-dismiss="modal">
             Close
           </button>
-          <button type="button" class="btn btn-primary" (click)="submitepopupmeeting()" data-dismiss="modal"
+          <button type="button" class="btn btn-primary" (click)="submitepopupmeeting()" data-bs-dismiss="modal"
             style="background-color: #044063;color: white;">
             Submit
           </button>
@@ -399,7 +399,7 @@
       <div class="modal-content">
         <div class="modal-header" style="background-color: #044063;color: white;">
           <h2 class="modal-title">Reschedule Date</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;">
             <span aria-hidden="true" #closeModal1>&times;</span>
           </button>
         </div>
@@ -422,10 +422,10 @@
           </div>
         </form>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="resechduleback()" data-dismiss="modal">
+          <button type="button" class="btn btn-secondary" (click)="resechduleback()" data-bs-dismiss="modal">
             Close
           </button>
-          <button type="button" class="btn btn-primary" (click)="submiteresechdule()" data-dismiss="modal"
+          <button type="button" class="btn btn-primary" (click)="submiteresechdule()" data-bs-dismiss="modal"
             style="background-color: #044063;color: white;">
             Submit
           </button>

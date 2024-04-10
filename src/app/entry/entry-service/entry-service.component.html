@@ -359,7 +359,7 @@
                             </mat-form-field>
                             <div *ngIf="EntryTemplateNewAddRow[listIndex]['dynamicsecond']==true">
                                 <button mat-raised-button color="success" style="margin-left: 25px; width: 60px;" matTooltip="Calculate" (click)="getpaystatus(temp)">View</button>
-                                <!-- <span matTooltip="View" class="fa fa-eye create" style="color: green; cursor: pointer;" (click)="getpaystatus(listIndex)" data-toggle="modal" data-target="#showtrandetails"></span> -->
+                                <!-- <span matTooltip="View" class="fa fa-eye create" style="color: green; cursor: pointer;" (click)="getpaystatus(listIndex)" data-bs-toggle="modal" data-bs-target="#showtrandetails"></span> -->
                                 <!-- <mat-form-field class="example-form-field" appearance="fill" style="width: 150px;">
                                     <mat-label>Enter Dynamic Value</mat-label>
                                     <input matInput type="text" formControlName="dynamicdebitvalue" />
@@ -444,7 +444,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header" style="background: #21cbe5;">
                                         <h2 class="modal-title" style="color: black; text-align: center;">Transaction Details</h2>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -476,7 +476,7 @@
                                                 </div>
                                                 <div class="col-sm-3" style="left: 40px; margin-top: 20px;">
                                                     <button mat-raised-button color="success" style="margin-left: 25px;" matTooltip="Calculate"
-                                                    class="close" data-dismiss="modal" aria-label="Close" (click)="calculation(listIndex, $event)">Calculate</button>
+                                                    class="close" data-bs-dismiss="modal" aria-label="Close" (click)="calculation(listIndex, $event)">Calculate</button>
                                                 </div>
                                             </div> -->
                                                 <!-- <div class="table-responsive" id="styleScroll" style="margin-top: 2%; width: 95%; margin-left: 5px;"> -->

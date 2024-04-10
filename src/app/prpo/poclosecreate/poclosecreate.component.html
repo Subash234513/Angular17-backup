@@ -65,7 +65,7 @@
                 <td>{{poclose.amount| amountPipeCustom}}</td>
                 <td>{{poclose.totalamount| amountPipeCustom}}</td>
                 <td>
-                    <span data-toggle="modal" data-target=".bd-example-modal-lg" class="material-icons" (click)="dataForSelectedLine(poclose,poclose.product_data)"
+                    <span data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg" class="material-icons" (click)="dataForSelectedLine(poclose,poclose.product_data)"
                         (click)="delivery(poclose.id)">
                         local_post_office
                     </span>
@@ -87,7 +87,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="exampleModalLabel">Delivery Details</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>

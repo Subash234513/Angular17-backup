@@ -364,13 +364,13 @@
                         <!-- <mat-chip-row class="cursor spacingfile" [matMenuTriggerFor]="menu1">
                             {{indexfile+1}}.{{files?.file_name}}</mat-chip-row>
                         <mat-menu #menu1="matMenu">
-                            <span class="textdecorationatag" (click)="Files_Api_View(files)" data-toggle="modal"
-                                data-target="#my-modalpreview">File view</span>|
+                            <span class="textdecorationatag" (click)="Files_Api_View(files)" data-bs-toggle="modal"
+                                data-bs-target="#my-modalpreview">File view</span>|
                             <span class="textdecorationatagdelete"
                                 (click)="deleteInlineFile(indexfile, files)">Delete</span>
                         </mat-menu> -->
                         <div class="btn-group mr-2 mb-2" role="group" aria-label="First group">
-                            <button style="font-size:14px;border-top-left-radius: 40px;border-bottom-left-radius: 40px;" type="button" class="btn btncolor" data-toggle="modal" data-target="#my-modalpreview">{{indexfile+1}}.{{files?.file_name}}</button>
+                            <button style="font-size:14px;border-top-left-radius: 40px;border-bottom-left-radius: 40px;" type="button" class="btn btncolor" data-bs-toggle="modal" data-bs-target="#my-modalpreview">{{indexfile+1}}.{{files?.file_name}}</button>
                             <button  type="button" class="btn btncolor material-icons" (click)="filedownload(files)">download</button>
                             <button style="border-top-right-radius: 40px;border-bottom-right-radius: 40px;" type="button" class="btn btncolor" (click)="deleteInlineApiImageFile(indexfile, files)">X</button>
                         </div>
@@ -387,14 +387,14 @@
                         </mat-chip-row>
 
                         <mat-menu #menu2="matMenu">
-                            <span class="textdecorationatag" (click)="Files_Api_View(files)" data-toggle="modal"
-                                data-target="#my-modalpreview">File view</span>|
+                            <span class="textdecorationatag" (click)="Files_Api_View(files)" data-bs-toggle="modal"
+                                data-bs-target="#my-modalpreview">File view</span>|
                             <span class="textdecorationatagdelete"
                                 (click)="deleteInlineFile(indexfile, files)">Delete</span>
                         </mat-menu> -->
                         <div class="btn-group mr-2 mb-2" role="group" aria-label="First group">
-                            <button style="font-size:14px;border-top-left-radius: 40px;border-bottom-left-radius: 40px;" type="button" class="btn btncolor" (click)="filepreview(files)" data-toggle="modal"
-                            data-target="#my-modalpreview" >{{indexfile+1}}. {{files?.name}} </button>
+                            <button style="font-size:14px;border-top-left-radius: 40px;border-bottom-left-radius: 40px;" type="button" class="btn btncolor" (click)="filepreview(files)" data-bs-toggle="modal"
+                            data-bs-target="#my-modalpreview" >{{indexfile+1}}. {{files?.name}} </button>
                             <button style="border-top-right-radius: 40px;border-bottom-right-radius: 40px;" type="button" class="btn btncolor" (click)="deleteInlineFile(indexfile, files)" >X</button>
                         </div>
                     </div>
@@ -526,7 +526,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#bce6ed;">
                 <h2 class="modal-title">PDF View</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -544,9 +544,9 @@
 
 <div *ngIf="showimageHeaderPreview" id="my-modalpreview" class="modal fade" aria-labelledby="my-modalLabel"
     aria-hidden="true" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">

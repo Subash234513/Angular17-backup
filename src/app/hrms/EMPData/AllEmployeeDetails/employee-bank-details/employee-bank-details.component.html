@@ -14,14 +14,14 @@
     <div class="col-sm-2 col-md-2 col-2 col-lg-2 col-xl-2" style="margin-top: 1.2%;padding-left:6%">
 
       <button class="btn btn-primary" style="background-color: #044063;" type="button" (click)="showSaveButton()"
-        data-toggle="modal" data-target="#bankModal">
+        data-bs-toggle="modal" data-bs-target="#bankModal">
         <span>+ Add</span>
       </button>
 
     </div>
     <!-- <div class="col-sm-2 col-md-2 col-2 col-lg-2 col-xl-2" style="margin-top: 1.2%;">
       <div class="popup-btn">
-        <button class="btn btn-primary" style="background-color: #044063;" type="button" data-toggle="modal" data-target="#docsModal">
+        <button class="btn btn-primary" style="background-color: #044063;" type="button" data-bs-toggle="modal" data-bs-target="#docsModal">
           <span>Upload</span>
         </button>
       </div>
@@ -36,7 +36,7 @@
               Bank Info</p>
           </div>
           <div class="col-md-1" style="margin-left: -7%;">
-            <i class="fa solid fa-pencil" (click)="editBankRow(bank)" data-toggle="modal" data-target="#bankModal"></i>
+            <i class="fa solid fa-pencil" (click)="editBankRow(bank)" data-bs-toggle="modal" data-bs-target="#bankModal"></i>
           </div>
           <div class="col-md-1">
             <i style="margin-left: 5px;" class="fa solid fa-trash-can" (click)="deleteBank(bank?.id)"></i>
@@ -111,7 +111,7 @@
         <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: large;"><b>Bank Details</b>
 
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButton
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton
           style="color: white;opacity: 1;">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -200,7 +200,7 @@
                 <div class="cus-attachCard" *ngIf="reuploadfileArr?.file_name !== null" style="margin-left: -2%;">
                   <!-- H -->
                   <span>{{ reuploadfileArr?.file_name }}</span>
-                  <button mat-icon-button type="button" (click)="viewfiles(reuploadfileArr)" data-target="#viewDownload" data-toggle="modal" style="    margin-left: 37%;">
+                  <button mat-icon-button type="button" (click)="viewfiles(reuploadfileArr)" data-bs-target="#viewDownload" data-bs-toggle="modal" style="    margin-left: 37%;">
                     <mat-icon  aria-label="View" style="font-size: x-large;color: blue;
                     margin-top: -19px;">visibility</mat-icon>
                    
@@ -251,10 +251,10 @@
                   style="background-color: #044063;">Save</button>
                 <button class="btn btn-dark" *ngIf="!addingMode" (click)="onUpdatebank()"
                   style="background-color: #044063;">Update</button>
-                <button class="btn btn-warning" style="margin-left: 74%;" (click)="addIfsc()" data-toggle="modal"
-                  data-target="#ifscmodal" *ngIf="addingMode">Add IFSC</button>
-                <button class="btn btn-warning" style="margin-left: 70%;" (click)="addIfsc()" data-toggle="modal"
-                  data-target="#ifscmodal" *ngIf="!addingMode">Add IFSC</button>
+                <button class="btn btn-warning" style="margin-left: 74%;" (click)="addIfsc()" data-bs-toggle="modal"
+                  data-bs-target="#ifscmodal" *ngIf="addingMode">Add IFSC</button>
+                <button class="btn btn-warning" style="margin-left: 70%;" (click)="addIfsc()" data-bs-toggle="modal"
+                  data-bs-target="#ifscmodal" *ngIf="!addingMode">Add IFSC</button>
               </div>
             </div>
           </div>
@@ -270,7 +270,7 @@
       <div class="modal-header" id="educationHeader" style="width: 800px; ">
         <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: large;"><b>Bank Details</b>
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButton>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton>
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -393,7 +393,7 @@
 
         </h5>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButtons>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons>
           <span aria-hidden="true">&times;</span>
         </button>
 
@@ -462,7 +462,7 @@
 
 
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
           #closebutton>
           <span aria-hidden="true">&times;</span>
         </button>
@@ -523,7 +523,7 @@
         <!-- <mat-icon  style="margin-left: 7%;
         font-size: 25px; cursor: pointer;" (click)="onDownload()">cloud_download</mat-icon> -->
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closebutton
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closebutton
           style="color: white; opacity: 1;">
           <span aria-hidden="true">&times;</span>
         </button>

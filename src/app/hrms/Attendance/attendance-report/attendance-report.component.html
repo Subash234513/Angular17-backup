@@ -86,7 +86,7 @@
                         <!-- <td>{{data?.duration}}</td> -->
                         <td *ngFor="let datascheck of ListOfDaysInSelectedMonthFull; let indextwo = index;"
                             class="attendanceMark">
-                            <span data-toggle="modal" data-target=".popupReport" data-backdrop='static'
+                            <span data-bs-toggle="modal" data-bs-target=".popupReport" data-backdrop='static'
                                 data-keyboard='false'
                                 (click)="getAttendanceBasedOnEmployee(data, datascheck); getSelectedEMP(datascheck, 'summary'); activityData(datascheck,'summary', data);"
                                 [ngClass]="data[datascheck] == 'Present'?'presentstyle': data[datascheck]=='Absent'?'absentstyle': data[datascheck]=='Absent (PL)' ?'absentstyle': data[datascheck]=='Absent (CL)' ?'absentstyle':data[datascheck]=='Absent (SL)'?'absentstyle':data[datascheck]=='Absent (LOP)' ?'absentstyle':data[datascheck]=='WFH'?'weekendHolidayPresent': data[datascheck]=='COMP-OFF'?'weekendHolidayPresent':data[datascheck]=='Holiday' ?'holiday': data[datascheck]=='Weekend' ?'weekend': ''"
@@ -135,7 +135,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

@@ -4,22 +4,22 @@
         <hr>
         <div class=" row col-md-12">
             <!-- <div class="col-md-3">
-                <button mat-icon-button  data-toggle="modal" data-target="#ccbsModal" style="color: rgb(13, 163, 243);width: 40px ;height: 40px;margin-right: 25px; ">
+                <button mat-icon-button  data-bs-toggle="modal" data-bs-target="#ccbsModal" style="color: rgb(13, 163, 243);width: 40px ;height: 40px;margin-right: 25px; ">
                     <mat-icon>touch_app</mat-icon>Audit Checklist</button>                
             </div> -->
             <div *ngIf="statusflage" class="col-md-3">
             <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;"
-            data-toggle="modal" data-target="#ccbsModal"  ><i class="fa fa-arrow-up" aria-hidden="true">Audit Checklist</i>
+            data-bs-toggle="modal" data-bs-target="#ccbsModal"  ><i class="fa fa-arrow-up" aria-hidden="true">Audit Checklist</i>
                 </button>  
             </div>
             <div class="col-md-3">
                 <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;"
-                     data-toggle="modal" data-target="#viewtran" (click)="viewtrn()"><i class="fa fa-arrow-up" aria-hidden="true">View Tranasaction</i>
+                     data-bs-toggle="modal" data-bs-target="#viewtran" (click)="viewtrn()"><i class="fa fa-arrow-up" aria-hidden="true">View Tranasaction</i>
                 </button>                  
             </div>
             <div class="col-md-3">                
                 <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;"
-                     data-toggle="modal" data-target="#data" ><i class="fa fa-arrow-up" aria-hidden="true">Dedupe Check</i>
+                     data-bs-toggle="modal" data-bs-target="#data" ><i class="fa fa-arrow-up" aria-hidden="true">Dedupe Check</i>
                 </button>   
             </div>            
             <!-- <div class="col-md-3">
@@ -36,7 +36,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:rgba(23, 204, 23, 0.288);color:rgb(31, 29, 29);text-align:center">
                 <h2 class="modal-title" style="text-align:center;margin-left:36%">Audit Checklist</h2>
-            <button class="close" #auditclose type="button" data-dismiss="modal">x</button>      
+            <button class="close" #auditclose type="button" data-bs-dismiss="modal">x</button>      
             </div>
             <div>
                 <table class="table table-bordered" style="width: 100%;text-align: center;">
@@ -50,7 +50,7 @@
                     <tr *ngFor="let dt of data;let i=index">
                         <td>{{i+1}}</td>
                         <td>{{dt.question}}</td>
-                        <td>  <div class="btn-group btn-group-toggle" data-toggle="buttons"  >
+                        <td>  <div class="btn-group btn-group-toggle" data-bs-toggle="buttons"  >
                             <label class="btn btn-outline-success">
                             <input type="radio" name="options" id="option1" [(ngModel)]="changevalue"  autocomplete="off" value="1" (change)="ok(i,changevalue,dt,$event)" > Ok
                             </label>
@@ -79,7 +79,7 @@
                 <button type="submit" [disabled]="((rem.invalid==true) || (cli==true))" class="btn btn-success" style="margin-left: 100px;" (click)="bounce()">Bounce</button>        </div>
             <div >    
                 <button  mat-raised-button class="btn btn-success btn-lg float-right" [disabled] = "(count < 25) ||(btnDisabled)" style="margin-right: 10px;" (click)="submitted()">Submit</button>
-                <button  mat-raised-button data-dismiss="modal" class="btn-lg float-right" style="margin-right: 20px;">Close</button> 
+                <button  mat-raised-button data-bs-dismiss="modal" class="btn-lg float-right" style="margin-right: 20px;">Close</button> 
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:rgba(23, 204, 23, 0.288);color:rgb(31, 29, 29)">
             <h2 class="modal-title" style="text-align:center;margin-left:45%">Dedupe</h2>
-            <button class="close" type="button" data-dismiss="modal">x</button>                
+            <button class="close" type="button" data-bs-dismiss="modal">x</button>                
             </div>
             <div class="modal-body">
                 <pre>EXACT_MATCH</pre>
@@ -249,7 +249,7 @@
                 </div>
             </div>
             <div class="modal-footer"  class="col-md-12 text-center" style="margin-bottom: 2%;">
-                <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;text-align:center ;" data-dismiss="modal" >Back</button>
+                <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;text-align:center ;" data-bs-dismiss="modal" >Back</button>
             </div>
 
         </div>
@@ -263,7 +263,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:rgba(23, 204, 23, 0.288);color:rgb(31, 29, 29);text-align:center">
                 <h2 class="modal-title" style="text-align:center;margin-left:42%">View Tranasaction</h2>
-            <button class="close" type="button" data-dismiss="modal">x</button>      
+            <button class="close" type="button" data-bs-dismiss="modal">x</button>      
             </div>
             <div>
                 <table class="table table-bordered" style="width: 100%;text-align: center;">
@@ -306,7 +306,7 @@
                         <td>Branch Code :{{this.branch}}</td>
                         <td>Designation: {{this.designation}}</td>
                      </tr>
-                     <tr><td colspan="3"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-dismiss="modal" >Cancel</button></td></tr>
+                     <tr><td colspan="3"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-bs-dismiss="modal" >Cancel</button></td></tr>
                 </table>
             </div>
              

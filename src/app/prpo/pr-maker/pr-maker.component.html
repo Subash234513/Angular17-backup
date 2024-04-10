@@ -52,7 +52,7 @@
                         <mat-form-field style="width: 200px; margin-left: 8px;" (click)="getmepFK()">
                             <mat-label>PCA Number</mat-label>
                             <input #mepinput placeholder="PCA Number" matInput formControlName="mepno"
-                                [readonly]="mepreadonly" data-toggle="modal" data-target="#exampleModalResetOptionMep"
+                                [readonly]="mepreadonly" data-bs-toggle="modal" data-bs-target="#exampleModalResetOptionMep"
                                 [matAutocomplete]="mepname">
                             <mat-autocomplete #mepname="matAutocomplete" [displayWith]="displayFnMep.bind(this)"
                                 >
@@ -68,7 +68,7 @@
                                 (click)="resetAfterMepChange(); resetMepChange()">X</button>
                         </mat-form-field>
                         <button *ngIf="ismepdtl" type="button" matTooltip="PCA Details" class="btn btn-default"
-                            mat-button data-toggle="modal" data-target="#lableMep">
+                            mat-button data-bs-toggle="modal" data-bs-target="#lableMep">
                             <span class="material-icons">
                                 feedback
                             </span>
@@ -80,7 +80,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header" style="background:#DDEFDD;">
                                         <h2 class="modal-title" id="exampleModalLongTitle">PCA Details</h2>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -286,8 +286,8 @@
                         </mat-form-field>
                     </td>
                     <td>
-                        <span class="material-icons" data-toggle="modal" style="margin-left: 50px;"
-                            data-target=".bd-examplenote-modal-xl">description</span>
+                        <span class="material-icons" data-bs-toggle="modal" style="margin-left: 50px;"
+                            data-bs-target=".bd-examplenote-modal-xl">description</span>
 
                         <div class="modal fade bd-examplenote-modal-xl" tabindex="-1" role="dialog"
                             aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
@@ -297,7 +297,7 @@
                                         <h2 class="modal-title" id="exampleModalLongTitle">
                                             NotePad
                                         </h2>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -315,7 +315,7 @@
                                     <br>
                                     <div class="modal-footer">
                                         <button type="button" style="border-radius: 40px;margin-left: 10px;"
-                                            class="btn btn-outline-primary" data-dismiss="modal">Save</button>
+                                            class="btn btn-outline-primary" data-bs-dismiss="modal">Save</button>
                                     </div>
                                 </div>
                             </div>

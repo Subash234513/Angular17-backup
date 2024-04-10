@@ -15,7 +15,7 @@
       </div>
       <div class="col-sm-2 col-md-2 col-2 col-lg-2 col-xl-2" style="margin-top: 1.2%;">
         <div class="popup-btn">
-          <button class="btn btn-primary" style="background-color: #044063;" type="button"  (click)="showSaveButton()"  data-toggle="modal" data-target="#familyModal">
+          <button class="btn btn-primary" style="background-color: #044063;" type="button"  (click)="showSaveButton()"  data-bs-toggle="modal" data-bs-target="#familyModal">
             <span>+ Add</span>
           </button>
         </div>
@@ -33,7 +33,7 @@
         </p>
       </div>
       <div  class="p-2" style="width: 100px;">
-        <a  data-toggle="modal" data-target="#familyModal">
+        <a  data-bs-toggle="modal" data-bs-target="#familyModal">
           <i class="fa solid fa-pencil"  (click)="editRow(family)"></i>
         </a>
         <i style="margin-left: 17%;" class="fa solid fa-trash-can" (click)="deleteBankRecord(family.id)"></i>
@@ -51,7 +51,7 @@
         <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: large;"><b
            >Family Details</b>     
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButton style="color: white;opacity: 1;">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton style="color: white;opacity: 1;">
   <span aria-hidden="true">&times;</span>
 </button>
       </div>     

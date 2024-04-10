@@ -1,6 +1,6 @@
 <div class="Container" style="margin-left: 20px;">
     <div class="nav nav-tabs" style="margin-top: 1%;">
-        <span class="nav-item nav-link " data-toggle="tab" (click)="subModuleData(sub)" role="tab"
+        <span class="nav-item nav-link " data-bs-toggle="tab" (click)="subModuleData(sub)" role="tab"
             *ngFor="let sub of prpoGRNList">
             {{sub.name}}
         </span>
@@ -180,7 +180,7 @@
                                 picture_as_pdf</span>
                         </td>
                         <td style="text-align: center;color:green;">
-                            <i class="fa fa-file" aria-hidden="true" data-toggle="modal" data-target="#fileview"
+                            <i class="fa fa-file" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#fileview"
                                 (click)="fileview(GRN)"></i>
                         </td>
                         <td><span class="material-icons" matTooltip="view" style="color:green;">
@@ -188,8 +188,8 @@
                                     visibility</mat-icon>
                             </span></td>
                         <td style="text-align: center;color:green;">
-                            <i class="fa fa-file" aria-hidden="true" data-toggle="modal"
-                                data-target="#exampleModalLongs" (click)="tranview(GRN)"></i>
+                            <i class="fa fa-file" aria-hidden="true" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalLongs" (click)="tranview(GRN)"></i>
                         </td>
                     </tr>
                 </tbody>
@@ -223,7 +223,7 @@
                         <h2 class="modal-title"
                             style="color:black ;font-family:'Times New Roman', Times, serif;font-size:25px;font-weight:lighter;">
                             View Transaction History Against {{POno}}</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -256,7 +256,7 @@
                         <h3>Sorry data not found!.. </h3>
                     </div>
                     <tr>
-                        <button style="margin-left: 500px;" type="button" data-dismiss="modal"
+                        <button style="margin-left: 500px;" type="button" data-bs-dismiss="modal"
                             class="btn btn-outline-primary">
                             Back</button>
                     </tr>
@@ -288,7 +288,7 @@
                         <h2 class="modal-title"
                             style="color:black ;font-family:'Times New Roman', Times, serif;font-size:25px;font-weight:lighter;">
                             GRN Header File(s) for {{GRNNo}}</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -316,8 +316,8 @@
                                         </i></a>
                                 </td>
                                 <!-- <td style="margin-left:-1%">
-                                    <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal"
-                                        data-toggle="modal" (click)="commentPopup(file.file_id,file.file_name)">
+                                    <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal"
+                                        data-bs-toggle="modal" (click)="commentPopup(file.file_id,file.file_name)">
                                         File Name:{{a.file_name }}<i class="fa fa-picture-o"
                                             aria-hidden="true"></i>
                                         <br>
@@ -351,13 +351,13 @@
         </div>
         <div *ngIf="showimagepopup" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
             tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+            <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
                 <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <img src="{{jpgUrls}}" class="img-responsive" style="width: 100%;">
@@ -504,12 +504,12 @@
 
                         <td style="margin: 15px; padding: 15px;">{{grn?.inwardheader?.grn_status}}</td>
                         <td style="text-align: center;color:green;"><span class="fa fa-file" aria-hidden="true"
-                                data-toggle="modal" (click)="filejson(grn)" data-target="#exampleModalLong"></span></td>
+                                data-bs-toggle="modal" (click)="filejson(grn)" data-bs-target="#exampleModalLong"></span></td>
                         <td style="text-align: center;color:green;"><span class="fa fa-eye" aria-hidden="true"
                                 (click)="approverview(grn)"></span></td>
                         <td style="text-align: center;color:green;"><span class="fa fa-file" aria-hidden="true"
-                                data-toggle="modal" (click)="gettransaction(grn)"
-                                data-target="#exampleModalLongs"></span></td>
+                                data-bs-toggle="modal" (click)="gettransaction(grn)"
+                                data-bs-target="#exampleModalLongs"></span></td>
                     </tr>
                 </tbody>
             </table>
@@ -538,7 +538,7 @@
                     <div class="modal-header">
                         <h2 class="modal-title" style="font-family:'Times New Roman', Times, serif;font-size:25px;">
                             Transaction History Against {{ponumpop}} </h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -571,7 +571,7 @@
                         </div>
                     </div>
                     <div style="margin-bottom: 5% ;margin-left:43%">
-                        <button type="submit" data-dismiss="modal" style="border-radius: 40px;"
+                        <button type="submit" data-bs-dismiss="modal" style="border-radius: 40px;"
                             class="btn btn-outline-primary">BACK</button>
                     </div>
                 </div>
@@ -584,7 +584,7 @@
                     <div class="modal-header">
                         <h2 class="modal-title" style="font-family:'Times New Roman', Times, serif;font-size:25px;">
                             GRN File for {{grnnumpop}} </h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -615,8 +615,8 @@
                                             </p><br>
                                         </td>
                                         <!-- <td style="margin-left:-1%">
-                                            <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal"
-                                                data-toggle="modal"
+                                            <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal"
+                                                data-bs-toggle="modal"
                                                 (click)="commentPopupapprover(a.file_id,a.file_name)">
                                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                                                 <br>
@@ -632,7 +632,7 @@
                         </div>
                     </div>
                     <div style="margin-bottom: 5% ;margin-left:43%">
-                        <button type="submit" data-dismiss="modal" style="border-radius: 40px;"
+                        <button type="submit" data-bs-dismiss="modal" style="border-radius: 40px;"
                             class="btn btn-outline-primary">BACK</button>
                     </div>
                 </div>
@@ -640,7 +640,7 @@
         </div>
         <div *ngIf="showimagepopup" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
             tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+            <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
 
                 <div class="modal-content">
                     <!-- <div class="modal-header"> -->
@@ -653,7 +653,7 @@
 
                         <!-- <div id="myModal" class="modals">
                             <span class="closecursor" (onclick)="closeModal()">&times;</span> -->
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <div class="modal-body">

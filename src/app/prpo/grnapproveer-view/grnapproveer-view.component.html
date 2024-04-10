@@ -79,27 +79,27 @@
                 <td>{{grn?.quantity | number:'1.0-0'}}</td>
                 <td>{{grn?.podetails_id?.uom}}</td>
                 <!-- <td>
-                    <button type="button" class="btn btn-outline-success" data-toggle="modal" (click)="getGrnAssetdata(grn)"
-                        data-target="#HistoryModal"><span class="fa fa-file"></span>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" (click)="getGrnAssetdata(grn)"
+                        data-bs-target="#HistoryModal"><span class="fa fa-file"></span>
                     </button>
                 </td> -->
 
                 <td>
                     <div *ngIf="grn?.is_asset == 1 ; else lockasset">
-                        <button type="button" class="btn btn-outline-success" data-toggle="modal" (click)="getGrnAssetdata(grn)"
-                        data-target="#HistoryModal"><span class="fa fa-file"></span>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" (click)="getGrnAssetdata(grn)"
+                        data-bs-target="#HistoryModal"><span class="fa fa-file"></span>
                     </button>
                     </div>
                     <ng-template #lockasset> -- </ng-template>
                 </td>
-                <!-- <td>--</td>data-toggle="modal" data-target="#HistoryModal" -->
+                <!-- <td>--</td>data-bs-toggle="modal" data-bs-target="#HistoryModal" -->
                 <!-- a.podetails_id.product_id.category_id.isasset -->
 
                 <!-- <td *ngIf="a.podetails_id.product_id.category_id.isasset === '0'" class='unselectable'>
-                    <i class="fa fa-file" aria-hidden="true" data-toggle="modal" data-target="#exampleModalLongs"></i>
+                    <i class="fa fa-file" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModalLongs"></i>
                 </td>
                 <td *ngIf="a.podetails_id.product_id.category_id.isasset === '1'">
-                    <i class="fa fa-file" aria-hidden="true" data-toggle="modal" data-target="#exampleModalLongs"></i>
+                    <i class="fa fa-file" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModalLongs"></i>
                 </td> -->
             </tr>
         </tbody>
@@ -130,7 +130,7 @@
             <div class="modal-header">
                 <h2 class="modal-title" style="font-family:'Times New Roman', Times, serif;font-size:25px;">
                     Asset data</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -166,7 +166,7 @@
                 </div>
             </div>
             <div style="margin-bottom: 5% ;margin-left:45%">
-                <button type="submit" data-dismiss="modal" class="btn btn-outline-primary"
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-outline-primary"
                     style="border-radius: 40px;">BACK</button>
             </div>
 
@@ -192,9 +192,9 @@
                         </mat-form-field>
                    </td>
             </tr>
-            <button type="submit" data-dismiss="modal" style="border-radius: 40px;" class="btn btn-outline-success">Approve</button>
-            <button type="submit" data-dismiss="modal" style="border-radius: 40px;margin-left: 5%;" class="btn btn-outline-danger">Reject</button>
-            <button type="submit" data-dismiss="modal" style="border-radius: 40px;margin-left: 80%;margin-top:-28%" class="btn btn-outline-danger" (click)="onCancelClick()">Cancel</button>
+            <button type="submit" data-bs-dismiss="modal" style="border-radius: 40px;" class="btn btn-outline-success">Approve</button>
+            <button type="submit" data-bs-dismiss="modal" style="border-radius: 40px;margin-left: 5%;" class="btn btn-outline-danger">Reject</button>
+            <button type="submit" data-bs-dismiss="modal" style="border-radius: 40px;margin-left: 80%;margin-top:-28%" class="btn btn-outline-danger" (click)="onCancelClick()">Cancel</button>
 
         </table>
 </form> -->
@@ -205,7 +205,7 @@
             <mat-label>Approval Remarks</mat-label>
             <textarea matInput placeholder="APPROVE Remarks" formControlName="remarks" autocomplete="off"></textarea>
         </mat-form-field>  
-        <button type="submit" data-dismiss="modal" (click)="approveClick()" class="btn btn-outline-success" style="border-radius: 40px;margin-left: 10px;">APPROVE</button>
+        <button type="submit" data-bs-dismiss="modal" (click)="approveClick()" class="btn btn-outline-success" style="border-radius: 40px;margin-left: 10px;">APPROVE</button>
       </form>
     
       <form [formGroup]="rejectForm">
@@ -213,7 +213,7 @@
             <mat-label>Rejected Remarks</mat-label>
             <textarea matInput placeholder="REJECT Remarks" formControlName="remarks" autocomplete="off" ></textarea>
         </mat-form-field> 
-        <button type="button" data-dismiss="modal" (click)="rejectClick()" class="btn btn-outline-danger" [disabled]="rejectForm.invalid"  style="border-radius: 40px;margin-left: 10px;">REJECT</button>
+        <button type="button" data-bs-dismiss="modal" (click)="rejectClick()" class="btn btn-outline-danger" [disabled]="rejectForm.invalid"  style="border-radius: 40px;margin-left: 10px;">REJECT</button>
       
         <br>
       <br>
@@ -229,7 +229,7 @@
             <mat-label>Approval Remarks</mat-label>
             <textarea matInput placeholder="APPROVE Remarks" formControlName="remarks" autocomplete="off"></textarea>
         </mat-form-field>
-        <button type="submit" data-dismiss="modal" (click)="approveClick()" class="btn btn-outline-success"
+        <button type="submit" data-bs-dismiss="modal" (click)="approveClick()" class="btn btn-outline-success"
             style="border-radius: 40px;margin-left: 10px;" [disabled]="isapprove">APPROVE</button>
     </form>
 
@@ -238,7 +238,7 @@
             <mat-label>Rejected Remarks</mat-label>
             <textarea matInput placeholder="REJECT Remarks" formControlName="remarks" autocomplete="off"></textarea>
         </mat-form-field>
-        <button type="button" data-dismiss="modal" (click)="rejectClick()" class="btn btn-outline-danger"
+        <button type="button" data-bs-dismiss="modal" (click)="rejectClick()" class="btn btn-outline-danger"
             [disabled]="isreject" style="border-radius: 40px;margin-left: 10px;">REJECT</button>
         <button type="button" class="btn btn-outline-primary" style="border-radius: 40px;margin-left: 10px;"
             (click)="onCancelClick()">Cancel</button>

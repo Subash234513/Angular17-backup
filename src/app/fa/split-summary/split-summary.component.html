@@ -116,7 +116,7 @@
                     <td>{{ Split.assetdetails_status}}</td>
                     <td>{{Split.splitheader_status}} </td>
                     <td>
-                        <span class="material-icons" data-toggle="modal" data-target=".bd-example-modal-lg"
+                        <span class="material-icons" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg"
                             (click)="getAssetSplitIdData(Split)">
                             visibility
                         </span>
@@ -127,7 +127,7 @@
                             <div class="modal-content">
                                 <div class="modal-header" style="background-color:rgb(62,178,113)">
                                     <h1 class="modal-title" style="margin-left:32%;" id="exampleModalLabel">Asset Details</h1>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
@@ -280,8 +280,8 @@
     <nav>
         <div class="nav nav-tabs" style="margin-left: 50px;">
 
-            <a class="nav-item nav-link active" data-toggle="tab" role="tab" (click)="source()">Source Asset</a>
-            <a class="nav-item nav-link" data-toggle="tab" role="tab" (click)="split()">Split Asset List</a>
+            <a class="nav-item nav-link active" data-bs-toggle="tab" role="tab" (click)="source()">Source Asset</a>
+            <a class="nav-item nav-link" data-bs-toggle="tab" role="tab" (click)="split()">Split Asset List</a>
 
         </div>
     </nav>

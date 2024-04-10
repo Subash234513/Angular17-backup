@@ -104,8 +104,8 @@
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-outline-success" [disabled]='isDisabled' data-toggle="modal"
-              data-target="#ccbsModal" (click)='valuecheck()' style="border-radius:40px;margin-left: 50px"><span
+            <button type="button" class="btn btn-outline-success" [disabled]='isDisabled' data-bs-toggle="modal"
+              data-bs-target="#ccbsModal" (click)='valuecheck()' style="border-radius:40px;margin-left: 50px"><span
                 class="fa fa-plus"></span>
               CCBS</button>
           </td>
@@ -218,7 +218,7 @@
             <div class="modal-header" style="background:#DDEFDD">
               <h2 class="modal-title" style="width: 250px;margin-left: 20px;">CCBS (Tour No) : {{this.dataa}} </h2>
 
-              <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -304,7 +304,7 @@
                 <button type="submit" style="border-radius: 40px;margin-left: 10px;" (click)="submitccbs()"
                   [disabled]="applevel ==1" class="btn btn-outline-primary">Submit</button>
 
-                <button type="button" data-dismiss="modal" class="btn btn-outline-primary"
+                <button type="button" data-bs-dismiss="modal" class="btn btn-outline-primary"
                   style="border-radius: 40px;margin-left: 20px;">Close</button>
               </div>
             </div>

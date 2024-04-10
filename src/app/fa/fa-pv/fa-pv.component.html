@@ -75,7 +75,7 @@
             <mat-icon>arrow_back</mat-icon>
             </button>
             <!-- <button color="success" (click)="dialogopen_new()" style="margin-left: 50px;" mat-mini-fab matTooltip="Employee Mapping"><mat-icon>add</mat-icon></button> -->
-            <button color="success" data-toggle="modal" data-target="#split" style="margin-left: 50px;" mat-mini-fab matTooltip="Employee Mapping"><mat-icon>add</mat-icon></button>
+            <button color="success" data-bs-toggle="modal" data-bs-target="#split" style="margin-left: 50px;" mat-mini-fab matTooltip="Employee Mapping"><mat-icon>add</mat-icon></button>
           </div>
         <div class="col-sm-2 addbtn">
             <button mat-raised-button color="primary" style="margin-left: 25px;" [disabled]="addRowDisable==true || addRowOnce==true" matTooltip="Add Row" (click)="addItem()">Add</button> 
@@ -237,7 +237,7 @@
     
 
     <div *ngFor="let file of assetcat.files; index as fileIndex">
-        <div><a data-toggle="modal" data-dismiss="modal" data-target="#exampleModal" (click)="imagess(assetcat['images'][fileIndex])">* {{file}}</a>
+        <div><a data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal" (click)="imagess(assetcat['images'][fileIndex])">* {{file}}</a>
         <button type="button" (click)="deleteRow(listIndex, fileIndex); fileInput.value = ''"
             class="btn btn-primary" style="height:30px">X</button>
         </div>
@@ -293,9 +293,9 @@
                     <div class="modal-header " style="background: #21cbe5;" ><!--style="background-color:rgb(104, 122, 224)"-->
                         <!-- <h2 class="modal-title" style="margin-left:32%;"><strong>Split Quantity with Location</strong></h2> -->
                         <h1 class="modal-title" style="margin-left:32%;font-family: 'Times New Roman', Times, serif;color: rgb(4, 4, 29);font-size: 20px;">Employee Mapping Details</h1>
-                        <button #exampleModal style="display: none;" type="button" class="close"  data-dismiss="modal">&times;</button>
+                        <button #exampleModal style="display: none;" type="button" class="close"  data-bs-dismiss="modal">&times;</button>
 
-                        <button (click)="dismisspopupdata()" type="button" class="close"  data-dismiss="modal">&times;</button>
+                        <button (click)="dismisspopupdata()" type="button" class="close"  data-bs-dismiss="modal">&times;</button>
                     </div>
                     <!-- style="height:450px;overflow: scroll;"<h1 style="font-family: 'Times New Roman', Times, serif;color: blue;font-size: 20px;">Employee Mapping Details</h1><hr> -->
                     <div class="modal-body"  >  

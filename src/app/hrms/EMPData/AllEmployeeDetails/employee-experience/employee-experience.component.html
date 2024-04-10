@@ -16,14 +16,14 @@
     <div class="col-sm-2 col-md-2 col-2 col-lg-2 col-xl-2" style="margin-top: 1.2%;padding-left:6%;margin-left:12%">
       <div class="popup-btn">
         <button class="btn btn-primary" style="background-color: #044063;" type="button" (click)="showSaveButton()"
-          data-toggle="modal" data-target="#expModal">
+          data-bs-toggle="modal" data-bs-target="#expModal">
           <span>+ Add</span>
         </button>
       </div>
     </div>
     <!-- <div class="col-sm-2 col-md-2 col-2 col-lg-2 col-xl-2" style="margin-top: 1.2%;">
       <div class="popup-btn">
-        <button class="btn btn-primary" style="background-color: #044063;" type="button" data-toggle="modal" data-target="#docsModal">
+        <button class="btn btn-primary" style="background-color: #044063;" type="button" data-bs-toggle="modal" data-bs-target="#docsModal">
           <span>Upload</span>
         </button>
       </div>
@@ -48,7 +48,7 @@
         </p>
       </div>
       <div class="p-2" style="width: 100px;">
-        <a (click)="editRowExp(exp)" data-toggle="modal" data-target="#expModal">
+        <a (click)="editRowExp(exp)" data-bs-toggle="modal" data-bs-target="#expModal">
           <i class="fa solid fa-pencil" style="margin-left: -44%;"></i>
         </a>
         <i style="margin-left: 5px;" class="fa solid fa-trash-can" (click)="deleteExperience(exp?.id)"></i>
@@ -57,8 +57,8 @@
         </span>
 
 
-        <!-- <i *ngIf="exp?.employee_document !== null" style="margin-left: 20%;" class="fa solid fa-eye" data-toggle="modal"
-          data-target="#viewDownload" (click)="viewfile(exp)"></i> -->
+        <!-- <i *ngIf="exp?.employee_document !== null" style="margin-left: 20%;" class="fa solid fa-eye" data-bs-toggle="modal"
+          data-bs-target="#viewDownload" (click)="viewfile(exp)"></i> -->
       </div>
 
 
@@ -79,7 +79,7 @@
 
         </h5>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButton
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton
           style="color: white;opacity: 1;">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -162,8 +162,8 @@
                 <div class="cus-attachCard" *ngIf="reuploadfileArr?.file_name !== null" style="margin-left: -2%;">
                   <!-- H -->
                   <span>{{ reuploadfileArr?.file_name }}</span>
-                  <button mat-icon-button type="button" (click)="viewfiles(reuploadfileArr)" data-target="#viewDownload"
-                    data-toggle="modal" style="    margin-left: 37%;">
+                  <button mat-icon-button type="button" (click)="viewfiles(reuploadfileArr)" data-bs-target="#viewDownload"
+                    data-bs-toggle="modal" style="    margin-left: 37%;">
                     <mat-icon aria-label="View" style="font-size: x-large;color: blue;
                       margin-top: -19px;">visibility</mat-icon>
 
@@ -234,7 +234,7 @@
 
 
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
           #closebutton>
           <span aria-hidden="true">&times;</span>
         </button>
@@ -295,7 +295,7 @@
         <!-- <mat-icon  style="margin-left: 7%;
         font-size: 25px; cursor: pointer;" (click)="onDownload()">cloud_download</mat-icon> -->
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closebutton
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closebutton
           style="color: white; opacity: 1;">
           <span aria-hidden="true">&times;</span>
         </button>

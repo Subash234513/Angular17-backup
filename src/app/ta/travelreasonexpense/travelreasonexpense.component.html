@@ -20,8 +20,8 @@
                                 style="border-radius:40px;margin-left: 15px;" color="primary"><i class="fa fa-search"
                                     aria-hidden="true"></i></button>
                             <button class="btn btn-outline-primary" type="clear" style="border-radius:40px;margin-left: 15px;"
-                            data-toggle="modal"
-                                            data-target="#travelreasonaddmodal"
+                            data-bs-toggle="modal"
+                                            data-bs-target="#travelreasonaddmodal"
                                 color="primary">Add</button>
             
                         </form>
@@ -48,8 +48,8 @@
                                 <p *ngIf="reasons.international_travel == 0">No</p>
                             </td>
                             <td>
-                                <button mat-icon-button data-toggle="modal" (click)="edittravelreasons(reasons)"
-                                    data-target="#travelreasoneditmodal">
+                                <button mat-icon-button data-bs-toggle="modal" (click)="edittravelreasons(reasons)"
+                                    data-bs-target="#travelreasoneditmodal">
                                     <mat-icon>edit</mat-icon>
                                 </button>
                             </td>
@@ -88,7 +88,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title" style="color:black ;">Edit Travel Reason</h2>
-                <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -126,7 +126,7 @@
                                         class="btn btn-outline-primary"
                                         (click)="submitForm()">Submit</button>
                                     <button type="button" class="btn btn-outline-primary"
-                                        data-dismiss="modal"
+                                        data-bs-dismiss="modal"
                                         style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                                 </div>
                             </tr>
@@ -144,7 +144,7 @@ aria-hidden="true" id="travelreasonaddmodal">
     <div class="modal-content">
         <div class="modal-header" style="background:#DDEFDD;">
             <h2 class="modal-title" style="color:black ;">Add New Travel Reason</h2>
-            <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>            </button>
         </div>
 
@@ -182,7 +182,7 @@ aria-hidden="true" id="travelreasonaddmodal">
                     <div style="margin-bottom: 5%;">
                         <button type="submit" style="border-radius: 40px;margin-left: 10px;"
                             class="btn btn-outline-primary" (click)="addsubmitForm()">Submit</button>
-                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal"
+                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"
                             style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                     </div>
                 </tr>
@@ -209,8 +209,8 @@ aria-hidden="true" id="travelreasonaddmodal">
                     style="border-radius:40px;margin-left: 15px;" color="primary"><i class="fa fa-search"
                         aria-hidden="true"></i></button>
                 <button class="btn btn-outline-primary" type="clear" style="border-radius:40px;margin-left: 15px;"
-                data-toggle="modal"
-                                data-target="#expenseaddmodal"
+                data-bs-toggle="modal"
+                                data-bs-target="#expenseaddmodal"
                     color="primary">Add</button>
 
             </form>
@@ -233,7 +233,7 @@ aria-hidden="true" id="travelreasonaddmodal">
                 <td>{{expensess.name}}</td>
                 <td>{{expensess.code}}</td>
                 <td>
-                    <button mat-icon-button data-toggle="modal" data-target="#expenseeditmodal"
+                    <button mat-icon-button data-bs-toggle="modal" data-bs-target="#expenseeditmodal"
                         (click)="edittravelexpense(expensess)">
                         <mat-icon>edit</mat-icon>
                     </button>
@@ -270,7 +270,7 @@ aria-hidden="true" id="travelreasonaddmodal">
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title" style="color:black ;">Edit Travel Expense</h2>
-                <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -303,7 +303,7 @@ aria-hidden="true" id="travelreasonaddmodal">
                                 <div style="margin-bottom: 5%;">
                                     <button type="submit" style="border-radius: 40px;margin-left: 10px;"
                                         class="btn btn-outline-primary" (click)="editsubmitForm()">Submit</button>
-                                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal"
+                                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"
                                         style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                                 </div>
                             </tr>
@@ -323,7 +323,7 @@ aria-hidden="true" id="travelreasonaddmodal">
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title" style="color:black ;">Edit Travel Expense</h2>
-                <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -356,7 +356,7 @@ aria-hidden="true" id="travelreasonaddmodal">
                                 <div style="margin-bottom: 5%;">
                                     <button type="submit" style="border-radius: 40px;margin-left: 10px;"
                                         class="btn btn-outline-primary" (click)="addsubmitForms()">Submit</button>
-                                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal"
+                                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"
                                         style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                                 </div>
                             </tr>

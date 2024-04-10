@@ -276,7 +276,7 @@
         
             <td style="font-size: small;width: 150px;cursor: pointer;">
                 <div *ngFor="let file of display.filekey ;index as i;" title="{{file.name }}" class=" btn-link"
-                data-toggle="modal" data-target="#my-modalpreview"
+                data-bs-toggle="modal" data-bs-target="#my-modalpreview"
                     (click)="fileview(file)">
                     {{i+1}}.{{file.name }}
 
@@ -301,7 +301,7 @@
       type="button"
       (click)="BackToSummary()"
       class="btn btn-secondary"
-      data-dismiss="modal"
+      data-bs-dismiss="modal"
     >
       Close
     </button>

@@ -106,8 +106,8 @@
 
   </div>
   <div class="col-2">
-    <button class="btn btn-primary text-center" style="margin-left: 10px;" data-target="#revisionModal"
-      data-toggle="modal" [disabled]="enableRevise">Salary Revise</button>
+    <button class="btn btn-primary text-center" style="margin-left: 10px;" data-bs-target="#revisionModal"
+      data-bs-toggle="modal" [disabled]="enableRevise">Salary Revise</button>
   </div>
 
 </div>
@@ -662,8 +662,8 @@
 
         <div class="row col-12 d-flex align-items-center skyblue mb-5">
           <button type="submit" class="btn btn-outline-primary text-center"
-            style="border-radius: 40px;margin-left: 10px;" (click)="previewPay()" data-target="#modalPay"
-            data-toggle="modal">Preview</button>
+            style="border-radius: 40px;margin-left: 10px;" (click)="previewPay()" data-bs-target="#modalPay"
+            data-bs-toggle="modal">Preview</button>
           <button type="submit" class="btn btn-outline-success text-center"
             style="border-radius: 40px;margin-left: 10px;" (click)="Formsubmission()"
             [disabled]="!payrollgenform.get('take_home').valid">Submit</button>
@@ -684,7 +684,7 @@
       <div class="modal-header">
         <h2 class="modal-title" id="exampleModalLabel">Preview Pay Structure </h2>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -861,7 +861,7 @@
         </mat-card>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -875,7 +875,7 @@
         <h2 class="modal-title" id="exampleModalLabel" style="font-family: 'Inter';">Select the Salary Revision Type
         </h2>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -968,7 +968,7 @@
             <button class="btn btn-primary text-center" (click)="reviseProcess()" >Submit</button>
           </div>
           <div class="col-md-2">
-            <button class="btn btn-info text-center" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-info text-center" data-bs-dismiss="modal">Cancel</button>
           </div>
         </div>
 

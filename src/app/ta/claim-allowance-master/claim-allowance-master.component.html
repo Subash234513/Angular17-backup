@@ -49,7 +49,7 @@
                     </td>
                     <td>
                         <button mat-mini-fab style="background-color:#DDEFDD ; margin-right: 20px; " class="linkbtn"
-                            data-toggle="modal" data-target="#myModal">
+                            data-bs-toggle="modal" data-bs-target="#myModal">
                             <mat-icon>add</mat-icon>
                         </button>
                     </td>
@@ -92,7 +92,7 @@
                         <td>{{tab.effectiveto}}</td>
                         <td>
                             <button mat-icon-button (click)="getpassvalue(tab,i)" [disabled]="tab.effectiveto"
-                                data-toggle="modal" type="button" data-target="#myModal1">
+                                data-bs-toggle="modal" type="button" data-bs-target="#myModal1">
                                 <mat-icon>edit</mat-icon>
                             </button>
                         </td>
@@ -146,13 +146,13 @@
                         <td>{{tab.effectivefrom}}</td>
                         <td>{{tab.effectiveto}}</td>
                         <td>
-                            <button (click)="getpassvalue(tab,i)" data-toggle="modal"
+                            <button (click)="getpassvalue(tab,i)" data-bs-toggle="modal"
                                 [disabled]="tab.effectiveto"  style="background: none;border: none;"
-                                type="button" data-target="#myModal1">
+                                type="button" data-bs-target="#myModal1">
                                 <mat-icon>edit</mat-icon>
                             </button>
-                            <!-- <button mat-mini-fab style="background-color:#DDEFDD ; margin-right: 20px; " class="linkbtn" data-toggle="modal"
-                            data-target="#myModal">
+                            <!-- <button mat-mini-fab style="background-color:#DDEFDD ; margin-right: 20px; " class="linkbtn" data-bs-toggle="modal"
+                            data-bs-target="#myModal">
                         <mat-icon>add</mat-icon>
                         </button> -->
                         </td>
@@ -197,7 +197,7 @@
                 <div class="modal-header text-center  ">
                     <h3 class="modal-title   w-100" style="font-family: 'Times New Roman', Times, serif;"></h3>
                     <button type="button" #modalclose class="close" (click)="getrestall()" #closed
-                        data-dismiss="modal">&times;</button>
+                        data-bs-dismiss="modal">&times;</button>
                 </div>
 
                 <div class="modal-body">
@@ -284,7 +284,7 @@
         <div class='modal-content'>
             <div class="modal-header text-center  ">
                 <h3 class="modal-title   w-100" style="font-family: 'Times New Roman', Times, serif;"></h3>
-                <button type="button" #modalclose1 class="close" #closed data-dismiss="modal">&times;</button>
+                <button type="button" #modalclose1 class="close" #closed data-bs-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-body">

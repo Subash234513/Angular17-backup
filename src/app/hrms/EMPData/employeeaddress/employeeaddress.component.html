@@ -16,7 +16,7 @@
     <div class="col-sm-2 col-md-2 col-2 col-lg-2 col-xl-2" id="position">
       <div class="popup-btn">
         <button class="btn btn-primary" id="colors" type="button" (click)="showSaveButton()"
-          data-toggle="modal" data-target="#bankModal">
+          data-bs-toggle="modal" data-bs-target="#bankModal">
           <span>+ Add</span>
         </button>
       </div>
@@ -36,8 +36,8 @@
         </p>
       </div>
       <div class="p-2" id="fullWidth">
-        <a data-toggle="modal" data-target="#familyModal" style="    margin-left: -65%;">
-          <i class="fa solid fa-pencil" (click)="editRow(family)" data-toggle="modal" data-target="#bankModals"></i>
+        <a data-bs-toggle="modal" data-bs-target="#familyModal" style="    margin-left: -65%;">
+          <i class="fa solid fa-pencil" (click)="editRow(family)" data-bs-toggle="modal" data-bs-target="#bankModals"></i>
         </a>
         <i style="margin-left: 20%;" class="fa solid fa-trash-can" (click)="deleteAddress(family?.id)"></i>
         <i  style="margin-left: 20%;" class="fa solid fa-download" *ngIf="family?.employee_document !== null"
@@ -57,7 +57,7 @@
         <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: large;color: white;"><b>Address
             Details</b>
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButton>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton>
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -194,7 +194,7 @@
 
         </h5>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButtons>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons>
           <span aria-hidden="true">&times;</span>
         </button>
 
@@ -289,7 +289,7 @@
               <div class="cus-attachCard" *ngIf="reuploadfileArr?.file_name !== null">
                 <!-- H -->
                 <span>{{ reuploadfileArr?.file_name }}</span>
-                <button mat-icon-button type="button" (click)="viewfiles(reuploadfileArr)" data-target="#viewDownload" data-toggle="modal" style="    margin-left: 37%;">
+                <button mat-icon-button type="button" (click)="viewfiles(reuploadfileArr)" data-bs-target="#viewDownload" data-bs-toggle="modal" style="    margin-left: 37%;">
                   <mat-icon  aria-label="View" style="font-size: x-large;color: blue;
                   margin-top: -19px;">visibility</mat-icon>
                  
@@ -367,7 +367,7 @@
         <!-- <mat-icon  style="margin-left: 7%;
         font-size: 25px; cursor: pointer;" (click)="onDownload()">cloud_download</mat-icon> -->
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closebutton style="color: white; opacity: 1;">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closebutton style="color: white; opacity: 1;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

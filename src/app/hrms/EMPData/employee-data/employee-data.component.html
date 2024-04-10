@@ -79,14 +79,14 @@
                     <mat-icon>history</mat-icon>
                 </button> -->
                 <button  mat-icon-button
-                [matMenuTriggerFor]="menu">
-                    <i class="fa-regular fa-user color" (click)="callEmployeeInfoRoutes()" matTooltip="My Info"></i>
+                [matMenuTriggerFor]="menu" (click)="callEmployeeInfoRoutes()" matTooltip="My Info">
+                    <i class="fa-regular fa-user color" ></i>
                 </button>
                 <button mat-icon-button class="spaceBtwn"
                 [matMenuTriggerFor]="menu" matTooltip="Day Log">
                     <mat-icon class="color">history</mat-icon>
                   </button>
-                <button mat-icon-button class="spaceBtwn"> <i class="fa-solid fa-hospital-user color" (click)="EmergencyInfo()"  matTooltip="Emergency"></i></button>
+                <button mat-icon-button class="spaceBtwn" (click)="EmergencyInfo()"  matTooltip="Emergency"> <i class="fa-solid fa-hospital-user color" ></i></button>
 
 
 

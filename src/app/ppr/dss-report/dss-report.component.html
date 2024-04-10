@@ -36,8 +36,8 @@
     <div style="text-align: end; font-weight: bold ;color:#007bff" [hidden]="!dss_report_view">Amounts In Crores &nbsp;&nbsp;&nbsp; <button class="btn btn-outline-primary" style="border-radius: 40px;margin-left: 40px
     ;" (click)="export()" matTooltip="Download" *ngIf="dss_report_data?.length!=0"><i class="fa fa-download"
                     aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-primary" matTooltip="Upload"
-                    style="border-radius: 40px;" data-toggle="modal" 
-                    data-target=".bd-fileupload-modal-lg"><i class="fa fa-upload"
+                    style="border-radius: 40px;" data-bs-toggle="modal" 
+                    data-bs-target=".bd-fileupload-modal-lg"><i class="fa fa-upload"
                         aria-hidden="true"></i></button></div>
 
     <div class="table-responsive" class="tablescroll" [hidden]="!dss_report_view"
@@ -149,13 +149,13 @@
         
     </div>
     </div>
-    <div class="modal fade bd-fileupload-modal-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false"
+    <div class="modal fade bd-fileupload-modal-lg" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false"
     tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabels">
     <div class="modal-dialog modal-lg" style="padding-top: 7%;">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">DSS Report File Upload</h2>
-                <button type="button" class="close" #closepop data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" #closepop data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -193,7 +193,7 @@
                 <button class="btn btn-outline-primary" type="button" style="float: right;" (click)="upload()" >
                     Upload
                 </button>
-                <button class="btn btn-outline-secondary" type="button" data-dismiss="modal" style="float: right ;"
+                <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal" style="float: right ;"
                     (click)="clear_filedetails()">
                     Close
                 </button>

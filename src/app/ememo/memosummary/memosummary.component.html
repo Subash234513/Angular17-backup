@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item" *ngFor="let tab of tabs">
-            <a class="nav-link" data-toggle="tab" role="tab" [href]=" '#' + tab.itemName" 
+            <a class="nav-link" data-bs-toggle="tab" role="tab" [href]=" '#' + tab.itemName" 
             [ngClass]="{ 'active': activeItem == tab.itemName}"
             (click)="menuTabClick(tab)">
                 {{tab.displayName}}

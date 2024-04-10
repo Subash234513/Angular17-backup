@@ -8,8 +8,8 @@
 <!-- <nav >
     <div class="nav nav-tabs" style="margin-left: -5%;">
 
-        <a class="nav-item nav-link active" data-toggle="tab" role="tab" (click)="invoiceBtn()" >Invoice</a>
-        <a class="nav-item nav-link" data-toggle="tab" role="tab" (click)="expenseBtn()">Expense</a>
+        <a class="nav-item nav-link active" data-bs-toggle="tab" role="tab" (click)="invoiceBtn()" >Invoice</a>
+        <a class="nav-item nav-link" data-bs-toggle="tab" role="tab" (click)="expenseBtn()">Expense</a>
 
     </div>
 
@@ -30,7 +30,7 @@
                             
                                 <div class="modal-header " style="background-color:rgb(62,178,113)">
                                         <h2 class="modal-title" style="margin-left:32%;"><strong>Split Quantity with Location</strong></h2>
-                                        <button #exampleModal type="button" class="close"  data-dismiss="modal">&times;</button>
+                                        <button #exampleModal type="button" class="close"  data-bs-dismiss="modal">&times;</button>
         
                                 </div>
                             <div class="modal-body" style="height:450px;overflow: scroll;" >
@@ -41,8 +41,8 @@
                                             <div class="col-sm-3">Unit Price :&nbsp;&#8377;{{sp_unitprice}}</div>
                                         
                                             <div class="col-sm-1">
-                                                <button type="button" class="btn btn-info btn-circle" data-toggle="modal"
-                                                data-target="#exampleModals" matTooltip="Location Add"> 
+                                                <button type="button" class="btn btn-info btn-circle" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModals" matTooltip="Location Add"> 
                                                     <mat-icon >location_on</mat-icon>
                                                     
                                                 </button>
@@ -117,7 +117,7 @@
                                         </mat-form-field>
                                     </div>
                                     <div class="col-sm-1">
-                                        <button type="button" style="border:none;background-color: white;" data-toggle="modal" data-target="#split_qty"><mat-icon>call_split</mat-icon></button>
+                                        <button type="button" style="border:none;background-color: white;" data-bs-toggle="modal" data-bs-target="#split_qty"><mat-icon>call_split</mat-icon></button>
                                     </div>
                                     <div class="col-sm-1" *ngIf="i+1 == split_length">
                                         <button type="button" class="button btn-circle" style="border-radius: 30px;" (click)="removesplitquantuty()" matTooltip="clear"><mat-icon>close</mat-icon></button>
@@ -134,7 +134,7 @@
                             <div class="modal-footer">
                                 <div class="col-md-12 text-center">
                                 <button type="submit" class="btn btn-info custbutton" [disabled]="split_qty_length" matTooltip="Add">ADD</button>
-                                <button type="button"  data-dismiss="modal"  class="md-raised btn btn-danger custbutton" matTooltip="Back">Back</button>
+                                <button type="button"  data-bs-dismiss="modal"  class="md-raised btn btn-danger custbutton" matTooltip="Back">Back</button>
                             </div>
                       
                         </div>
@@ -148,7 +148,7 @@
                         <div class="modal-content" >
                             <div class="modal-header" style="background-color: steelblue;">
                                 <h2 class="modal-title"><strong>Split Quantity with Asset ID</strong></h2>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <div class="col-12 row">
@@ -180,7 +180,7 @@
                             <div class="modal-footer">
                                 <div class="col-md-12 text-center">
                                 <button  class="btn btn-info custbutton" >ADD</button>
-                                <button type="button"  data-dismiss="modal" class="md-raised btn btn-danger custbutton">Back</button>
+                                <button type="button"  data-bs-dismiss="modal" class="md-raised btn btn-danger custbutton">Back</button>
                             </div>
 							</div>
 
@@ -196,7 +196,7 @@
                             <form [formGroup]='assetlocation' (ngSubmit)="locationsubmit()">
                             <div class="modal-header" style="background-color:rgb(62,178,113)">
                                 <h1 class="modal-title" id="exampleModalLabel" style="font-weight:bold;font-family:Times New Roman;font-size:20px;margin-left:40%;background-color:rgb(62,178,113)">Location Details</h1>
-                                <button  #locationsub type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button  #locationsub type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -257,7 +257,7 @@
                                 </div>
                             
                             <div class="modal-footer" >
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary" >Save changes</button>
                             </div>
                         </form>
@@ -355,8 +355,8 @@
                             <!-- </td> -->
                             <!-- <td> -->
                                 <div class="col-sm-1">
-                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" matTooltip="Location Add"
-                                    data-target="#exampleModals" style="margin-left: 15px;">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" matTooltip="Location Add"
+                                    data-bs-target="#exampleModals" style="margin-left: 15px;">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </button>
                             </div>
@@ -547,8 +547,8 @@
                             </mat-label>
                         </mat-form-field> -->
                         <!-- <div>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal" (click)="btn(assetcat.id)">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" (click)="btn(assetcat.id)">
                                 View</button>
 
                         </div> -->
@@ -576,7 +576,7 @@
                         </div>
                             <!-- </div> -->
                             </td>
-                        <td >{{ assetcat.faclringdetails_qty }}<button *ngIf="data == 'REGULAR' " type="button" data-toggle="modal" data-target="#split" style="border: none; background-color: white;" (click)="split_qty_details(assetcat,listIndex)"><mat-icon >call_split</mat-icon></button></td>
+                        <td >{{ assetcat.faclringdetails_qty }}<button *ngIf="data == 'REGULAR' " type="button" data-bs-toggle="modal" data-bs-target="#split" style="border: none; background-color: white;" (click)="split_qty_details(assetcat,listIndex)"><mat-icon >call_split</mat-icon></button></td>
                         <td  >
                        <input *ngIf="data == 'REGULAR'" type="number" [readonly]= "isreadonly" value={{assetcat.unit_prices}} style="border: 1px solid bisque;width: 100px;padding: 2px 5px;margin: 0; background-color: white;height: 35px;text-decoration: none;" [ngClass]="isreadonly ? 'allowed':'auto'" >
                        <input *ngIf="data != 'REGULAR'" type="number" [readonly]= "isreadonly" [value]="assetcat.unit_prices" style="border: 1px solid bisque;width: 100px;padding: 2px 5px;margin: 0; background-color: white;height: 35px;text-decoration: none;" [ngClass]="isreadonly ? 'allowed':'auto'" [(ngModel)]="cap_after_change" [ngModelOptions]="{standalone: true}">  
@@ -655,7 +655,7 @@
                                 
 
                                 <div *ngFor="let file of assetcat.files; index as fileIndex">
-                                    <div><a data-toggle="modal" data-dismiss="modal" data-target="#exampleModal" (click)="imagess(assetcat['images'][fileIndex])">* {{file}}</a>
+                                    <div><a data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal" (click)="imagess(assetcat['images'][fileIndex])">* {{file}}</a>
                                     <button type="button" (click)="deleteRow(listIndex, fileIndex); fileInput.value = ''"
                                         class="btn btn-primary" style="height:30px">X</button>
                                     </div>
@@ -732,7 +732,7 @@
             <div class="modal-content" style="width: 800px;height: 500px;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Image preview</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -743,7 +743,7 @@
                     <div *ngIf="!images?.length">No images uploaded yet!</div>
                 </div>
                <!--<div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>-->
             </div>

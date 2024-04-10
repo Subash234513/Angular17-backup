@@ -1,11 +1,11 @@
 <div class="Container" style="margin-left: 40px;">
     <nav>
         <div class="nav nav-tabs" style="margin-top: 1%;">
-            <span class="nav-item nav-link" data-toggle="tab" (click)="subModuleData(sub)" role="tab"
+            <span class="nav-item nav-link" data-bs-toggle="tab" (click)="subModuleData(sub)" role="tab"
                 *ngFor="let sub of subModuleList">
                 {{sub.name}}
             </span>
-            <!-- <a class="nav-item nav-link" data-toggle="tab"(click)="Modules_Listview()">Risk</a> -->
+            <!-- <a class="nav-item nav-link" data-bs-toggle="tab"(click)="Modules_Listview()">Risk</a> -->
             <button type="button" class="btn btn-outline-success" *ngIf="ismakerCheckerButton" (click)="addForm()"
                 style="border-radius: 20px;margin-left: 300px;margin-top: 10px;margin-bottom: 5px;" color="primary"><span
                     class="fa fa-plus"></span>
@@ -981,7 +981,7 @@
                     <th>District Code</th>
                     </thead>
                     <tr *ngFor="let d od city.city.data;let i=index">
-                    <td><button type="button" mat-icon-button data-toggle="collapse" [attr.data-target]="'#collapses-' + i" [attr.aria-expanded]="false" [attr.aria-controls] = "'collapse-' + i"><mat-icon>expand_less</mat-icon></button></td>
+                    <td><button type="button" mat-icon-button data-bs-toggle="collapse" [attr.data-bs-target]="'#collapses-' + i" [attr.aria-expanded]="false" [attr.aria-controls] = "'collapse-' + i"><mat-icon>expand_less</mat-icon></button></td>
 
                     <td scope="row">{{ i+1 }}</td>
                     <td>{{d.name}}</td>
@@ -1209,13 +1209,13 @@
                             </div>
                             <ng-template #enableedit>
                                 <span class="material-icons" type="button" (click)="editbs(bs)" style="color: gray;"
-                                    data-toggle="modal" data-target="#myModal">edit</span>
+                                    data-bs-toggle="modal" data-bs-target="#myModal">edit</span>
                                 <div class="modal fade" id="myModal" role="dialog">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header" style="background:#DDEFDD;">
                                                 <h2 class="modal-title">Business Segment Edit</h2>
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                             </div>
                                             <div class="modal-body">
                                                 <form [formGroup]="editbss">
@@ -1257,11 +1257,11 @@
                                                         </div>
                                                     </table>
                                                     <div class="modal-footer">
-                                                        <button type="submit" data-dismiss="modal"
+                                                        <button type="submit" data-bs-dismiss="modal"
                                                             style="border-radius: 40px;margin-left: 10px;"
                                                             class="btn btn-outline-primary" [disabled]="editbss.invalid"
                                                             (click)="editbssForm()">Submit</button>
-                                                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -2209,15 +2209,15 @@
                         <td class="cursor">
                             <div *ngIf="com?.status === 0 ; else enable">
                                 <button mat-icon-button matTooltip=" Edit" class="iconbutton" color="primary" disabled
-                                    title="Disabled in Inactive State" data-toggle="modal"
-                                    data-target=".bd-example-modal-lgone">
+                                    title="Disabled in Inactive State" data-bs-toggle="modal"
+                                    data-bs-target=".bd-example-modal-lgone">
                                     <mat-icon aria-label="assign-product">edit</mat-icon>
                                 </button>
                             </div>
     
                             <ng-template #enable>
                                 <button mat-icon-button matTooltip=" Edit" class="iconbutton" color="primary"
-                                    data-toggle="modal" data-target=".bd-example-modal-lgone"
+                                    data-bs-toggle="modal" data-bs-target=".bd-example-modal-lgone"
                                     (click)="commodityforProduct(com)">
                                     <mat-icon style="color: gray;" aria-label="assign-product">edit</mat-icon>
                                 </button>
@@ -2262,7 +2262,7 @@
                     <div class="modal-header">
                         <h2 class="modal-title" id="exampleModalLongTitle">
                             Commodity Name:<span style="color: blue;"> {{commodname}}</span></h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -2303,14 +2303,14 @@
     
     
     
-                        <button data-dismiss="modal" type="submit" style="border-radius: 40px;margin-left: 10px;"
+                        <button data-bs-dismiss="modal" type="submit" style="border-radius: 40px;margin-left: 10px;"
                             class="btn btn-outline-success" (click)="productsubmit()">Add</button>
     
-                        <button *ngIf="prodList?.length===0; else disab" disabled data-dismiss="modal" type="submit"
+                        <button *ngIf="prodList?.length===0; else disab" disabled data-bs-dismiss="modal" type="submit"
                             style="border-radius: 40px;margin-left: 10px;" class="btn btn-outline-danger"
                             (click)="productremovesubmit()">Remove</button>
                         <ng-template #disab>
-                            <button data-dismiss="modal" type="submit" style="border-radius: 40px;margin-left: 10px;"
+                            <button data-bs-dismiss="modal" type="submit" style="border-radius: 40px;margin-left: 10px;"
                                 class="btn btn-outline-danger" (click)="productremovesubmit()">Remove</button>
                         </ng-template>
     
@@ -2529,8 +2529,8 @@
                         <td>{{ delapp?.limit| currency:'INR' }}</td>
                         <td>{{ delapp?.delmat_status }}</td>
                         <td class="cursor">
-                            <span class="material-icons" (click)="approval(delapp)" data-toggle="modal" matTooltip="Click To View"
-                                data-target=".bd-example-modal-lg" style="color:rgb(18, 190, 212) ;">visibility</span>
+                            <span class="material-icons" (click)="approval(delapp)" data-bs-toggle="modal" matTooltip="Click To View"
+                                data-bs-target=".bd-example-modal-lg" style="color:rgb(18, 190, 212) ;">visibility</span>
                         </td>
                     </tr>
     
@@ -2562,7 +2562,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="exampleModalLongTitle" style="color: blue;">APPROVAL</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -2594,7 +2594,7 @@
                                 <textarea matInput placeholder="APPROVE Remarks" formControlName="remarks" (keypress)="kyenbdata($event)"
                                     autocomplete="off"></textarea>
                             </mat-form-field>
-                            <button type="submit" data-dismiss="modal" (click)="approveClick()"
+                            <button type="submit" data-bs-dismiss="modal" (click)="approveClick()"
                                 class="btn btn-outline-success"
                                 style="border-radius: 40px;margin-left: 10px;">APPROVE</button>
                         </form>
@@ -2605,7 +2605,7 @@
                                 <textarea matInput placeholder="REJECT Remarks" formControlName="remarks" (keypress)="kyenbdata($event)"
                                     autocomplete="off"></textarea>
                             </mat-form-field>
-                            <button type="button" data-dismiss="modal" (click)="rejectClick()"
+                            <button type="button" data-bs-dismiss="modal" (click)="rejectClick()"
                                 class="btn btn-outline-danger" [disabled]="rejectForm.invalid"
                                 style="border-radius: 40px;margin-left: 10px;">REJECT</button>
     

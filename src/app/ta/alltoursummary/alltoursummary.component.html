@@ -21,8 +21,8 @@
         <th>Claim Status</th>
         <!-- <th>Travel Admin No</th> -->
         <th>Travel Claim Amount</th>
-        <th class="lastfixed-header1" data-toggle="modal" data-target="#requirementmodal">Requirements</th>
-        <th class="lastfixed-header" data-toggle="modal" data-target="#historymodal">Approval Flow</th>
+        <th class="lastfixed-header1" data-bs-toggle="modal" data-bs-target="#requirementmodal">Requirements</th>
+        <th class="lastfixed-header" data-bs-toggle="modal" data-bs-target="#historymodal">Approval Flow</th>
         <!-- <th class="lastfixed-header">Action</th> -->
 
       </tr>
@@ -39,12 +39,12 @@
         <td>{{sum.claim_status}}</td>
         <td>{{sum.total_claimed_amount}}</td>
         <td class="lastfixed-header1" [ngStyle]="{'background':((i+1)%2 == 0)? '#fff' : '#EDF8FA' }">
-          <button data-toggle="modal" (click)="getrequirement(sum.id)" data-target="#requirementmodal" mat-icon-button>
+          <button data-bs-toggle="modal" (click)="getrequirement(sum.id)" data-bs-target="#requirementmodal" mat-icon-button>
             <mat-icon>visibility</mat-icon>
           </button>
         </td>
         <td class="lastfixed-header" [ngStyle]="{'background':((i+1)%2 == 0)? '#fff' : '#EDF8FA' }">
-          <button data-toggle="modal" (click)="getapprovalflowlsit(sum.id)" data-target="#historymodal" mat-icon-button>
+          <button data-bs-toggle="modal" (click)="getapprovalflowlsit(sum.id)" data-bs-target="#historymodal" mat-icon-button>
             <mat-icon>visibility</mat-icon>
           </button>
         </td>
@@ -133,7 +133,7 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title" style="font-weight: 700;font-size: large;">Approval Flow</h4>
-          <button type="button" class="close" #closeapprovalpopup data-dismiss="modal"
+          <button type="button" class="close" #closeapprovalpopup data-bs-dismiss="modal"
             (click)="clearhistorypopup()">&times;</button>
         </div>
 
@@ -225,7 +225,7 @@
 
         <!-- Modal footer -->
         <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div> -->
 
       </div>
@@ -240,7 +240,7 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title" style="font-weight: 700;font-size: large;">Requirements</h4>
-          <button type="button" class="close" data-dismiss="modal" (click)="clearrequirementpopup()">&times;</button>
+          <button type="button" class="close" data-bs-dismiss="modal" (click)="clearrequirementpopup()">&times;</button>
         </div>
 
         <!-- Modal body -->

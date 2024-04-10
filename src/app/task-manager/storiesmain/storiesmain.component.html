@@ -161,7 +161,7 @@
         </div>
 
         <div class="cus-storiesFormContainer2">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#storiesModal"
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#storiesModal"
             style="background-color: #044063; color: white">
             <!-- (click)="createStory()" -->
             + Story
@@ -176,7 +176,7 @@
                   <p class="modal-title" id="storiesModalLabel" style="margin-bottom: 0">
                     New Story Creation
                   </p>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closebutton
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closebutton
                     style="color: white;" (click)="popclose()">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -225,7 +225,7 @@
                     list?.sprint?.name
                     }}</span>
                   <ng-template #plusSign (click)="openModal($event)" style="cursor: pointer">
-                    <span data-target="#workinprogressModal" data-toggle="modal" class="cus-storyPlusBtn">+</span>
+                    <span data-bs-target="#workinprogressModal" data-bs-toggle="modal" class="cus-storyPlusBtn">+</span>
                   </ng-template>
                 </p>
               </div>
@@ -279,7 +279,7 @@
                     <p class="modal-title" id="exampleModalLabel" style="margin-bottom: 0">
                       Add Task
                     </p>
-                    <button type="button" class="close" data-dismiss="modal" #closebutton1 style="color: white;"
+                    <button type="button" class="close" data-bs-dismiss="modal" #closebutton1 style="color: white;"
                       aria-label="Close" (click)="taskcreateclose()">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -295,7 +295,7 @@
                 <button
                   type="button"
                   class="btn btn-secondary"
-                  data-dismiss="modal"
+                  data-bs-dismiss="modal"
                 >
                   Close
                 </button>
@@ -630,7 +630,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: #044063;color: white;">
         <h3 class="modal-title" style="margin-bottom: 0">Sprint Mapping</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -661,7 +661,7 @@
       </div>
       <div class="modal-footer">
         <div>
-          <button class="btn btn-primary" (click)="addSprintToStory()" data-dismiss="modal"
+          <button class="btn btn-primary" (click)="addSprintToStory()" data-bs-dismiss="modal"
             style="background-color: #044063;color: white;">
             Submit
           </button>

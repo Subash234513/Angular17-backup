@@ -74,8 +74,8 @@
                 <td>{{grndetailsview?.podetails_id?.uom}}</td>
                 <td>
                     <div *ngIf="grndetailsview?.is_asset == 1 ; else lockasset">
-                        <button type="button" class="btn btn-outline-success" data-toggle="modal"
-                        data-target="#assetdetails" (click)="getGrnAssetdata(grndetailsview)" ><span
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#assetdetails" (click)="getGrnAssetdata(grndetailsview)" ><span
                             class="fa fa-file"></span>
                     </button>
                     </div>
@@ -150,7 +150,7 @@
             <div class="modal-header">
                 <h2 class="modal-title" style="font-family:'Times New Roman', Times, serif;font-size:25px;">
                     Asset data</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -186,7 +186,7 @@
                 </div>
             </div>
             <div style="margin-bottom: 5% ;margin-left:45%">
-                <button type="submit" data-dismiss="modal" class="btn btn-outline-primary"
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-outline-primary"
                     style="border-radius: 40px;">BACK</button>
             </div>
 

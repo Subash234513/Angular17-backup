@@ -2,7 +2,7 @@
     <mat-card style="margin:20px 12px 20px 20px;" class="mat-elevation-z0">
         <nav>
             <div class="nav nav-tabs" style="margin-top: 10px">
-                <span #myDiv class="nav-item nav-link" [ngClass]="(i==navcheck())?'active':''" id="subname" data-toggle="tab"
+                <span #myDiv class="nav-item nav-link" [ngClass]="(i==navcheck())?'active':''" id="subname" data-bs-toggle="tab"
                     (click)="subModuleData(sub,0)" role="tab" *ngFor="let sub of tabs;index as i">
                     {{sub.name}}
                 </span>

@@ -4,10 +4,10 @@
     <h2 style="margin-left: 2%;font-family:Times New Roman;font-size:20px;color:blue;font-weight:bold;">Approve Summary
     </h2>   
     <button type="button" *ngIf="entrybuttonflage" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;margin-left:330px"
-        data-toggle="modal" data-target="#entry" (click)="getentrydet()"  ><i class="fa fa-arrow-up" aria-hidden="true">View Entry</i>
+        data-bs-toggle="modal" data-bs-target="#entry" (click)="getentrydet()"  ><i class="fa fa-arrow-up" aria-hidden="true">View Entry</i>
     </button> 
     <button type="button" *ngIf="!entrybuttonflage" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;margin-left:330px"
-        data-toggle="modal" data-target="#beforeentry"  ><i class="fa fa-arrow-up" aria-hidden="true">Before Approval Entry</i>
+        data-bs-toggle="modal" data-bs-target="#beforeentry"  ><i class="fa fa-arrow-up" aria-hidden="true">Before Approval Entry</i>
     </button> 
 </div>
 
@@ -142,7 +142,7 @@
                             </td>
                             <td>
                                 <a (click)="data(file)" class="btn btn-link" style="cursor: pointer;color:blue;"
-                                    matTooltip="View File"  data-target="#my-modal" data-toggle="modal">{{ file.filename}}</a>
+                                    matTooltip="View File"  data-bs-target="#my-modal" data-bs-toggle="modal">{{ file.filename}}</a>
                             </td>
                             <td>
                                 <i class="material-icons" (click)="getfiles(file)">
@@ -447,7 +447,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align:center">
                 <h2 class="modal-title" style="text-align:center;margin-left:42%">Entry</h2>
-            <button class="close" type="button" data-dismiss="modal">x</button>      
+            <button class="close" type="button" data-bs-dismiss="modal">x</button>      
             </div>
             <div>
                 <table class="table table-bordered" style="width: 100%;text-align: center;">
@@ -483,7 +483,7 @@
                         </ng-container>
                     </tr>     
                 </table>
-                <div style="margin-left: 50%;margin-bottom: 2%;"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-dismiss="modal" >Back</button></div>
+                <div style="margin-left: 50%;margin-bottom: 2%;"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-bs-dismiss="modal" >Back</button></div>
             </div>
            
              
@@ -498,7 +498,7 @@ id="beforeentry">
     <div class="modal-content">
         <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align:center">
             <h2 class="modal-title" style="text-align:center;margin-left:42%">Sample Entry</h2>
-        <button class="close" type="button" data-dismiss="modal">x</button>      
+        <button class="close" type="button" data-bs-dismiss="modal">x</button>      
         </div>
         <div>
             <table class="table table-bordered" style="width: 100%;text-align: center;">
@@ -536,7 +536,7 @@ id="beforeentry">
                 <div class="col-md-3">DEBIT TOTAL:{{this.dbttot | currency:'INR' }}</div>
                 <div class="col-md-3">CREDIT TOTAL:{{this.crttot | currency:'INR' }}</div>
              </div>
-            <div style="margin-left: 50%;margin-bottom: 2%;"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-dismiss="modal" >Back</button></div>
+            <div style="margin-left: 50%;margin-bottom: 2%;"><button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;" data-bs-dismiss="modal" >Back</button></div>
         </div>
        
          
@@ -566,9 +566,9 @@ id="beforeentry">
 </div>
 <div *ngIf="showimageHeaderAPI" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
     tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -584,7 +584,7 @@ id="beforeentry">
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;">
                 <h2 class="modal-title">ECF Attachments</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

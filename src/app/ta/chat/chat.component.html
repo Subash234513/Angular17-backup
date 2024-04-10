@@ -32,7 +32,7 @@
                     </td>
                     <td style="float: right;border-style: hidden;">
                         <span>
-                            <a data-toggle="modal" data-target="#chatbox1" (click)='tourEdit(chat.Chats.travel_id,i)'
+                            <a data-bs-toggle="modal" data-bs-target="#chatbox1" (click)='tourEdit(chat.Chats.travel_id,i)'
                                 class="notification">
                                 <span>Reply</span>
                                 <span *ngIf="chat.Chats.unread_message != 0 "
@@ -78,7 +78,7 @@
                   <span class="fa fa-window-maximize" *ngIf="!this.isMaximize" title="Maximize" (click)="maximize();" id="modal-fullscreen" style="box-sizing:border-box;"></span>
                   <span class="fa fa-window-restore"  *ngIf="this.isMaximize" title="Restore" (click)="restore();" style="padding:5px"  ></span>
 
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -159,7 +159,7 @@
                     style="border-color: black;color: black;margin-left:10px" matTooltip="Send Message"
                     class="btn btn-light" (click)="createCommentform();">SEND</button>
                     <button id="secondarybtn" style="border-color:black; color: black;margin-left:10px;" matTooltip="Close Comment Box"
-                      class="btn btn-light" data-dismiss="modal" >CLOSE</button>
+                      class="btn btn-light" data-bs-dismiss="modal" >CLOSE</button>
                     
                 </td>
 

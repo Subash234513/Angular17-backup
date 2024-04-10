@@ -9,8 +9,8 @@
             </div>
            
             <div class="col-sm-2" id="btnalign" >
-                <button type="button" class="btn btn-warning mb-3" id="btnss" data-toggle="modal"
-                    data-target="#requestModal">Request Advance</button>
+                <button type="button" class="btn btn-warning mb-3" id="btnss" data-bs-toggle="modal"
+                    data-bs-target="#requestModal">Request Advance</button>
             </div>
         </div>
         <hr>
@@ -103,13 +103,13 @@
 
                         <td *ngIf="adminUser" class="AlignCenter">
                            <span *ngIf="selectedValue==='True'">
-                            <span *ngIf="(  sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'FORCE_CLOSED'  && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'MOVE TO CHECKER'  && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'DRAFT'  )  || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-target="#approveView">{{ sum?.advance_status?.name }}</span>
+                            <span *ngIf="(  sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'FORCE_CLOSED'  && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'MOVE TO CHECKER'  && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'DRAFT'  )  || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-bs-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-bs-target="#approveView">{{ sum?.advance_status?.name }}</span>
                             <span *ngIf="sum?.employee_data?.employee_no !== EmployeeCode">
 
                                 <span
                                 *ngIf="(sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'REJECT'&& sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'FORCE_CLOSED'   && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'MOVE TO CHECKER' && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'DRAFT') || sum?.advance_status?.name === null || sum?.advance_status?.name === ''">
                                     <button mat-icon-button class="iconbutton" color="green" mat-button
-                                        data-toggle="modal" (click)="ApproveViews(sum)" data-target="#approveView">
+                                        data-bs-toggle="modal" (click)="ApproveViews(sum)" data-bs-target="#approveView">
                                         <span class="material-icons" style="color: green;">check_circle_outline</span>
                                         <span class="material-icons" style="color: red;">close</span>
                                     </button>
@@ -127,7 +127,7 @@
                             </span>
                            </span> 
                            <span *ngIf="selectedValue==='False'">
-                                <span *ngIf="(sum?.advance_status?.name !== 'MOVE TO CHECKER' && sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'FORCE_CLOSED') || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-target="#approveView">{{ sum?.advance_status?.name }}</span>
+                                <span *ngIf="(sum?.advance_status?.name !== 'MOVE TO CHECKER' && sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'FORCE_CLOSED') || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-bs-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-bs-target="#approveView">{{ sum?.advance_status?.name }}</span>
                                 <span
                                 *ngIf="sum?.advance_status?.name === 'MOVE TO CHECKER' || sum?.advance_status?.name === 'REJECT' || sum?.advance_status?.name === 'PROCESSING' || sum?.advance_status?.name === 'MOVE TO APPROVER' || sum?.advance_status?.name === 'APPROVED'  || sum?.advance_status?.name === 'PAID'  || sum?.advance_status?.name === 'OPEN'  || sum?.advance_status?.name === 'CLOSED'  || sum?.advance_status?.name === 'FORCE_CLOSED'">{{
                                     sum?.advance_status?.name }}
@@ -137,12 +137,12 @@
                         </td>
                         <td *ngIf="checkUser" class="AlignCenter ">
                             <span *ngIf="selectedValue==='True'">
-                                <span *ngIf="(sum?.advance_status?.name !== 'DRAFT' &&  sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'DRAFT'  && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'OPEN'  && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'FORCE_CLOSED' && sum?.advance_status?.name !== 'DRAFT'  ) || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-target="#approveView">{{ sum?.advance_status?.name }}</span>
+                                <span *ngIf="(sum?.advance_status?.name !== 'DRAFT' &&  sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'DRAFT'  && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'OPEN'  && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'FORCE_CLOSED' && sum?.advance_status?.name !== 'DRAFT'  ) || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-bs-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-bs-target="#approveView">{{ sum?.advance_status?.name }}</span>
                                 <span *ngIf="sum?.employee_data?.employee_no !== EmployeeCode && sum?.advance_status?.name !== 'DRAFT'" >
                                     <span
                                         *ngIf="(sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'MOVE TO CHECKER' && sum?.advance_status?.name !== 'APPROVED'  && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'FORCE_CLOSED'   ) || sum?.advance_status?.name === null || sum?.advance_status?.name === '' ">
                                         <button mat-icon-button class="iconbutton" color="green" mat-button
-                                            data-toggle="modal" (click)="ApproveViews(sum)" data-target="#approveView">
+                                            data-bs-toggle="modal" (click)="ApproveViews(sum)" data-bs-target="#approveView">
                                             <span class="material-icons" style="color: green;">check_circle_outline</span>
                                             <span class="material-icons" style="color: red;">close</span>
                                         </button>
@@ -158,7 +158,7 @@
                                 </span>
                             </span>
                             <span *ngIf="selectedValue==='False'">
-                                <span *ngIf="(sum?.advance_status?.name !== 'MOVE TO CHECKER' && sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'FORCE_CLOSED'   ) || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-target="#approveView">{{ sum?.advance_status?.name }}</span>
+                                <span *ngIf="(sum?.advance_status?.name !== 'MOVE TO CHECKER' && sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'FORCE_CLOSED'   ) || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-bs-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-bs-target="#approveView">{{ sum?.advance_status?.name }}</span>
                                 <span
                                 *ngIf="sum?.advance_status?.name === 'MOVE TO CHECKER' || sum?.advance_status?.name === 'REJECT' || sum?.advance_status?.name === 'PROCESSING' || sum?.advance_status?.name === 'MOVE TO APPROVER' || sum?.advance_status?.name === 'APPROVED' || sum?.advance_status?.name === 'PAID' || sum?.advance_status?.name === 'OPEN' || sum?.advance_status?.name === 'CLOSED' || sum?.advance_status?.name === 'FORCE_CLOSED'">{{
                                     sum?.advance_status?.name }}
@@ -169,7 +169,7 @@
                         </td>
                         
                         <td *ngIf="normalUser" class="AlignCenter">
-                            <!-- <span *ngIf="(sum?.advance_status?.name !== 'MOVE TO CHECKER' && sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'FORCE_CLOSED') || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-target="#approveView">{{ sum?.advance_status?.name }}</span> -->
+                            <!-- <span *ngIf="(sum?.advance_status?.name !== 'MOVE TO CHECKER' && sum?.advance_status?.name !== 'MOVE TO APPROVER' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'PROCESSING' && sum?.advance_status?.name !== 'APPROVED' && sum?.advance_status?.name !== 'REJECT' && sum?.advance_status?.name !== 'OPEN' && sum?.advance_status?.name !== 'PAID' && sum?.advance_status?.name !== 'CLOSED' && sum?.advance_status?.name !== 'FORCE_CLOSED') || sum?.advance_status?.name === null || sum?.advance_status?.name === ''" data-bs-toggle="modal" class="text-primary draft"  (click)="ApproveViews(sum)" data-bs-target="#approveView">{{ sum?.advance_status?.name }}</span> -->
                             <span
                           >{{
                                 sum?.advance_status?.name }}
@@ -178,7 +178,7 @@
 
                         <td class="AlignCenter">
                             <button mat-icon-button matTooltip="history" class="iconbutton" color="primary" mat-button
-                            data-toggle="modal" data-target="#HistoryModal">
+                            data-bs-toggle="modal" data-bs-target="#HistoryModal">
                                 <span class="material-icons" style="color: gray;" (click)="gettranhistory(sum)">
                                     description
                                 </span>
@@ -186,7 +186,7 @@
                         </td>
                         <td class="AlignCenter">
                             <button mat-icon-button matTooltip="history" class="iconbutton" color="primary" mat-button
-                                data-toggle="modal" data-target="#payHistoryModal">
+                                data-bs-toggle="modal" data-bs-target="#payHistoryModal">
                                 <span class="material-icons" style="color: gray;" (click)="getpayhistory(sum)">
                                     view_list
                                 </span>
@@ -195,8 +195,8 @@
                         <td *ngIf="normalUser || showedit" class="AlignCenter">
                             <span
                                 *ngIf="(sum?.advance_status?.name == 'DRAFT' )" >
-                                <mat-icon (click)="editAdvance(sum)" data-toggle="modal"
-                                    data-target="#editModal">edit</mat-icon>
+                                <mat-icon (click)="editAdvance(sum)" data-bs-toggle="modal"
+                                    data-bs-target="#editModal">edit</mat-icon>
                             </span>
                             <span
                                 *ngIf="sum?.advance_status?.name === 'APPROVED' || sum?.advance_status?.name === 'REJECT'">
@@ -344,7 +344,7 @@
                     <td  *ngIf="sum?.advance_status?.name === 'OPEN' || sum?.advance_status?.name === 'PAID'" style="    width: 5%;">
                       
                         <mat-icon style="    color: #5356FF;
-                        margin-left: 19px;" (click)="forceUpdate(sum)" data-toggle="modal" data-target="#forceUpdating">send</mat-icon>
+                        margin-left: 19px;" (click)="forceUpdate(sum)" data-bs-toggle="modal" data-bs-target="#forceUpdating">send</mat-icon>
                     </td>
 
                 </tr>
@@ -403,7 +403,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Request Advance</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="AddClose()"><span
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" (click)="AddClose()"><span
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body pr-0">
@@ -499,9 +499,9 @@
         </div>
 
             <div class="modal-footer">
-                <button type="button"  class="btn btn-default" data-dismiss="modal" id="fonts" (click)="AddClose()">Close</button>
-                <button type="button" class="btn yellow" data-dismiss="modal" (click)="Draft()" [disabled]="!advRequest.valid || !btnAddSubmit">Draft</button>
-                <button type="button"  class="btn btn-primary" id="fonts" data-dismiss="modal" (click)="addAdvance()" [disabled]="!advRequest.valid || !btnAddSubmit">Submit</button>
+                <button type="button"  class="btn btn-default" data-bs-dismiss="modal" id="fonts" (click)="AddClose()">Close</button>
+                <button type="button" class="btn yellow" data-bs-dismiss="modal" (click)="Draft()" [disabled]="!advRequest.valid || !btnAddSubmit">Draft</button>
+                <button type="button"  class="btn btn-primary" id="fonts" data-bs-dismiss="modal" (click)="addAdvance()" [disabled]="!advRequest.valid || !btnAddSubmit">Submit</button>
             </div>
         </div>
     </div>
@@ -513,7 +513,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Advance Details</h4>
-                <button type="button" id="closebtn" class="close" data-dismiss="modal" aria-label="Close" #closebtn><span
+                <button type="button" id="closebtn" class="close" data-bs-dismiss="modal" aria-label="Close" #closebtn><span
                         aria-hidden="true">&times;</span></button>
             </div>
 
@@ -701,20 +701,20 @@
 
             <!-- status based button changes -->
             <div class="modal-footer" *ngIf="approveDetails?.advance_status?.name!=='DRAFT'"  >
-                <button *ngIf="approveDetails?.advance_status?.name!=='DRAFT'"  type="button" class="btn btn-default" data-dismiss="modal" id="fonts"
-                    style="margin-right: 30%;" data-dismiss="modal">Cancel</button>
+                <button *ngIf="approveDetails?.advance_status?.name!=='DRAFT'"  type="button" class="btn btn-default" data-bs-dismiss="modal" id="fonts"
+                    style="margin-right: 30%;" data-bs-dismiss="modal">Cancel</button>
                     <!-- <span *ngIf="sum?.advance_status?.name != null">
                     </span> -->
                 <button *ngIf="checkUser || adminUser && approveDetails?.advance_status?.name!=='DRAFT'" type="button" class="btn btn-outline-danger checkdraft" id="fonts" 
                 
-                    (click)="rejectAdvances()" data-dismiss="modal" [disabled]="!advanceApprove.valid">Reject</button>
+                    (click)="rejectAdvances()" data-bs-dismiss="modal" [disabled]="!advanceApprove.valid">Reject</button>
                 
                 <button *ngIf="adminUser && approveDetails?.advance_status?.name == 'MOVE TO APPROVER' &&  approveDetails?.advance_status?.name !== 'MOVE TO CHECKER' " type="button" class="btn btn-warning" id="fonts"
-                    (click)="finalApprove()" data-dismiss="modal" [disabled]="!advanceApprove.valid">Approve</button>
-                    <button *ngIf=" approveDetails?.advance_status?.name == 'DRAFT'  &&  idEmployee == approveDetails?.created_by && normalUser||approveDetails?.advance_status?.name == 'DRAFT'  &&  idEmployee == approveDetails?.created_by && adminUser||approveDetails?.advance_status?.name == 'DRAFT'  &&  idEmployee == approveDetails?.created_by && checkUser " type="button" class="btn btn-warning" id="fonts" (click)="approvechecker()"  [disabled]="!advanceApprove.valid" data-dismiss="modal">Move
+                    (click)="finalApprove()" data-bs-dismiss="modal" [disabled]="!advanceApprove.valid">Approve</button>
+                    <button *ngIf=" approveDetails?.advance_status?.name == 'DRAFT'  &&  idEmployee == approveDetails?.created_by && normalUser||approveDetails?.advance_status?.name == 'DRAFT'  &&  idEmployee == approveDetails?.created_by && adminUser||approveDetails?.advance_status?.name == 'DRAFT'  &&  idEmployee == approveDetails?.created_by && checkUser " type="button" class="btn btn-warning" id="fonts" (click)="approvechecker()"  [disabled]="!advanceApprove.valid" data-bs-dismiss="modal">Move
                         to Checker</button>
                         
-                <button *ngIf=" checkUser   && approveDetails?.advance_status?.name == 'MOVE TO CHECKER'" type="button" class="btn btn-warning checkdraft" id="fonts" (click)="approveAdv()" data-dismiss="modal" [disabled]="!advanceApprove.valid">Move
+                <button *ngIf=" checkUser   && approveDetails?.advance_status?.name == 'MOVE TO CHECKER'" type="button" class="btn btn-warning checkdraft" id="fonts" (click)="approveAdv()" data-bs-dismiss="modal" [disabled]="!advanceApprove.valid">Move
                         to Next Level</button>
 
             </div>
@@ -728,7 +728,7 @@
             <div class="Container">
                 <div class="modal-header" style="padding-bottom: 1%;">
                     <h2 class="modal-title">Transaction History</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -774,7 +774,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Edit Advance</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="AddClose()"><span
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" (click)="AddClose()"><span
                         aria-hidden="true">&times;</span></button>
 
             </div>
@@ -865,9 +865,9 @@
             </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="fonts" (click)="AddClose()">Close</button>
-                <button type="button" class="btn yellow" data-dismiss="modal" (click)="UpdateDraft()" [disabled]="!advEditForm.valid || !btnAddSubmit">Draft</button>
-                <button type="button" class="btn btn-primary" id="fonts" data-dismiss="modal" (click)="updateAdvance()" [disabled]="!advEditForm.valid || !btnAddSubmit">Update</button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal" id="fonts" (click)="AddClose()">Close</button>
+                <button type="button" class="btn yellow" data-bs-dismiss="modal" (click)="UpdateDraft()" [disabled]="!advEditForm.valid || !btnAddSubmit">Draft</button>
+                <button type="button" class="btn btn-primary" id="fonts" data-bs-dismiss="modal" (click)="updateAdvance()" [disabled]="!advEditForm.valid || !btnAddSubmit">Update</button>
             </div>
         </div>
     </div>
@@ -880,7 +880,7 @@
             <div class="Container">
                 <div class="modal-header" style="padding-bottom: 1%;">
                     <h2 class="modal-title">Advance Transaction History</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -915,7 +915,7 @@
             <div class="Container">
                 <div class="modal-header" style="padding-bottom: 1%;">
                     <h2 class="modal-title">Advance Force Closing</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>

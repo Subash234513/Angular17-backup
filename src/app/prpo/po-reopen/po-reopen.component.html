@@ -51,7 +51,7 @@
                 <td>{{poreopen.product_id.name}}</td>
                 <td>&#8377;{{sum}}</td>
                 <td>
-                    <span data-toggle="modal" data-target=".bd-example-modal-lg" class="material-icons"(click)="addreopendeliverydetails(poreopen)">
+                    <span data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg" class="material-icons"(click)="addreopendeliverydetails(poreopen)">
                         local_post_office
                     </span>
                 </td>
@@ -80,7 +80,7 @@
               
                     <td>
                         <span
-                        data-toggle="modal" data-target=".bd-example-modal-lg" class="material-icons"
+                        data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg" class="material-icons"
                          (click)="deliveryReopen(poclose.id)" 
                         (click)="dataForSelectedLine(poclose)">
                         local_post_office
@@ -101,7 +101,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="exampleModalLabel">Delivery Details</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <!-- <div style="margin-top: -4%;margin-left: 58%;">
-                    <button type="button" data-dismiss="modal" style="float: left;margin-left: 400px; "
+                    <button type="button" data-bs-dismiss="modal" style="float: left;margin-left: 400px; "
                     class="btn btn-outline-primary">
                     close</button>
                 </div> -->

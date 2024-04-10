@@ -54,8 +54,8 @@
                                 </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </td>
                             <td>
-                                <button class="btn btn-outline-primary" type="submit" data-toggle="modal"
-                                    data-target="#selectSupplier" style="border-radius:40px;margin-left: 40px;
+                                <button class="btn btn-outline-primary" type="submit" data-bs-toggle="modal"
+                                    data-bs-target="#selectSupplier" style="border-radius:40px;margin-left: 40px;
                         margin-top: auto;" color="primary"><i class="fa fa-long-arrow-up fa-lg" aria-hidden="true"></i>
                                     Select Supplier</button>
 
@@ -110,8 +110,8 @@
                     <td><input type="number" [value]="grninward?.qty - grninward?.received_quantity" #quantity
                             class="inputStyle" [disabled]=grninward.fieldtext /></td>
                     <td>
-                        <div *ngIf="grninward.is_asset == 1 ; else lock" data-toggle="modal"
-                            data-target="#assetdataModal">
+                        <div *ngIf="grninward.is_asset == 1 ; else lock" data-bs-toggle="modal"
+                            data-bs-target="#assetdataModal">
                             <button
                                 (click)="passgrninwardid(grninward?.poheader_id, grninward?.podetails_id, grninward, quantity.value, templatepopup )"
                                 type="button" class="btn btn-outline-success" [disabled]=grninward.fieldtext><span
@@ -221,7 +221,7 @@
                                                 <button style="border-radius: 40px;margin-left: 10px;margin-bottom: 100px;"
                                                 class="btn btn-outline-primary"
                                                 (click)="getData(grninward, i, quantity.value, $event, 'popup')"
-                                                data-dismiss="modal">Save</button>
+                                                data-bs-dismiss="modal">Save</button>
                                             </div>
                                             <div class="col">
                                                 
@@ -384,7 +384,7 @@
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title">
                     Find Supplier</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

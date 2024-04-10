@@ -1,7 +1,7 @@
 <div  style="margin-left: 20px;">
     <nav>
         <div class="nav nav-tabs" style="margin-top: 1%;">
-            <span class="nav-item nav-link" data-toggle="tab" (click)="ECFSubModule(sub)" role="tab"
+            <span class="nav-item nav-link" data-bs-toggle="tab" (click)="ECFSubModule(sub)" role="tab"
                 *ngFor="let sub of ECF_Sub_Menu_List">
                 {{sub.name}}
             </span>
@@ -574,7 +574,7 @@
                                     <td>{{colist?.ecfamount}}</td>
                                    <td *ngIf="colist?.ap_status == 'PAID'">
                                         <span matTooltip="view Payment Details" class=" fa fa-eye create " style="color: green;cursor: pointer;"
-                                       (click)="getpaystatus(colist.crno)" data-toggle="modal"  data-target="#showpaymentdetails"></span>
+                                       (click)="getpaystatus(colist.crno)" data-bs-toggle="modal"  data-bs-target="#showpaymentdetails"></span>
                                     </td>
                                     <td *ngIf="colist?.ap_status != 'PAID'">-</td>
                                     <td *ngIf="colist?.ecfstatus == 'PENDING_FOR_APPROVAL' ">PENDING FOR APPROVAL</td>
@@ -609,7 +609,7 @@
                                     <td>{{colist?.ecfheader_id?.ecfamount}}</td>
                                    <td style="text-align: center;">
                                         <span matTooltip="view Payment Details" class=" fa fa-eye create " style="color: green;cursor: pointer;"
-                                       (click)="getpaystatus(colist?.ecfheader_id?.crno)" data-toggle="modal"  data-target="#showpaymentdetails"></span>
+                                       (click)="getpaystatus(colist?.ecfheader_id?.crno)" data-bs-toggle="modal"  data-bs-target="#showpaymentdetails"></span>
                                     </td>
                                    
                                     <td *ngIf="colist?.ecfheader_id?.ecfstatus == 'PENDING_FOR_APPROVAL' ">PENDING FOR APPROVAL</td>
@@ -686,7 +686,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background: #21cbe5;">
                 <h2 class="modal-title" style="color:black ;text-align: center;">Transaction Details</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -752,7 +752,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background: #21cbe5;">
                 <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">Inward and Payment Details</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -819,7 +819,7 @@
 
             <!-- <div class="modal-header" style="background:rgba(23, 204, 23, 0.288);">
                 <h2 class="modal-title" style="color:black ;text-align: center;">Payment Details</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div> -->

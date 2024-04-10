@@ -89,7 +89,7 @@
                             <td>{{sum?.advance_status?.name}}</td>
                             <td>
                                 <button mat-icon-button matTooltip="history" class="iconbutton" color="primary" mat-button
-                                data-toggle="modal" data-target="#HistoryModal">
+                                data-bs-toggle="modal" data-bs-target="#HistoryModal">
                                 <span class="material-icons" style="color: gray;" (click)="gettranhistory(sum)">
                                     description
                                 </span>
@@ -334,7 +334,7 @@ aria-hidden="true" id="HistoryModal">
         <div class="Container">
             <div class="modal-header" style="background-color: aliceblue;">
                 <h2 class="modal-title">Transaction History</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

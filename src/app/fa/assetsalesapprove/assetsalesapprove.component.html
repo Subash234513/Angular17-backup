@@ -135,12 +135,12 @@
           [attr.aria-expanded]="!isShow" aria-controls="collapseExample" style="text-align: center;padding-left: 84px;">
     Collapse Toggle
   </button></td> -->
-                <!-- <button data-toggle="collapse" data-target="#demo">Collapsible</button> -->
+                <!-- <button data-bs-toggle="collapse" data-bs-target="#demo">Collapsible</button> -->
                 <td>
                 
-                    <button class="btn btn-outline-primary btn-block" type="button" data-toggle="collapse" [attr.data-target]="'#collapse-' + i" [attr.aria-expanded]="false" [attr.aria-controls] = "'collapse-' + i">expand</button>
+                    <button class="btn btn-outline-primary btn-block" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse-' + i" [attr.aria-expanded]="false" [attr.aria-controls] = "'collapse-' + i">expand</button>
                   </td>
-                <!-- <td> <button class="btn btn-primary" type="button" data-toggle="collapse"  data-target="#i" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button></td> -->
+                <!-- <td> <button class="btn btn-primary" type="button" data-bs-toggle="collapse"  data-bs-target="#i" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button></td> -->
                 <td style="text-align:center;"> {{(presentpage - 1)*identificationSize +i+1 }} </td>
                 <td>{{value.barcode}}</td>
                 <td>{{value.assetcat_subcatname}}</td>

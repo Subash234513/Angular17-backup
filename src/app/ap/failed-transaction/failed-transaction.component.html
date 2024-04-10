@@ -50,7 +50,7 @@
                 <td>{{d.invoice_date}}</td>
                 <td>{{d.status.text}}</td>
                 <td>{{d.invoice_amount | currency:'INR'}}</td>
-                <td><button mat-icon-button style="color: rgb(43, 166, 223);" data-toggle="modal" data-target="#entry"
+                <td><button mat-icon-button style="color: rgb(43, 166, 223);" data-bs-toggle="modal" data-bs-target="#entry"
                         (click)="action(d)">
                         <mat-icon>restart_alt</mat-icon>
                     </button></td>
@@ -63,7 +63,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align:center">
                     <h2 class="modal-title" style="text-align:center;margin-left:42%">Entry Details</h2>
-                    <button class="close" type="button" data-dismiss="modal">x</button>
+                    <button class="close" type="button" data-bs-dismiss="modal">x</button>
                 </div>
                 <div>
                     <table class="table table-bordered" style="width: 100%;text-align: center;">
@@ -98,7 +98,7 @@
                                 <td>{{en.module}}</td>
                                 <td>{{en.entry_new_status}}
                                     <div *ngIf="en.is_error==1">
-                                        <a style="color: green;cursor: pointer;" data-toggle="modal" data-target="#viewerror" (click)="viewerror(entrylist,i)">View Error</a>
+                                        <a style="color: green;cursor: pointer;" data-bs-toggle="modal" data-bs-target="#viewerror" (click)="viewerror(entrylist,i)">View Error</a>
                                     </div>
                                 </td>
                                 <td style="text-align: right;">{{en.amount | currency:'INR' }}</td>
@@ -109,17 +109,17 @@
                         <div class="col-md-4"></div>
                             <div class="col-md-1" style="text-align: center;"> <button type="button"
                                 class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;"
-                                data-dismiss="modal" (click)="repush()">Repush</button>
+                                data-bs-dismiss="modal" (click)="repush()">Repush</button>
                             </div>
                             <div class="col-md-1" style="text-align: center;margin-left: 11px">
                                 <button type="button" class="btn btn-outline-primary"
                                     style="border-radius:40px;height: 44px; margin-top: 12px;"
-                                    data-dismiss="modal">Back</button>
+                                    data-bs-dismiss="modal">Back</button>
                             </div>
                             <div *ngIf="reauditflage" class="col-md-2">
                                 <button type="button"
                                 class="btn btn-outline-primary" style="border-radius:40px;height: 44px; margin-top: 12px;"
-                                data-dismiss="modal" (click)="reaudit()">Re-Audit</button>
+                                data-bs-dismiss="modal" (click)="reaudit()">Re-Audit</button>
                             </div>
                         <div class="col-md-4"></div>
                     </div>
@@ -135,16 +135,16 @@
           <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align:center">
               <h2 class="modal-title" style="text-align:center;margin-left:38%">Error Description</h2>
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">×</button>
             </div><div class="container"></div>
             <div class="modal-body">
               {{errordes}}
             </div>
             <hr>
-            <div  style="margin-left: 40%;margin-bottom: 2%;"><!-- <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a> -->
+            <div  style="margin-left: 40%;margin-bottom: 2%;"><!-- <a href="#" data-bs-dismiss="modal" class="btn btn-primary">Close</a> -->
                 <button type="button" class="btn btn-outline-primary"
                               style="border-radius:40px;height: 44px; margin-top: 12px;margin-left: 20px;"
-                              data-dismiss="modal">Close</button>
+                              data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align:center">
                 <h2 class="modal-title" style="text-align:center;margin-left:42%">Error Description </h2>
-                <button class="close" type="button" data-dismiss="modal">x</button>
+                <button class="close" type="button" data-bs-dismiss="modal">x</button>
             </div>
             <br>
 
@@ -182,7 +182,7 @@
                     <div style="margin-left: 40%;margin-bottom: 2%;">
                         <button type="button" class="btn btn-outline-primary"
                             style="border-radius:40px;height: 44px; margin-top: 12px;margin-left: 20px;"
-                            data-dismiss="modal" data-toggle="modal">Back</button>
+                            data-bs-dismiss="modal" data-bs-toggle="modal">Back</button>
                     </div>
                 </div>
             </div>

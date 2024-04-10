@@ -45,8 +45,8 @@
                 *ngIf="detailsPreView?.is_created_by == false && detailsPreView?.pending_approver?.length > 0 ">
                 <mat-form-field class="ddheight" style="width: 140px;">
                     <mat-select placeholder="Select Action">
-                        <mat-option *ngFor="let process of ProcessList" [value]="process?.name" data-toggle="modal"
-                            data-target="#exampleModal" (click)="gettingRemarks(process)">
+                        <mat-option *ngFor="let process of ProcessList" [value]="process?.name" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" (click)="gettingRemarks(process)">
                             {{process?.name}}
                         </mat-option>
                     </mat-select>
@@ -64,7 +64,7 @@
                 <div class="modal-header" style="background:#c1e2f6;">
                     <h2 class="modal-title" id="exampleModalLabel">{{SelectedProcess}}
                         Remarks</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -93,11 +93,11 @@
                 <div class="modal-footer">
                     <button type="button" class=" mat-stroked-button" style="border-radius: 7px;margin-left: 10px;
                                                         border-color: black;
-                                                        background-color: white;" data-dismiss="modal">Close</button>
+                                                        background-color: white;" data-bs-dismiss="modal">Close</button>
 
                     <button type="button" [disabled]="RemarksForm.invalid" style="border-radius: 10px;margin-left: 10px; 
                                                     border-color: #f5c68b; background-color: #f5c68b;"
-                        class=" mat-stroked-button" data-dismiss="modal"
+                        class=" mat-stroked-button" data-bs-dismiss="modal"
                         (click)="Approval_Reject_Review(SelectedProcess)">Submit</button>
                 </div>
             </div>
@@ -106,7 +106,7 @@
 
 
     <!------------------------------ Project View --------------------------->
-    <button mat-button color="primary" data-toggle="collapse" data-target="#collapseDetailView" aria-expanded="false"
+    <button mat-button color="primary" data-bs-toggle="collapse" data-bs-target="#collapseDetailView" aria-expanded="false"
         aria-controls="collapseExample">Project Full Details View<mat-icon>expand_more</mat-icon>
     </button>
     <div id="collapseDetailView" class="panel-collapse collapse show in">
@@ -153,7 +153,7 @@
                     <td>{{detailsPreView?.approval_status?.text}}</td>
                     <th>Version: </th>
                     <td>{{detailsPreView?.version}}</td>
-                    <td> <button mat-button color="primary" data-toggle="collapse" data-target="#collapseExample"
+                    <td> <button mat-button color="primary" data-bs-toggle="collapse" data-bs-target="#collapseExample"
                             aria-expanded="false" aria-controls="collapseExample">more..<mat-icon>expand_more</mat-icon>
                         </button>
                     </td>
@@ -268,7 +268,7 @@
 
 
         <div class="paddingsizediv">
-            <button mat-button class="buttonwidth" color="primary" data-toggle="collapse" data-target="#collapseNote"
+            <button mat-button class="buttonwidth" color="primary" data-bs-toggle="collapse" data-bs-target="#collapseNote"
                 aria-expanded="false" aria-controls="collapseExample">Note(Detailed Spec):
                 <mat-icon>expand_more</mat-icon>
             </button>
@@ -280,8 +280,8 @@
             </div>
         </div>
         <div class="paddingsizediv">
-            <button mat-button class="buttonwidth" color="primary" data-toggle="collapse"
-                data-target="#collapseStrategyNote" aria-expanded="false" aria-controls="collapseExample">Strategy Note(Major Benefits):
+            <button mat-button class="buttonwidth" color="primary" data-bs-toggle="collapse"
+                data-bs-target="#collapseStrategyNote" aria-expanded="false" aria-controls="collapseExample">Strategy Note(Major Benefits):
                 <mat-icon>expand_more</mat-icon>
             </button>
         </div>
@@ -293,7 +293,7 @@
             </div>
         </div>
         <div class="paddingsizediv">
-            <button mat-button class="buttonwidth" color="primary" data-toggle="collapse" data-target="#collapsevendor"
+            <button mat-button class="buttonwidth" color="primary" data-bs-toggle="collapse" data-bs-target="#collapsevendor"
                 aria-expanded="false" aria-controls="collapseExample">Selected Invitation List:
                 <mat-icon>expand_more</mat-icon>
             </button>
@@ -335,7 +335,7 @@
                 <!-- <mat-chip-row class="cursor spacingfile" [matMenuTriggerFor]="menu1">{{indexfile+1}}.{{files?.file_name}}
                 </mat-chip-row>
                 <mat-menu #menu1="matMenu">
-                    <span (click)="Files_Api_View(files)" data-toggle="modal" data-target="#my-modalpreview">File
+                    <span (click)="Files_Api_View(files)" data-bs-toggle="modal" data-bs-target="#my-modalpreview">File
                         view</span>
                 </mat-menu> -->
                 <div class="btn-group mr-2 mb-2" role="group" aria-label="First group">
@@ -356,7 +356,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#c1e2f6;">
                     <h2 class="modal-title">PDF View</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -374,9 +374,9 @@
 
     <div *ngIf="showimageHeaderPreview" id="my-modalpreview" class="modal fade" aria-labelledby="my-modalLabel"
         aria-hidden="true" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+        <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
             <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-body">
@@ -390,9 +390,9 @@
 
     <!-- <div *ngIf="showimageHeaderPreview" id="my-modalpreviewPreview" class="modal fade" aria-labelledby="my-modalLabel"
         aria-hidden="true" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+        <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
             <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-body">
@@ -408,7 +408,7 @@
     <div>
         <nav>
             <div class="nav nav-tabs">
-                <span #myDiv class="nav-item nav-link" id="subname" data-toggle="tab" role="tab" style="color: black;"
+                <span #myDiv class="nav-item nav-link" id="subname" data-bs-toggle="tab" role="tab" style="color: black;"
                     *ngFor="let sub of CMS_ProjectView_Menu_List;index as i" (click)="viewShow(sub)">
                     {{sub?.name}}
                 </span>
@@ -610,8 +610,8 @@
                         </div>
                         <div *ngIf="this.Documentfilearray?.length > 0">
                             <!-- <mat-chip-grid *ngFor="let files of Documentfilearray; let indexfile = index">
-                                <mat-chip-row class="cursor spacingfile"   data-toggle="modal"
-                                data-target="#my-modalpreviewPreview">{{indexfile+1}}.{{files?.name}}
+                                <mat-chip-row class="cursor spacingfile"   data-bs-toggle="modal"
+                                data-bs-target="#my-modalpreviewPreview">{{indexfile+1}}.{{files?.name}}
                                     <mat-icon (click)="deleteInlineFile(indexfile, '')">cancel</mat-icon>
                                 </mat-chip-row>
                             </mat-chip-grid> -->
@@ -620,7 +620,7 @@
                                     <button
                                         style="font-size:14px;border-top-left-radius: 40px;border-bottom-left-radius: 40px;"
                                         type="button" class="btn btncolor" (click)="filepreview(files)"
-                                        data-toggle="modal" data-target="#my-modalpreview">{{indexfile+1}}.
+                                        data-bs-toggle="modal" data-bs-target="#my-modalpreview">{{indexfile+1}}.
                                         {{files?.name}} </button>
                                     <button style="border-top-right-radius: 40px;border-bottom-right-radius: 40px;"
                                         type="button" class="btn btncolor"
@@ -654,8 +654,8 @@
                                     reply
                                 </span>
                                 &nbsp;
-                                <span class="material-icons" data-toggle="modal" (click)="popupimageView(datacomments)"
-                                    data-target="#exampleModalcommentFile">
+                                <span class="material-icons" data-bs-toggle="modal" (click)="popupimageView(datacomments)"
+                                    data-bs-target="#exampleModalcommentFile">
                                     image
                                 </span>
                             </small>
@@ -703,7 +703,7 @@
                 <div class="modal-header" style="background:#c1e2f6;">
                     <h2 class="modal-title" id="exampleModalLabel">Comment File View
                     </h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -728,7 +728,7 @@
                 <div class="modal-footer">
                     <button type="button" class=" mat-stroked-button" style="border-radius: 7px;margin-left: 10px;
                                 border-color: black;
-                                background-color: white;" data-dismiss="modal">Close</button>
+                                background-color: white;" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -806,13 +806,13 @@
 
             <div class="row">
                 <div class="col">
-                    <button mat-stroked-button data-toggle="modal" data-target="#exampleModalMoveToApprover"
+                    <button mat-stroked-button data-bs-toggle="modal" data-bs-target="#exampleModalMoveToApprover"
                         *ngIf="ShowHideButtonForApprover">
                         Move To Approver Group
                     </button>
                 </div>
                 <div class="col">
-                    <span class="material-icons" data-toggle="modal" data-target="#exampleModalReleaseNote"
+                    <span class="material-icons" data-bs-toggle="modal" data-bs-target="#exampleModalReleaseNote"
                         (click)="CoverNoteGet()">mark_as_unread</span>
 
 
@@ -824,7 +824,7 @@
                                 <div class="modal-header" style="background:#c1e2f6;">
                                     <h2 class="modal-title" id="exampleModalLabel">
                                         Release Note</h2>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
@@ -836,7 +836,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class=" mat-stroked-button" style="border-radius: 7px;margin-left: 10px;
                                                     border-color: black;
-                                                    background-color: white;" data-dismiss="modal">Close</button>
+                                                    background-color: white;" data-bs-dismiss="modal">Close</button>
 
                                 </div>
                             </div>
@@ -893,7 +893,7 @@
                     <div class="modal-header" style="background:#c1e2f6;">
                         <h2 class="modal-title" id="exampleModalLabel">
                             Release Note</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -918,11 +918,11 @@
                     <div class="modal-footer">
                         <button type="button" class=" mat-stroked-button" style="border-radius: 7px;margin-left: 10px;
                                                     border-color: black;
-                                                    background-color: white;" data-dismiss="modal">Close</button>
+                                                    background-color: white;" data-bs-dismiss="modal">Close</button>
 
                         <button type="button" style="border-radius: 10px;margin-left: 10px; 
                                                 border-color: #f5c68b; background-color: #f5c68b;"
-                            class=" mat-stroked-button" data-dismiss="modal"
+                            class=" mat-stroked-button" data-bs-dismiss="modal"
                             (click)="FinalApprovalSelectedData()">Submit</button>
 
                     </div>
@@ -975,7 +975,7 @@
                 <div class="nav nav-tabs">
                     <span #myDiv *ngFor="let sub of EvaluationList;index as i"
                         (click)="getIndividualListBasedOnType(sub)" class="nav-item nav-link" id="subname"
-                        data-toggle="tab" role="tab" style="color: black;">
+                        data-bs-toggle="tab" role="tab" style="color: black;">
                         {{sub?.type}}
                     </span>
                 </div>
@@ -997,7 +997,7 @@
                 <div class="nav nav-tabs">
                     <span #myDiv *ngFor="let sub of EvaluateListData;index as i"
                         (click)="getIndividualListBasedOnType(sub)" class="nav-item nav-link" id="subname"
-                        data-toggle="tab" role="tab" style="color: black;">
+                        data-bs-toggle="tab" role="tab" style="color: black;">
                         {{sub?.type?.name}}
                     </span>
                 </div>

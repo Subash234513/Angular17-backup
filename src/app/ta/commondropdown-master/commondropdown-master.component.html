@@ -1,10 +1,10 @@
 <div class="Container" style="margin-left: 40px;">
     <div class="table-responsive" style="margin-top: 1%;width: 90%; -ms-overflow-style: none;">
       <tr>
-        <button type="button" class="btn btn-outline-success"data-toggle="modal" data-target="#commondropdowncreate"
+        <button type="button" class="btn btn-outline-success"data-bs-toggle="modal" data-bs-target="#commondropdowncreate"
         style="border-radius:40px;margin-left: 470px" [disabled]="dropdown"><span class="fa fa-plus"></span>
         Common Dropdown</button>
-        <button type="button" class="btn btn-outline-success"data-toggle="modal" data-target="#commondropdowndetailcreate"
+        <button type="button" class="btn btn-outline-success"data-bs-toggle="modal" data-bs-target="#commondropdowndetailcreate"
         style="border-radius:40px;margin-left: 5px" [disabled]="dropdowndetail"><span class="fa fa-plus"></span>
         Common Dropdowndetail</button>
     </tr> 
@@ -37,7 +37,7 @@
              <input type="checkbox" class="checkboxsize" (click)="getdata($event,data.id,data.name)"  >
             </td>
             <td>
-                <button mat-icon-button (click)="editcommondropdown(data)" data-toggle="modal" data-target="#commondropdownedit">
+                <button mat-icon-button (click)="editcommondropdown(data)" data-bs-toggle="modal" data-bs-target="#commondropdownedit">
                   <mat-icon>edit</mat-icon>
                 </button>
             </td>
@@ -95,7 +95,7 @@
             <td style="text-align: center;">{{detail.value}}</td> 
             <td style="text-align: center;">{{detail.common_drop_down_id}}</td>
             <td>
-                <button mat-icon-button  (click)="editcommondropdowndetail(detail)"  data-toggle="modal" data-target="#commondropdowndetailedit">
+                <button mat-icon-button  (click)="editcommondropdowndetail(detail)"  data-bs-toggle="modal" data-bs-target="#commondropdowndetailedit">
                   <mat-icon>edit</mat-icon>
                 </button>
             </td>
@@ -123,7 +123,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#DDEFDD;">
                     <h2 class="modal-title" style="color:black ;">Common Dropdown</h2>
-                    <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -160,7 +160,7 @@
                             <div style="margin-bottom: 5%;">
                                 <button type="submit" style="border-radius: 40px;margin-left: 10px;" class="btn btn-outline-primary" (click)="submitForm()"
                                 >Submit</button>
-                                <button type="button"  class="btn btn-outline-primary" (click)="OnCancelclick()" data-dismiss="modal"
+                                <button type="button"  class="btn btn-outline-primary" (click)="OnCancelclick()" data-bs-dismiss="modal"
                                     style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                             </div>
                         </tr>
@@ -175,7 +175,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#DDEFDD;">
                     <h2 class="modal-title" style="color:black ;">Common Dropdowndetail</h2>
-                    <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -222,7 +222,7 @@
                             <div style="margin-bottom: 5%;">
                                 <button type="submit" style="border-radius: 40px;margin-left: 10px;" class="btn btn-outline-primary" (click)="submitdetailForm()"
                                 >Submit</button>
-                                <button type="button"  class="btn btn-outline-primary" (click)="OnCanceldetailclick()" data-dismiss="modal"
+                                <button type="button"  class="btn btn-outline-primary" (click)="OnCanceldetailclick()" data-bs-dismiss="modal"
                                     style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                             </div>
                         </tr>
@@ -238,7 +238,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#DDEFDD;">
                     <h2 class="modal-title" style="color:black ;">Edit Common Dropdown Details</h2>
-                    <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -275,7 +275,7 @@
                             <div style="margin-bottom: 5%;">
                                 <button type="submit" style="border-radius: 40px;margin-left: 10px;" class="btn btn-outline-primary" (click)="updateDetailForm()"
                                 >Update</button>
-                                <button type="button"  class="btn btn-outline-primary" (click)="OnCancelclick()" data-dismiss="modal"
+                                <button type="button"  class="btn btn-outline-primary" (click)="OnCancelclick()" data-bs-dismiss="modal"
                                     style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                             </div>
                         </tr>
@@ -290,7 +290,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title" style="color:black ;">Common Dropdown</h2>
-                <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -327,7 +327,7 @@
                         <div style="margin-bottom: 5%;">
                             <button type="submit" style="border-radius: 40px;margin-left: 10px;" class="btn btn-outline-primary" (click)="updateForm()"
                             >Update</button>
-                            <button type="button"  class="btn btn-outline-primary" (click)="OnCancelclick()" data-dismiss="modal"
+                            <button type="button"  class="btn btn-outline-primary" (click)="OnCancelclick()" data-bs-dismiss="modal"
                                 style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                         </div>
                     </tr>
@@ -342,7 +342,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#DDEFDD;">
                     <h2 class="modal-title" style="color:black ;">Add Common Dropdown Details</h2>
-                    <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -379,7 +379,7 @@
                             <div style="margin-bottom: 5%;">
                                 <button type="submit" style="border-radius: 40px;margin-left: 10px;" class="btn btn-outline-primary" (click)="submitdetailForm()"
                                 >Update</button>
-                                <button type="button"  class="btn btn-outline-primary" (click)="OnCancelclick()" data-dismiss="modal"
+                                <button type="button"  class="btn btn-outline-primary" (click)="OnCancelclick()" data-bs-dismiss="modal"
                                     style="border-radius: 40px;margin-left: 10px;">Cancel</button>
                             </div>
                         </tr>

@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-outline-primary" style="border-radius: 40px;" data-toggle="modal" data-target="#glsubgrpAdd">
+                    <button type="button" class="btn btn-outline-primary" style="border-radius: 40px;" data-bs-toggle="modal" data-bs-target="#glsubgrpAdd">
                         Add
                         </button>
                 </div>
@@ -65,12 +65,12 @@
                         <div *ngIf="glsubgrpsummary?.description!=null">{{glsubgrpsummary.description}}</div></td>
                     <!-- <td>({{headgrpsummary.sourcecode}}){{headgrpsummary.sourcecode}}</td> -->
                       <td class="text-center">
-                        <a style="color:#2177e5;cursor: pointer;"  data-toggle="modal" data-target="#glsubgrpedit"  matTooltip="Edit"  (click)='editviewgl_subgrp(glsubgrpsummary)'>
+                        <a style="color:#2177e5;cursor: pointer;"  data-bs-toggle="modal" data-bs-target="#glsubgrpedit"  matTooltip="Edit"  (click)='editviewgl_subgrp(glsubgrpsummary)'>
                             <mat-icon>edit</mat-icon>
                         </a>
                     </td>
                   <td style="text-align: center;">
-                        <a style="color:#2177e5;cursor: pointer;" matTooltip="View" data-toggle="modal" data-target="#glsubgrpview" (click)='editviewgl_subgrp(glsubgrpsummary)'>
+                        <a style="color:#2177e5;cursor: pointer;" matTooltip="View" data-bs-toggle="modal" data-bs-target="#glsubgrpview" (click)='editviewgl_subgrp(glsubgrpsummary)'>
                             <mat-icon>visibility</mat-icon>
                         </a>
                     </td>
@@ -94,7 +94,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="supgrpAddLabel">PPR Sub Group Add</h2>
-          <button type="button" class="close" #closepop data-dismiss="modal" (click)="clearsource()" aria-label="Close">
+          <button type="button" class="close" #closepop data-bs-dismiss="modal" (click)="clearsource()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -134,7 +134,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearsource()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearsource()" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="save_glsubgrp(pprglsubgrpsource.value,1)">Submit</button>
         </div>
       </div>
@@ -146,7 +146,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="glsubgrpeditLabel">PPR GL Sub Group Edit</h2>
-          <button type="button" class="close" #closepopedit data-dismiss="modal" (click)="clearsource()" aria-label="Close">
+          <button type="button" class="close" #closepopedit data-bs-dismiss="modal" (click)="clearsource()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -186,7 +186,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearsource()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearsource()" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="save_glsubgrp(pprglsubgrpsource.value,2)">Submit</button>
         </div>
       </div>
@@ -199,7 +199,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="glsubgrpviewLabel">PPR GL Sub Group View</h2>
-          <button type="button" class="close"  data-dismiss="modal" (click)="clearsource()" aria-label="Close">
+          <button type="button" class="close"  data-bs-dismiss="modal" (click)="clearsource()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -239,7 +239,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearsource()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearsource()" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

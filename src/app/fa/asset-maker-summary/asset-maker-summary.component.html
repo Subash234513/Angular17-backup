@@ -70,8 +70,8 @@
                         color="primary"><i class="fa fa-search" aria-hidden="true"></i></button>
                     <button class="btn btn-primary" (click)="resets()" type="reset" style="border-radius:40px;margin-left: 4px; width:80px;height: 40px;"
                         color="primary">Reset</button>
-                   <!-- <button type="button" class="btn btn-outline-primary" data-toggle="modal"
-                        data-target="#exampleModal"
+                   <!-- <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
                         style="border-radius:40px;margin-left: 4px; width:40px;height: 40px;">
                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                     </button>-->
@@ -90,7 +90,7 @@
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel"
                                         style="font-size:1.2vw;font-weight: bolder;">Depreciation setting</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
@@ -123,7 +123,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-success">Submit</button>
 
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
                                 </div>
                             </div>
@@ -173,7 +173,7 @@
                         <td>
                             {{assetcat.assetdetails_status}}
                         </td>
-                        <td class="text-center"><button disabled mat-mini-fab color="primary" data-toggle="modal" data-target="#split"   matTooltip="Employee Mapping" (click)="openpopupdatafamake(assetcat)"><mat-icon>add</mat-icon></button>
+                        <td class="text-center"><button disabled mat-mini-fab color="primary" data-bs-toggle="modal" data-bs-target="#split"   matTooltip="Employee Mapping" (click)="openpopupdatafamake(assetcat)"><mat-icon>add</mat-icon></button>
                         </td>
                         <!--     
     <td>
@@ -226,7 +226,7 @@
                     <!-- <h2 class="modal-title" style="margin-left:32%;"><strong>Split Quantity with Location</strong></h2> -->
                     <h1 class="modal-title" style="margin-left:32%;font-family: 'Times New Roman', Times, serif;color: rgb(4, 4, 29);font-size: 20px;">Employee Mapping Details</h1>
                     <button  type="button" class="close"  (click)="dismisspopupdata()">&times;</button>
-                    <button #exampleModal style="display: none;" type="button" class="close"  data-dismiss="modal">&times;</button>
+                    <button #exampleModal style="display: none;" type="button" class="close"  data-bs-dismiss="modal">&times;</button>
                 </div>
                 <!-- style="height:450px;overflow: scroll;"<h1 style="font-family: 'Times New Roman', Times, serif;color: blue;font-size: 20px;">Employee Mapping Details</h1><hr> -->
                 <div class="modal-body"  >  

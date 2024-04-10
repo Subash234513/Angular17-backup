@@ -92,14 +92,14 @@
           <span id="UserNameContainer" style="margin-right: 10px;font-size: 14px;">{{sharedService.Loginname}}</span>
           <span id="UserNameContainer" style="margin-right: 10px;font-size: 14px;">({{sharedService.entity_Name}})</span>
 
-          <img src="https://cdn-icons-png.flaticon.com/512/152/152360.png" data-toggle="modal"
-          data-target="#entityreloadpopup" (click)="onClickSwitchIcon()" style="width: 25px;cursor: pointer;">&nbsp;
-            <!-- <span  data-toggle="modal"
-            data-target="#entityreloadpopup" class="material-icons">
+          <img src="https://cdn-icons-png.flaticon.com/512/152/152360.png" data-bs-toggle="modal"
+          data-bs-target="#entityreloadpopup" (click)="onClickSwitchIcon()" style="width: 25px;cursor: pointer;">&nbsp;
+            <!-- <span  data-bs-toggle="modal"
+            data-bs-target="#entityreloadpopup" class="material-icons">
             cached
             </span>&nbsp; -->
-            <span  data-toggle="modal" matTooltip="Change Password" style="vertical-align: middle;"
-              data-target="#changepopup"  class="material-icons">
+            <span  data-bs-toggle="modal" matTooltip="Change Password" style="vertical-align: middle;"
+              data-bs-target="#changepopup"  class="material-icons">
               key 
               </span>
             <span class="material-icons" style="vertical-align: middle;" (click)="logout()">
@@ -160,7 +160,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title">Entity</p>
-                  <button type="button" #closeentityreload class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closeentityreload class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -180,7 +180,7 @@
                   <span class="col-md-12 text-center" style="margin-bottom: 5%;">
                     <button type="submit" style="margin-left: 10px;" class="btn btn-light" id="primarybtn"
                       (click)="viewDetail_Entityreload()">Submit</button>
-                    <button type="button" data-dismiss="modal" class="btn btn-light" id="secondarybtn"
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-light" id="secondarybtn"
                       style="margin-left: 10px;">Close</button>
                   </span>
                 </div> 
@@ -218,7 +218,7 @@
           ">
               <!-- <h4 class="modal-title  w-100 font-weight-bold" id="Employee">Employee Personal Info</h4> -->
               <h4><p>EMPLOYEE PERSONAL INFO</p></h4>
-              <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
               </button>
           </div>
@@ -277,8 +277,8 @@
           </div>
 
           <div class="text-right">
-            <button class="btn btn-outline-success" type="button" data-toggle="modal"
-                data-target="#mobileupdation">
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+                data-bs-target="#mobileupdation">
                 Cancel </button> &nbsp;&nbsp;
             <button  *ngIf="!otpflag" class="btn btn-outline-primary" type="submit" (click)="submitForm()" 
                  >
@@ -301,7 +301,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <p class="modal-title">Change Password</p>
-        <button type="button" #changepassword class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" #changepassword class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -348,7 +348,7 @@
         <span class="col-md-12 text-center">
           <button type="submit" style="margin-left: 10px;" class="btn btn-light" id="primarybtn"
             (click)="change_pwd()">Submit</button>
-          <button type="button" data-dismiss="modal" class="btn btn-light" id="secondarybtn"
+          <button type="button" data-bs-dismiss="modal" class="btn btn-light" id="secondarybtn"
             style="margin-left: 10px;">Close</button>
         </span>
       </div>

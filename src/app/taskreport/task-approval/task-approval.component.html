@@ -74,8 +74,8 @@
                     <td>({{type?.client.code}}) {{type?.client.name}}
                         <small style="color: red;font-size: 13px;">{{type?.client.message}}</small>
                     </td>
-                    <td><mat-icon data-toggle="modal"
-                        data-target="#projectDetails" style="cursor: pointer;" (click)="project(type)">today</mat-icon> ({{type?.project.code}}) {{type?.project.name}}
+                    <td><mat-icon data-bs-toggle="modal"
+                        data-bs-target="#projectDetails" style="cursor: pointer;" (click)="project(type)">today</mat-icon> ({{type?.project.code}}) {{type?.project.name}}
                         <small style="color: red;font-size: 13px;">{{type?.project.message}}</small>
                     </td>
                     <td>({{type?.module.code}}) {{type?.module.name}}
@@ -118,7 +118,7 @@
           <div class="modal-content">
             <div class="modal-header" style="background-color:#044063;color: white;">
               <h5 class="modal-title" id="exampleModalLabel">({{projectdata?.project.code}}) {{projectdata?.project.name}}</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>

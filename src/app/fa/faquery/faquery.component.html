@@ -389,7 +389,7 @@
                     <td>{{ i.subcat.glno}}</td>
                     <td>{{ i.product_id.name}}</td>
                     <td>{{ i.capdate |date: 'dd-MMM-yyyy'}}</td>
-                    <td data-target="#Accountdetails" data-toggle="modal" (click)="Accountdetails(i)">
+                    <td data-bs-target="#Accountdetails" data-bs-toggle="modal" (click)="Accountdetails(i)">
                         {{ i.assetdetails_value}}</td>
                     <td>{{ i.ponum}}</td>
                     <td>{{ i.invoice_id.invoiceno }}</td>
@@ -486,7 +486,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h2 class="modal-title">Accounting Details</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -508,7 +508,7 @@
                         </table>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success">Expense</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
 
                     </div>
@@ -522,7 +522,7 @@
                     <div class="modal-header" style="background-color:rgb(58, 184, 173) ;">
                         <h2 class="modal-title text-center" style="margin-left: 32%;font-family:'Times New Roman', Times, serif;color:black">Accounting Details</h2>
 
-                        <button #refclose type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button #refclose type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -591,7 +591,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success">Expense</button>
-                            <button type="button" class="btn btn-secondary" (click)="closenewdialog()" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" (click)="closenewdialog()" data-bs-dismiss="modal">Close</button>
                         </div>
 
                     </div>

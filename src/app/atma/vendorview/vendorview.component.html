@@ -3,8 +3,8 @@
 <div style="margin-left: 15px;">
     <!-- <tr> -->
     <div class="btn-rm-edit">
-        <button class="btn btn-success" type="button" style="border-radius: 10px;" *ngIf="isDraft" data-toggle="modal"
-            data-target="#exampleModalCenter" (click)="movetorm()">
+        <button class="btn btn-success" type="button" style="border-radius: 10px;" *ngIf="isDraft" data-bs-toggle="modal"
+            data-bs-target="#exampleModalCenter" (click)="movetorm()">
             Submit to RM </button>
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -12,7 +12,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Move To RM Validation</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -79,7 +79,7 @@
 
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" style="border-radius:10px;margin-left:10px" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" style="border-radius:10px;margin-left:10px" data-bs-dismiss="modal">Close</button>
                         <!-- <button type="button" class="btn btn-primary" 
                             (click)="submitrm()" >Proceed</button>
                         </div> -->
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <ng-template #dismiss>
-                        <button type="button"  *ngIf="((branch_Flag == true) && (doc_Flag == true) && (kycfg == true))" class="btn btn-primary" style="border-radius:10px;margin-left:10px" data-dismiss="modal"
+                        <button type="button"  *ngIf="((branch_Flag == true) && (doc_Flag == true) && (kycfg == true))" class="btn btn-primary" style="border-radius:10px;margin-left:10px" data-bs-dismiss="modal"
                             (click)="submitrm()">Proceed</button>
                     </ng-template>
 
@@ -98,10 +98,10 @@
         </div>
 
 
-        <button type="button" mat-button data-toggle="modal" *ngIf="rm_viewscreen" class="btn btn-success"
+        <button type="button" mat-button data-bs-toggle="modal" *ngIf="rm_viewscreen" class="btn btn-success"
             (click)="changes_view()" style="border-radius: 10px;margin-top: 10px;margin-left:10px">
             View Changes</button>
-        <!-- <button type="button" mat-button data-toggle="modal" *ngIf="renewal_flag" class="btn btn-success"
+        <!-- <button type="button" mat-button data-bs-toggle="modal" *ngIf="renewal_flag" class="btn btn-success"
             (click)="changes_renewal()" style="border-radius: 10px;margin-top: 10px;margin-left:10px">
             RENEWAL </button> -->
         <button class="btn btn-success" *ngIf="ismodification" type="button" style="border-radius:10px;margin-left:10px"
@@ -119,7 +119,7 @@
 
         <button class="btn btn-success" *ngIf="isPendingHeader" type="button" (click)="approver()" style="border-radius:10px;margin-left:10px" >
             Approve </button>
-        <!-- <button class="btn btn-success" *ngIf="isPendingRM" data-toggle="modal" data-target="#submittocheckerModal" (click)="onClickSub_To_CheButton()" type="button" style="border-radius:10px;margin-left:10px" >
+        <!-- <button class="btn btn-success" *ngIf="isPendingRM" data-bs-toggle="modal" data-bs-target="#submittocheckerModal" (click)="onClickSub_To_CheButton()" type="button" style="border-radius:10px;margin-left:10px" >
             Submit to Checker </button>
         <button class="btn btn-success" *ngIf="isPendingChecker" type="button" (click)="headapprover()" style="border-radius:10px;margin-left:10px" >
             Submit to Header </button> -->
@@ -132,12 +132,12 @@
                 Submit to compliance </button> -->
         <!-- </div> -->
 
-        <button class="btn btn-danger" type="button" *ngIf="isRejectBtn" data-toggle="modal" style="border-radius:10px;margin-left:10px"
-            data-target="#rejectModal">
+        <button class="btn btn-danger" type="button" *ngIf="isRejectBtn" data-bs-toggle="modal" style="border-radius:10px;margin-left:10px"
+            data-bs-target="#rejectModal">
             Reject</button>
 
-        <button class="btn btn-success" type="button" *ngIf="isReturnBtn" data-toggle="modal" style="border-radius:10px;margin-left:10px"
-            data-target="#returnModal">
+        <button class="btn btn-success" type="button" *ngIf="isReturnBtn" data-bs-toggle="modal" style="border-radius:10px;margin-left:10px"
+            data-bs-target="#returnModal">
             Return</button>    
 
         <button class="btn btn-success" style="border-radius: 10px;margin-left:10px"  type="button" (click)="vendorEdit()" *ngIf="vendor_flag">
@@ -148,9 +148,9 @@
                   <mat-menu #evalmenu="matMenu" style="width:150px">
                     <div>
                     
-                      <button type="button" mat-menu-item data-toggle="modal" data-target="#documentcreatepopup"
+                      <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#documentcreatepopup"
                           (click)="evaluationroute(0)">Vendor</button>
-                      <button type="button" mat-menu-item data-toggle="modal" data-target="#riskcreatepopup"
+                      <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#riskcreatepopup"
                           (click)="evaluationroute(1)">Activity</button>
 
                     </div>
@@ -191,32 +191,32 @@
             class="btn btn-light">Action</button>
           <mat-menu #menu="matMenu" style="width:150px">
             <div>
-              <!-- <button style="display: none;" data-toggle="modal"
-              data-target="#addBranchpopup" #addBranchpopup></button> -->
+              <!-- <button style="display: none;" data-bs-toggle="modal"
+              data-bs-target="#addBranchpopup" #addBranchpopup></button> -->
 
               <button *ngIf="isBranchButton" type="button" mat-menu-item  (click)="branch_view()" (click)="addBranch()"
-              data-toggle="modal"
-              data-target="#addBranchpopup">Branch Details</button>
-              <!-- <button type="button" mat-menu-item (click)="client_view()" (click)="addClient()" data-toggle="modal"
-                data-target="#addClientpopup"  >Client</button> -->
-              <!-- <button type="button" mat-menu-item data-toggle="modal" (click)="Contract_view()" (click)="addContractor()"
-                data-target="#addContractorpopup">Contract</button> -->
+              data-bs-toggle="modal"
+              data-bs-target="#addBranchpopup">Branch Details</button>
+              <!-- <button type="button" mat-menu-item (click)="client_view()" (click)="addClient()" data-bs-toggle="modal"
+                data-bs-target="#addClientpopup"  >Client</button> -->
+              <!-- <button type="button" mat-menu-item data-bs-toggle="modal" (click)="Contract_view()" (click)="addContractor()"
+                data-bs-target="#addContractorpopup">Contract</button> -->
               <button type="button" mat-menu-item (click)="tax_view()" (click)="taxadd()"  
-              data-toggle="modal" data-target="#addTax">Tax Details</button>
+              data-bs-toggle="modal" data-bs-target="#addTax">Tax Details</button>
               
   
-              <!-- <button type="button" mat-menu-item data-toggle="modal" data-target="#productformpopup" (click)="product_view()" (click)="addProduct()" >
+              <!-- <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#productformpopup" (click)="product_view()" (click)="addProduct()" >
                   Product</button> -->
-              <button type="button" mat-menu-item data-toggle="modal" data-target="#documentcreatepopup"
+              <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#documentcreatepopup"
                   (click)="document_view()" (click)="adddocument()">Document</button>
-              <button type="button" mat-menu-item data-toggle="modal" data-target="#riskcreatepopup"
+              <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#riskcreatepopup"
                   (click)="risk_view()" (click)="addrisk()">Risk</button>
-              <button *ngIf="this.comflag == true" type="button" mat-menu-item data-toggle="modal" data-target="#kyccreatepopup"
+              <button *ngIf="this.comflag == true" type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#kyccreatepopup"
                   (click)="kyc_view()" (click)="addkyc()">KYC</button>
-              <button type="button" mat-menu-item data-toggle="modal" data-target="#portalcreatepopup"
+              <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#portalcreatepopup"
                   (click)="portal_view()" (click)="addportal()">Portal User</button> 
                   
-              <!-- <button type="button" mat-menu-item data-toggle="modal" data-target="#transactionpopup"
+              <!-- <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#transactionpopup"
                  (click)="transaction_view()"  >Transaction</button> -->
             
             </div>
@@ -224,8 +224,8 @@
         </div>
 
         <div  *ngIf="ismodificationView" style="float: right;margin-right: 3%; ">
-            <button mat-button type="button" data-toggle="modal"
-            data-target="#viewChangespopup" style="border-radius: 10px;"
+            <button mat-button type="button" data-bs-toggle="modal"
+            data-bs-target="#viewChangespopup" style="border-radius: 10px;"
             class="btn btn-primary">Vendor View</button>
             <!-- <div *ngIf="ismodificationView"> -->
                 <!-- <app-vendormodification (onCancel)="rmVendorViewCancel()"></app-vendormodification> -->
@@ -235,7 +235,7 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <p class="modal-title" id="exampleModalLongTitle">Branch Form</p>
-                      <button type="button" #closebuttonbranch class="close" (click)="branchCancel()"  data-dismiss="modal" aria-label="Close">
+                      <button type="button" #closebuttonbranch class="close" (click)="branchCancel()"  data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
@@ -714,7 +714,7 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <p class="modal-title" id="exampleModalLongTitle">Vendor Changes</p>
-                      <button type="button" #closebuttonvendorview class="close" (click)="rmVendorViewCancel()"  data-dismiss="modal" aria-label="Close">
+                      <button type="button" #closebuttonvendorview class="close" (click)="rmVendorViewCancel()"  data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
@@ -778,7 +778,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Branch Detail Create Form</p>
-                  <button type="button" #closebuttonbranch class="close" (click)="branchCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonbranch class="close" (click)="branchCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -799,7 +799,7 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Branch Detail Form</p>
-                      <button type="button" #closebuttonbranchedit class="close" (click)="branchEditCancel()" data-dismiss="modal" aria-label="Close">
+                      <button type="button" #closebuttonbranchedit class="close" (click)="branchEditCancel()" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
@@ -852,21 +852,21 @@
                             <td>{{ branch.limitdays}}</td>
                             <td *ngIf=" vendor_flag==true">
                                 <button *ngIf="branch.modify_ref_id>0" mat-icon-button matTooltip=" Edit"
-                                    class="iconbutton" data-toggle="modal"
-                                    data-target="#editBranchpopup" (click)="branchEditForm(branch)" [disabled]="true"
+                                    class="iconbutton" data-bs-toggle="modal"
+                                    data-bs-target="#editBranchpopup" (click)="branchEditForm(branch)" [disabled]="true"
                                     color="primary">
                                     <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                 </button>
                                 <button *ngIf="branch.modify_ref_id=='-1'" mat-icon-button matTooltip="Edit"
-                                    class="iconbutton" data-toggle="modal"
-                                    data-target="#editBranchpopup" (click)="branchEditForm(branch)" color="primary">
+                                    class="iconbutton" data-bs-toggle="modal"
+                                    data-bs-target="#editBranchpopup" (click)="branchEditForm(branch)" color="primary">
                                     <mat-icon style="color: black;" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </td>
                             <td *ngIf=" vendor_flag==false">
                                 <button mat-icon-button matTooltip=" Edit" class="iconbutton"
-                                data-toggle="modal"
-                                data-target="#editBranchpopup" (click)="branchEditForm(branch)" [disabled]="true" color="primary">
+                                data-bs-toggle="modal"
+                                data-bs-target="#editBranchpopup" (click)="branchEditForm(branch)" [disabled]="true" color="primary">
                                     <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </td>
@@ -884,8 +884,8 @@
                                 </td>
                                 <td *ngIf=" vendor_flag==false">
                                     <button mat-icon-button matTooltip=" Edit" class="Active/Inactive"
-                                    data-toggle="modal"
-                                    data-target="#editBranchpopup" (click)="branchEditForm(branch)" [disabled]="true" color="primary">
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#editBranchpopup" (click)="branchEditForm(branch)" [disabled]="true" color="primary">
                                         <mat-icon style="color:gray;" aria-label="Active/Inactive">wb_sunny</mat-icon>
                                     </button>
                                 </td>
@@ -953,36 +953,36 @@
                         <td>
                             <span *ngIf="j.new_data.modify_ref_id !=j.new_data.id && j.new_data.modify_status==1">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                data-toggle="modal"
-                                data-target="#editBranchpopup" (click)="branchEditForm(j.new_data)" color="primary" [disabled]="true">
+                                data-bs-toggle="modal"
+                                data-bs-target="#editBranchpopup" (click)="branchEditForm(j.new_data)" color="primary" [disabled]="true">
                                     <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_status==3">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                data-toggle="modal"
-                                data-target="#editBranchpopup"    (click)="branchEditForm(j.new_data)" color="primary" [disabled]="true">
+                                data-bs-toggle="modal"
+                                data-bs-target="#editBranchpopup"    (click)="branchEditForm(j.new_data)" color="primary" [disabled]="true">
                                     <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_ref_id ==j.new_data.id && j.new_data.modify_status==1">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                data-toggle="modal"
-                                data-target="#editBranchpopup"  (click)="branchEditForm(j.new_data)" color="primary">
+                                data-bs-toggle="modal"
+                                data-bs-target="#editBranchpopup"  (click)="branchEditForm(j.new_data)" color="primary">
                                     <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_status==2  &&  j.new_data.modify_ref_id != true">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                data-toggle="modal"
-                                data-target="#editBranchpopup"    (click)="branchEditForm(j.new_data)" color="primary">
+                                data-bs-toggle="modal"
+                                data-bs-target="#editBranchpopup"    (click)="branchEditForm(j.new_data)" color="primary">
                                     <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_status==2  &&  j.new_data.modify_ref_id ==true">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                data-toggle="modal"
-                                data-target="#editBranchpopup"    (click)="branchEditForm(j.new_data)" color="primary" [disabled]="true">
+                                data-bs-toggle="modal"
+                                data-bs-target="#editBranchpopup"    (click)="branchEditForm(j.new_data)" color="primary" [disabled]="true">
                                     <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
@@ -1027,7 +1027,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Client Create Form</p>
-                  <button type="button" #closebuttonclient class="close" (click)="clientCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonclient class="close" (click)="clientCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1049,7 +1049,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Client Changes</p>
-                  <button type="button" #closebuttonclientview class="close" (click)="clientCancelview()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonclientview class="close" (click)="clientCancelview()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1074,7 +1074,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Client Edit Form</p>
-                  <button type="button" #closebuttonclientedit class="close" (click)="clientEditCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonclientedit class="close" (click)="clientEditCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1119,20 +1119,20 @@
                         <td>{{client.address_id.district_id.name  | titlecase}}</td>
                         <td>{{client.address_id.state_id.name | titlecase }}</td>
                         <td> <button mat-icon-button matTooltip="view" class="iconbutton"
-                                (click)="RMView_client({'new_data':client})" data-toggle="modal"
-                                data-target="#viewClientpopup" color="primary">
+                                (click)="RMView_client({'new_data':client})" data-bs-toggle="modal"
+                                data-bs-target="#viewClientpopup" color="primary">
                                 <mat-icon class="enabled_icon" aria-label="view">visibility</mat-icon>
                             </button></td>
                         <td *ngIf=" vendor_flag==true">
                             <button *ngIf="client.modify_ref_id>0 " mat-icon-button matTooltip=" Edit"
-                                class="iconbutton" (click)="clientEditForm(client,'')" data-toggle="modal"
-                                data-target="#editClientpopup" [disabled]="true"
+                                class="iconbutton" (click)="clientEditForm(client,'')" data-bs-toggle="modal"
+                                data-bs-target="#editClientpopup" [disabled]="true"
                                 color="primary">
                                 <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                             </button>
                             <button *ngIf="client.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit"
-                                class="iconbutton" (click)="clientEditForm(client,'')"  data-toggle="modal"
-                                data-target="#editClientpopup"color="primary">
+                                class="iconbutton" (click)="clientEditForm(client,'')"  data-bs-toggle="modal"
+                                data-bs-target="#editClientpopup"color="primary">
                                 <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                             </button>
                         </td>
@@ -1191,8 +1191,8 @@
                         <td *ngIf="j.new_data.modify_status==1">Create</td>
                         <td *ngIf="j.new_data.modify_status==2">Edit</td>
                         <td *ngIf="j.new_data.modify_status==0">Delete</td>
-                        <td> <button mat-icon-button matTooltip="view" class="iconbutton" (click)="modify_client(j)" data-toggle="modal"
-                            data-target="#mod_viewClientpopup"
+                        <td> <button mat-icon-button matTooltip="view" class="iconbutton" (click)="modify_client(j)" data-bs-toggle="modal"
+                            data-bs-target="#mod_viewClientpopup"
                                 color="primary">
                                 <mat-icon class="enabled_icon" aria-label="view">visibility</mat-icon>
                             </button></td>
@@ -1201,29 +1201,29 @@
                         <td>
                             <span *ngIf="j.new_data.modify_ref_id !=j.new_data.id && j.new_data.modify_status==1">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                    (click)="clientEditForm(j,'modify')" data-toggle="modal"
-                                    data-target="#editClientpopup" color="primary" [disabled]="true">
+                                    (click)="clientEditForm(j,'modify')" data-bs-toggle="modal"
+                                    data-bs-target="#editClientpopup" color="primary" [disabled]="true">
                                     <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_ref_id ==j.new_data.id && j.new_data.modify_status==1">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                    (click)="clientEditForm(j,'modify')" data-toggle="modal"
-                                    data-target="#editClientpopup" color="primary">
+                                    (click)="clientEditForm(j,'modify')" data-bs-toggle="modal"
+                                    data-bs-target="#editClientpopup" color="primary">
                                     <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_status==2  &&  j.new_data.modify_ref_id != true">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                    (click)="clientEditForm(j,'modify')" data-toggle="modal"
-                                    data-target="#editClientpopup" color="primary">
+                                    (click)="clientEditForm(j,'modify')" data-bs-toggle="modal"
+                                    data-bs-target="#editClientpopup" color="primary">
                                     <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_status==2  &&  j.new_data.modify_ref_id ==true">
                                 <button mat-icon-button matTooltip="Edit" class="iconbutton"
-                                    (click)="clientEditForm(j,'modify')" data-toggle="modal"
-                                    data-target="#editClientpopup" color="primary" [disabled]="true">
+                                    (click)="clientEditForm(j,'modify')" data-bs-toggle="modal"
+                                    data-bs-target="#editClientpopup" color="primary" [disabled]="true">
                                     <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
@@ -1251,7 +1251,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Contractor Create Form</p>
-                  <button type="button" #closebuttoncontractorcreate class="close" (click)="contractorCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttoncontractorcreate class="close" (click)="contractorCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1273,7 +1273,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Contractor Changes</p>
-                  <button type="button" #closecontractorCancel class="close" (click)="contractorrvmCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closecontractorCancel class="close" (click)="contractorrvmCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1298,7 +1298,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Client Changes</p>
-                  <button type="button" #closebuttonclientmod_view class="close" (click)="clientCancelmod_view()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonclientmod_view class="close" (click)="clientCancelmod_view()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1321,7 +1321,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Contractor Edit Form</p>
-                  <button type="button" #closebuttoncontractoredit class="close" (click)="contractorEditCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttoncontractoredit class="close" (click)="contractorEditCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1368,22 +1368,22 @@
                         <td>{{ contractor.service| titlecase }}</td>
                         <td>{{ contractor.remarks | titlecase}}</td>
                         <td> <button mat-icon-button matTooltip="view" class="iconbutton"
-                                (click)="RMView_contractor({'new_data':contractor})" data-toggle="modal"
-                                data-target="#contractorviewpopup" color="primary">
+                                (click)="RMView_contractor({'new_data':contractor})" data-bs-toggle="modal"
+                                data-bs-target="#contractorviewpopup" color="primary">
                                 <mat-icon class="enabled_icon" aria-label="view">visibility</mat-icon>
                             </button></td>
                         <td *ngIf=" vendor_flag==true">
 
                             <button *ngIf="contractor.modify_ref_id>0 " mat-icon-button matTooltip=" Edit"
                                 class="iconbutton" (click)="contractEditForm(contractor,'')" [disabled]="true"
-                                data-toggle="modal"
-                                data-target="#contractoreditpopup"
+                                data-bs-toggle="modal"
+                                data-bs-target="#contractoreditpopup"
                                 color="primary">
                                 <mat-icon style="color: gray;" aria-label="Edit">edit</mat-icon>
                             </button>
                             <button *ngIf="contractor.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit"
-                                class="iconbutton" data-toggle="modal"
-                                data-target="#contractoreditpopup" (click)="contractEditForm(contractor,'')" color="primary">
+                                class="iconbutton" data-bs-toggle="modal"
+                                data-bs-target="#contractoreditpopup" (click)="contractEditForm(contractor,'')" color="primary">
                                 <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                             </button>
                         </td>
@@ -1438,30 +1438,30 @@
                             <td *ngIf="j.new_data.modify_status==0">Delete</td>
                             <td>
                                 <span *ngIf="j.new_data.modify_ref_id !=j.new_data.id && j.new_data.modify_status==1">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal"
-                                    data-target="#contractoreditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal"
+                                    data-bs-target="#contractoreditpopup"
                                         (click)="contractEditForm(j,'modify')" color="primary"
                                          [disabled]="true">
                                         <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="j.new_data.modify_ref_id ==j.new_data.id && j.new_data.modify_status==1">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal"
-                                    data-target="#contractoreditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal"
+                                    data-bs-target="#contractoreditpopup"
                                         (click)="contractEditForm(j,'modify')" color="primary">
                                         <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="j.new_data.modify_status==2  &&  j.new_data.modify_ref_id != true">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal"
-                                    data-target="#contractoreditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal"
+                                    data-bs-target="#contractoreditpopup"
                                         (click)="contractEditForm(j,'modify')" color="primary">
                                         <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="j.new_data.modify_status==2  &&  j.new_data.modify_ref_id ==true">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal"
-                                    data-target="#contractoreditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal"
+                                    data-bs-target="#contractoreditpopup"
                                         (click)="contractEditForm(j,'modify')" color="primary" [disabled]="true">
                                         <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
@@ -1493,7 +1493,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Branch Tax Create Form</p>
-                  <button type="button" #closebuttonbranchtax class="close" (click)="branchtaxaddcancl()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonbranchtax class="close" (click)="branchtaxaddcancl()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1515,7 +1515,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Branch Tax Changes</p>
-                  <button type="button" #closebuttonbranchtaxview class="close" (click)="branchtaxviewclosefun()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonbranchtaxview class="close" (click)="branchtaxviewclosefun()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1536,7 +1536,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle"  style="font-weight: bold;">Branch Tax Edit Form</p>
-                  <button type="button" #closebuttonbranchtaxedit class="close" (click)="taxeditcancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonbranchtaxedit class="close" (click)="taxeditcancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1596,26 +1596,26 @@
                             <!-- <td>{{tax.taxrate.rate}}</td> -->
 
                             <td>
-                                <button mat-icon-button matTooltip="view" class="iconbutton" data-toggle="modal" data-target="#branchtaxview"
+                                <button mat-icon-button matTooltip="view" class="iconbutton" data-bs-toggle="modal" data-bs-target="#branchtaxview"
                                     (click)="RMView_branchtax({'new_data':tax})" color="primary">
                                     <mat-icon class="enabled_icon" aria-label="view">visibility</mat-icon>
                                 </button>
                             </td>
                             <td>
                                 <span *ngIf=" vendor_flag==true">
-                                    <button *ngIf="tax.modify_ref_id>0" mat-icon-button matTooltip=" Edit" data-toggle="modal" data-target="#branchtaxedit"
+                                    <button *ngIf="tax.modify_ref_id>0" mat-icon-button matTooltip=" Edit" data-bs-toggle="modal" data-bs-target="#branchtaxedit"
                                         class="iconbutton" (click)="Taxedit(tax)" [disabled]="true" color="primary">
                                         <mat-icon style="color: gray;" aria-label="Edit">edit</mat-icon>
                                     </button>
-                                    <button *ngIf="tax.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit" data-toggle="modal"
-                                    data-target="#branchtaxedit"
+                                    <button *ngIf="tax.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit" data-bs-toggle="modal"
+                                    data-bs-target="#branchtaxedit"
                                         class="iconbutton" (click)="Taxedit(tax)" color="primary">
                                         <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf=" vendor_flag==false">
-                                    <button mat-icon-button matTooltip=" Edit" class="iconbutton" (click)="Taxedit(tax)" data-toggle="modal"
-                                    data-target="#branchtaxedit"
+                                    <button mat-icon-button matTooltip=" Edit" class="iconbutton" (click)="Taxedit(tax)" data-bs-toggle="modal"
+                                    data-bs-target="#branchtaxedit"
                                         [disabled]="true" color="primary">
                                         <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                     </button>
@@ -1710,25 +1710,25 @@
                             <td>
                                 <span *ngIf="j.modify_ref_id !=j.id && j.modify_status==1">
                                     <button mat-icon-button matTooltip="Edit" class="iconbutton" (click)="Taxedit(j)"
-                                        color="primary" [disabled]="true" data-toggle="modal" data-target="#branchtaxedit" >
+                                        color="primary" [disabled]="true" data-bs-toggle="modal" data-bs-target="#branchtaxedit" >
                                         <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="j.modify_ref_id ==j.id && j.modify_status==1">
                                     <button mat-icon-button matTooltip="Edit" class="iconbutton" (click)="Taxedit(j)"
-                                        color="primary" data-toggle="modal" data-target="#branchtaxedit" >
+                                        color="primary" data-bs-toggle="modal" data-bs-target="#branchtaxedit" >
                                         <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="j.modify_status==2  &&  j.modify_ref_id != true">
                                     <button mat-icon-button matTooltip="Edit" class="iconbutton" (click)="Taxedit(j)"
-                                        color="primary" data-toggle="modal" data-target="#branchtaxedit" >
+                                        color="primary" data-bs-toggle="modal" data-bs-target="#branchtaxedit" >
                                         <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="j.modify_status==2  &&  j.modify_ref_id ==true">
                                     <button mat-icon-button matTooltip="Edit" class="iconbutton" (click)="Taxedit(j)"
-                                        color="primary" [disabled]="true" data-toggle="modal" data-target="#branchtaxedit" >
+                                        color="primary" [disabled]="true" data-bs-toggle="modal" data-bs-target="#branchtaxedit" >
                                         <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
@@ -1774,7 +1774,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;" >Product Create Form </p>
-                  <button type="button" #closebuttonproductform class="close" (click)="productCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonproductform class="close" (click)="productCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1798,7 +1798,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;" >Product Changes</p>
-                  <button type="button" #closebuttonproductview class="close" (click)="productviewclose()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonproductview class="close" (click)="productviewclose()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1821,7 +1821,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;" >Product Edit Form</p>
-                  <button type="button" #closebuttonproducteditform class="close" (click)="productEditCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonproducteditform class="close" (click)="productEditCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1863,20 +1863,20 @@
                         <td>{{ product.age}}</td>
                         <td>
                             <button mat-icon-button matTooltip="view" class="iconbutton"
-                                (click)="RMView_product({'new_data':product})" data-toggle="modal" data-target="#productview" color="primary">
+                                (click)="RMView_product({'new_data':product})" data-bs-toggle="modal" data-bs-target="#productview" color="primary">
                                 <mat-icon class="enabled_icon" aria-label="view">visibility</mat-icon>
                             </button>
                         </td>
                         <td *ngIf=" vendor_flag==true">
 
-                            <button *ngIf="product.modify_ref_id>0 " mat-icon-button matTooltip=" Edit" data-toggle="modal"
-                                data-target="#producteditpopup"
+                            <button *ngIf="product.modify_ref_id>0 " mat-icon-button matTooltip=" Edit" data-bs-toggle="modal"
+                                data-bs-target="#producteditpopup"
                                 class="iconbutton" (click)="productEditForm(product)" [disabled]="true" color="primary">
                                 <mat-icon style="color: gray;" aria-label="Edit">edit</mat-icon>
                             </button>
                             <button *ngIf="product.modify_ref_id=='-1' " mat-icon-button matTooltip=" Edit"
-                            data-toggle="modal"
-                            data-target="#producteditpopup"
+                            data-bs-toggle="modal"
+                            data-bs-target="#producteditpopup"
                                 class="iconbutton" (click)="productEditForm(product)" color="primary">
                                 <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                             </button>
@@ -1933,29 +1933,29 @@
                         <td *ngIf="j.new_data.modify_status==0">Delete</td>
                         <td>
                             <span *ngIf="j.new_data.modify_ref_id !=j.new_data.id && j.new_data.modify_status==1">
-                                <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal"
-                                data-target="#producteditpopup"
+                                <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal"
+                                data-bs-target="#producteditpopup"
                                     (click)="productEditForm(j)" color="primary" [disabled]="true">
                                     <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_ref_id ==j.new_data.id && j.new_data.modify_status==1">
-                                <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal"
-                                data-target="#producteditpopup"
+                                <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal"
+                                data-bs-target="#producteditpopup"
                                     (click)="productEditForm(j.new_data)" color="primary">
                                     <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_status==2  &&  j.new_data.modify_ref_id != true">
-                                <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal"
-                                data-target="#producteditpopup"
+                                <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal"
+                                data-bs-target="#producteditpopup"
                                     (click)="productEditForm(j.new_data)" color="primary">
                                     <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
                             </span>
                             <span *ngIf="j.new_data.modify_status==2  &&  j.new_data.modify_ref_id ==true">
-                                <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal"
-                                data-target="#producteditpopup"
+                                <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal"
+                                data-bs-target="#producteditpopup"
                                     (click)="productEditForm(j.new_data)" color="primary" [disabled]="true">
                                     <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                 </button>
@@ -2033,7 +2033,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle"  style="font-weight: bold;">KYC</p>
-                  <button type="button" class="close" #closebuttonkycform (click)="kycCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" #closebuttonkycform (click)="kycCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2077,18 +2077,18 @@
                         <td *ngIf="(this.organizationType != 'Individual' && this.organizationType != 'Sole Proprietorship')">{{ kyc.organization_name | titlecase}}</td>
                         <td>{{ kyc.sanctions_conducted.name }}</td>
                         <td>{{ kyc.match_found.name }}</td>
-                        <td> <button mat-icon-button matTooltip="view" class="iconbutton" data-toggle="modal" data-target="#kycviewpopup"
+                        <td> <button mat-icon-button matTooltip="view" class="iconbutton" data-bs-toggle="modal" data-bs-target="#kycviewpopup"
                                 (click)="KYCView_kyc({'new_data':kyc})" color="primary">
                                 <mat-icon class="enabled_icon" aria-label="view">visibility</mat-icon>
                             </button></td>
                         <td *ngIf=" vendor_flag==true">
 
 
-                            <button *ngIf="kyc.modify_ref_id>0" mat-icon-button matTooltip=" Edit" data-toggle="modal" data-target="#kyceditpopup"
+                            <button *ngIf="kyc.modify_ref_id>0" mat-icon-button matTooltip=" Edit" data-bs-toggle="modal" data-bs-target="#kyceditpopup"
                                 class="iconbutton" (click)="kycEdit(kyc)" [disabled]="true" color="primary">
                                 <mat-icon style="color: gray;" aria-label="Edit">edit</mat-icon>
                             </button>
-                            <button *ngIf="kyc.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit" data-toggle="modal" data-target="#kyceditpopup"
+                            <button *ngIf="kyc.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit" data-bs-toggle="modal" data-bs-target="#kyceditpopup"
                                 class="iconbutton" (click)="kycEdit(kyc)" color="primary">
                                 <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                             </button>
@@ -2178,26 +2178,26 @@
 
                                 <span
                                     *ngIf="kycMofidy.new_data.modify_ref_id !=kycMofidy.new_data.id && kycMofidy.new_data.modify_status==1">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#kyceditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#kyceditpopup"
                                         (click)="kycEdit(kycMofidy.new_data)" color="primary" [disabled]="true">
                                         <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span
                                     *ngIf="kycMofidy.new_data.modify_ref_id ==kycMofidy.new_data.id && kycMofidy.new_data.modify_status==1">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#kyceditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#kyceditpopup"
                                         (click)="kycEdit(kycMofidy.new_data)" color="primary">
                                         <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="kycMofidy.new_data.modify_status==2  &&  kycMofidy.new_data.modify_ref_id != true">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#kyceditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#kyceditpopup"
                                         (click)="kycEdit(kycMofidy.new_data)" color="primary">
                                         <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="kycMofidy.new_data.modify_status==2  &&  kycMofidy.new_data.modify_ref_id ==true">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#kyceditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#kyceditpopup"
                                         (click)="kycEdit(kycMofidy.new_data)" color="primary" [disabled]="true">
                                         <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
@@ -2248,7 +2248,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle"  style="font-weight: bold;" >KYC Edit Form </p>
-                  <button type="button" #closebuttonkycedit class="close" (click)="kycEditCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonkycedit class="close" (click)="kycEditCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2270,7 +2270,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;" >KYC Changes</p>
-                  <button type="button" #closebuttonkycview class="close" (click)="kycviewCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonkycview class="close" (click)="kycviewCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2300,7 +2300,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle"  style="font-weight: bold;">Risk</p>
-                  <button type="button" class="close" #closebuttonriskform (click)="riskCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" #closebuttonriskform (click)="riskCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2329,7 +2329,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle"  style="font-weight: bold;">Portal User</p>
-                  <button type="button" class="close" #closebuttonportalform (click)="portalCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" #closebuttonportalform (click)="portalCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2369,18 +2369,18 @@
                         <td>{{ risk.risktype_id.name | titlecase}}</td>
                         <td>{{ risk.risk_mitigant |titlecase }}</td>
                         <!-- <td>{{ document.risk_mitigant_review | titlecase}}</td> -->
-                        <td> <button mat-icon-button matTooltip="view" class="iconbutton" data-toggle="modal" data-target="#riskviewpopup"
+                        <td> <button mat-icon-button matTooltip="view" class="iconbutton" data-bs-toggle="modal" data-bs-target="#riskviewpopup"
                                 (click)="RMView_risk({'new_data':risk})" color="primary">
                                 <mat-icon class="enabled_icon" aria-label="view">visibility</mat-icon>
                             </button></td>
                         <td *ngIf=" vendor_flag==true">
 
 
-                            <button *ngIf="risk.modify_ref_id>0" mat-icon-button matTooltip=" Edit" data-toggle="modal" data-target="#riskeditpopup"
+                            <button *ngIf="risk.modify_ref_id>0" mat-icon-button matTooltip=" Edit" data-bs-toggle="modal" data-bs-target="#riskeditpopup"
                                 class="iconbutton" (click)="riskEdit(risk)" [disabled]="true" color="primary">
                                 <mat-icon style="color: gray;" aria-label="Edit">edit</mat-icon>
                             </button>
-                            <button *ngIf="risk.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit" data-toggle="modal" data-target="#riskeditpopup"
+                            <button *ngIf="risk.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit" data-bs-toggle="modal" data-bs-target="#riskeditpopup"
                                 class="iconbutton" (click)="riskEdit(risk)" color="primary">
                                 <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                             </button>
@@ -2463,26 +2463,26 @@
 
                                 <span
                                     *ngIf="rik.new_data.modify_ref_id !=rik.new_data.id && rik.new_data.modify_status==1">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#riskeditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#riskeditpopup"
                                         (click)="riskEdit(rik.new_data)" color="primary" [disabled]="true">
                                         <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span
                                     *ngIf="rik.new_data.modify_ref_id ==rik.new_data.id && rik.new_data.modify_status==1">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#riskeditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#riskeditpopup"
                                         (click)="riskEdit(rik.new_data)" color="primary">
                                         <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="rik.new_data.modify_status==2  &&  rik.new_data.modify_ref_id != true">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#riskeditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#riskeditpopup"
                                         (click)="riskEdit(rik.new_data)" color="primary">
                                         <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="rik.new_data.modify_status==2  &&  rik.new_data.modify_ref_id ==true">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#riskeditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#riskeditpopup"
                                         (click)="riskEdit(rik.new_data)" color="primary" [disabled]="true">
                                         <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
@@ -2534,7 +2534,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle"  style="font-weight: bold;" >Risk Edit Form </p>
-                  <button type="button" #closebuttonriskedit class="close" (click)="riskEditCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonriskedit class="close" (click)="riskEditCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2557,7 +2557,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;" >Risk Changes</p>
-                  <button type="button" #closebuttonriskview class="close" (click)="riskviewCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttonriskview class="close" (click)="riskviewCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2582,7 +2582,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle"  style="font-weight: bold;">Document Create Form </p>
-                  <button type="button" #closebuttondocumentform class="close" (click)="documentCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttondocumentform class="close" (click)="documentCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2607,7 +2607,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;" >Document Changes</p>
-                  <button type="button" #closebuttondocumentview class="close" (click)="documentviewCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttondocumentview class="close" (click)="documentviewCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2630,7 +2630,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle"  style="font-weight: bold;" >Document Edit Form </p>
-                  <button type="button" #closebuttondocumentedit class="close" (click)="documentEditCancel()"  data-dismiss="modal" aria-label="Close">
+                  <button type="button" #closebuttondocumentedit class="close" (click)="documentEditCancel()"  data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -2673,18 +2673,18 @@
                         <td>{{ document.partner_id}}</td>
                         <td>{{ document.docgroup_id.name | titlecase }}</td>
                         <td>{{ document.remarks | titlecase}}</td>
-                        <td> <button mat-icon-button matTooltip="view" class="iconbutton" data-toggle="modal" data-target="#documentviewpopup"
+                        <td> <button mat-icon-button matTooltip="view" class="iconbutton" data-bs-toggle="modal" data-bs-target="#documentviewpopup"
                                 (click)="RMView_document({'new_data':document})" color="primary">
                                 <mat-icon class="enabled_icon" aria-label="view">visibility</mat-icon>
                             </button></td>
                         <td *ngIf=" vendor_flag==true">
 
 
-                            <button *ngIf="document.modify_ref_id>0" mat-icon-button matTooltip=" Edit" data-toggle="modal" data-target="#documenteditpopup"
+                            <button *ngIf="document.modify_ref_id>0" mat-icon-button matTooltip=" Edit" data-bs-toggle="modal" data-bs-target="#documenteditpopup"
                                 class="iconbutton" (click)="documentEdit(document)" [disabled]="true" color="primary">
                                 <mat-icon style="color: gray;" aria-label="Edit">edit</mat-icon>
                             </button>
-                            <button *ngIf="document.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit" data-toggle="modal" data-target="#documenteditpopup"
+                            <button *ngIf="document.modify_ref_id=='-1'" mat-icon-button matTooltip=" Edit" data-bs-toggle="modal" data-bs-target="#documenteditpopup"
                                 class="iconbutton" (click)="documentEdit(document)" color="primary">
                                 <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                             </button>
@@ -2768,26 +2768,26 @@
 
                                 <span
                                     *ngIf="doc.new_data.modify_ref_id !=doc.new_data.id && doc.new_data.modify_status==1">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#documenteditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#documenteditpopup"
                                         (click)="documentEdit(doc.new_data)" color="primary" [disabled]="true">
                                         <mat-icon style="color:gray;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span
                                     *ngIf="doc.new_data.modify_ref_id ==doc.new_data.id && doc.new_data.modify_status==1">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#documenteditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#documenteditpopup"
                                         (click)="documentEdit(doc.new_data)" color="primary">
                                         <mat-icon style="color:black;" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="doc.new_data.modify_status==2  &&  doc.new_data.modify_ref_id != true">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#documenteditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#documenteditpopup"
                                         (click)="documentEdit(doc.new_data)" color="primary">
                                         <mat-icon class="enabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
                                 </span>
                                 <span *ngIf="doc.new_data.modify_status==2  &&  doc.new_data.modify_ref_id ==true">
-                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-toggle="modal" data-target="#documenteditpopup"
+                                    <button mat-icon-button matTooltip="Edit" class="iconbutton" data-bs-toggle="modal" data-bs-target="#documenteditpopup"
                                         (click)="documentEdit(doc.new_data)" color="primary" [disabled]="true">
                                         <mat-icon class="disabled_icon" aria-label="Edit">edit</mat-icon>
                                     </button>
@@ -2835,7 +2835,7 @@
         <div class="modal-content">
             <div class="modal-header text-center">
                 <h4 class="modal-title  w-100 font-weight-bold" id="rejectModalLabel">Reject</h4>
-                <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -2846,15 +2846,15 @@
                         <input matInput placeholder="Remarks" autocomplete="off" formControlName="comments" required>
                     </mat-form-field>
                     <!-- <div class="modal-footer">
-                        <button class="btn btn-outline-success" type="button" data-toggle="modal"
-                            data-target="#rejectModal">
+                        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+                            data-bs-target="#rejectModal">
                             Cancel </button>
                         <button class="btn btn-outline-primary" type="submit" (click)="rejectRemarks()"
                             [disabled]="rejectFrom.invalid" style="border-radius:40px;margin-left: 10px;">
                             Submit</button>
                     </div> -->
                     <div class="modal-footer" >
-                        <button type="button"  class="btn btn-light" data-toggle="modal" data-target="#rejectModal"
+                        <button type="button"  class="btn btn-light" data-bs-toggle="modal" data-bs-target="#rejectModal"
                                     style="border-radius: 7px;margin-left: 25px;
                                      border-color: black;
                                     background-color: white;">Cancel</button>
@@ -2877,7 +2877,7 @@
         <div class="modal-content">
             <div class="modal-header text-center">
                 <h4 class="modal-title  w-100 font-weight-bold" id="returnModalLabel">Return</h4>
-                <button type="button" #closebuttonretn class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebuttonretn class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -2888,15 +2888,15 @@
                         <input matInput placeholder="Remarks" autocomplete="off" formControlName="comments" required>
                     </mat-form-field>
                     <!-- <div class="modal-footer">
-                        <button class="btn btn-outline-success" type="button" data-toggle="modal"
-                            data-target="#rejectModal">
+                        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal"
+                            data-bs-target="#rejectModal">
                             Cancel </button>
                         <button class="btn btn-outline-primary" type="submit" (click)="rejectRemarks()"
                             [disabled]="rejectFrom.invalid" style="border-radius:40px;margin-left: 10px;">
                             Submit</button>
                     </div> -->
                     <div class="modal-footer" >
-                        <button type="button"  class="btn btn-light" data-toggle="modal" data-target="#returnModal"
+                        <button type="button"  class="btn btn-light" data-bs-toggle="modal" data-bs-target="#returnModal"
                                     style="border-radius: 7px;margin-left: 25px;
                                      border-color: black;
                                     background-color: white;">Cancel</button>
@@ -2918,7 +2918,7 @@
         <div class="modal-content">
             <div class="modal-header text-center">
                 <h4 class="modal-title  w-100 font-weight-bold">Please Confirm</h4>
-                <button type="button" #closedeclbutton class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closedeclbutton class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -2934,7 +2934,7 @@
                                     border-color: #f5c68b;
                                     background-color: #f5c68b;"
                                     class="btn btn-light" (click)="checker()"  >OK</button>
-                                    <button type="button"  class="btn btn-light" data-dismiss="modal"
+                                    <button type="button"  class="btn btn-light" data-bs-dismiss="modal"
                                     style="border-radius: 7px;margin-left: 25px;
                                      border-color: black;
                                     background-color: white;">Cancel</button>

@@ -9,11 +9,11 @@
             (click)="submit_tochecker_approve('3')">Approve</button> -->
         <button type="button" style="border-radius: 17px;
                 ;margin-left: 10px;border-color:grey" class="btn btn-light font"
-            data-toggle="modal" data-target="#exampleModalCenter" [disabled]="disabled" >Create User</button>
+            data-bs-toggle="modal" data-bs-target="#exampleModalCenter" [disabled]="disabled" >Create User</button>
             <!-- border-color: #f5c68b; background-color: #f5c68b -->
         <button type="button" style="border-radius: 10px; 
                ;margin-left: 10px; border-color:grey" class="btn btn-light font"
-            data-toggle="modal" data-target=".bd-example-modal-lg" (click)="preview_click()">Preview Pay
+            data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg" (click)="preview_click()">Preview Pay
             Structure</button>
             <!-- border-color: #f5c68b; background-color: #f5c68b -->
     </div>
@@ -224,7 +224,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title" id="exampleModalLongTitle">Employee Check List</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -241,7 +241,7 @@
                 </mat-checkbox><br>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal"     (click)="create_user()">Proceed</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"     (click)="create_user()">Proceed</button>
             </div>
         </div>
     </div>
@@ -257,7 +257,7 @@
             <div class="modal-header">
                 <h2 class="modal-title" id="exampleModalLabel">Officer Letter </h2>
                 <div  style="margin-left:765px;height:50px;margin-top:7px;outline:none;cursor:pointer;"  (click)="download_click()" matTooltip="Download Pdf"><i class="fa-solid fa-cloud-arrow-down fa-2xl pdfDownload" style="color: blue;" ></i> </div>
-                <button type="button" class="close closes" data-dismiss="modal" aria-label="Close" (click)="closes()">
+                <button type="button" class="close closes" data-bs-dismiss="modal" aria-label="Close" (click)="closes()">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -700,7 +700,7 @@
                 </mat-card>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
     <mat-card style="margin:10px 12px 20px 10px;" class="mat-elevation-z0">
         <nav>
             <div class="nav nav-tabs">
-                <span class="nav-item nav-link" data-toggle="tab" (click)="subModuleData(sub)" role="tab"
+                <span class="nav-item nav-link" data-bs-toggle="tab" (click)="subModuleData(sub)" role="tab"
                     *ngFor="let sub of attendance_Master_Menu_List;index as i">
                     {{sub.name}}
                 </span>
@@ -669,8 +669,8 @@
                                     <mat-icon style="color: gray;" aria-label="Edit">
                                         delete</mat-icon>  -data->
                             </button> -->
-                                    <mat-icon style="color: black;" type="button" data-toggle="modal"
-                                        data-target="#exampleModal" (click)="AddShiftMapping('', type)">
+                                    <mat-icon style="color: black;" type="button" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" (click)="AddShiftMapping('', type)">
                                         visibility</mat-icon>
 
                                 </td>
@@ -813,7 +813,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-light" style="border-radius: 7px;margin-left: 10px;
                                         border-color: black; 
-                                        background-color: white;" data-dismiss="modal"
+                                        background-color: white;" data-bs-dismiss="modal"
                                             (click)="onShiftMappingCancel(); ">Cancel</button>
                                         <!-- <button type="button" class="close"  aria-label="Close"
                                             (click)="onShiftMappingCancel()">Cancel -->
@@ -1468,8 +1468,8 @@
                             *ngIf="identificationViewList?.is_created_by == false && identificationViewList?.pending_approver?.length > 0 ">
                             <mat-form-field class="ddheight">
                                 <mat-select placeholder="Select Action">
-                                    <mat-option *ngFor="let process of ProcessList" [value]="process?.name" data-toggle="modal"
-                                        data-target="#exampleModal" (click)="gettingRemarks(process)">
+                                    <mat-option *ngFor="let process of ProcessList" [value]="process?.name" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" (click)="gettingRemarks(process)">
                                         {{process?.name}}
                                     </mat-option>
                                 </mat-select>

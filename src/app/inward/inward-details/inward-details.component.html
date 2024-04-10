@@ -141,8 +141,8 @@
                                     </button>
                                     <div *ngIf="innerdet?.filearray?.length > 0">
                                         <div *ngFor="let files of innerdet?.filearray; let index = index">
-                                            <p (click)="filepreview(files)" data-toggle="modal"
-                                                data-target="#my-modalpreview" style="color: #0000EE;cursor: pointer;"> 
+                                            <p (click)="filepreview(files)" data-bs-toggle="modal"
+                                                data-bs-target="#my-modalpreview" style="color: #0000EE;cursor: pointer;"> 
                                                 {{index+1}}.{{files?.name}} </p>
                                             <span (click)="deleteInlineFile(det, innerdet, i, j, index)">X</span>
 
@@ -161,7 +161,7 @@
                     <td>
                         <!-- <div *ngIf="innerdet.statuskey == false; else disabledataafterdeleteVisible">
                             <span class="material-icons" aria-hidden="true" (click)="HeaderFiles(innerdet)"
-                                data-toggle="modal" data-target=".bd-examplepopHeaderfiles-modal-lg"> visibility
+                                data-bs-toggle="modal" data-bs-target=".bd-examplepopHeaderfiles-modal-lg"> visibility
                             </span>
                         </div>
                         <ng-template #disabledataafterdeleteVisible>
@@ -169,7 +169,7 @@
                         </ng-template> -->
                         <div *ngIf="innerdet.docnumber != ''; else disabledataafterdeleteVisible">
                             <span class="material-icons" aria-hidden="true" (click)="HeaderFiles(innerdet)"
-                                data-toggle="modal" data-target=".bd-examplepopHeaderfiles-modal-lg"> visibility
+                                data-bs-toggle="modal" data-bs-target=".bd-examplepopHeaderfiles-modal-lg"> visibility
                             </span>
                         </div>
                         <ng-template #disabledataafterdeleteVisible>
@@ -240,7 +240,7 @@
                     <td>
                         <div *ngIf="det.assigned == false; else clonedata">
                             <div *ngIf="innerdet.statuskey == false; else disabledataclone">
-                                <button data-toggle="tooltip" title="Clone" class="commonbuttonstyle cursor"
+                                <button data-bs-toggle="tooltip" title="Clone" class="commonbuttonstyle cursor"
                                     type="button" (click)="inwardDetailsClone(i, j, det, innerdet)">
                                     <mat-icon style="font-size:30px;">content_copy</mat-icon>
                                 </button>
@@ -347,7 +347,7 @@
         <div class="modal-content">
             <div class="modal-header text-center">
                 <h4 class="modal-title w-100 font-weight-bold">File View</h4>
-                <button type="button" #closebutton class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebutton class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
             </div>
 
@@ -365,7 +365,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#17a2b8;">
                 <h2 class="modal-title">Header Files</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -383,7 +383,7 @@
                         <td>{{ i+1 }}</td>
                         <td>{{file?.filedata?.file_name}}</td>
                         <td style="margin-left:-1%">
-                            <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal" data-toggle="modal"
+                            <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal" data-bs-toggle="modal"
                                 (click)="commentPopupHeaderFiles(file)">
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                                 <br>
@@ -400,9 +400,9 @@
 
 <div *ngIf="showimageHeaderAPI" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
     tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -418,9 +418,9 @@
 
 <div *ngIf="showimageHeaderPreview" id="my-modalpreview" class="modal fade" aria-labelledby="my-modalLabel"
     aria-hidden="true" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -437,7 +437,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;">
                 <h2 class="modal-title">PDF View</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -453,7 +453,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;">
                 <h2 class="modal-title">PDF View</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

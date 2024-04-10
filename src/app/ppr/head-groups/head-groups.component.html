@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-outline-primary" style="border-radius: 40px;" data-toggle="modal" data-target="#headegrpAdd">
+                    <button type="button" class="btn btn-outline-primary" style="border-radius: 40px;" data-bs-toggle="modal" data-bs-target="#headegrpAdd">
                         Add
                         </button>
                 </div>
@@ -64,12 +64,12 @@
                     <td>{{headgrpsummary.description}}</td>
                     <!-- <td>({{headgrpsummary.sourcecode}}){{headgrpsummary.sourcecode}}</td> -->
                     <td class="text-center">
-                        <a style="color:#2177e5;cursor: pointer;"  data-toggle="modal" data-target="#headgrpedit"  matTooltip="Edit"  (click)='editview_headgrp(headgrpsummary)'>
+                        <a style="color:#2177e5;cursor: pointer;"  data-bs-toggle="modal" data-bs-target="#headgrpedit"  matTooltip="Edit"  (click)='editview_headgrp(headgrpsummary)'>
                             <mat-icon>edit</mat-icon>
                         </a>
                     </td>
                     <td style="text-align: center;">
-                        <a style="color:#2177e5;cursor: pointer;" matTooltip="View" data-toggle="modal" data-target="#headgrpview" (click)='editview_headgrp(headgrpsummary)'>
+                        <a style="color:#2177e5;cursor: pointer;" matTooltip="View" data-bs-toggle="modal" data-bs-target="#headgrpview" (click)='editview_headgrp(headgrpsummary)'>
                             <mat-icon>visibility</mat-icon>
                         </a>
                     </td>
@@ -93,7 +93,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="headergrpAddLabel">Header Group Add</h2>
-          <button type="button" class="close" #closepopadd data-dismiss="modal" (click)="clearheadergrp()" aria-label="Close">
+          <button type="button" class="close" #closepopadd data-bs-dismiss="modal" (click)="clearheadergrp()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -134,7 +134,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearheadergrp()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearheadergrp()" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="save_source(headergroup.value,1)">Submit</button>
         </div>
       </div>
@@ -147,7 +147,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="headergrpeditLabel">PPR Scorce Edit</h2>
-          <button type="button" class="close" #closepopedit data-dismiss="modal" (click)="clearheadergrp()" aria-label="Close">
+          <button type="button" class="close" #closepopedit data-bs-dismiss="modal" (click)="clearheadergrp()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -188,7 +188,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearheadergrp()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearheadergrp()" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="save_source(headergroup.value,2)">Submit</button>
         </div>
       </div>
@@ -201,7 +201,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="headergrpviewLabel">PPR Scorce View</h2>
-          <button type="button" class="close"  data-dismiss="modal" (click)="clearheadergrp()" aria-label="Close">
+          <button type="button" class="close"  data-bs-dismiss="modal" (click)="clearheadergrp()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -244,7 +244,7 @@
                
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearheadergrp()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearheadergrp()" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

@@ -141,7 +141,7 @@
 					</mat-form-field>
 				</div>
 				<div class="col-md-3">
-					<div style="text-align: center;cursor: pointer;"><button  style="display: none;" data-toggle="modal" data-target=".bd-bbapprovepopup-modal-lg" #popup_eve></button>
+					<div style="text-align: center;cursor: pointer;"><button  style="display: none;" data-bs-toggle="modal" data-bs-target=".bd-bbapprovepopup-modal-lg" #popup_eve></button>
 						<button style="border-radius: 40px;" class="btn btn-outline-primary"	(click)="budgetbuildersearech_click(this.pprSearchForm.value)">
 							Search
 						</button>
@@ -185,14 +185,14 @@
 
 
 
-	<div class="modal fade bd-bbapprovepopup-modal-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false"
+	<div class="modal fade bd-bbapprovepopup-modal-lg" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false"
 	tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabels">
 		<div class="modal-dialog modal-lg"
 			style="max-width: 100%;max-height: 100%;width: 100%; height: 100%;border-radius: 0;  width: 100%;height: 100%;padding-left: 20px;padding-bottom: -264px; padding-right: 19px;display: block;">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h2 class="modal-title" >Budget  Checker</h2>
-					<button type="button" class="close" (click)="closepopupbb()" #closepopup data-dismiss="modal" aria-label="Close">
+					<button type="button" class="close" (click)="closepopupbb()" #closepopup data-bs-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
@@ -495,8 +495,8 @@
 										<span *ngIf="ppr.status==6">Bgt-Returned</span>
 										<span *ngIf="ppr.status==7">Bgt-Rejected</span>
 <!-- 										
-										<span class="material-icons" *ngIf="ppr.status && ppr.Padding_left=='120px'" data-toggle="modal"
-										data-target=".bd-exampleremarks-modal-lg" (click)="remarks(ppr)" matTooltip="Comments">
+										<span class="material-icons" *ngIf="ppr.status && ppr.Padding_left=='120px'" data-bs-toggle="modal"
+										data-bs-target=".bd-exampleremarks-modal-lg" (click)="remarks(ppr)" matTooltip="Comments">
 											visibility
 										</span>
 <span *ngIf="!ppr.status && ppr.Padding_left!='120px'">--</span>
@@ -751,7 +751,7 @@
 										>Return</button>
 										<!-- <button type="submit" class="btn btn-outline-danger" (click)="budget_status_set(7,'CHECKER')"
 										>Reject</button> -->
-						<button type="button" (click)="closepopupbb()" class="btn btn-outline-dark" data-dismiss="modal">
+						<button type="button" (click)="closepopupbb()" class="btn btn-outline-dark" data-bs-dismiss="modal">
 						Close
 					</button></div>
 				</form>
@@ -771,7 +771,7 @@
 			<div class="modal-header">
 				<h2 class="modal-title" >Transaction History-{{pprname}}</h2>
 
-				<button type="button" class="close" #closepopup data-dismiss="modal" aria-label="Close">
+				<button type="button" class="close" #closepopup data-bs-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
@@ -802,7 +802,7 @@
 			</div>
 			<div class="modal-footer">
 				
-				<button type="button" class="btn btn-outline-dark" data-dismiss="modal">
+				<button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
 				Close
 			</button></div>
 		</div>

@@ -164,7 +164,7 @@
                 <td  class="text-center"> {{value.assetsale_status}} </td>
                 <td class="text-center">{{value.status}}</td>
                 <td><button (click)="clickreason(value)" style="border: none;background: none;color:rgb(132, 132, 199);"><span [matTooltip]="value.reason">Reason</span></button></td>
-                <td style="text-align: center;cursor: pointer;"><span class="material-icons" data-toggle="modal" data-target=".bd-examplepoppdf-modal-lg"
+                <td style="text-align: center;cursor: pointer;"><span class="material-icons" data-bs-toggle="modal" data-bs-target=".bd-examplepoppdf-modal-lg"
                     (click)="pdfpup(value)">
                     visibility
                 </span>
@@ -203,7 +203,7 @@ aria-hidden="true">
     <div class="modal-content">
         <div class="modal-header" style="background:#088a61; height: 57px; ">
             <h2 class="modal-title" >Sale Invoice</h2>
-            <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close"  data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -216,7 +216,7 @@ aria-hidden="true">
         [original-size]="false"
         style="width: 795px; height: 318px"
 ></pdf-viewer>
-    <div class="modal-footer"><button type="button" class="btn btn-outline-dark" data-dismiss="modal">
+    <div class="modal-footer"><button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
         Back
     </button></div>
     </div>

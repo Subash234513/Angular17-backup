@@ -118,8 +118,8 @@
 						</mat-autocomplete>
 					</mat-form-field>
 				</div>
-				<div class="col-md-3"> <button data-toggle="modal"
-					data-target=".bd-varianceanalysis-modal-lg" style="display: none;" #popupvariance></button>
+				<div class="col-md-3"> <button data-bs-toggle="modal"
+					data-bs-target=".bd-varianceanalysis-modal-lg" style="display: none;" #popupvariance></button>
 					<!-- <div class="example-button-container"> -->
 					<button style="border-radius: 40px;" 
 					class="btn btn-outline-primary"   type="submit" (click)="budgetbuildersearech_click(this.pprSearchForm.value)">Search
@@ -138,7 +138,7 @@
 
 
 	
-	<div  class="modal fade bd-varianceanalysis-modal-lg" data-toggle="modal"
+	<div  class="modal fade bd-varianceanalysis-modal-lg" data-bs-toggle="modal"
 	data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabels">
 	<div class="modal-dialog modal-lg"
 		style="max-width: 100%;max-height: 100%;width: 100%; height: 100%;border-radius: 0;  width: 100%;height: 100%;padding-left: 20px;padding-bottom: -264px; padding-right: 19px;display: block;">
@@ -146,7 +146,7 @@
 			<div class="modal-header">
 				<h2 class="modal-title">Variance Analysis</h2>
 
-				<button type="button" class="close"  #closepopup data-dismiss="modal"
+				<button type="button" class="close"  #closepopup data-bs-dismiss="modal"
 					aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -680,7 +680,7 @@
 	<div class="modal-footer">
 		
 		<button type="button"  class="btn btn-outline-dark"
-			data-dismiss="modal">
+			data-bs-dismiss="modal">
 			Close
 		</button>
 	</div>

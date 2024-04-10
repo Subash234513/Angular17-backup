@@ -10,25 +10,25 @@
         </div>
         <div>
           <div *ngIf="status == 3 || status == 2|| status == 4 || status == 5" style="float: right;">
-            <!-- <button class="float-button" data-toggle="modal" data-target="#chatbox" (click)="getchatlist()"> <i class="float-icon fa fa-comment"></i></button> -->
-            <!-- <button type="button" data-toggle="modal" data-target="#commentbox" id="successbtn" class="btn btn-light">Comment
+            <!-- <button class="float-button" data-bs-toggle="modal" data-bs-target="#chatbox" (click)="getchatlist()"> <i class="float-icon fa fa-comment"></i></button> -->
+            <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#commentbox" id="successbtn" class="btn btn-light">Comment
             </button> -->
             <button mat-button [matMenuTriggerFor]="menu" id="primarybtn" type="button" class="btn btn-light">Action
               <mat-icon style="margin-bottom: 5px;">arrow_drop_down</mat-icon>
             </button>
             <mat-menu #menu="matMenu" style="width:150px">
               <!-- <div *ngIf="approverapplevel == 0">
-                <button type="button" *ngIf="status == 3 && apptype !='TourCancel'" mat-menu-item data-toggle="modal"
-                  data-target="#actionpopup">Request for Cancellation</button>
-                <button type="button" mat-menu-item data-toggle="modal" data-target="#approvalflow">Approval
+                <button type="button" *ngIf="status == 3 && apptype !='TourCancel'" mat-menu-item data-bs-toggle="modal"
+                  data-bs-target="#actionpopup">Request for Cancellation</button>
+                <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#approvalflow">Approval
                   Flow</button>
               </div> -->
               <div *ngIf="approverapplevel >0">
-                <!-- <button type="button" *ngIf="status == 2" mat-menu-item data-toggle="modal"
-                  data-target="#approvepopup">Approve</button> -->
-                <button type="button" mat-menu-item data-toggle="modal" data-target="#returnpopup">Return</button>
-                <button type="button" mat-menu-item data-toggle="modal" data-target="#rejectpopup">Reject</button>
-                <button type="button" mat-menu-item data-toggle="modal" data-target="#approvalflow">Approval
+                <!-- <button type="button" *ngIf="status == 2" mat-menu-item data-bs-toggle="modal"
+                  data-bs-target="#approvepopup">Approve</button> -->
+                <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#returnpopup">Return</button>
+                <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#rejectpopup">Reject</button>
+                <button type="button" mat-menu-item data-bs-toggle="modal" data-bs-target="#approvalflow">Approval
                   Flow</button>
               </div>
             </mat-menu>
@@ -382,7 +382,7 @@
                           *ngIf="taForm.value.detail[((p-1)*pageSize)+ind].requirements[j].booking_status == 0 || taForm.value.detail[((p-1)*pageSize)+ind].requirements[j].booking_status == 5 || taForm.value.detail[((p-1)*pageSize)+ind].requirements[j].booking_status == -1 "
                           placeholder="Booking Status"
                           [disabled]="inpstatus(((p-1)*pageSize)+ind,j) || taForm.value.detail[((p-1)*pageSize)+ind].requirements[j].booking_status == 5 ">
-                          <mat-option data-target="#bookingpopup" data-toggle="modal"
+                          <mat-option data-bs-target="#bookingpopup" data-bs-toggle="modal"
                             (click)="booking(transfer.key,((p-1)*pageSize)+ind,j)"
                             *ngFor="let transfer of instatus(((p-1)*pageSize)+ind,j)" [value]="transfer.value">
                             {{transfer.key}}
@@ -392,7 +392,7 @@
                         <mat-select formControlName="booking_status"
                           *ngIf="taForm.value.detail[((p-1)*pageSize)+ind].requirements[j].booking_status == 3"
                           class="{{2 == 2 ? 'booked' : 'notc'}}" placeholder="Booking Status">
-                          <mat-option data-target="#bookingpopup" data-toggle="modal"
+                          <mat-option data-bs-target="#bookingpopup" data-bs-toggle="modal"
                             (click)="booking(transfer.key,((p-1)*pageSize)+ind,j)" *ngFor="let transfer of bookedstatus"
                             [value]="transfer.value">
                             {{transfer.key}}
@@ -401,7 +401,7 @@
                         <mat-select formControlName="booking_status" class="{{2 == 2 ? 'cancelled' : 'notc'}}"
                           *ngIf="taForm.value.detail[((p-1)*pageSize)+ind].requirements[j].booking_status == 2"
                           placeholder="Booking Status">
-                          <mat-option data-target="#bookingpopup" data-toggle="modal"
+                          <mat-option data-bs-target="#bookingpopup" data-bs-toggle="modal"
                             (click)="booking(transfer.key,((p-1)*pageSize)+ind,j)" *ngFor="let transfer of afboooked"
                             [value]="transfer.value">
                             {{transfer.key}}
@@ -412,7 +412,7 @@
                           *ngIf="taForm.value.detail[((p-1)*pageSize)+ind].requirements[j].booking_status == 4"
                           class="{{2 == 2 ? 'cancelled' : 'notc'}}" formControlName="booking_status"
                           placeholder="Booking Status">
-                          <mat-option data-target="#bookingpopup" data-toggle="modal"
+                          <mat-option data-bs-target="#bookingpopup" data-bs-toggle="modal"
                             (click)="booking(transfer.key,((p-1)*pageSize)+ind,j)" *ngFor="let transfer of cancelstatus"
                             [value]="transfer.value">
                             {{transfer.key}}
@@ -589,7 +589,7 @@
                     *ngFor="let files of taForm.value.detail[((p-1)*pageSize)+ind].requirements[j].filedetail;let find=index">
                     <td>{{files.file_name}}</td>
                     <td style="padding-left: 0px;border: hidden;">
-                      <span (click)="getattview(files)" data-toggle="modal" data-target="#fileview">
+                      <span (click)="getattview(files)" data-bs-toggle="modal" data-bs-target="#fileview">
                         <mat-icon matTooltip="View File">visibility
                         </mat-icon>
                       </span>
@@ -645,7 +645,7 @@
                 <tr *ngFor="let files of base64textString;let ind=index">
                   <td>{{fileData[ind].name}}</td>
                   <td>
-                    <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                    <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                       <mat-icon matTooltip="View File">visibility
                       </mat-icon>
                     </span>
@@ -676,7 +676,7 @@
               <tr *ngFor="let files of attachmentlist;let ind=index">
                 <td>{{files.file_name}}</td>
                 <td>
-                  <span (click)="fileeditview(ind)" data-toggle="modal" data-target="#fileview">
+                  <span (click)="fileeditview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                     <mat-icon matTooltip="View File">visibility
                     </mat-icon>
                   </span>
@@ -724,7 +724,7 @@
       </div>
 
       <div class="chaticon">
-        <button matTooltip="Open Comment Box" class="float-button" data-toggle="modal" data-target="#chatbox1"
+        <button matTooltip="Open Comment Box" class="float-button" data-bs-toggle="modal" data-bs-target="#chatbox1"
           (click)="chatclickscrollchanges();chatseen()"> <i class="float-icon fa fa-comment"></i><span
             *ngIf="chatunreadmsg != 0" class="badge">{{chatunreadmsg}}</span></button>
       </div>
@@ -802,7 +802,7 @@
         </div>
 
       </fieldset>
-      <!-- <button class="float-button" style="margin:20px 10px 30px 10px" data-toggle="modal" data-target="#chatbox1"> <i
+      <!-- <button class="float-button" style="margin:20px 10px 30px 10px" data-bs-toggle="modal" data-bs-target="#chatbox1"> <i
               class="float-icon fa fa-comment"></i></button> -->
 
       <div *ngIf="show_cancelapprovediv">
@@ -870,7 +870,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <p class="modal-title" style="margin-top: 10px;" id="exampleModalLongTitle">Travel Request Return</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -891,9 +891,9 @@
                   <div class="col-md-12 text-center" style="margin-bottom: 5%;">
                     <!-- <button type="submit" style="margin-left: 10px;" class="btn btn-light" id="primarybtn"
                           (click)="advancecancel()">Submit</button> -->
-                    <button type="submit" id="secondarybtn" class="btn btn-light" data-dismiss="modal"
+                    <button type="submit" id="secondarybtn" class="btn btn-light" data-bs-dismiss="modal"
                       (click)="return()">Return</button>
-                    <button type="button" data-dismiss="modal" class="btn btn-light" id="secondarybtn"
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-light" id="secondarybtn"
                       style="margin-left: 10px;">Close</button>
                   </div>
                 </div>
@@ -910,7 +910,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <p class="modal-title" style="margin-top: 10px;" id="exampleModalLongTitle">Travel Request Reject</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -930,9 +930,9 @@
                     <!-- <button type="submit" style="margin-left: 10px;" class="btn btn-light" id="primarybtn"
                           (click)="advancecancel()">Submit</button> -->
                     <button type="submit" id="primarybtn" style="border-color:black; color: black;"
-                      class="btn btn-light" data-dismiss="modal" (click)="reject()">Reject</button>
+                      class="btn btn-light" data-bs-dismiss="modal" (click)="reject()">Reject</button>
 
-                    <button type="button" data-dismiss="modal" class="btn btn-light" id="secondarybtn"
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-light" id="secondarybtn"
                       style="margin-left: 10px;">Close</button>
                   </div>
                 </div>
@@ -950,7 +950,7 @@
           <div class="modal-content" style="width:fit-content">
             <div class="modal-header">
               <p class="modal-title" id="exampleModalLongTitle">Approval Flow</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -1065,7 +1065,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <p class="modal-title" id="exampleModalLongTitle">Travel booking status</p>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -1091,8 +1091,8 @@
                   <span class="col-md-12 text-center" style="margin-bottom: 5%;">
                 
                     <button type="submit" id="primarybtn" class="btn btn-light"
-                      data-dismiss="modal" >Submit</button>
-                    <button type="button" data-dismiss="modal" class="btn btn-light" id="secondarybtn"
+                      data-bs-dismiss="modal" >Submit</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-light" id="secondarybtn"
                       style="margin-left: 10px;">Close</button>
                   </span>
                 </div>
@@ -1106,7 +1106,7 @@
           <div id="reqpopup" *ngIf="createacc && !cancelupdbtn" class="modal-content" style="width:fit-content">
             <div class="modal-header">
               <p class="modal-title" id="book">Accomodation Booking</p>
-              <button type="button" #accbook class="close" (click)="resetbookingfiles($event)" data-dismiss="modal"
+              <button type="button" #accbook class="close" (click)="resetbookingfiles($event)" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -1360,7 +1360,7 @@
                       <tr *ngFor="let files of base64textString;let ind=index">
                         <td>{{fileData[ind].name}}</td>
                         <td>
-                          <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                          <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                             <mat-icon matTooltip="View File">visibility
                             </mat-icon>
                           </span>
@@ -1381,7 +1381,7 @@
                       <tr *ngFor="let files of getviewfilelist;let ind=index">
                         <td>{{files.file_name}}</td>
                         <td style="padding-left: 30px;">
-                          <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                          <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                             <mat-icon matTooltip="View File">visibility
                             </mat-icon>
                           </span>
@@ -1412,7 +1412,7 @@
                     <label *ngIf="updatebtn">Update</label>
                   </button>
                   <button type="button" (click)="resetbookingfiles($event)" class="btn btn-light" id="secondarybtn"
-                    data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                    data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
                 </div>
 
               </form>
@@ -1424,7 +1424,7 @@
               <p class="modal-title" id="cancel">Accomodation Booking Cancellation
               </p>
 
-              <button type="button" #accbook class="close" (click)="resetbookingfiles($event)" data-dismiss="modal"
+              <button type="button" #accbook class="close" (click)="resetbookingfiles($event)" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -1665,7 +1665,7 @@
                           <tr *ngFor="let files of base64textString;let ind=index">
                             <td>{{fileData[ind].name}}</td>
                             <td>
-                              <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -1688,7 +1688,7 @@
                           <tr *ngFor="let files of getviewfilelist;let ind=index">
                             <td>{{files.file_name}}</td>
                             <td style="padding-left: 30px;">
-                              <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -1714,13 +1714,13 @@
                 </form>
               </section>
               <div style="text-align: center;margin-top: 4%;margin-bottom: 2%;">
-                <button type="submit" data-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
+                <button type="submit" data-bs-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
                   (click)="reqcancel($event)" id="primarybtn">
                   <label *ngIf="cancelbtn">Submit</label>
                   <label *ngIf="cancelupdbtn">Update</label>
                 </button>
                 <button type="button" (click)="resetbookingfiles($event)" class="btn btn-light" id="secondarybtn"
-                  data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                  data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
               </div>
 
 
@@ -1731,7 +1731,7 @@
             <div class="modal-header">
               <p class="modal-title" id="book">Train Booking</p>
 
-              <button type="button" #trainbook (click)="resetbookingfiles($event)" class="close" data-dismiss="modal"
+              <button type="button" #trainbook (click)="resetbookingfiles($event)" class="close" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -1982,7 +1982,7 @@
                         <tr *ngFor="let files of base64textString;let ind=index">
                           <td>{{fileData[ind].name}}</td>
                           <td>
-                            <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                            <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                               <mat-icon matTooltip="View File">visibility
                               </mat-icon>
                             </span>
@@ -2003,7 +2003,7 @@
                         <tr *ngFor="let files of getviewfilelist;let ind=index">
                           <td>{{files.file_name}}</td>
                           <td style="padding-left: 30px;">
-                            <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                            <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                               <mat-icon matTooltip="View File">visibility
                               </mat-icon>
                             </span>
@@ -2031,7 +2031,7 @@
                     <label *ngIf="bookbtn">Book</label>
                     <label *ngIf="updatebtn">Update</label> </button>
                   <button type="button" (click)="resetbookingfiles($event)" class="btn btn-light" id="secondarybtn"
-                    data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                    data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
                 </div>
 
               </form>
@@ -2043,7 +2043,7 @@
             <div class="modal-header">
               <p class="modal-title" id="cancel">Train Booking Cancellation</p>
 
-              <button type="button" #trainbook (click)="resetbookingfiles($event)" class="close" data-dismiss="modal"
+              <button type="button" #trainbook (click)="resetbookingfiles($event)" class="close" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -2253,7 +2253,7 @@
                           <tr *ngFor="let files of base64textString;let ind=index">
                             <td>{{fileData[ind].name}}</td>
                             <td>
-                              <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -2274,7 +2274,7 @@
                           <tr *ngFor="let files of getviewfilelist;let ind=index">
                             <td>{{files.file_name}}</td>
                             <td style="padding-left: 30px;">
-                              <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -2299,12 +2299,12 @@
                 </form>
               </section>
               <div style="text-align: center;margin-top: 4%;margin-bottom: 2%;">
-                <button type="submit" data-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
+                <button type="submit" data-bs-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
                   id="primarybtn" (click)="reqcancel($event)">
                   <label *ngIf="cancelbtn">Submit</label>
                   <label *ngIf="cancelupdbtn">Update</label> </button>
                 <button type="button" (click)="resetbookingfiles($event)" class="btn btn-light" id="secondarybtn"
-                  data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                  data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
               </div>
 
 
@@ -2315,7 +2315,7 @@
             <div class="modal-header">
               <p class="modal-title" id="book">Bus Booking</p>
 
-              <button type="button" #busbook (click)="resetbookingfiles($event)" class="close" data-dismiss="modal"
+              <button type="button" #busbook (click)="resetbookingfiles($event)" class="close" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -2579,7 +2579,7 @@
                         <tr *ngFor="let files of base64textString;let ind=index">
                           <td>{{fileData[ind].name}}</td>
                           <td>
-                            <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                            <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                               <mat-icon matTooltip="View File">visibility
                               </mat-icon>
                             </span>
@@ -2600,7 +2600,7 @@
                         <tr *ngFor="let files of getviewfilelist;let ind=index">
                           <td>{{files.file_name}}</td>
                           <td style="padding-left: 30px;">
-                            <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                            <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                               <mat-icon matTooltip="View File">visibility
                               </mat-icon>
                             </span>
@@ -2628,7 +2628,7 @@
                     <label *ngIf="bookbtn">Book</label>
                     <label *ngIf="updatebtn">Update</label> </button>
                   <button type="button" class="btn btn-light" (click)="resetbookingfiles($event)" id="secondarybtn"
-                    data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                    data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
                 </div>
 
               </form>
@@ -2639,7 +2639,7 @@
             <div class="modal-header">
               <p class="modal-title" id="cancel">Bus Booking Cancellation</p>
 
-              <button type="button" #busbook (click)="resetbookingfiles($event)" class="close" data-dismiss="modal"
+              <button type="button" #busbook (click)="resetbookingfiles($event)" class="close" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -2850,7 +2850,7 @@
                           <tr *ngFor="let files of base64textString;let ind=index">
                             <td>{{fileData[ind].name}}</td>
                             <td>
-                              <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -2871,7 +2871,7 @@
                           <tr *ngFor="let files of getviewfilelist;let ind=index">
                             <td>{{files.file_name}}</td>
                             <td style="padding-left: 30px;">
-                              <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -2896,12 +2896,12 @@
                 </form>
               </section>
               <div style="text-align: center;margin-top: 4%;margin-bottom: 2%;">
-                <button type="submit" data-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
+                <button type="submit" data-bs-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
                   id="primarybtn" (click)="reqcancel($event)">
                   <label *ngIf="cancelbtn">Submit</label>
                   <label *ngIf="cancelupdbtn">Update</label> </button>
                 <button type="button" class="btn btn-light" (click)="resetbookingfiles($event)" id="secondarybtn"
-                  data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                  data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
               </div>
 
 
@@ -2912,7 +2912,7 @@
             <div class="modal-header">
               <p class="modal-title" id="book">Flight Booking</p>
 
-              <button type="button" #airbook (click)="resetbookingfiles($event)" class="close" data-dismiss="modal"
+              <button type="button" #airbook (click)="resetbookingfiles($event)" class="close" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -3184,7 +3184,7 @@
                         <tr *ngFor="let files of base64textString;let ind=index">
                           <td>{{fileData[ind].name}}</td>
                           <td>
-                            <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                            <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                               <mat-icon matTooltip="View File">visibility
                               </mat-icon>
                             </span>
@@ -3205,7 +3205,7 @@
                         <tr *ngFor="let files of getviewfilelist;let ind=index">
                           <td>{{files.file_name}}</td>
                           <td style="padding-left: 30px;">
-                            <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                            <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                               <mat-icon matTooltip="View File">visibility
                               </mat-icon>
                             </span>
@@ -3233,7 +3233,7 @@
                     <label *ngIf="bookbtn">Book</label>
                     <label *ngIf="updatebtn">Update</label> </button>
                   <button type="button" class="btn btn-light" (click)="resetbookingfiles($event)" id="secondarybtn"
-                    data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                    data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
                 </div>
 
               </form>
@@ -3244,7 +3244,7 @@
             <div class="modal-header">
               <p class="modal-title" id="cancel">Flight Booking Cancellation</p>
 
-              <button type="button" #airbook (click)="resetbookingfiles($event)" class="close" data-dismiss="modal"
+              <button type="button" #airbook (click)="resetbookingfiles($event)" class="close" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -3453,7 +3453,7 @@
                           <tr *ngFor="let files of base64textString;let ind=index">
                             <td>{{fileData[ind].name}}</td>
                             <td>
-                              <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -3474,7 +3474,7 @@
                           <tr *ngFor="let files of getviewfilelist;let ind=index">
                             <td>{{files.file_name}}</td>
                             <td style="padding-left: 30px;">
-                              <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -3499,12 +3499,12 @@
                 </form>
               </section>
               <div style="text-align: center;margin-top: 4%;margin-bottom: 2%;">
-                <button type="submit" data-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
+                <button type="submit" data-bs-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
                   id="primarybtn" (click)="reqcancel($event)">
                   <label *ngIf="cancelbtn">Submit</label>
                   <label *ngIf="cancelupdbtn">Update</label> </button>
                 <button type="button" class="btn btn-light" (click)="resetbookingfiles($event)" id="secondarybtn"
-                  data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                  data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
               </div>
 
 
@@ -3515,7 +3515,7 @@
             <div class="modal-header">
               <p class="modal-title" id="book">Cab Booking</p>
 
-              <button type="button" #cabbook (click)="resetbookingfiles($event)" class="close" data-dismiss="modal"
+              <button type="button" #cabbook (click)="resetbookingfiles($event)" class="close" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -3781,7 +3781,7 @@
                         <tr *ngFor="let files of base64textString;let ind=index">
                           <td>{{fileData[ind].name}}</td>
                           <td>
-                            <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                            <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                               <mat-icon matTooltip="View File">visibility
                               </mat-icon>
                             </span>
@@ -3802,7 +3802,7 @@
                         <tr *ngFor="let files of getviewfilelist;let ind=index">
                           <td>{{files.file_name}}</td>
                           <td style="padding-left: 30px;">
-                            <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                            <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                               <mat-icon matTooltip="View File">visibility
                               </mat-icon>
                             </span>
@@ -3845,7 +3845,7 @@
                     <label *ngIf="bookbtn">Book</label>
                     <label *ngIf="updatebtn">Update</label> </button>
                   <button type="button" class="btn btn-light" (click)="resetbookingfiles($event)" id="secondarybtn"
-                    data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                    data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
                 </div>
 
               </form>
@@ -3856,7 +3856,7 @@
             <div class="modal-header">
               <p class="modal-title" id="cancel">Cab Booking Cancellation</p>
 
-              <button type="button" #cabbook (click)="resetbookingfiles($event)" class="close" data-dismiss="modal"
+              <button type="button" #cabbook (click)="resetbookingfiles($event)" class="close" data-bs-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -4058,7 +4058,7 @@
                           <tr *ngFor="let files of base64textString;let ind=index">
                             <td>{{fileData[ind].name}}</td>
                             <td>
-                              <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -4079,7 +4079,7 @@
                           <tr *ngFor="let files of getviewfilelist;let ind=index">
                             <td>{{files.file_name}}</td>
                             <td style="padding-left: 30px;">
-                              <span (click)="getfileview(ind)" data-toggle="modal" data-target="#fileview">
+                              <span (click)="getfileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                 <mat-icon matTooltip="View File">visibility
                                 </mat-icon>
                               </span>
@@ -4104,12 +4104,12 @@
                 </form>
               </section>
               <div style="text-align: center;margin-top: 4%;margin-bottom: 2%;">
-                <button type="submit" data-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
+                <button type="submit" data-bs-dismiss="modal" style="margin-left: 10px;" class="btn btn-light"
                   id="primarybtn" (click)="reqcancel($event)">
                   <label *ngIf="cancelbtn">Submit</label>
                   <label *ngIf="cancelupdbtn">Update</label> </button>
                 <button type="button" class="btn btn-light" (click)="resetbookingfiles($event)" id="secondarybtn"
-                  data-dismiss="modal" style="margin-left: 10px;">Close</button>
+                  data-bs-dismiss="modal" style="margin-left: 10px;">Close</button>
               </div>
 
 
@@ -4120,7 +4120,7 @@
               <div class="modal-header">
                 <p class="modal-title" id="exampleModalLongTitle">Accommodation Summary</p>
                 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -4143,7 +4143,7 @@
                     <td>{{acc.checkin_time| date:'dd-MMM-yyyy'}}</td>
                     <td>{{acc.checkout_time| date:'dd-MMM-yyyy'}}</td>
                     <td>{{acc.place_of_stay}}</td>
-                    <td><span class="material-icons" (click)="acc(i)" matTooltip="view" data-toggle="modal" data-target="#bookingpopup" style="color:green;">
+                    <td><span class="material-icons" (click)="acc(i)" matTooltip="view" data-bs-toggle="modal" data-bs-target="#bookingpopup" style="color:green;">
                         <mat-icon style="color: green;"class="material-icons">
                             visibility</mat-icon></span></td>
                         
@@ -4158,7 +4158,7 @@
               <div class="modal-header">
                 <p class="modal-title" id="exampleModalLongTitle">Train Summary</p>
                 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -4183,7 +4183,7 @@
                   <td>{{acc.to_time| date:'dd-MMM-yyyy'}}</td>
                   <td>{{acc.from_place}}</td>
                   <td>{{acc.to_place}}</td>
-                  <td><span class="material-icons" (click)="train(i)" matTooltip="view" data-toggle="modal" data-target="#bookingpopup" style="color:green;">
+                  <td><span class="material-icons" (click)="train(i)" matTooltip="view" data-bs-toggle="modal" data-bs-target="#bookingpopup" style="color:green;">
                       <mat-icon style="color: green;"class="material-icons">
                           visibility</mat-icon></span></td>
                       
@@ -4198,7 +4198,7 @@
               <div class="modal-header">
                 <p class="modal-title" id="exampleModalLongTitle">Bus Summary</p>
                 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -4223,7 +4223,7 @@
                   <td>{{acc.to_time| date:'dd-MMM-yyyy'}}</td>
                   <td>{{acc.from_place}}</td>
                   <td>{{acc.to_place}}</td>
-                  <td><span class="material-icons" (click)="bus(i)" matTooltip="view" data-toggle="modal" data-target="#bookingpopup" style="color:green;">
+                  <td><span class="material-icons" (click)="bus(i)" matTooltip="view" data-bs-toggle="modal" data-bs-target="#bookingpopup" style="color:green;">
                       <mat-icon style="color: green;"class="material-icons">
                           visibility</mat-icon></span></td>
                       
@@ -4238,7 +4238,7 @@
               <div class="modal-header">
                 <p class="modal-title" id="exampleModalLongTitle">Air Summary</p>
                 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -4263,7 +4263,7 @@
                   <td>{{acc.to_time| date:'dd-MMM-yyyy'}}</td>
                   <td>{{acc.from_place}}</td>
                   <td>{{acc.to_place}}</td>
-                  <td><span class="material-icons" (click)="air(i)" matTooltip="view" data-toggle="modal" data-target="#bookingpopup" style="color:green;">
+                  <td><span class="material-icons" (click)="air(i)" matTooltip="view" data-bs-toggle="modal" data-bs-target="#bookingpopup" style="color:green;">
                       <mat-icon style="color: green;"class="material-icons">
                           visibility</mat-icon></span></td>
                       
@@ -4278,7 +4278,7 @@
               <div class="modal-header">
                 <p class="modal-title" id="exampleModalLongTitle">Cab Summary</p>
                 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -4303,7 +4303,7 @@
                   <td>{{acc.to_time| date:'dd-MMM-yyyy'}}</td>
                   <td>{{acc.from_place}}</td>
                   <td>{{acc.to_place}}</td>
-                  <td><span class="material-icons" (click)="cab(i)" matTooltip="view" data-toggle="modal" data-target="#bookingpopup" style="color:green;">
+                  <td><span class="material-icons" (click)="cab(i)" matTooltip="view" data-bs-toggle="modal" data-bs-target="#bookingpopup" style="color:green;">
                       <mat-icon style="color: green;"class="material-icons">
                           visibility</mat-icon></span></td>
                       
@@ -4329,7 +4329,7 @@
                 Travel Attachment View
               </p>
 
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">
                   ×
                 </span>
@@ -4367,7 +4367,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <p class="modal-title" id="exampleModalLongTitle">Comment Box</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -4390,7 +4390,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <p class="modal-title" id="exampleModalLongTitle">Chat Box</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -4434,7 +4434,7 @@
                   <p class="modal-title" style="color: #999;" id="exampleModalLongTitle"><i _ngcontent-mxe-c1=""
                       aria-hidden="true" style="color: #999;" class="fa fa-user-circle-o"></i> SENT MESSAGE</p>
 
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -4501,7 +4501,7 @@
                 <span class="fa fa-window-restore" *ngIf="this.isMaximize" title="Restore" (click)="restore();"
                   style="padding:5px"></span>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -4580,7 +4580,7 @@
                     <button type="submit" id="primarybtn" style="border-color: black;color: black;margin-left:50px"
                       matTooltip="Send Message" class="btn btn-light" (click)="createCommentform();">SEND</button>
                     <button id="secondarybtn" style="border-color:black; color: black;margin-left:30px;"
-                      matTooltip="Close Comment Box" class="btn btn-light" data-dismiss="modal">CLOSE</button>
+                      matTooltip="Close Comment Box" class="btn btn-light" data-bs-dismiss="modal">CLOSE</button>
 
                   </td>
 
@@ -4605,7 +4605,7 @@
           <div class="modal-content">
             <div class="modal-header" style="background:rgba(23, 204, 23, 0.288);">
               <p class="modal-title" style="color:black ;text-align: center;">Travel Attachment View</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -4632,7 +4632,7 @@
                           <td style="text-align: center;">{{attach.file_name}}</td>
                           <td style="text-align: center;color:blue;">
                             <div matTooltip="View" class="fa fa-arrow-up" aria-hidden="true"
-                              data-target="#exampleModal1" data-dismiss="modal" data-toggle="modal"
+                              data-bs-target="#exampleModal1" data-bs-dismiss="modal" data-bs-toggle="modal"
                               (click)="commentPopup(attach.id,attach.file_name )">
 
                               <!-- (click)="getimages()" -->

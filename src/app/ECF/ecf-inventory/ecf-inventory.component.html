@@ -465,8 +465,8 @@
                                     <td > -->
                                         <!-- <label style="margin-left: 50px;">Add Notes</label> -->
 
-                                        <span class="material-icons" type="button" data-toggle="modal"
-                                            data-target=".bd-example-modal-xl" matTooltip="Add Notes">description</span>
+                                        <span class="material-icons" type="button" data-bs-toggle="modal"
+                                            data-bs-target=".bd-example-modal-xl" matTooltip="Add Notes">description</span>
 
 
 
@@ -503,7 +503,7 @@
 
                                                     <button type="button" style="border-radius:10px;margin-left: 10px; border-color: black; 
                                                         background-color: white;" class="btn btn-light"
-                                                        data-dismiss="modal">
+                                                        data-bs-dismiss="modal">
                                                         Close</button>
 
                                                 </div>
@@ -642,8 +642,8 @@
                                                 </mat-form-field>
 
                                                 <button type="button" class="btn btn-outline-primary"
-                                                    matTooltip="Select Supplier" data-toggle="modal"
-                                                    data-target="#selectSupplier" (click)="getsuppindex(i)"
+                                                    matTooltip="Select Supplier" data-bs-toggle="modal"
+                                                    data-bs-target="#selectSupplier" (click)="getsuppindex(i)"
                                                     style="border-radius:40px;margin-left:15px;"><span
                                                         class="fa fa-arrow-up"></span></button>
 
@@ -802,7 +802,7 @@
                                                       <tr *ngFor="let files of base64textString;let ind=index">
                                                         <td>{{fileData[ind].name}}</td>
                                                         <td>
-                                                          <span (click)="fileview(ind)" data-toggle="modal" data-target="#fileview">
+                                                          <span (click)="fileview(ind)" data-bs-toggle="modal" data-bs-target="#fileview">
                                                             <mat-icon matTooltip="View File">visibility
                                                             </mat-icon>
                                                           </span>
@@ -820,8 +820,8 @@
                                                 <!-- <div *ngIf="innerdet?.filearray?.length > 0"> -->
                                                 <div
                                                     *ngFor="let files of InvoiceHeaderForm?.value?.invoiceheader[i]?.filevalue; let index = index">
-                                                    <p (click)="filepreview(files)" data-toggle="modal"
-                                                        data-target="#my-modalpreview"
+                                                    <p (click)="filepreview(files)" data-bs-toggle="modal"
+                                                        data-bs-target="#my-modalpreview"
                                                         style="color: #0000EE;cursor: pointer;">
                                                         {{index+1}}.{{files?.name}} </p>
                                                     <span (click)="deletefileUpload(InvoiceHeaderForm?.value?.invoiceheader[i],index)"
@@ -836,9 +836,9 @@
                                                 <div
                                                     *ngIf="InvoiceHeaderForm?.value?.invoiceheader[i]?.filekey?.length > 0">
                                                     <h3 (click)="getfiledetails(section,i)"
-                                                        data-target="#showattachmentpopup"
+                                                        data-bs-target="#showattachmentpopup"
                                                         style="cursor: pointer;color:blue;font-family: 'Times New Roman', Times, serif;margin-left: 5px;"
-                                                        class="btn btn-link" data-toggle="modal">Previously Attached
+                                                        class="btn btn-link" data-bs-toggle="modal">Previously Attached
                                                         Files</h3>
                                                 </div>
 
@@ -1587,7 +1587,7 @@
                                             </td>
                                             <!-- <td *ngIf="this.ecftypeid == 3" style="text-align: center;">
                                             <i class="fa fa-arrow-up" aria-hidden="true" style="color: darkviolet;"
-                                                data-toggle="modal" data-target="#supplierdetailpopup"></i>
+                                                data-bs-toggle="modal" data-bs-target="#supplierdetailpopup"></i>
                                         </td> -->
                                             <td>
                                                 <mat-form-field style="width:160px;" (click)="gethsndropdown()">
@@ -1743,7 +1743,7 @@
                                                     class="btn btn-outline-primary" matTooltip="Add Debit"
                                                     (click)="adddebit(section,InvoiceDetailForm.value,invdtlindex)"
                                                     style="border-radius:40px;margin-left:5px;color: mediumblue"
-                                                    data-toggle="modal" data-target="#createdebitdetails"><span
+                                                    data-bs-toggle="modal" data-bs-target="#createdebitdetails"><span
                                                         class="fa fa-arrow-right"></span></button>
 
 
@@ -1751,7 +1751,7 @@
                                                     class="btn btn-outline-primary" matTooltip="Add Debit"
                                                     (click)="adddebit(section,InvoiceDetailForm.value,invdtlindex)"
                                                     style="border-radius:40px;margin-left:5px;color: mediumblue;"
-                                                    data-toggle="modal" data-target="#createdebitdetails"><span
+                                                    data-bs-toggle="modal" data-bs-target="#createdebitdetails"><span
                                                         class="fa fa-arrow-right"></span></button>
 
 
@@ -1891,7 +1891,7 @@
                                                         <mat-option *ngFor="let pay of PaymodeNonPoList"
                                                             [value]="pay.id"
                                                             (click)="CreditDessss(credit,pay,creditindex)"
-                                                            data-toggle="modal" data-target="#createmodalforpopup">
+                                                            data-bs-toggle="modal" data-bs-target="#createmodalforpopup">
                                                             {{pay.name}}
                                                         </mat-option>
                                                     </mat-select>
@@ -1907,7 +1907,7 @@
                                                         <mat-option *ngFor="let pay of PaymodeNonPoLists"
                                                             [value]="pay.id"
                                                             (click)="CreditDessss(credit,pay,creditindex)"
-                                                            data-toggle="modal" data-target="#createmodalforpopup">
+                                                            data-bs-toggle="modal" data-bs-target="#createmodalforpopup">
                                                             {{pay.name}}
                                                         </mat-option>
                                                     </mat-select>
@@ -1923,7 +1923,7 @@
                                                         <mat-option *ngFor="let pay of PaymodeAdvVenList"
                                                             [value]="pay.id"
                                                             (click)="CreditDessss(credit,pay,creditindex)"
-                                                            data-toggle="modal" data-target="#createmodalforpopup">
+                                                            data-bs-toggle="modal" data-bs-target="#createmodalforpopup">
                                                             {{pay.name}}
                                                         </mat-option>
                                                     </mat-select>
@@ -1938,7 +1938,7 @@
                                                         <mat-option *ngFor="let pay of PaymodeAdvERAList"
                                                             [value]="pay.id"
                                                             (click)="CreditDessss(credit,pay,creditindex)"
-                                                            data-toggle="modal" data-target="#createmodalforpopup">
+                                                            data-bs-toggle="modal" data-bs-target="#createmodalforpopup">
                                                             {{pay.name}}
                                                         </mat-option>
                                                     </mat-select>
@@ -1954,7 +1954,7 @@
                                                         <mat-option *ngFor="let pay of PaymodeERAList"
                                                             [value]="pay.id"
                                                             (click)="CreditDessss(credit,pay,creditindex)"
-                                                            data-toggle="modal" data-target="#createmodalforpopup">
+                                                            data-bs-toggle="modal" data-bs-target="#createmodalforpopup">
                                                             {{pay.name}}
                                                         </mat-option>
                                                     </mat-select>
@@ -1969,7 +1969,7 @@
                                                         <mat-option *ngFor="let pay of PaymodeERALists"
                                                             [value]="pay.id"
                                                             (click)="CreditDessss(credit,pay,creditindex)"
-                                                            data-toggle="modal" data-target="#createmodalforpopup">
+                                                            data-bs-toggle="modal" data-bs-target="#createmodalforpopup">
                                                             {{pay.name}}
                                                         </mat-option>
                                                     </mat-select>
@@ -1982,7 +1982,7 @@
                                                 <mat-select formControlName="paymode_id" [disabled]="readcreditdata != false">
                                                     <mat-option *ngFor="let pay of PaymodeAdvBRAList" [value]="pay.id"
                                                         (click)="CreditDessss(credit,pay,creditindex)"
-                                                        data-toggle="modal" data-target="#createmodalforpopup" >
+                                                        data-bs-toggle="modal" data-bs-target="#createmodalforpopup" >
                                                         {{pay.name}}
                                                     </mat-option>
                                                 </mat-select>
@@ -2499,7 +2499,7 @@
                 <div class="modal-header" style="background: #21cbe5">
                     <h2 class="modal-title">
                         Find Supplier</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -2661,7 +2661,7 @@
                                 <br><br>
                                 <div *ngIf="submitbutton" style="margin-left: 20px; ">
                                     <tr>
-                                        <button type="button" data-dismiss="modal" style="border-radius:10px;margin-left: 500px;border-color: #f5c68b;
+                                        <button type="button" data-bs-dismiss="modal" style="border-radius:10px;margin-left: 500px;border-color: #f5c68b;
                                         background-color: #f5c68b;" class="btn btn-light"
                                             (click)="Branchcallingfunction()">
                                             Submit</button>
@@ -2695,7 +2695,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background: #21cbe5">
                     <h2 class="modal-title" style="color:black ;">Credit GL</h2>
-                    <button type="button" #closebuttons class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" #closebuttons class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -2774,7 +2774,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background: #21cbe5">
                     <h2 class="modal-title" style="color:black ;text-align: center;">PPX Details</h2>
-                    <button type="button" class="close" #closeppxbutton data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" #closeppxbutton data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -2896,7 +2896,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background: #21cbe5">
                 <h2 class="modal-title" style="color:black ;text-align: center;">Supplier Details</h2>
-                <button type="button" #closebuttons class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebuttons class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -2995,7 +2995,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background: #21cbe5">
                     <h2 style="margin-left: 4px;;font-weight:bold;">Debit Details</h2>
-                    <button type="button" class="close" #closebutton data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" #closebutton data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -3297,7 +3297,7 @@
                 <div class="modal-header" style="background: #21cbe5;">
                     <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">ECF Attachments
                     </h2>
-                    <button type="button" class="close" data-dismiss="modal" #closedbuttons aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" #closedbuttons aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -3325,7 +3325,7 @@
                                             <td style="text-align: center;">{{attach.file_name}}</td>
                                             <!-- <td style="text-align: center;color:blue;">
                           <div matTooltip="View" class="fa fa-arrow-up" aria-hidden="true" 
-                            data-toggle="modal"
+                            data-bs-toggle="modal"
                             (click)="data(attach.file_id)" >
 
                            
@@ -3379,7 +3379,7 @@
                     ECF Attachments
                 </p>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">
                         ×
                     </span>
@@ -3415,9 +3415,9 @@
 
 <div *ngIf="showimageHeaderPreview" id="my-modalpreview" class="modal fade" aria-labelledby="my-modalLabel"
     aria-hidden="true" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -3434,7 +3434,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;">
                 <h2 class="modal-title"> ECF Attachments</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

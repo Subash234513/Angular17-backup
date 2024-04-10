@@ -277,7 +277,7 @@
                                 <td>
                                     <div>
                                         <span *ngFor="let selected of documentList;let index = index"
-                                            (click)="imagePreview(selected)" data-toggle="modal" data-target="#my-modal"
+                                            (click)="imagePreview(selected)" data-bs-toggle="modal" data-bs-target="#my-modal"
                                             matTooltip="Images" class="btn-link">
                                             {{selected.file_name}}
                                             <button mat-icon-button type="button">
@@ -369,7 +369,7 @@
     </div>
     <div id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true" tabindex="-1"
         role="dialog">
-        <div class="modal-dialog" data-dismiss="modal">
+        <div class="modal-dialog" data-bs-dismiss="modal">
             <div class="modal-content">
                 <div class="modal-body" *ngIf="pdfUrls!=='pdf'">
                     <img src="{{jpgUrls}}" class="img-responsive" style="width: 100%;">

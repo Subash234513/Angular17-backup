@@ -2,7 +2,7 @@
     <mat-card style="margin:10px 12px 20px 10px;" class="mat-elevation-z0">
         <nav>
             <div class="nav nav-tabs">
-                <span #myDiv class="nav-item nav-link" id="subname" data-toggle="tab" (click)="subModuleData(sub)"
+                <span #myDiv class="nav-item nav-link" id="subname" data-bs-toggle="tab" (click)="subModuleData(sub)"
                     role="tab" *ngFor="let sub of CMS_Master_Menu_List;index as i">
                     {{sub.name}}
                 </span>
@@ -413,16 +413,16 @@
                         </div>
                         <div class="col-sm-2 col-md-2 col-lg-2">
                             <button type="button"  *ngIf="legalDetails?.is_created_by == true && (legalDetails?.approval_status?.text == 'DRAFT' || legalDetails?.approval_status?.text == 'REVIEW')" mat-stroked-button 
-                            data-toggle="modal"
-                            data-target="#Move_To_Approve"
+                            data-bs-toggle="modal"
+                            data-bs-target="#Move_To_Approve"
                             style="margin-left: 1%;background-color: green;color: white;">Submit To Approver</button>
                         </div>
                         <div class="col-sm-2 col-md-2 col-lg-2">
                             <div *ngIf="legalDetails?.is_approver == true && legalDetails?.approval_status.text == 'PENDING' ">
                                 <mat-form-field class="ddheight positiontext">
                                     <mat-select placeholder="Select Action">
-                                        <mat-option *ngFor="let process of ProcessList" [value]="process?.name" data-toggle="modal"
-                                            data-target="#exampleModal" (click)="gettingRemarks(process)">
+                                        <mat-option *ngFor="let process of ProcessList" [value]="process?.name" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal" (click)="gettingRemarks(process)">
                                             {{process?.name}}
                                         </mat-option>
                                     </mat-select>
@@ -443,7 +443,7 @@
 
 
 
-                    <button mat-button class="buttonwidth" color="primary" data-toggle="collapse" data-target="#collapseNote"
+                    <button mat-button class="buttonwidth" color="primary" data-bs-toggle="collapse" data-bs-target="#collapseNote"
                       aria-expanded="false" aria-controls="collapseNoteview">Description:<mat-icon>expand_more</mat-icon>
                     </button>
                     <br>
@@ -456,7 +456,7 @@
                     </div>
 
 
-                    <button mat-button class="buttonwidth" color="primary" data-toggle="collapse" data-target="#collapseNoteclause"
+                    <button mat-button class="buttonwidth" color="primary" data-bs-toggle="collapse" data-bs-target="#collapseNoteclause"
                       aria-expanded="false" aria-controls="collapseNoteclauseview">Legal Clause note:<mat-icon>expand_more</mat-icon>
                     </button>
                     <br>
@@ -728,7 +728,7 @@
                 <div class="modal-header" style="background:#21cbe5;">
                     <h2 class="modal-title" id="exampleModalLabel">{{SelectedProcess}}
                         Remarks</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -749,12 +749,12 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" style="border-radius: 7px;margin-left: 10px;
                                                         border-color: black;
-                                                        background-color: white;" data-dismiss="modal">Close</button>
+                                                        background-color: white;" data-bs-dismiss="modal">Close</button>
 
                     <button type="button" style="border-radius: 10px;margin-left: 10px;
                                                     border-color: #f5c68b; background-color: #f5c68b;"
-                        class="btn btn-light" (click)="Approval_Reject_Review(SelectedProcess)" data-toggle="modal"
-                        data-target="#exampleModal">Submit</button>
+                        class="btn btn-light" (click)="Approval_Reject_Review(SelectedProcess)" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Submit</button>
                 </div>
             </div>
         </div>
@@ -767,7 +767,7 @@
             <div class="modal-header" style="background:#c1e2f6;">
                 <h2 class="modal-title" id="exampleModalLabel">{{SelectedProcess}}
                     Remarks</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -795,11 +795,11 @@
             <div class="modal-footer">
                 <button type="button" class=" mat-stroked-button" style="border-radius: 7px;margin-left: 10px;
                                                     border-color: black;
-                                                    background-color: white;" data-dismiss="modal">Close</button>
+                                                    background-color: white;" data-bs-dismiss="modal">Close</button>
 
                 <button type="button" style="border-radius: 10px;margin-left: 10px; 
                                                 border-color: #f5c68b; background-color: #f5c68b;"
-                    class=" mat-stroked-button" data-dismiss="modal"
+                    class=" mat-stroked-button" data-bs-dismiss="modal"
                     (click)="Approval_Reject_Review(SelectedProcess)">Submit</button>
             </div>
         </div>
@@ -815,7 +815,7 @@
             <div class="modal-header" style="background:#c1e2f6;">
                 <h2 class="modal-title" id="exampleModalLabel">
                     Move to Approver</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -844,11 +844,11 @@
             <div class="modal-footer">
                 <button type="button" class=" mat-stroked-button" style="border-radius: 7px;margin-left: 10px;
                                                     border-color: black;
-                                                    background-color: white;" data-dismiss="modal">Close</button>
+                                                    background-color: white;" data-bs-dismiss="modal">Close</button>
 
                 <button type="button" style="border-radius: 10px;margin-left: 10px; 
                                                 border-color: #f5c68b; background-color: #f5c68b;"
-                    class=" mat-stroked-button" data-dismiss="modal"
+                    class=" mat-stroked-button" data-bs-dismiss="modal"
                     (click)="move_to_approver()">Submit</button>
             </div>
         </div>

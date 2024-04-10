@@ -18,8 +18,8 @@
           </div>
 
           <div>
-            <button *ngIf="story_TaskViewData?.can_map" class="btn btn-outline-secondary" data-toggle="modal"
-              data-target="#assignStoryTask">
+            <button *ngIf="story_TaskViewData?.can_map" class="btn btn-outline-secondary" data-bs-toggle="modal"
+              data-bs-target="#assignStoryTask">
               Story Mapping
             </button>
           </div>
@@ -38,8 +38,8 @@
                     story_TaskViewData?.task_status_id === 6
                   ">
                 <span *ngIf="isActualDate == true">
-                  <button class="btn" (click)="ChaneStatuss(story_TaskViewData)" data-target="#workinprogressModal"
-                    data-toggle="modal">
+                  <button class="btn" (click)="ChaneStatuss(story_TaskViewData)" data-bs-target="#workinprogressModal"
+                    data-bs-toggle="modal">
                     Work In Progress</button><br />
                 </span>
                 <span *ngIf="isActualDate == false">
@@ -53,8 +53,8 @@
                     story_TaskViewData?.task_status_id === 1 ||
                     story_TaskViewData?.task_status_id === 6
                   ">
-                <button class="btn" (click)="ChaneStatuss(story_TaskViewData)" data-target="#markcompleteModal"
-                  data-toggle="modal">
+                <button class="btn" (click)="ChaneStatuss(story_TaskViewData)" data-bs-target="#markcompleteModal"
+                  data-bs-toggle="modal">
                   Mark Complete</button><br />
               </ng-container>
 
@@ -73,8 +73,8 @@
                     story_TaskViewData?.task_status_id === 2 ||
                     story_TaskViewData?.task_status_id === 5
                   ">
-                <button class="btn" (click)="ChaneStatuss(story_TaskViewData)" data-target="#returnModal"
-                data-toggle="modal">
+                <button class="btn" (click)="ChaneStatuss(story_TaskViewData)" data-bs-target="#returnModal"
+                data-bs-toggle="modal">
                 <!-- (click)="ChaneStatus(6, story_TaskViewData)"> -->
                   Return</button><br />
               </ng-container>
@@ -87,12 +87,12 @@
           </div>
           <!-- </div> -->
           <div *ngIf="story_TaskViewData?.can_reassign">
-            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#holidaygetmodal">
+            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#holidaygetmodal">
               Reassign
             </button>
           </div>
           <div *ngIf="story_TaskViewData?.task_status_id == 8">
-            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#assignmodal"
+            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#assignmodal"
               (click)="assignEdit(story_TaskViewData)">
               Assign
             </button>
@@ -102,8 +102,8 @@
               
             ">
             <button type="button" class="btn btn-primary"
-              style="padding: 2px 10px 0 10px;background-color: #044063;color: white;" data-toggle="modal"
-              data-target="#exampleModal" (click)="onclickTaskEdit(story_TaskViewData)">
+              style="padding: 2px 10px 0 10px;background-color: #044063;color: white;" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" (click)="onclickTaskEdit(story_TaskViewData)">
               <mat-icon>edit</mat-icon>
             </button>
 
@@ -116,7 +116,7 @@
                     <p class="modal-title" id="exampleModalLabel" style="margin-bottom: 0">
                       Task Edit
                     </p>
-                    <button (click)="popclose()" type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    <button (click)="popclose()" type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
                       style="color: white;" #closebutton>
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -131,7 +131,7 @@
                     <button
                       type="button"
                       class="btn btn-secondary"
-                      data-dismiss="modal"
+                      data-bs-dismiss="modal"
                     >
                       Close
                     </button>
@@ -516,7 +516,7 @@
                           <i class="fa-solid fa-trash"></i>
                         </button>
                         <span class="cus-taskViewFlagsDiv" *ngIf="item.file">
-                          <button mat-icon-button data-toggle="modal" data-target="#myModal3"
+                          <button mat-icon-button data-bs-toggle="modal" data-bs-target="#myModal3"
                             class="btn btn-outline-secondary" (click)="fileview(item)">
                             <mat-icon style="font-size: 16px">file_open</mat-icon>
                           </button>
@@ -575,7 +575,7 @@
         <p class="modal-title" id="exampleassignlabel" style="margin-bottom: 0">
           Assign Task
         </p>
-        <button (click)="popassignclose()" type="button" class="close" data-dismiss="modal" aria-label="Close"
+        <button (click)="popassignclose()" type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
           style="color: white;" #closebutton>
           <span aria-hidden="true">&times;</span>
         </button>
@@ -591,7 +591,7 @@
       <button
         type="button"
         class="btn btn-secondary"
-        data-dismiss="modal"
+        data-bs-dismiss="modal"
       >
         Close
       </button>
@@ -616,7 +616,7 @@
         <button
           type="button"
           class="close"
-          data-dismiss="modal"
+          data-bs-dismiss="modal"
           aria-label="Close"
         >
           <span aria-hidden="true">&times;</span>
@@ -664,7 +664,7 @@
               class="btn btn-primary"
               style="margin-left: 30%"
               (click)="assignTask()"
-              data-dismiss="modal"
+              data-bs-dismiss="modal"
             >
               Assign
             </button>
@@ -680,7 +680,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: #044063;color: white;">
         <h2 class="modal-title">Re-assigning</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -712,7 +712,7 @@
           </div>
           <div class="col-sm-4">
             <button class="btn btn-primary" style="margin-left: 30%;background-color: #044063;color: white;"
-              (click)="reassignTask()" data-dismiss="modal">
+              (click)="reassignTask()" data-bs-dismiss="modal">
               Reassign
             </button>
           </div>
@@ -727,7 +727,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: #044063;color: white;">
         <h3 class="modal-title" style="margin-bottom: 0">Action</h3>
-        <button type="button" class="close" data-dismiss="modal" style="color: white;" aria-label="Close">
+        <button type="button" class="close" data-bs-dismiss="modal" style="color: white;" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -751,7 +751,7 @@
       <div class="modal-footer">
         <!-- <p>Updating the Task</p> -->
         <div>
-          <button class="btn btn-primary" (click)="updateTaskProgress()" data-dismiss="modal"
+          <button class="btn btn-primary" (click)="updateTaskProgress()" data-bs-dismiss="modal"
             style="background-color: #044063;color: white;">
             Update
           </button>
@@ -766,7 +766,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: #044063;color: white;">
         <h3 class="modal-title" style="margin-bottom: 0">Action</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -818,7 +818,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn" (click)="updateTaskProgresss()" data-dismiss="modal"
+        <button class="btn" (click)="updateTaskProgresss()" data-bs-dismiss="modal"
           style="background-color: #044063; color: white">
           Update
         </button>
@@ -845,17 +845,17 @@
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title" style="margin-bottom: 0">Details</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class="row">
           Confirm to Hold the Task.
-          <button class="btn btn-primary" (click)="updateTaskProgressHold()" data-dismiss="modal">
+          <button class="btn btn-primary" (click)="updateTaskProgressHold()" data-bs-dismiss="modal">
             Update
           </button>
-          <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
@@ -867,7 +867,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: #044063;color: white;">
         <h3 class="modal-title" style="margin-bottom: 0">Story Task Mapping</h3>
-        <button style="color: white;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button style="color: white;" type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -900,11 +900,11 @@
 
       <div class="modal-footer">
         <button class="btn btn-primary" style="margin-left: 30%;background-color: #044063;color: white;"
-          (click)="assignStoryTasks()" data-dismiss="modal">
+          (click)="assignStoryTasks()" data-bs-dismiss="modal">
           Submit
         </button>
         <div>
-          <button class="btn btn-primary" (click)="gotoStories()" data-dismiss="modal"
+          <button class="btn btn-primary" (click)="gotoStories()" data-bs-dismiss="modal"
             style="background-color: #044063;color: white;">
             Add New Story
           </button>
@@ -923,7 +923,7 @@
       <!-- Modal Header -->
       <div class="modal-header" style="background-color: #044063;color: white;">
         <p class="modal-title" style="margin-bottom: 0;">Comment Attachments</p>
-        <button type="button" class="close" data-dismiss="modal" style="color: white;">
+        <button type="button" class="close" data-bs-dismiss="modal" style="color: white;">
           &times;
         </button>
       </div>
@@ -943,7 +943,7 @@
         <!-- </div> -->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
           style="background-color: #044063;color: white;">
           Close
         </button>
@@ -957,7 +957,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: #044063;color: white;">
         <h3 class="modal-title" style="margin-bottom: 0">Action</h3>
-        <button type="button" class="close" data-dismiss="modal" style="color: white;" aria-label="Close">
+        <button type="button" class="close" data-bs-dismiss="modal" style="color: white;" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -980,7 +980,7 @@
       <div class="modal-footer">
         <!-- <p>Updating the Task</p> -->
         <div>
-          <button class="btn btn-primary" (click)="updateTaskProgressOne()" data-dismiss="modal"
+          <button class="btn btn-primary" (click)="updateTaskProgressOne()" data-bs-dismiss="modal"
             style="background-color: #044063;color: white;">
             Update
           </button>

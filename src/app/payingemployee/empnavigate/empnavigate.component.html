@@ -1,7 +1,7 @@
 <!-- <div>
     <nav *ngIf="isShowNavs">
         <div class="nav nav-tabs">
-            <span class="nav-item nav-link " data-toggle="tab" role="tab" *ngFor="let sub of payrollsubmoduleList">
+            <span class="nav-item nav-link " data-bs-toggle="tab" role="tab" *ngFor="let sub of payrollsubmoduleList">
                 <span *ngIf="sub.url !=='/landing'">
                     <span *ngIf="sub.url !=='/payapproval'">
                         <span *ngIf="sub.url !=='/paysummary'">
@@ -84,7 +84,7 @@
         class="nav-item nav-link"
         id="subname"
         [ngClass]="i == returnnav ? 'active' : ''"
-        data-toggle="tab"
+        data-bs-toggle="tab"
         (click)="subModuleData(sub)"
         role="tab"
         *ngFor="let sub of payrollsubmoduleList; index as i"
@@ -98,14 +98,14 @@
       class="nav-item nav-link"
       id="subname"
       [ngClass]="i == returnnav ? 'active' : ''"
-      data-toggle="tab"
+      data-bs-toggle="tab"
       (click)="subModuleData(sub)"
       role="tab">Monthly Payroll</p>
       <p  #myDiv
       class="nav-item nav-link"
       id="subname"
       [ngClass]="i == returnnav ? 'active' : ''"
-      data-toggle="tab"
+      data-bs-toggle="tab"
       (click)="subModuleData(sub)"
       role="tab">Bank Template</p> -->
     </div>

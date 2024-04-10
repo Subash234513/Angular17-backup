@@ -111,7 +111,7 @@
                         <td>{{ display.match_found.name }}</td>
                         <td style="font-size: small;width: 150px;cursor: pointer;">
                             <div *ngFor="let file of display.filekey ;index as i;" title="{{file.name }}" class=" btn-link"
-                            data-target="#my-modalpreview" data-toggle="modal" (click)="fileview(file)">
+                            data-bs-target="#my-modalpreview" data-bs-toggle="modal" (click)="fileview(file)">
                                 {{i+1}}.{{file.name }}
 
                             </div>
@@ -156,7 +156,7 @@
 </div>
 <div *ngIf="showimageHeaderPreview" id="my-modalpreview" class="modal fade" aria-labelledby="my-modalLabel"
     aria-hidden="true" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
             <div class="modal-body">
                 <img src="{{jpgUrls}}" class="img-responsive" style="width: 100%;">

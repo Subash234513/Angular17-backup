@@ -106,13 +106,13 @@
         <!-- tab for bcp & due  -->
     <nav>
         <div class="nav nav-tabs">
-            <!-- <span class="nav-item nav-link " data-toggle="tab" (click)="subModuleData(sub)" role="tab"
+            <!-- <span class="nav-item nav-link " data-bs-toggle="tab" (click)="subModuleData(sub)" role="tab"
                 *ngFor="let sub of SGList">
                 {{sub.name}}
             </span> -->
-        <a class="nav-item nav-link active" data-toggle="tab" (click)="document()">Document</a>
-        <!-- <a class="nav-item nav-link" *ngIf="this.comflag == true" data-toggle="tab" (click)="BCP_Questionnaire()">BCP Questionnaire</a>
-        <a class="nav-item nav-link" *ngIf="this.comflag == true" data-toggle="tab" (click)="due_diligence()">Due Diligence</a> -->
+        <a class="nav-item nav-link active" data-bs-toggle="tab" (click)="document()">Document</a>
+        <!-- <a class="nav-item nav-link" *ngIf="this.comflag == true" data-bs-toggle="tab" (click)="BCP_Questionnaire()">BCP Questionnaire</a>
+        <a class="nav-item nav-link" *ngIf="this.comflag == true" data-bs-toggle="tab" (click)="due_diligence()">Due Diligence</a> -->
         </div>
     </nav>
 
@@ -226,7 +226,7 @@
                         <td>{{display.remarks}}</td>
                         <td style="font-size: small;width: 150px;cursor: pointer;">
                             <div *ngFor="let file of display.filekey ;index as i;" title="{{file.name }}" class=" btn-link"
-                            data-toggle="modal" data-target="#my-modalpreview"
+                            data-bs-toggle="modal" data-bs-target="#my-modalpreview"
                                 (click)="fileview(file)">
                                 {{i+1}}.{{file.name }}
 
@@ -387,7 +387,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;">
                 <h2 class="modal-title">PDF View</h2>
-                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button> -->
             </div>
@@ -398,9 +398,9 @@
 </div>
 <div *ngIf="showimageHeaderPreview" id="my-modalpreview" class="modal fade" aria-labelledby="my-modalLabel"
     aria-hidden="true" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button> -->
             <div class="modal-body">

@@ -1,6 +1,6 @@
 <div class="Container" style="margin-left: 20px;">
     <div class="nav nav-tabs" style="margin-top: 1%;">
-        <span class="nav-item nav-link " data-toggle="tab" (click)="subModuleData(sub)" role="tab"
+        <span class="nav-item nav-link " data-bs-toggle="tab" (click)="subModuleData(sub)" role="tab"
             *ngFor="let sub of prpoRCNList">
             {{sub.name}}
         </span>
@@ -175,7 +175,7 @@
                         <td>{{GRN?.inwardheader?.grn_status }}</td>
 
                         <td style="text-align: center;color:green;">
-                            <i class="fa fa-file" aria-hidden="true" data-toggle="modal" data-target="#fileview"
+                            <i class="fa fa-file" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#fileview"
                                 (click)="filesummary(GRN)"></i>
                         </td>
                         <td><span class="material-icons" matTooltip="view" style="color:green;">
@@ -183,8 +183,8 @@
                                     visibility</mat-icon>
                             </span></td>
                         <!-- <td style="text-align: center;color:green;">
-                            <i class="fa fa-file" aria-hidden="true" data-toggle="modal"
-                                data-target="#exampleModalLongs" (click)="tranview(GRN)"></i>
+                            <i class="fa fa-file" aria-hidden="true" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalLongs" (click)="tranview(GRN)"></i>
                         </td> -->
                         <td style="text-align: center;color:green;"><span class="material-icons" (click)="GRNPDf(GRN)">
                                 picture_as_pdf
@@ -221,7 +221,7 @@
                         <h2 class="modal-title"
                             style="color:black ;font-family:'Times New Roman', Times, serif;font-size:25px;font-weight:lighter;">
                             View Transaction History Against {{POno}}</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -254,7 +254,7 @@
                         <h3>Sorry data not found!.. </h3>
                     </div>
                     <tr>
-                        <button style="margin-left: 500px;" type="button" data-dismiss="modal"
+                        <button style="margin-left: 500px;" type="button" data-bs-dismiss="modal"
                             class="btn btn-outline-primary">
                             Back</button>
                     </tr>
@@ -286,7 +286,7 @@
                         <h2 class="modal-title"
                             style="color:black ;font-family:'Times New Roman', Times, serif;font-size:25px;font-weight:lighter;">
                             RCN Header File(s) for </h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -312,8 +312,8 @@
                                         </i></a>
                                 </td>
                                 <!-- <td style="margin-left:-1%">
-                                    <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal"
-                                        data-toggle="modal" (click)="commentPopup(file.file_id,file.file_name)">
+                                    <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal"
+                                        data-bs-toggle="modal" (click)="commentPopup(file.file_id,file.file_name)">
                                         File Name:{{a.file_name }}<i class="fa fa-picture-o"
                                             aria-hidden="true"></i>
                                         <br>
@@ -327,7 +327,7 @@
                         <h3>Sorry File not found!.. </h3>
                     </div>
                     <tr>
-                        <button type="button" data-dismiss="modal" style="border-radius: 40px;margin-left: 50px; "
+                        <button type="button" data-bs-dismiss="modal" style="border-radius: 40px;margin-left: 50px; "
                             class="btn btn-outline-primary">
                             Back</button>
                     </tr>
@@ -351,10 +351,10 @@
         </div>
         <div *ngIf="showimagepopup" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
             tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+            <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <img src="{{jpgUrls}}" class="img-responsive" style="width: 100%;">
@@ -504,7 +504,7 @@
                         <td>{{rcn?.podetails_id?.product_name}}</td>
                         <td class="rightalign" >{{rcn?.qty - rcn?.received_quantity | currency:'INR'}}</td>
                         <td>{{rcn?.poheader_id?.closeremarks}}</td>
-                        <td><span data-toggle="modal" data-target=".bd-example-modal-lg" class="fa fa-eye"
+                        <td><span data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg" class="fa fa-eye"
                                 (click)="releasedata(rcn)"></span></td>
 
                         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
@@ -515,7 +515,7 @@
                                         <h2 class="modal-title">{{ROHeader}} </h2>
 
 
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -551,7 +551,7 @@
                                             </mat-form-field>
                                         </form>
                                         <button type="submit" style="float: left;" class="btn btn-outline-success"
-                                            style="border-radius: 40px;margin-left: 10px;" data-dismiss="modal"
+                                            style="border-radius: 40px;margin-left: 10px;" data-bs-dismiss="modal"
                                             (click)="ReleaseRoSubmit()" (click)="this.Releaseform.reset()">
                                             Release</button>
                                         <!-- <pre>{{ Releaseform.value | json }}</pre> -->

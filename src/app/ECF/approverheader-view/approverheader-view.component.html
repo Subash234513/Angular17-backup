@@ -104,8 +104,8 @@
                                 </mat-form-field>
                             </td>
                             <!-- <td>
-                                <span class="material-icons" type="button" data-toggle="modal"
-                                    style="margin-left: 50px;" data-target=".bd-example-modal-xl"
+                                <span class="material-icons" type="button" data-bs-toggle="modal"
+                                    style="margin-left: 50px;" data-bs-target=".bd-example-modal-xl"
                                     formControlName="notename">description</span>Add Note
                             </td> -->
                         </tr>
@@ -113,8 +113,8 @@
                         <td>
                                         
                                         
-                                            <h3   data-toggle="modal"
-                                            data-target=".bd-example-modal-xl" style="cursor: pointer;color:blue;font-family: 'Montserrat';" class="btn btn-link" matTooltip="View Notes">View Notes</h3>
+                                            <h3   data-bs-toggle="modal"
+                                            data-bs-target=".bd-example-modal-xl" style="cursor: pointer;color:blue;font-family: 'Montserrat';" class="btn btn-link" matTooltip="View Notes">View Notes</h3>
                                         
                                     </td>
 
@@ -146,11 +146,11 @@
                                                  <div class="modal-footer">
                                                      <!-- <button type="button" style="border-radius: 40px;margin-left: 10px;"
                                                          class="btn btn-outline-primary"
-                                                         data-dismiss="modal">Close</button> -->
+                                                         data-bs-dismiss="modal">Close</button> -->
  
                                                      <button type="button" style="border-radius:10px;margin-left: 10px; border-color: black; 
                                                          background-color: white;" class="btn btn-light"
-                                                         data-dismiss="modal">
+                                                         data-bs-dismiss="modal">
                                                          Close</button>
  
                                                  </div>
@@ -210,7 +210,7 @@
                                 </td>
                                 <td>
                                 <a (click)="data(file)" class="btn btn-link" style="cursor: pointer;color:blue;" matTooltip="View File"
-                                data-target="#my-modal" data-toggle="modal">{{ file?.file_name}}</a> 
+                                data-bs-target="#my-modal" data-bs-toggle="modal">{{ file?.file_name}}</a> 
                                </td>
                                <td>
                                 <i class="material-icons" (click)="getfiles(file)">
@@ -459,8 +459,8 @@
                         <td>{{invdtl.productname}}</td>
                         <td *ngIf="this.ecftypeid == 3" style="text-align: center;">
                             <i class="fa fa-arrow-up" aria-hidden="true" style="color: darkviolet;"
-                                matTooltip="view supplier Details" data-toggle="modal"
-                                data-target="#supplierdetailpopup"></i>
+                                matTooltip="view supplier Details" data-bs-toggle="modal"
+                                data-bs-target="#supplierdetailpopup"></i>
                         </td>
 
                         <td *ngIf="invdtl.hsn.code!='UNEXPECTED_ERROR'">{{invdtl.hsn.code}}</td>
@@ -578,8 +578,8 @@
     <td>{{invdtl?.description}}</td>
     <!-- <td *ngIf="this.ecftypeid == 3" style="text-align: center;">
         <i class="fa fa-arrow-up" aria-hidden="true" style="color: darkviolet;"
-            matTooltip="view supplier Details" data-toggle="modal"
-            data-target="#supplierdetailpopup"></i>
+            matTooltip="view supplier Details" data-bs-toggle="modal"
+            data-bs-target="#supplierdetailpopup"></i>
     </td> -->
 
     <td *ngIf="invdtl?.hsn?.code!='UNEXPECTED_ERROR'">{{invdtl?.hsn?.code}}</td>
@@ -1053,7 +1053,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background: #21cbe5;">
                 <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">Debit Details</h2>
-                <button type="button" class="close" data-dismiss="modal" #closebutton aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" #closebutton aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -1152,7 +1152,7 @@
             <br>
             <div class="modal-footer">
                 <button type="button" style="border-radius: 40px;margin-left: 10px;text-align: center;"
-                    class="btn btn-outline-primary" data-dismiss="modal">Back</button>
+                    class="btn btn-outline-primary" data-bs-dismiss="modal">Back</button>
             </div>
         </div>
     </div>
@@ -1168,7 +1168,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background: #21cbe5;">
                 <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">Supplier Details</h2>
-                <button type="button" class="close" data-dismiss="modal" #closebutton aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" #closebutton aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -1232,9 +1232,9 @@
 
 <div *ngIf="showimageHeaderAPI" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
     tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -1251,7 +1251,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;">
                 <h2 class="modal-title">ECF Attachments</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

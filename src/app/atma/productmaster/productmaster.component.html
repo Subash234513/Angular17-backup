@@ -43,7 +43,7 @@
                             </ng-container>
                         </mat-autocomplete>
                     </mat-form-field>
-                        <button type="button" style="border-radius: 40px;background-color: rgb(162, 206, 162);" data-toggle="modal" data-target="#productmodal"><mat-icon>add</mat-icon></button>
+                        <button type="button" style="border-radius: 40px;background-color: rgb(162, 206, 162);" data-bs-toggle="modal" data-bs-target="#productmodal"><mat-icon>add</mat-icon></button>
                     </div>
                     <div class="col-md-3">
                         <mat-form-field style="width: 200px;">
@@ -57,7 +57,7 @@
                                 </ng-container>
                             </mat-autocomplete>
                         </mat-form-field>
-                        <button type="button" style="border-radius: 40px;background-color: rgb(178, 223, 178);" data-toggle="modal" data-target="#productmodalsub"><mat-icon>add</mat-icon></button>
+                        <button type="button" style="border-radius: 40px;background-color: rgb(178, 223, 178);" data-bs-toggle="modal" data-bs-target="#productmodalsub"><mat-icon>add</mat-icon></button>
 
                     </div>
                     </div>
@@ -205,7 +205,7 @@
                                 </mat-autocomplete>
 
                             </mat-form-field>
-                            <button type="button" style="border-radius: 40px;background-color: rgb(162, 206, 162);"  data-toggle="modal" data-target="#productmodalsubspe"><mat-icon>add</mat-icon></button>
+                            <button type="button" style="border-radius: 40px;background-color: rgb(162, 206, 162);"  data-bs-toggle="modal" data-bs-target="#productmodalsubspe"><mat-icon>add</mat-icon></button>
 
                         </div>
                         <div class="col-md-3">
@@ -256,7 +256,7 @@
             <form [formGroup]="productcategorydetails">
                 <div class="modal-header" style="background-color:rgb(62,178,113)">
                     <h2 class="modal-title" style="font-weight:bold;font-family:Times New Roman;font-size:20px;margin-left:30%;background-color:rgb(62,178,113)">Product Main Category Details</h2>
-                    <button #modalclose class="close" type="button" data-dismiss="modal">&times;</button>
+                    <button #modalclose class="close" type="button" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     
@@ -295,7 +295,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" (click)="createproductcategory()" class="btn btn-outline-success text-center">Submit</button>
-                    <button type="button" class="btn btn-outline-danger text-center" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-outline-danger text-center" data-bs-dismiss="modal">Cancel</button>
 
                 </div>
             </form>
@@ -311,7 +311,7 @@
             <form [formGroup]="productsubcatdetails">
                 <div class="modal-header" style="background-color:rgb(62,178,113)">
                     <h2 class="modal-title" style="font-weight:bold;font-family:Times New Roman;font-size:20px;margin-left:30%;background-color:rgb(62,178,113)">Product SubCategory Details</h2>
-                    <button #modalclose class="close" type="button" data-dismiss="modal">&times;</button>
+                    <button #modalclose class="close" type="button" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     
@@ -357,7 +357,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" (click)="createproductsubcategoryData()" class="btn btn-outline-success">Submit</button>
-                    <button type="button" class="close" data-dismiss="modal" class="btn btn-outline-danger">Cancel</button>
+                    <button type="button" class="close" data-bs-dismiss="modal" class="btn btn-outline-danger">Cancel</button>
                 </div>
             </form>
         </div>
@@ -372,7 +372,7 @@
             <form [formGroup]="productForm">
                 <div class="modal-header" style="background-color:rgb(62,178,113)">
                     <h2 class="modal-title" style="font-weight:bold;font-family:Times New Roman;font-size:20px;margin-left:30%;background-color:rgb(62,178,113)">Add a new Specification</h2>
-                    <button #modalclose class="close" type="button" data-dismiss="modal">&times;</button>
+                    <button #modalclose class="close" type="button" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     
@@ -390,7 +390,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" (click)="createspecificationsdata()" class="btn btn-outline-success">Submit</button>
-                    <button type="button" class="close" data-dismiss="modal" class="btn btn-outline-danger">Cancel</button>
+                    <button type="button" class="close" data-bs-dismiss="modal" class="btn btn-outline-danger">Cancel</button>
                 </div>
             </form>
         </div>

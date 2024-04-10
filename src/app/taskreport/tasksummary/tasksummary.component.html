@@ -1,7 +1,7 @@
 <div>
 <nav>
     <div class="nav nav-tabs" >
-        <span class="nav-item nav-link " data-toggle="tab" (click)="subModuleData(sub)" role="tab"
+        <span class="nav-item nav-link " data-bs-toggle="tab" (click)="subModuleData(sub)" role="tab"
             *ngFor="let sub of tasksubmoduleList">
             {{sub.name}}
         </span>
@@ -78,7 +78,7 @@
         </label> -->
 
 
-        <button *ngIf="this.notificationList.length > 0" mat-button class="buttonwidth" color="primary" data-toggle="collapse" data-target="#collapseNote"
+        <button *ngIf="this.notificationList.length > 0" mat-button class="buttonwidth" color="primary" data-bs-toggle="collapse" data-bs-target="#collapseNote"
                       aria-expanded="false" aria-controls="collapseNoteview">Non Assigned Employee:<mat-icon (click)="isclick_product()">{{icon_product  ? 'arrow_drop_down' : 'arrow_right' }}</mat-icon>
         </button>
         <br>
@@ -363,8 +363,8 @@
                           <button (click)="TeamLead_Approve()" mat-button class="btn btn-danger" style="cursor: pointer;">
                             Reject
                           </button> -->
-                        <!-- <button type="button" class="btn btn-outline-success" data-toggle="modal"
-                       data-target="#rejectModalForPremiseNameApproval" style="border-radius: 40px;">
+                        <!-- <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                       data-bs-target="#rejectModalForPremiseNameApproval" style="border-radius: 40px;">
                         APPROVE/REJECT</button> -->
                     <!-- </td> -->
                     
@@ -1056,7 +1056,7 @@
                             <td *ngFor="let datascheck of ListOfDaysInSelectedMonth; let indextwo = index;"
                                 attr.name='{{indextwo}}' matTooltip="{{datascheck}}" class="attendanceMark">
 
-                                <div class="AttendanceTableView" data-toggle="modal" data-target=".popupReport"
+                                <div class="AttendanceTableView" data-bs-toggle="modal" data-bs-target=".popupReport"
                                     data-backdrop='static' data-keyboard='false' (click)="getAttendanceBasedOnEmployee(data, datascheck); 
                             getSelectedEMP(datascheck, 'summary'); activityData(datascheck,'summary', data);">
                             <!-- <div class="indicatorOnCornerPermission"   title="{{datascheck}} - ({{data?.code}}) {{data?.name}} - {{Permission_Data.title}}"
@@ -1136,7 +1136,7 @@
                                     <!-- <div class="indicatorOnCornerEdited" *ngIf="data[datascheck] !=null && data[datascheck]?.includes('Is_updated')" 
                                     >(edited)</div>  -->
 
-                                <!-- <span data-toggle="modal" data-target=".popupReport" data-backdrop='static'
+                                <!-- <span data-bs-toggle="modal" data-bs-target=".popupReport" data-backdrop='static'
                                 data-keyboard='false'
                                 (click)="getAttendanceBasedOnEmployee(data, datascheck); 
                                 getSelectedEMP(datascheck, 'summary'); activityData(datascheck,'summary', data);"
@@ -1196,7 +1196,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -1343,7 +1343,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

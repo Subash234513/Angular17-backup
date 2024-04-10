@@ -421,7 +421,7 @@
                 <mat-icon matTooltip="Add" style="color: black ;">add</mat-icon>
               </button>
               <div class="uploadIcon">
-                <i class="fa-solid fa-file-csv fa-2xl fa-bounce" style="color:green" data-toggle="modal" data-target="#UploadScreen" matTooltip="Excel Upload"></i>
+                <i class="fa-solid fa-file-csv fa-2xl fa-bounce" style="color:green" data-bs-toggle="modal" data-bs-target="#UploadScreen" matTooltip="Excel Upload"></i>
               </div>
             </div>
           </div>
@@ -491,7 +491,7 @@
               <mat-icon matTooltip="Add" style="color:sandybrown;">add_circle_outline</mat-icon>
             </div>
             <!-- <div class="uploadIcon">
-               <i class="fa-solid fa-file-csv fa-2xl" data-toggle="modal" data-target="#UploadScreen"></i>
+               <i class="fa-solid fa-file-csv fa-2xl" data-bs-toggle="modal" data-bs-target="#UploadScreen"></i>
             </div> -->
             <!-- <div class="DownloadButton">
               <button class="btn btn-info">Download Template</button>
@@ -991,7 +991,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="modal-title">Upload</div>
-          <button data-dismiss="modal" class="close" aria-label="close">
+          <button data-bs-dismiss="modal" class="close" aria-label="close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -1010,7 +1010,7 @@
                   <button class="btn btn-warning" type="button" (click)="Upload()">
                     <i class="fas fa-file-import"></i> Upload
                   </button>
-                  <button class="btn btn-outline-info" type="button"  style="margin-left: 4%;" data-dismiss="modal">
+                  <button class="btn btn-outline-info" type="button"  style="margin-left: 4%;" data-bs-dismiss="modal">
                     Cancel
                   </button>
                   <button class="btn btn-outline-info" type="button"  style="    margin-left:35%;" (click)="Download()">

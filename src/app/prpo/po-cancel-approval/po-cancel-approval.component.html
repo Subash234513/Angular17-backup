@@ -60,14 +60,14 @@
 
 
                 <td>
-                    <span data-toggle="modal" data-target=".bd-example-modal-lg" class="material-icons"
+                    <span data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg" class="material-icons"
                      (click)="dataForSelectedLine(poclose)"
                         (click)="delivery(poclose.id)">
                         local_post_office
                     </span>
                 </td>
-                <td><span class="material-icons" (click)="gettranhistory(poclose)" data-toggle="modal"
-                    data-target=".bd-examplethree-modal-lg">
+                <td><span class="material-icons" (click)="gettranhistory(poclose)" data-bs-toggle="modal"
+                    data-bs-target=".bd-examplethree-modal-lg">
                     history
                 </span></td>
             </tr>
@@ -84,7 +84,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="exampleModalLabel">Delivery Details</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -146,7 +146,7 @@
             <mat-label>Approval Remarks</mat-label>
             <textarea matInput placeholder="APPROVE Remarks" formControlName="remarks" autocomplete="off"></textarea>
         </mat-form-field>
-        <button type="submit" data-dismiss="modal" [disabled]="approvedisable" (click)="approveClick()" class="btn btn-outline-success"
+        <button type="submit" data-bs-dismiss="modal" [disabled]="approvedisable" (click)="approveClick()" class="btn btn-outline-success"
             style="border-radius: 40px;margin-left: 10px;">APPROVE</button>
     </form>
 
@@ -155,7 +155,7 @@
             <mat-label>Rejected Remarks</mat-label>
             <textarea matInput placeholder="REJECT Remarks" formControlName="remarks" autocomplete="off"></textarea>
         </mat-form-field>
-        <button type="button" data-dismiss="modal"  [disabled]="rejectdisable" (click)="rejectClick()" class="btn btn-outline-danger"
+        <button type="button" data-bs-dismiss="modal"  [disabled]="rejectdisable" (click)="rejectClick()" class="btn btn-outline-danger"
             [disabled]="rejectForm.invalid" style="border-radius: 40px;margin-left: 10px;">REJECT</button>
         <button type="button" class="btn btn-outline-primary" style="border-radius: 40px;margin-left: 10px;"
             (click)="onCancelClick()">Cancel</button>
@@ -168,7 +168,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title">PO Transaction Details</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

@@ -1,6 +1,6 @@
 <div class="Container" style="margin-left: 20px;">
     <div class="nav nav-tabs" style="margin-top: 1%;">
-        <span class="nav-item nav-link " data-toggle="tab" (click)="subModuleData(sub)" role="tab"
+        <span class="nav-item nav-link " data-bs-toggle="tab" (click)="subModuleData(sub)" role="tab"
             *ngFor="let sub of prpoPRList">
             {{sub.name}}
         </span>
@@ -171,14 +171,14 @@
                     <td>{{prsummary?.prheader_status}}</td>
                     <td>{{prsummary?.mepno}} -- {{prsummary?.mepname}}</td>
                     <td><span class="fa fa-download" aria-hidden="true" (click)="HeaderFilesPRdownload(prsummary)"
-                            data-toggle="modal" data-target=".bd-examplepopHeaderfiles-modal-lg"></span></td>
+                            data-bs-toggle="modal" data-bs-target=".bd-examplepopHeaderfiles-modal-lg"></span></td>
 
                     <td><span class="material-icons" (click)="PRPDf(prsummary)">
                             picture_as_pdf</span>
                     </td>
                     <td>
                         <button mat-icon-button matTooltip="View" class="iconbutton" color="primary" mat-button
-                            data-toggle="modal" data-target="#PRDetailModal">
+                            data-bs-toggle="modal" data-bs-target="#PRDetailModal">
                             <span class="material-icons" style="color: gray;" (click)="getprdetails(prsummary)"
                                 (click)="dataOnHeader(prsummary)">
                                 visibility
@@ -208,7 +208,7 @@
 
                     <td>
                         <button mat-icon-button matTooltip="history" class="iconbutton" color="primary" mat-button
-                            data-toggle="modal" data-target="#PRHistoryModal">
+                            data-bs-toggle="modal" data-bs-target="#PRHistoryModal">
                             <span class="material-icons" style="color: gray;" (click)="gettranhistory(prsummary)">
                                 description
                             </span>
@@ -238,7 +238,7 @@
                 <div class="Container">
                     <div class="modal-header" style="background-color: #ddefdd;">
                         <h2 class="modal-title">PR Details</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -309,7 +309,7 @@
                                             <ng-template #fileactionPR>
                                                 <p class="btn btn-link"
                                                     *ngFor="let a of prdetails.file_data ;index as i;"
-                                                    style="margin-left:-1%" data-target="#my-modalpopupimage" data-toggle="modal"
+                                                    style="margin-left:-1%" data-bs-target="#my-modalpopupimage" data-bs-toggle="modal"
                                                     (click)="commentPopup(a.file_id,a.file_name)">
                                                     <i class="fa fa-picture-o" aria-hidden="true"></i>
                                                     <br>
@@ -320,7 +320,7 @@
                                         <div *ngIf="showimagepopup" id="my-modalpopupimage" class="modal fade"
                                             aria-labelledby="my-modalLabel" aria-hidden="true" tabindex="-1"
                                             role="dialog">
-                                            <div class="modal-dialog modal-xl" data-dismiss="modal"
+                                            <div class="modal-dialog modal-xl" data-bs-dismiss="modal"
                                                 style="width: 60%;height: 80%;">
                                                 <div class="modal-content">
 
@@ -362,7 +362,7 @@
                 <div class="Container">
                     <div class="modal-header" style="background-color: #ddefdd;">
                         <h2 class="modal-title">View Transaction History</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -402,7 +402,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#DDEFDD;">
                     <h2 class="modal-title">Header Files</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -427,8 +427,8 @@
                                     </i></a>
                             </td>
                             <!-- <td style="margin-left:-1%">
-                                <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal"
-                                    data-toggle="modal" (click)="commentPopupHeaderFiles(file.file_id,file.file_name)">
+                                <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal"
+                                    data-bs-toggle="modal" (click)="commentPopupHeaderFiles(file.file_id,file.file_name)">
                                     <i class="fa fa-picture-o" aria-hidden="true"></i>
                                     <br>
                                     (Note:Only image file can be viewed)
@@ -444,9 +444,9 @@
 
     <div *ngIf="showimageHeader" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
         tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+        <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
             <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-body">
@@ -628,8 +628,8 @@
                             <td>{{prapprove?.totalamount | amountPipeCustom }}</td>
                             <td>{{prapprove?.mepno}} -- {{prapprove?.mepname}}</td>
                             <td><span class="fa fa-download" aria-hidden="true"
-                                    (click)="HeaderFilesPRdownloadapp(prapprove)" data-toggle="modal"
-                                    data-target=".bd-examplepopHeaderfilesapp-modal-lg"></span></td>
+                                    (click)="HeaderFilesPRdownloadapp(prapprove)" data-bs-toggle="modal"
+                                    data-bs-target=".bd-examplepopHeaderfilesapp-modal-lg"></span></td>
                             <td>
                                 <button mat-icon-button matTooltip="View" class="iconbutton" color="primary"
                                     (click)="approver(prapprove)">
@@ -640,7 +640,7 @@
                             </td>
                             <td>
                                 <button mat-icon-button matTooltip="history" class="iconbutton" color="primary"
-                                    mat-button data-toggle="modal" data-target="#PRApproverHistoryModal">
+                                    mat-button data-bs-toggle="modal" data-bs-target="#PRApproverHistoryModal">
                                     <span class="material-icons" style="color: gray;"
                                         (click)="gettranhistoryapp(prapprove)">
                                         description
@@ -720,7 +720,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#DDEFDD;">
                     <h2 class="modal-title">Header Files</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -745,8 +745,8 @@
                                     </i></a>
                             </td>
                             <!-- <td style="margin-left:-1%">
-                                <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal"
-                                    data-toggle="modal"
+                                <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal"
+                                    data-bs-toggle="modal"
                                     (click)="commentPopupHeaderFilesapp(file.file_id,file.file_name)">
                                     <i class="fa fa-picture-o" aria-hidden="true"></i>
                                     <br>
@@ -763,9 +763,9 @@
 
     <div *ngIf="showimageHeaderapp" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
         tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+        <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
             <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-body">

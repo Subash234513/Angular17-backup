@@ -23,7 +23,7 @@
 
     </div>
     <div class="col-md-3">
-        <button type="button" class="btn btn-outline-primary" style="border-radius: 40px;" data-toggle="modal" data-target="#sourceAdd">
+        <button type="button" class="btn btn-outline-primary" style="border-radius: 40px;" data-bs-toggle="modal" data-bs-target="#sourceAdd">
             Add
             </button>
     </div>
@@ -44,12 +44,12 @@
                     <td>{{sourcesummary.code}}</td>
                     <td>{{sourcesummary.name}}</td>
                     <td class="text-center">
-                        <a style="color:#2177e5;cursor: pointer;"  data-toggle="modal" data-target="#sourceedit"  matTooltip="Edit"  (click)='editview_source(sourcesummary)'>
+                        <a style="color:#2177e5;cursor: pointer;"  data-bs-toggle="modal" data-bs-target="#sourceedit"  matTooltip="Edit"  (click)='editview_source(sourcesummary)'>
                             <mat-icon>edit</mat-icon>
                         </a>
                     </td>
                     <td style="text-align: center;">
-                        <a style="color:#2177e5;cursor: pointer;" matTooltip="View" data-toggle="modal" data-target="#sourceview" (click)='editview_source(sourcesummary)'>
+                        <a style="color:#2177e5;cursor: pointer;" matTooltip="View" data-bs-toggle="modal" data-bs-target="#sourceview" (click)='editview_source(sourcesummary)'>
                             <mat-icon>visibility</mat-icon>
                         </a>
                     </td>
@@ -74,7 +74,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="sourceAddLabel">PPR Scorce Add</h2>
-          <button type="button" class="close" #closepop data-dismiss="modal" (click)="clearsource()" aria-label="Close">
+          <button type="button" class="close" #closepop data-bs-dismiss="modal" (click)="clearsource()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -100,7 +100,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearsource()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearsource()" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="save_source(pprsource.value)">Submit</button>
         </div>
       </div>
@@ -113,7 +113,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="sourceviewLabel">PPR Scorce View</h2>
-          <button type="button" class="close" #closepopview data-dismiss="modal" (click)="clearsource_view()" aria-label="Close">
+          <button type="button" class="close" #closepopview data-bs-dismiss="modal" (click)="clearsource_view()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -134,7 +134,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearsource_view()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearsource_view()" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -145,7 +145,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2 class="modal-title" id="sourceeditLabel">PPR Scorce Edit</h2>
-          <button type="button" class="close" #closepopedit data-dismiss="modal" (click)="clearsource_edit()" aria-label="Close">
+          <button type="button" class="close" #closepopedit data-bs-dismiss="modal" (click)="clearsource_edit()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -171,7 +171,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="clearsource_edit()" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" (click)="clearsource_edit()" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="save_source_edit(pprsource.value)">Submit</button>
         </div>
       </div>

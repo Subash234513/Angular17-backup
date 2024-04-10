@@ -1,7 +1,7 @@
 <div class="bgcolor">
     <nav id="navshow">
         <div class="nav nav-tabs">
-            <span #myDiv class="nav-item nav-link" id="subname" [ngClass]="(i==returnnav)?'active':''" data-toggle="tab"
+            <span #myDiv class="nav-item nav-link" id="subname" [ngClass]="(i==returnnav)?'active':''" data-bs-toggle="tab"
                 (click)="subModuleData(sub)" role="tab" *ngFor="let sub of Tran_Menu_List;index as i"
                 style="color: black;font-size: medium;">
                 {{sub.name}}

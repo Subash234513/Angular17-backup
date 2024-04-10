@@ -9,15 +9,15 @@
             (click)="backButton()">Back</button>
         <button type="button" *ngIf="vendor_flag" class="btn btn-success" (click)="activityUpdate()">Edit</button>
 
-        <button type="button" *ngIf="vendor_flag" class="btn btn-danger" data-toggle="modal"
-            data-target="#rejectModal">Delete</button>
+        <button type="button" *ngIf="vendor_flag" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#rejectModal">Delete</button>
         <div class="modal fade" id="rejectModal" tabindex="-1" role="dialog" aria-labelledby="rejectModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h2 class="modal-title  w-100 font-weight-bold" id="rejectModalLabel">Please Confirm..</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -33,12 +33,12 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-outline-primary" type="button" data-toggle="modal"
-                            data-target="#rejectModal" style="border-radius:40px; margin-left: 3px;"
+                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                            data-bs-target="#rejectModal" style="border-radius:40px; margin-left: 3px;"
                             (click)="activityDelete()">
                             OK </button>
-                        <button class="btn btn-light" type="button" data-toggle="modal"
-                            data-target="#rejectModal" style="border-radius: 7px;
+                        <button class="btn btn-light" type="button" data-bs-toggle="modal"
+                            data-bs-target="#rejectModal" style="border-radius: 7px;
                             border-color: black;
                             background-color: white;margin-left: 10px;">
                             Cancel </button>
@@ -256,10 +256,10 @@
     <div style="margin-bottom: 10%;margin-top: 1%;">
         <!-- <nav>
             <div class="nav nav-tabs">
-                <a *ngIf="catalogTab" class="nav-item nav-link" data-toggle="tab" role="tab"
+                <a *ngIf="catalogTab" class="nav-item nav-link" data-bs-toggle="tab" role="tab"
                     (click)="catalogBtn()">Catalog:>>{{catname}}
                 </a>
-                <a *ngIf="isActivityDetail" class="nav-item nav-link" data-toggle="tab" role="tab"
+                <a *ngIf="isActivityDetail" class="nav-item nav-link" data-bs-toggle="tab" role="tab"
                     (click)="activityDetailBtn()">Activity Detail
                 </a>
 
@@ -312,8 +312,8 @@
                 <tbody>
                     <tr *ngFor="let activityDetail of activityDetailList; index as i">
                         <td> {{(presentpage - 1)*pageSize +i+1 }} </td>
-                        <td (click)="catalogData(activityDetail)" data-toggle="modal"
-                        data-target="#catelogsummarypopup" style="cursor: pointer;color:blue;">{{ activityDetail.code}}</td>
+                        <td (click)="catalogData(activityDetail)" data-bs-toggle="modal"
+                        data-bs-target="#catelogsummarypopup" style="cursor: pointer;color:blue;">{{ activityDetail.code}}</td>
                         <td>
                             {{ activityDetail.detailname | titlecase}}</td>
                         <!-- <td (click)="catalogData(activityDetail)" style="cursor: pointer;color:blue;">
@@ -393,8 +393,8 @@
                         <tr *ngFor="let j of activitydetail_data; index as i">
 
                             <td> {{i+1}} </td>
-                            <td style="cursor: pointer;color:blue;" (click)="catalogList(j)" data-toggle="modal"
-                            data-target="#catelogsummarypopup"> {{ j.code}}</td>
+                            <td style="cursor: pointer;color:blue;" (click)="catalogList(j)" data-bs-toggle="modal"
+                            data-bs-target="#catelogsummarypopup"> {{ j.code}}</td>
                             <td *ngIf="j.modify_status==1">{{ j.detailname | titlecase}}</td>
                             <td *ngIf="j.modify_status==2 || j.modify_status==0" > {{ j.detailname | titlecase}}</td>
                             <td>{{ j.raisor.full_name | titlecase }}</td>
@@ -476,7 +476,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <p class="modal-title" id="exampleModalLongTitle" style="font-weight: bold;">Catalog</p>
-              <button type="button" #closebuttoncatelogback class="close" (click)="catelogbackCancel()"  data-dismiss="modal" aria-label="Close">
+              <button type="button" #closebuttoncatelogback class="close" (click)="catelogbackCancel()"  data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -679,7 +679,7 @@
         <nav>
             <div class="nav nav-tabs">
                 <div *ngIf="catalogTab">
-                    <a class="nav-item nav-link" data-toggle="tab" role="tab"
+                    <a class="nav-item nav-link" data-bs-toggle="tab" role="tab"
                         (click)="catalogBtn()">Catalog:({{catname}})
                     </a>
                 </div>

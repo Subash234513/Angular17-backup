@@ -32,7 +32,7 @@
                 </div> 
                 <div class="col-2 mt-1">
                     <div class="popup-btn">
-                        <button type="button" data-toggle="modal"
+                        <button type="button" data-bs-toggle="modal"
                             style=" max-width: 100%; background-color: #044063;"
                             (click)="Ontemplatetimesheet()" class="btn btn-primary">
                             <span> &nbsp; Template</span>
@@ -151,12 +151,12 @@
                         
 
                         <!-- Button to trigger the modal -->
-                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#exampleModal" style="margin-left: 352px;">
+                        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" style="margin-left: 352px;">
                             
                             <mat-icon>add</mat-icon>
                         </button> -->
-                        <button  class="btn btn-outline-primary" type="button"   style=" margin-top: -8px; width: 99px;  height: 37px;  margin-left: 415px;  margin-right: 10px;" data-toggle="modal" data-target="#exampleModal"  >
+                        <button  class="btn btn-outline-primary" type="button"   style=" margin-top: -8px; width: 99px;  height: 37px;  margin-left: 415px;  margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#exampleModal"  >
                             <!-- margin-right: -146px; -->
                             <mat-icon >add</mat-icon>
                         </button>
@@ -168,7 +168,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header" style="background-color: #044063;">
                                         <h5 class="modal-title" id="exampleModalLabel" style="color: white;">Template Details</h5>
-                                        <button type="button" class="close" data-dismiss="modal" style="color: white;" aria-label="Close">
+                                        <button type="button" class="close" data-bs-dismiss="modal" style="color: white;" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -201,7 +201,7 @@
                                     <div class="modal-footer">
                                         <!-- Close and Submit buttons for the modal -->
                                         <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal" (click)="clicktoclose()">Close</button>
+                                            data-bs-dismiss="modal" (click)="clicktoclose()">Close</button>
                                         <button type="button" class="btn btn-primary" (click)="submitpipetemp()" style="background-color: #044063;" >Submit</button>
                                     </div>
                                 </div>
@@ -228,8 +228,8 @@
                             <td>{{type.name}}</td>
                             <td (click)="viewpopup(type)">
                                 <span style="cursor: pointer;">
-                                    <mat-icon style="cursor: pointer;" data-toggle="modal"
-                                        data-target="#viewpipeline">visibility</mat-icon>
+                                    <mat-icon style="cursor: pointer;" data-bs-toggle="modal"
+                                        data-bs-target="#viewpipeline">visibility</mat-icon>
                                 </span>
                             </td>
 
@@ -248,7 +248,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="color: rgb(255, 255, 255);background-color: #044063;">
                     <h5 class="modal-title">Template View </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>

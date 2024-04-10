@@ -84,7 +84,7 @@
                 <td style="padding: 0 10px 0 10px ;">{{grninward?.podetails_id?.payperiod_from }} - {{grninward?.podetails_id?.payperiod_to }} </td>
                 <td>{{grninward?.poheader_id?.branch_id?.code}}--{{grninward?.poheader_id?.branch_id?.name}}</td>
                 <td>{{grninward?.poheader_id?.supplierbranch_id?.code}}--{{grninward?.poheader_id?.supplierbranch_id?.name}}</td>
-                <td><span class="material-icons" (click)="getLandlordInfo(grninward)" data-toggle="modal" data-target=".bd-example-modal-xl">info</span></td>
+                <td><span class="material-icons" (click)="getLandlordInfo(grninward)" data-bs-toggle="modal" data-bs-target=".bd-example-modal-xl">info</span></td>
                 <td>{{grninward?.podetails_id?.product_name}}</td>
                 <td>{{grninward?.podetails_id?.rcn_premises}}</td>
                 <td>{{grninward?.qty | currency:'INR'}}</td>
@@ -112,7 +112,7 @@
                                     </td> -->
                 <td>
                     <button type="button" class="btn btn-outline-success" style="border-radius: 40px;margin-left: 10px;"
-                        data-toggle="modal" data-target=".bd-examples-modal-lg" (click)=" holddata(grninward) ">
+                        data-bs-toggle="modal" data-bs-target=".bd-examples-modal-lg" (click)=" holddata(grninward) ">
                         Hold
                     </button>
                 </td>
@@ -124,7 +124,7 @@
                         <div class="modal-content">
                             <div class="modal-header" style="background:#DDEFDD;">
                                 <h1 class="modal-title" id="exampleModalLongTitle"> {{ROHeader}} </h1>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -165,9 +165,9 @@
                                             formControlName="remarks" required></textarea>
                                     </mat-form-field>
                                 </form>
-                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>  -->
+                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  -->
                                 <button type="submit" style="float: left;" class="btn btn-outline-success"
-                                    style="border-radius: 40px;margin-left: 10px;" data-dismiss="modal"
+                                    style="border-radius: 40px;margin-left: 10px;" data-bs-dismiss="modal"
                                     (click)="HoldRoSubmit()" (click)="this.Holdform.reset()">
                                     Hold</button>
                             </div>
@@ -280,7 +280,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h1 class="modal-title" id="exampleModalLongTitle">Landlord Info</h1>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -322,7 +322,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" style="border-radius:40px;margin-left: 15px;" class="btn btn-outline-primary"
-                    data-dismiss="modal">Close</button>
+                    data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

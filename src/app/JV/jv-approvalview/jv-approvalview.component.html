@@ -42,12 +42,12 @@
                         </tr>
                         <tr>
                             <td>
-                            <h3  (click)="gettrandata()" data-toggle="modal"
-                            data-target="#showtrandetails" style="cursor: pointer;color:blue;font-family: 'Montserrat';" class="btn btn-link" matTooltip="Transaction View">View Transaction Details</h3>
+                            <h3  (click)="gettrandata()" data-bs-toggle="modal"
+                            data-bs-target="#showtrandetails" style="cursor: pointer;color:blue;font-family: 'Montserrat';" class="btn btn-link" matTooltip="Transaction View">View Transaction Details</h3>
                         </td>
                         <td>
-                            <h3 data-toggle="modal"
-                            data-target="#showfiledetails" style="cursor: pointer;color:blue;font-family: 'Montserrat';" class="btn btn-link" matTooltip="File View">View File Details</h3>
+                            <h3 data-bs-toggle="modal"
+                            data-bs-target="#showfiledetails" style="cursor: pointer;color:blue;font-family: 'Montserrat';" class="btn btn-link" matTooltip="File View">View File Details</h3>
                         </td>
                     </div>
                 </table>
@@ -158,7 +158,7 @@
         <div class="modal-content">
             <div class="modal-header"  style="background: #21cbe5;">
                 <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">Transaction Details</h2>
-                <button type="button" class="close" data-dismiss="modal" #closedbuttons aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" #closedbuttons aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -231,7 +231,7 @@
         <div class="modal-content">
           <div class="modal-header"  style="background: #21cbe5;">
             <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">JV Attachments</h2>
-            <button type="button" class="close" data-dismiss="modal" #closefile aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" #closefile aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -258,7 +258,7 @@
                        
                         <td>
                             <a (click)="viewfile(attach)" class="btn btn-link" style="cursor: pointer;color:blue;"
-                                matTooltip="View File"  data-target="#my-modal" data-toggle="modal">{{ attach.file_name}}</a>
+                                matTooltip="View File"  data-bs-target="#my-modal" data-bs-toggle="modal">{{ attach.file_name}}</a>
                         </td>
                         <td>
                             <i class="material-icons" (click)="downloadfiles(attach)">
@@ -299,9 +299,9 @@
 
   <div *ngIf="showimageHeaderAPI" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
   tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+  <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
       <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
           </button>
           <div class="modal-body">
@@ -318,7 +318,7 @@
       <div class="modal-content">
           <div class="modal-header" style="background:#21cbe5;">
               <h2 class="modal-title">JV Attachments</h2>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
               </button>
           </div>

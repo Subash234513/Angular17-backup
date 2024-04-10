@@ -1,7 +1,7 @@
 <div style="margin-left:20px">
     <nav>
         <div class="nav nav-tabs" style="margin-top: 1%;">
-            <span class="nav-item nav-link" data-toggle="tab" (click)="JVSubModule(sub)" role="tab"
+            <span class="nav-item nav-link" data-bs-toggle="tab" (click)="JVSubModule(sub)" role="tab"
                 *ngFor="let sub of JV_Sub_Menu_List">
                 {{sub.name}}
             </span>
@@ -186,17 +186,17 @@
                         <td>{{data?.jeamount}}</td>
                         <!-- <td  style="text-align:center">
                             <span matTooltip="view Attached File" class=" fa fa-eye create "
-                            style="color: black;cursor: pointer;" data-target="#showattachmentpopup" data-toggle="modal"></span>
+                            style="color: black;cursor: pointer;" data-bs-target="#showattachmentpopup" data-bs-toggle="modal"></span>
                         </td> -->
                         <td>{{data?.jestatus}}</td>
                         <td style="text-align:center" *ngIf="data?.jestatus == 'Approved'">
                             <span matTooltip="view Entries" class=" fa fa-eye create "
-                            style="color: green;cursor: pointer;" data-target="#showentrydetails" data-toggle="modal" (click)="getjvcrno(data)"></span>
+                            style="color: green;cursor: pointer;" data-bs-target="#showentrydetails" data-bs-toggle="modal" (click)="getjvcrno(data)"></span>
                         </td>
                         <td style="text-align:center" *ngIf="data?.jestatus != 'Approved'">-</td>
                         <!-- <td style="text-align:center">
                             <span matTooltip="view Transaction" class=" fa fa-eye create "
-                            style="color: black;cursor: pointer;" data-target="#showtrandetails" data-toggle="modal"></span>
+                            style="color: black;cursor: pointer;" data-bs-target="#showtrandetails" data-bs-toggle="modal"></span>
                         </td> -->
                         <td style="text-align: center;">
                             <span matTooltip="view" class=" fa fa-eye create "
@@ -484,7 +484,7 @@
         <div class="modal-content">
           <div class="modal-header"  style="background: #21cbe5;">
             <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">JV Attachments</h2>
-            <button type="button" class="close" data-dismiss="modal" #closedbuttons aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" #closedbuttons aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -554,7 +554,7 @@
         <div class="modal-content">
             <div class="modal-header"  style="background: #21cbe5;">
                 <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">Entry Details</h2>
-                <button type="button" class="close" data-dismiss="modal" #closeentry aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" #closeentry aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -643,7 +643,7 @@
         <div class="modal-content">
           <div class="modal-header"  style="background: #21cbe5;">
             <h2 class="modal-title" style="color:black ;text-align: center;font-weight: bold;">Entry Details</h2>
-            <button type="button" class="close" data-dismiss="modal" #closeentry aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" #closeentry aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -717,7 +717,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background: #21cbe5;">
                 <h2 class="modal-title" style="color:black ;text-align: center;">Transaction Details</h2>
-                <button type="button" class="close" data-dismiss="modal" #closedbuttons aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" #closedbuttons aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

@@ -98,7 +98,7 @@
                 <mat-form-field class="ddheight" style="width: 140px;">
                     <mat-select placeholder="Select Action">
                         <mat-option *ngFor="let process of JobPostingObjects?.ProcessList" [value]="process?.name"
-                            data-toggle="modal" data-target="#exampleModal" (click)="gettingRemarks(process)">
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="gettingRemarks(process)">
                             {{process?.name}}
                         </mat-option>
                     </mat-select>
@@ -111,7 +111,7 @@
                         <div class="modal-header" style="background:#c1e2f6;">
                             <h2 class="modal-title" id="exampleModalLabel">{{JobPostingObjects?.SelectedProcess}}
                                 Remarks</h2>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -129,11 +129,11 @@
                         <div class="modal-footer">
                             <button type="button" class=" mat-stroked-button" style="border-radius: 7px;margin-left: 10px;
                                                         border-color: black;
-                                                        background-color: white;" data-dismiss="modal">Close</button>
+                                                        background-color: white;" data-bs-dismiss="modal">Close</button>
 
                             <button type="button" [disabled]="RemarksForm.invalid" style="border-radius: 10px;margin-left: 10px; 
                                                     border-color: #f5c68b; background-color: #f5c68b;"
-                                class=" mat-stroked-button" data-dismiss="modal"
+                                class=" mat-stroked-button" data-bs-dismiss="modal"
                                 (click)="Approval_Reject_Review(JobPostingObjects?.SelectedProcess)">Submit</button>
                         </div>
                     </div>

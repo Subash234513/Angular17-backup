@@ -155,7 +155,7 @@
     </ng-template>
     <button type="button" class="btn btn-outline-primary"
         style="border-radius:40px;height: 44px; margin-top: 12px;float: right;" [disabled]="(istrue) || (datamissingflage)"
-        data-toggle="modal" data-target="#payment"  (click)="prepare(absolutedata)">Preparepayment</button>
+        data-bs-toggle="modal" data-bs-target="#payment"  (click)="prepare(absolutedata)">Preparepayment</button>
 </div>
 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabels" aria-hidden="true"
     id="payment">
@@ -163,7 +163,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;color:rgb(31, 29, 29);text-align: center;">
                 <h2 class="modal-title" style="text-align:center;margin-left:45%">Payment Data</h2>
-                <button class="close" type="button" #payementsubmit data-dismiss="modal">x</button>
+                <button class="close" type="button" #payementsubmit data-bs-dismiss="modal">x</button>
             </div>
             <div class="modal-body">
                 <div class="table-responsive" class="tablescroll"
@@ -209,7 +209,7 @@
                 <button type="button" class="btn btn-outline-primary" style="margin-right:20px;" >Close</button> -->
                         <button type="button" class="btn btn-outline-primary"
                             style="border-radius:40px;margin-left: 12px;" [disabled]="payementsubmitflage" (click)="paymentsubmit()">Submit</button>
-                        <button type="button" data-dismiss="modal" class="btn btn-outline-primary"
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-outline-primary"
                             style="border-radius:40px;margin-left: 12px;">Close</button>
                     </div>
                 </div>

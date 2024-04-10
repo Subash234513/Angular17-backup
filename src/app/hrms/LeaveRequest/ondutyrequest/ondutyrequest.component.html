@@ -101,10 +101,10 @@
             </thead>
             <tbody>
 
-                <!-- data-toggle="modal" data-target="#modalleavereqview"  leaveReqView(type.id)-->
+                <!-- data-bs-toggle="modal" data-bs-target="#modalleavereqview"  leaveReqView(type.id)-->
                 <tr *ngFor="let type of LeaveObjects?.leavereqList; index as i">
                     <td>{{(leaveRequestSummary?.presentpagelvereq - 1) * LeaveObjects.pagesize +i+1 }}</td>
-                    <td *ngIf="leaveRequestSearchForm.value.type == 2" (click)="leaveRequestView(type)" data-toggle="modal" data-target=".bd-example-modal-lg"
+                    <td *ngIf="leaveRequestSearchForm.value.type == 2" (click)="leaveRequestView(type)" data-bs-toggle="modal" data-bs-target=".bd-example-modal-lg"
                     style="cursor: pointer;color:blue;text-decoration: underline;">({{type?.user_id?.code}})
                         {{type?.user_id?.full_name}}</td>
                     <td>
@@ -179,7 +179,7 @@
                     <span class="badge badge-pill badge-primary"> {{this.LeaveObjects.LeaveRequestView?.total_days}}
                     </span>
                 </h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -247,20 +247,20 @@
                 <button type="button" class="btn-success spaceForBtn" mat-raised-button
                     *ngIf="AdminView && this.LeaveObjects.LeaveRequestView?.approve_status?.text == 'Pending'"
                     (click)="Approval(this.LeaveObjects.LeaveRequestView, 1) "
-                    data-dismiss="modal">Approve</button>
+                    data-bs-dismiss="modal">Approve</button>
 
                 <button type="button" mat-raised-button class="btn-danger spaceForBtn"
                     *ngIf="AdminView && this.LeaveObjects.LeaveRequestView?.approve_status?.text == 'Pending'"
                     (click)="Reject(this.LeaveObjects.LeaveRequestView, 2)"
-                    data-dismiss="modal">Reject</button>
+                    data-bs-dismiss="modal">Reject</button>
 
                 <button type="button" mat-raised-button class="btn-danger spaceForBtn"
                     *ngIf="AdminView == false && this.LeaveObjects.LeaveRequestView?.approve_status?.text == 'Pending'"
-                    (click)="RequestProcess(this.LeaveObjects.LeaveRequestView, 'close')" data-dismiss="modal">Cancel
+                    (click)="RequestProcess(this.LeaveObjects.LeaveRequestView, 'close')" data-bs-dismiss="modal">Cancel
                     Request</button>
 
 
-                <!-- <button type="button" class="btn btn-secondary spaceForBtn" data-dismiss="modal">Close</button> -->
+                <!-- <button type="button" class="btn btn-secondary spaceForBtn" data-bs-dismiss="modal">Close</button> -->
 
             </div>
         </div>

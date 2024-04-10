@@ -109,8 +109,8 @@
                                     </mat-form-field>
 
                                     <button type="button" class="btn btn-outline-primary"
-                                        matTooltip="Select Supplier" data-toggle="modal"
-                                        data-target="#selectSupplier" (click)="getsuppindex(i)"
+                                        matTooltip="Select Supplier" data-bs-toggle="modal"
+                                        data-bs-target="#selectSupplier" (click)="getsuppindex(i)"
                                         style="border-radius:40px;margin-left:15px;font-family: 'Times New Roman', Times, serif;"><span
                                             class="fa fa-arrow-up"></span></button>
 
@@ -263,7 +263,7 @@
         <div class="modal-header" style="background:#DDEFDD;">
             <h2 class="modal-title" style="font-family: 'Times New Roman', Times, serif;">
                 Find Supplier</h2>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -428,7 +428,7 @@
                         <br><br>
                         <div *ngIf="submitbutton" style="margin-left: 20px; ">
                             <tr>
-                                <button type="button" data-dismiss="modal"
+                                <button type="button" data-bs-dismiss="modal"
                                     style="border-radius:40px;margin-left: 500px;" class="btn btn-outline-primary">
                                     Submit</button>
                             </tr>

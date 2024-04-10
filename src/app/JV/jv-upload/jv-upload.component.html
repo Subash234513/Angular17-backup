@@ -208,8 +208,8 @@
 
                                 <div style="margin-left:470px" class="btn-link"
                                 *ngFor="let files of JVcreationForm?.value?.filevalue; let index = index">
-                                <p (click)="filepreview(files)" data-toggle="modal"
-                                    data-target="#my-modalpreview"
+                                <p (click)="filepreview(files)" data-bs-toggle="modal"
+                                    data-bs-target="#my-modalpreview"
                                     style="color: #0000EE;cursor: pointer;">
                                     {{index+1}}.{{files?.name}} 
                                 <span (click)="deleteUploads(files,index)"
@@ -262,9 +262,9 @@
 
 <div *ngIf="showimageHeaderPreview" id="my-modalpreview" class="modal fade" aria-labelledby="my-modalLabel"
     aria-hidden="true" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -281,7 +281,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#21cbe5;">
                 <h2 class="modal-title"> JV Attachments</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

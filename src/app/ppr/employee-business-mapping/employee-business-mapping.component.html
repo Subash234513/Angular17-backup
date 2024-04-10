@@ -117,8 +117,8 @@
                 </div>
                 <div class="col-md-3">
                     <button type="button" class="btn btn-outline-primary"
-                        style="border-radius:40px;margin-left: 10px;height: 44px" data-toggle="modal"
-                        data-target=".bd-employeebusinesspopup-modal-lg"><span class="fa fa-plus"></span>Add</button>
+                        style="border-radius:40px;margin-left: 10px;height: 44px" data-bs-toggle="modal"
+                        data-bs-target=".bd-employeebusinesspopup-modal-lg"><span class="fa fa-plus"></span>Add</button>
                 </div>
             </div>
             
@@ -188,7 +188,7 @@
         <div class="modal-content">
             <div class="modal-header"  style="background-color: #ddefdd;">
                 <h2 style="font-size: 18px;">Employee BS Mapping</h2>
-                <button type="button" #closebutton (click)="clearpopup()" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" #closebutton (click)="clearpopup()" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -278,7 +278,7 @@
                                       (click)="empbusinessSub(this.employeeBusinesssearch.value)">
                                     Submit
                                 </button>
-                <button type="button" (click)="clearpopup()" class="btn btn-outline-dark" data-dismiss="modal">
+                <button type="button" (click)="clearpopup()" class="btn btn-outline-dark" data-bs-dismiss="modal">
                     Close
                 </button>
             </div>

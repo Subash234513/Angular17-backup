@@ -4,8 +4,8 @@
     <div class="col-md-12" style="text-align: right; ">
 
 
-        <button mat-mini-fab style="background-color:#DDEFDD ; margin-right: 20px; " class="linkbtn" data-toggle="modal"
-            data-target="#myModal">
+        <button mat-mini-fab style="background-color:#DDEFDD ; margin-right: 20px; " class="linkbtn" data-bs-toggle="modal"
+            data-bs-target="#myModal">
             <mat-icon>add</mat-icon>
         </button>
     </div>
@@ -61,7 +61,7 @@
         <div class='modal-content'>
             <div class="modal-header text-center  ">
                 <h3 class="modal-title   w-100" style="font-family: 'Times New Roman', Times, serif;"></h3>
-                <button type="button" #modalclose  (click)="resetall()" class="close" #closed data-dismiss="modal">&times;</button>
+                <button type="button" #modalclose  (click)="resetall()" class="close" #closed data-bs-dismiss="modal">&times;</button>
 
             </div>
             <div class="modal-body">
@@ -140,7 +140,7 @@
                     </ng-template>
 
                     <div style="text-align: center;">
-                        <button mat-flat-button color='warn' data-dismiss="modal" (click)="submit()">submit</button>
+                        <button mat-flat-button color='warn' data-bs-dismiss="modal" (click)="submit()">submit</button>
                         <button mat-flat-button type="button" (click)="resetall()">Cancel</button>
                     </div>
                 </form>

@@ -1,7 +1,7 @@
 <div class="nav nav-tabs" style="margin-top: 1%;margin-left: 20px;">
-    <span class="nav-item nav-link  " data-toggle="tab" (click)="subModuleData(sub)" role="tab"
+    <span class="nav-item nav-link  " data-bs-toggle="tab" (click)="subModuleData(sub)" role="tab"
         *ngFor="let sub of prpoPOList">
-        <!-- <span [routerLink]="['/po']" [queryParams]="{ tab: sub.name}" class="nav-item nav-link  " data-toggle="tab"  (click)="subModuleData(sub)" role="tab"
+        <!-- <span [routerLink]="['/po']" [queryParams]="{ tab: sub.name}" class="nav-item nav-link  " data-bs-toggle="tab"  (click)="subModuleData(sub)" role="tab"
         *ngFor="let sub of prpoPOList"> -->
         {{sub.name}}
     </span>
@@ -175,10 +175,10 @@
                         <ng-template #lockcancel>Yes </ng-template>
                     </td>
                     <td><span class="fa fa-download" aria-hidden="true" (click)="HeaderFilesPOdownload(po)"
-                            data-toggle="modal" data-target=".bd-examplepopHeaderfiles-modal-lg"></span></td>
+                            data-bs-toggle="modal" data-bs-target=".bd-examplepopHeaderfiles-modal-lg"></span></td>
 
                     <td>
-                        <!-- <span class="material-icons" data-toggle="modal" data-target=".bd-examplepoppdf-modal-lg"
+                        <!-- <span class="material-icons" data-bs-toggle="modal" data-bs-target=".bd-examplepoppdf-modal-lg"
                             (click)="pdfPopup(po)">
                             visibility
                         </span> -->
@@ -189,7 +189,7 @@
                                 (click)="pdfPopup(po)">
                                 visibility
                             </span>
-                            <!-- data-toggle="modal" data-target=".bd-examplepoppdf-modal-lg" -->
+                            <!-- data-bs-toggle="modal" data-bs-target=".bd-examplepoppdf-modal-lg" -->
                         </div>
                         <ng-template #lockjustNoteReopen>
                             <div *ngIf="po?.poheader_status == 'REOPENED' ; else lockjustsimple">
@@ -224,7 +224,7 @@
                     </td> -->
 
                     <td><span class="material-icons" (click)="getProductData(po)" (click)="dataOnHeader(po)"
-                            data-toggle="modal" data-target=".bd-exampletwo-modal-lg">
+                            data-bs-toggle="modal" data-bs-target=".bd-exampletwo-modal-lg">
                             visibility
                         </span>
                     </td>
@@ -233,7 +233,7 @@
                             (click)="pdfPopupJustificationNote(po)">
                             visibility
                         </span>
-                        <!-- data-toggle="modal" data-target=".bd-examplepoppdf-modal-lg" -->
+                        <!-- data-bs-toggle="modal" data-bs-target=".bd-examplepoppdf-modal-lg" -->
 
 
                     </td>
@@ -245,8 +245,8 @@
                         </div>
                         <ng-template #lockbarcode> -- </ng-template>
                     </td>
-                    <td><span class="material-icons" (click)="gettranhistory(po)" data-toggle="modal"
-                            data-target=".bd-examplethree-modal-lg">
+                    <td><span class="material-icons" (click)="gettranhistory(po)" data-bs-toggle="modal"
+                            data-bs-target=".bd-examplethree-modal-lg">
                             history
                         </span></td>
                 </tr>
@@ -281,7 +281,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title">PO Details</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -347,7 +347,7 @@
                                             Records Found...</div>
                                         <ng-template #fileactionPO>
                                             <p class="btn btn-link" *ngFor="let a of po.file_data ;index as i;"
-                                                style="margin-left:-1%" data-target="#my-modal" data-toggle="modal"
+                                                style="margin-left:-1%" data-bs-target="#my-modal" data-bs-toggle="modal"
                                                 (click)="commentPopup(a.file_id,a.file_name)">
                                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                                                 <br>
@@ -393,9 +393,9 @@
 
 <div *ngIf="showimagepopup" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
     tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -413,7 +413,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title">PO Transaction History</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -462,7 +462,7 @@
             <div class="modal-content">
                 <div class="modal-header" style="background:#DDEFDD;">
                     <h2 class="modal-title">Header Files</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -487,8 +487,8 @@
                                     </i></a>
                             </td>
                             <!-- <td style="margin-left:-1%">
-                                <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal"
-                                    data-toggle="modal" (click)="commentPopupHeaderFiles(file.file_id,file.file_name)">
+                                <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal"
+                                    data-bs-toggle="modal" (click)="commentPopupHeaderFiles(file.file_id,file.file_name)">
                                     <i class="fa fa-picture-o" aria-hidden="true"></i>
                                     <br>
                                     (Note:Only image file can be viewed)
@@ -504,9 +504,9 @@
 
 <div *ngIf="showimageHeader" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
     tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -647,12 +647,12 @@
                             (click)="pdfPopupJustificationNote(po)">
                             visibility
                         </span></td>
-                        <!-- data-toggle="modal" data-target=".bd-examplepoppdf-modal-lg" -->
+                        <!-- data-bs-toggle="modal" data-bs-target=".bd-examplepoppdf-modal-lg" -->
                     <!-- <td><span class="material-icons">
                                         visibility
                                         </span></td> -->
                     <td><span class="fa fa-download" aria-hidden="true" (click)="HeaderFilesPOdownloadApp(po)"
-                            data-toggle="modal" data-target=".bd-examplepopHeaderfilesApp-modal-lg"></span></td>
+                            data-bs-toggle="modal" data-bs-target=".bd-examplepopHeaderfilesApp-modal-lg"></span></td>
                     <td><span class="material-icons" (click)="POapprovalscreen(po)">
                             visibility
                         </span>
@@ -1438,7 +1438,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title">Header Files</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -1462,7 +1462,7 @@
                                 </i></a>
                         </td>
                         <!-- <td style="margin-left:-1%">
-                            <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal" data-toggle="modal"
+                            <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal" data-bs-toggle="modal"
                                 (click)="commentPopupHeaderFilesApp(file.file_id,file.file_name)">
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                                 <br>
@@ -1478,9 +1478,9 @@
 
 <div *ngIf="showimageHeaderApp" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
     tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -1496,7 +1496,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background:#DDEFDD;">
                 <h2 class="modal-title">PDF View</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

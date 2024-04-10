@@ -212,7 +212,7 @@
                             </button>
                             </div>
                             <div *ngIf="rejectFlagRoute==true;">
-                            <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-toggle="modal" *ngIf="d.status.text == 'REJECTED'" data-target="#data" >
+                            <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-bs-toggle="modal" *ngIf="d.status.text == 'REJECTED'" data-bs-target="#data" >
                                 <mat-icon>send</mat-icon>
                                 </button>
                             </div>
@@ -227,7 +227,7 @@
                   <div class="modal-content">
                     <div class="modal-header" style="background-color:rgb(58, 224, 147);color:#1f1d1d">
                       <h2 class="modal-title" style="text-align:center;margin-left:45%">Courier Details</h2>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
@@ -305,7 +305,7 @@
                     </div>
                     <div class="modal-footer" style="text-align: center;" >
                       <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;">Send Courier</button>
-                      <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;" data-bs-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
@@ -535,7 +535,7 @@
                     <td>{{colist.ecfdate|date:'dd/MM/yyyy'}}</td>
                     <td>{{colist.ecfamount}}</td>
                     <td>
-                        <span matTooltip="view Payment Details" class="fa fa-eye create" style="color: green; cursor: pointer;" (click)="getpaystatus(colist.crno)" data-toggle="modal" data-target="#showpaymentdetails"></span>
+                        <span matTooltip="view Payment Details" class="fa fa-eye create" style="color: green; cursor: pointer;" (click)="getpaystatus(colist.crno)" data-bs-toggle="modal" data-bs-target="#showpaymentdetails"></span>
                     </td>
 
                     <td>{{colist.ecfstatus}}</td>
@@ -555,7 +555,7 @@
                     <td>{{colist.ecfheader_id.ecfdate|date:'dd-MMM-yyyy'}}</td>
                     <td>{{colist.ecfheader_id.ecfamount}}</td>
                     <td>
-                        <span matTooltip="view Payment Details" class="fa fa-eye create" style="color: green; cursor: pointer;" (click)="getpaystatus(colist.crno)" data-toggle="modal" data-target="#showpaymentdetails"></span>
+                        <span matTooltip="view Payment Details" class="fa fa-eye create" style="color: green; cursor: pointer;" (click)="getpaystatus(colist.crno)" data-bs-toggle="modal" data-bs-target="#showpaymentdetails"></span>
                     </td>
 
                     <td>{{colist.ecfheader_id.ecfstatus}}</td>
@@ -587,7 +587,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background: rgba(23, 204, 23, 0.288);">
                 <h2 class="modal-title" style="color: black; text-align: center;">Transaction Details</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -640,7 +640,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background: rgba(23, 204, 23, 0.288);">
                 <h2 class="modal-title" style="color: black; text-align: center;">Inward and Payment Details</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -681,7 +681,7 @@
 
             <!-- <div class="modal-header" style="background:rgba(23, 204, 23, 0.288);">
     <h2 class="modal-title" style="color:black ;text-align: center;">Payment Details</h2>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 </div> -->

@@ -39,8 +39,8 @@
                             <input matInput placeholder="Type" autocomplete="off" formControlName="full_name" readonly>
                         </mat-form-field>
                     </td> -->
-                    <td> <span class="material-icons" type="button" data-toggle="modal"
-                            data-target=".bd-example-modal-xl">description</span></td>
+                    <td> <span class="material-icons" type="button" data-bs-toggle="modal"
+                            data-bs-target=".bd-example-modal-xl">description</span></td>
                 </tr>
 
             </table>
@@ -71,7 +71,7 @@
                         <br>
                         <div class="modal-footer">
                             <button type="button" style="border-radius: 40px;margin-left: 10px;"
-                                class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                                class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -123,8 +123,8 @@
                                 <ng-template #lock>Yes </ng-template>
                             </td>
                             <td style="text-align:center">
-                                <button type="button" class="btn btn-default" mat-button data-toggle="modal"
-                                    (click)="delivaryDetailsPatch(approve.prccbs)" data-target="#deliveryModal">
+                                <button type="button" class="btn btn-default" mat-button data-bs-toggle="modal"
+                                    (click)="delivaryDetailsPatch(approve.prccbs)" data-bs-target="#deliveryModal">
                                     <span class="material-icons">
                                         local_shipping
                                     </span>
@@ -151,8 +151,8 @@
                                 <ng-template #filePRview>
     
                                     <p *ngFor="let a of approve.file_data ;index as i;" class="material-icons"
-                                     data-target="#my-modal"
-                                    data-toggle="modal"
+                                     data-bs-target="#my-modal"
+                                    data-bs-toggle="modal"
                                      (click)="commentPopup(a.file_id,a.file_name)"
                                         class=" btn-btn-link">
                                         touch_app
@@ -165,8 +165,8 @@
 
 
                                 <!-- <span class="material-icons"> -->
-                                    <!-- <p class="btn btn-link" style="margin-left:-1%" data-target="#my-modal"
-                                        data-toggle="modal" (click)="commentPopup(approve.file_id,approve.file_name)">
+                                    <!-- <p class="btn btn-link" style="margin-left:-1%" data-bs-target="#my-modal"
+                                        data-bs-toggle="modal" (click)="commentPopup(approve.file_id,approve.file_name)">
 
                                         <i class="fa fa-picture-o" aria-hidden="true"></i>
                                  <br>
@@ -176,7 +176,7 @@
                             <!-- </td> -->
                             <div *ngIf="showimagepopup" id="my-modal" class="modal fade" aria-labelledby="my-modalLabel"
                                 aria-hidden="true" tabindex="-1" role="dialog">
-                                <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+                                <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
                                     <div class="modal-content">
 
                                         <div class="modal-body">
@@ -209,7 +209,7 @@
                         </mat-autocomplete>
                     </mat-form-field>
 
-                    <button type="submit" data-dismiss="modal" (click)="approveClick()" class="btn btn-outline-success"
+                    <button type="submit" data-bs-dismiss="modal" (click)="approveClick()" class="btn btn-outline-success"
                     style="border-radius: 40px;margin-left: 10px;">Approve and Forward</button>
                 </td>
                 <mat-form-field style="width: 400px; margin-left: 50px;">
@@ -224,7 +224,7 @@
                              class="example-margin" formControlName="dts">DTS</mat-checkbox>
                 </section>
                     </td>   -->
-                <button type="submit" data-dismiss="modal" (click)="approveClick()" class="btn btn-outline-success"
+                <button type="submit" data-bs-dismiss="modal" (click)="approveClick()" class="btn btn-outline-success"
                     style="border-radius: 40px;margin-left: 10px;">Final Approve</button>
             </form>
 
@@ -241,7 +241,7 @@
                              class="example-margin" formControlName="dts">DTS</mat-checkbox>
                 </section>
                     </td>  -->
-                <button type="button" data-dismiss="modal" (click)="rejectClick()" class="btn btn-outline-danger"
+                <button type="button" data-bs-dismiss="modal" (click)="rejectClick()" class="btn btn-outline-danger"
                     [disabled]="rejectForm.invalid" style="border-radius: 40px;margin-left: 10px;">Reject</button>
 
                 <br>
@@ -274,12 +274,12 @@
         <div class="modal-content">
             <div class="modal-header" style="background-color: #ddefdd;">
                 <h2 class="modal-title">  Delivery Details</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <!-- <div style="background-color: #ddefdd;">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <h2
@@ -319,7 +319,7 @@
                     </tbody>
                 </table>
                 <tr>
-                    <button style="margin-left: 500px;" type="button" data-dismiss="modal"
+                    <button style="margin-left: 500px;" type="button" data-bs-dismiss="modal"
                         class="btn btn-outline-primary">
                         Back
                     </button>

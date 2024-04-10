@@ -164,7 +164,7 @@
                             </div>
                         </div>
                         <!-- <div class="col-md-3">
-                            <button  class="btn btn-outline-primary" style="border-radius: 40px;" data-toggle="modal" data-target=".bd-fileupload-modal-lg">
+                            <button  class="btn btn-outline-primary" style="border-radius: 40px;" data-bs-toggle="modal" data-bs-target=".bd-fileupload-modal-lg">
                             <mat-icon>upload</mat-icon>Upload
                         </button> 
                         </div>-->
@@ -194,12 +194,12 @@
                         <div>
                             <p style="text-align: start;">Active Client #</p>
                             <p style="float: right;"><button class="btn btn-outline-primary" matTooltip="Upload"
-                                    style="border-radius: 40px;" data-toggle="modal" (click)="fileuploadopen('Active Client',1)"
-                                    data-target=".bd-fileupload-modal-lg"><i class="fa fa-upload"
+                                    style="border-radius: 40px;" data-bs-toggle="modal" (click)="fileuploadopen('Active Client',1)"
+                                    data-bs-target=".bd-fileupload-modal-lg"><i class="fa fa-upload"
                                         aria-hidden="true"></i></button></p>
 
                         </div>
-                        <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                        <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
                     </button> -->
                     </div>
                     <!-- <div class="collapse multi-collapse" id="multiCollapseExample2"> -->
@@ -283,13 +283,13 @@
             <div class="col">
                 <div class="card" id='typelist-table'>
                     <div class="card-header">
-                        <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3"> -->
+                        <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3"> -->
                         <div>
                             <p style="text-align: start;">Active Client Typelist</p>
                             <p style="float: right;color: #4b3ce5;">{{fromdate}} &nbsp; - &nbsp; {{todate}} 
                                 <!-- <button class="btn btn-outline-primary" matTooltip="Upload"
-                                style="border-radius: 40px;" data-toggle="modal" (click)="fileuploadopen('Active Client Typelist',2)"
-                                data-target=".bd-fileupload-modal-lg"><i class="fa fa-upload"
+                                style="border-radius: 40px;" data-bs-toggle="modal" (click)="fileuploadopen('Active Client Typelist',2)"
+                                data-bs-target=".bd-fileupload-modal-lg"><i class="fa fa-upload"
                                     aria-hidden="true"></i></button> -->
                                 </p>
                         </div>
@@ -377,13 +377,13 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4"> -->
+                        <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4"> -->
                        
                         <div>
                         <p style="text-align: start;"> Income Header Details</p>
                         <p style="float: right;"><button class="btn btn-outline-primary" matTooltip="Upload"
-                            style="border-radius: 40px;" data-toggle="modal" (click)="fileuploadopen('Income Header Details',3)"
-                            data-target=".bd-fileupload-modal-lg"><i class="fa fa-upload"
+                            style="border-radius: 40px;" data-bs-toggle="modal" (click)="fileuploadopen('Income Header Details',3)"
+                            data-bs-target=".bd-fileupload-modal-lg"><i class="fa fa-upload"
                                 aria-hidden="true"></i></button></p>
                         </div>
                         <!-- </button> -->
@@ -407,8 +407,8 @@
                                             <a style="color: black;" (click)="expant_level(k,assestgrp,level,monthsearch)" (click)="level.expanded = !level.expanded">{{ level.name }}
                                             </a>
                                             <button class="btn btn-outline-primary" matTooltip="Upload"
-                                            style="border-radius: 40px;float: right;" data-toggle="modal" 
-                                            data-target=".bd-otheroperatingexpupload-modal-lg">
+                                            style="border-radius: 40px;float: right;" data-bs-toggle="modal" 
+                                            data-bs-target=".bd-otheroperatingexpupload-modal-lg">
                                             <i class="fa fa-upload"
                                             aria-hidden="true"></i>
                                             </button>
@@ -607,13 +607,13 @@
 
         </div>
     </div>
-    <div class="modal fade bd-fileupload-modal-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false"
+    <div class="modal fade bd-fileupload-modal-lg" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false"
         tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabels">
         <div class="modal-dialog modal-lg" style="padding-top: 7%;">
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title">{{filed_name}} &nbsp;&nbsp; File Upload</h2>
-                    <button type="button" class="close" (click)="clear_filedetails()" #closepop data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" (click)="clear_filedetails()" #closepop data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -651,7 +651,7 @@
                     <button class="btn btn-outline-primary" type="button" style="float: right;" (click)="upload(numberoffiled)" >
                         Upload
                     </button>
-                    <button class="btn btn-outline-secondary" type="button" data-dismiss="modal" style="float: right ;"
+                    <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal" style="float: right ;"
                         (click)="clear_filedetails()">
                         Close
                     </button>
@@ -661,13 +661,13 @@
     </div>
 
 
-    <div class="modal fade bd-otheroperatingexpupload-modal-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false"
+    <div class="modal fade bd-otheroperatingexpupload-modal-lg" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false"
     tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabels">
     <div class="modal-dialog modal-lg" style="padding-top: 7%;">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">Other Operating Expense &nbsp;&nbsp; File Upload</h2>
-                <button type="button" class="close" (click)="clear_filedetails()" #closepopexp data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" (click)="clear_filedetails()" #closepopexp data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -730,7 +730,7 @@
                 <button class="btn btn-outline-primary" type="button" style="float: right;" (click)="otheroperatingupload(otheroperating)" >
                     Upload
                 </button>
-                <button class="btn btn-outline-secondary" type="button" data-dismiss="modal" style="float: right ;"
+                <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal" style="float: right ;"
                     (click)="clear_filedetails()">
                     Close
                 </button>

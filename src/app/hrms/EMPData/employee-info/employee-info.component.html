@@ -3,7 +3,7 @@
             class="highlights alignvertical" >Employee Details</span></h2>    
 
             <div *ngIf="adminValidation">
-            <button mat-raised-button color="warn" class="btnalign"  data-toggle="modal" data-target="#deactivateModal" >Deactivate</button>    
+            <button mat-raised-button color="warn" class="btnalign"  data-bs-toggle="modal" data-bs-target="#deactivateModal" >Deactivate</button>    
             <button mat-raised-button color="primary" class="btnalign"  (click)="startingNoticePeriod()" >Notice Period</button>         
              </div>
 
@@ -267,7 +267,7 @@
           <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Deactivate Employee</h5> 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>

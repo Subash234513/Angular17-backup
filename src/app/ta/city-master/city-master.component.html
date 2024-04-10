@@ -28,8 +28,8 @@
       </td>
 
       <td>
-        <button mat-fab style="margin-left: 20px;background-color: white;" data-toggle="modal"
-          data-target="#cityaddmodal">
+        <button mat-fab style="margin-left: 20px;background-color: white;" data-bs-toggle="modal"
+          data-bs-target="#cityaddmodal">
           <mat-icon>add</mat-icon>
         </button>
       </td>
@@ -66,7 +66,7 @@
 
         </td>
         <td>
-          <button mat-icon-button (click)="editcity(city)" data-toggle="modal" data-target="#cityeditmodal">
+          <button mat-icon-button (click)="editcity(city)" data-bs-toggle="modal" data-bs-target="#cityeditmodal">
             <mat-icon>edit</mat-icon>
           </button>
         </td>
@@ -104,7 +104,7 @@
       <div class="modal-header">
         <h4 class="modal-title" style="font-weight: 700;font-size: large;"></h4>
         <button type="button" class="close" #closeapprovalpopup (click)="resetform()" #cityaddclose
-          data-dismiss="modal">&times;</button>
+          data-bs-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
@@ -210,7 +210,7 @@
               <td>
                 <button type="submit" style="margin-left: 10px;" id='primarybtn' (click)="submitform()"
                   class="btn btn-light">Submit</button>
-                <button type="button" class="btn btn-light" id="secondarybtn" data-dismiss="modal" (click)="resetform()"
+                <button type="button" class="btn btn-light" id="secondarybtn" data-bs-dismiss="modal" (click)="resetform()"
                   style="margin-left: 10px;">cancel</button>
               </td>
             </tr>
@@ -221,7 +221,7 @@
 
       <!-- Modal footer -->
       <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div> -->
 
     </div>
@@ -237,7 +237,7 @@
       <div class="modal-header">
         <h4 class="modal-title" style="font-weight: 700;font-size: large;"></h4>
         <button type="button" class="close" #closeapprovalpopup (click)="resetform()" #cityeditclose
-          data-dismiss="modal">&times;</button>
+          data-bs-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
@@ -303,7 +303,7 @@
               <td>
                 <button type="submit" style="margin-left: 10px;" id='primarybtn' (click)="editsubmitform()"
                   class="btn btn-light">Submit</button>
-                <button type="button" class="btn btn-light" id="secondarybtn" data-dismiss="modal" (click)="resetform()"
+                <button type="button" class="btn btn-light" id="secondarybtn" data-bs-dismiss="modal" (click)="resetform()"
                   style="margin-left: 10px;">cancel</button>
               </td>
             </tr>
@@ -314,7 +314,7 @@
 
       <!-- Modal footer -->
       <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div> -->
 
     </div>

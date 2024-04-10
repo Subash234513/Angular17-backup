@@ -48,8 +48,8 @@
                         </mat-form-field>
                     </td>
                     
-                    <td> <span class="material-icons" type="button" data-toggle="modal"
-                            data-target=".bd-example-modal-xl">description</span></td>
+                    <td> <span class="material-icons" type="button" data-bs-toggle="modal"
+                            data-bs-target=".bd-example-modal-xl">description</span></td>
                 </tr>
                 <tr>
                     <td>
@@ -86,7 +86,7 @@
                     <br>
                     <div class="modal-footer">
                         <button type="button" style="border-radius: 40px;margin-left: 10px;"
-                            class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                            class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                             File Found...</div>
                         <ng-template #fileactionPar>
                             <p class="btn btn-link" *ngFor="let a of section.file_upload ;index as i;"
-                                style="margin-left:-1%" data-target="#exampleModal" data-toggle="modal"
+                                style="margin-left:-1%" data-bs-target="#exampleModal" data-bs-toggle="modal"
                                 (click)="commentPopup(a.file_id,a.file_name)">
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                                 <br>
@@ -167,7 +167,7 @@
                 <textarea matInput placeholder="APPROVE Remarks" formControlName="remarks"
                     autocomplete="off"></textarea>
             </mat-form-field>
-            <button type="submit" data-dismiss="modal" [disabled]="approvedisable" (click)="approveClick()" class="btn btn-outline-success"
+            <button type="submit" data-bs-dismiss="modal" [disabled]="approvedisable" (click)="approveClick()" class="btn btn-outline-success"
                 style="border-radius: 40px;margin-left: 10px;">APPROVE</button>
         </form>
 
@@ -176,7 +176,7 @@
                 <mat-label>Rejected Remarks</mat-label>
                 <textarea matInput placeholder="REJECT Remarks" formControlName="remarks" autocomplete="off"></textarea>
             </mat-form-field>
-            <button type="button" data-dismiss="modal" [disabled]="rejectdisable" (click)="rejectClick()" class="btn btn-outline-danger"
+            <button type="button" data-bs-dismiss="modal" [disabled]="rejectdisable" (click)="rejectClick()" class="btn btn-outline-danger"
                 [disabled]="rejectForm.invalid" style="border-radius: 40px;margin-left: 10px;">REJECT</button>
 
             <br>
@@ -191,9 +191,9 @@
 </div>
 <div *ngIf="showimagepopup" id="exampleModal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true"
     tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" data-dismiss="modal" style="width: 60%;height: 80%;">
+    <div class="modal-dialog modal-xl" data-bs-dismiss="modal" style="width: 60%;height: 80%;">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">

@@ -1,8 +1,8 @@
 <nav>
     <div class="nav nav-tabs">
 
-        <a class="nav-item nav-link active" data-toggle="tab" role="tab" (click)="invoiceBtn()" >Invoice</a>
-        <a class="nav-item nav-link" data-toggle="tab" role="tab" (click)="expenseBtn()">Expense</a>
+        <a class="nav-item nav-link active" data-bs-toggle="tab" role="tab" (click)="invoiceBtn()" >Invoice</a>
+        <a class="nav-item nav-link" data-bs-toggle="tab" role="tab" (click)="expenseBtn()">Expense</a>
 
     </div>
 
@@ -53,7 +53,7 @@
                                         <td>{{ assetcat['branch_id'].name}}</td>
                                         <td ><div class="text">{{assetcat.assetdetails_status}}</div></td>
                                         <td>
-                                           <button data-toggle="modal" (click)="imageview(i,assetcat)" data-target="#imagemodal" style="border:none"><mat-icon>insert_photo</mat-icon></button>
+                                           <button data-bs-toggle="modal" (click)="imageview(i,assetcat)" data-bs-target="#imagemodal" style="border:none"><mat-icon>insert_photo</mat-icon></button>
                                         </td>
                                         <td> <input type="checkbox" id="vehicle1" name="vehicle1" [checked]="assetcat.is_approved" (click)="approvedata(assetcat,$event)" value="Bike"></td>
 
@@ -152,7 +152,7 @@
         <div class="modal-content">
             <div class="modal-header">
             <h2 class="modal-title" >Image View</h2>
-            <button type="button" class="button"  data-dismiss="modal">x</button>
+            <button type="button" class="button"  data-bs-dismiss="modal">x</button>
             </div>
             <div class="modal-body" style="overflow-y:scroll">
             <div *ngFor="let d of imagearray">
@@ -162,7 +162,7 @@
             <div *ngIf="imagearray.length==0">No Image Upload yet..</div>
             </div>
             <div class="modal-footer">
-            <button type="button" data-dismiss="modal" class="text-center">Back</button>
+            <button type="button" data-bs-dismiss="modal" class="text-center">Back</button>
             </div>
 
         </div>

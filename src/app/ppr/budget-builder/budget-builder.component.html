@@ -256,8 +256,8 @@
 						</td>
 
 						<td colspan="14" *ngIf="i==2" style="background-color: #ffff0045; text-align: center;">
-							<a data-toggle="modal" #popupbb style="display: none;"
-								data-target=".bd-budgetbuilderpopup-modal-lg"></a>
+							<a data-bs-toggle="modal" #popupbb style="display: none;"
+								data-bs-target=".bd-budgetbuilderpopup-modal-lg"></a>
 							<a style="color: blue;"
 								(click)="budgetbuildersearech_click(this.pprSearchForm.value)">{{level.name}}</a>
 
@@ -813,7 +813,7 @@
 		</table>
 
 	</div>
-	<div class="modal fade bd-budgetbuilderpopup-modal-lg" data-toggle="modal" data-backdrop="static"
+	<div class="modal fade bd-budgetbuilderpopup-modal-lg" data-bs-toggle="modal" data-backdrop="static"
 		data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabels">
 		<div class="modal-dialog modal-lg"
 			style="max-width: 100%;max-height: 100%;width: 100%; height: 100%;border-radius: 0;  width: 100%;height: 100%;padding-left: 20px;padding-bottom: -264px; padding-right: 19px;display: block;">
@@ -821,7 +821,7 @@
 				<div class="modal-header">
 					<h2 class="modal-title">Budget Builder</h2>
 
-					<button type="button" class="close" (click)="closesearchPopup()" #closepopup data-dismiss="modal"
+					<button type="button" class="close" (click)="closesearchPopup()" #closepopup data-bs-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -972,8 +972,8 @@
 														{{ppr.name}}</a>
 												</div>
 												<div *ngIf="ppr.Padding_left=='100px'">
-													<a style="color: blue;display: none;" data-toggle="modal"
-														data-target=".bd-subcatpop-modal-lg" #popupsuplier></a>
+													<a style="color: blue;display: none;" data-bs-toggle="modal"
+														data-bs-target=".bd-subcatpop-modal-lg" #popupsuplier></a>
 													<a style="color: blue;"
 														(click)="popupsummary(i,ppr,summarydata)">{{ppr.name}}</a>&nbsp;&nbsp;
 
@@ -1832,7 +1832,7 @@
 										<span *ngIf="ppr.status==6">Bgt-Returned</span>
 										<span *ngIf="ppr.status==7">Bgt-Rejected</span>
 										<!-- <span class="material-icons" *ngIf="ppr.status && ppr.Padding_left=='120px'"
-											data-toggle="modal" style="cursor: pointer;" data-target=".bd-exampleremarks-modal-lg"
+											data-bs-toggle="modal" style="cursor: pointer;" data-bs-target=".bd-exampleremarks-modal-lg"
 											(click)="remarks(ppr)" matTooltip="Comments">
 											visibility
 										</span>
@@ -2090,7 +2090,7 @@
 						<button type="submit" class="btn btn-outline-primary"
 							(click)="save_draft(summarydata,qsummarydata,1,'draft')">Save as Draft</button>
 						<button type="button" (click)="closesearchPopup()" class="btn btn-outline-dark"
-							data-dismiss="modal">
+							data-bs-dismiss="modal">
 							Close
 						</button>
 					</div>
@@ -2102,13 +2102,13 @@
 	<!-- <pre>
 		{{buildermonthForm.value | json}}
 	</pre> -->
-	<div class="modal fade bd-subcatpop-modal-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false"
+	<div class="modal fade bd-subcatpop-modal-lg" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false"
 		tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabels">
 		<div class="modal-dialog modal-lg" style="padding-top: 7%;">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h2 class="modal-title">Budget Builder - {{bbname}}</h2>
-					<button type="button" class="close" #closepop (click)="closePopup()" data-dismiss="modal"
+					<button type="button" class="close" #closepop (click)="closePopup()" data-bs-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -2215,7 +2215,7 @@
 					<div class="modal-footer">
 						<button type="submit" class="btn btn-outline-primary"
 							(click)="submit_subcat(pprSearchForm,summarydata,supplierLists)">Submit</button>
-						<button type="button" (click)="closePopup()" class="btn btn-outline-dark" data-dismiss="modal">
+						<button type="button" (click)="closePopup()" class="btn btn-outline-dark" data-bs-dismiss="modal">
 							Close
 						</button>
 					</div>
@@ -2234,7 +2234,7 @@
 				<div class="modal-header">
 					<h2 class="modal-title">Transaction History-{{pprname}}</h2>
 
-					<button type="button" class="close" #closepopup data-dismiss="modal" aria-label="Close">
+					<button type="button" class="close" #closepopup data-bs-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
@@ -2269,7 +2269,7 @@
 				</div>
 				<div class="modal-footer">
 
-					<button type="button" class="btn btn-outline-dark" data-dismiss="modal">
+					<button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
 						Close
 					</button>
 				</div>

@@ -181,10 +181,10 @@
                     <td>{{d.apamount}}</td>
                     <td>{{d['apinvoiceheader'][0]['status'].text}}</td>
                     <td> 
-                        <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-toggle="modal" *ngIf="d['apinvoiceheader'][0]['status'].text == 'REJECTED'" data-target="#data" >
+                        <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-bs-toggle="modal" *ngIf="d['apinvoiceheader'][0]['status'].text == 'REJECTED'" data-bs-target="#data" >
                         <mat-icon>send</mat-icon>
                         </button>
-                        <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-toggle="modal" *ngIf="d['apinvoiceheader'][0]['status'].text != 'REJECTED'" data-target="#Dispatch" >
+                        <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-bs-toggle="modal" *ngIf="d['apinvoiceheader'][0]['status'].text != 'REJECTED'" data-bs-target="#Dispatch" >
                             <mat-icon>send</mat-icon>
                             </button>
                 </td>
@@ -201,10 +201,10 @@
                         <td>{{d.invoice_amount}}</td>
                         <td>{{d.status.text}}</td>
                         <td> 
-                            <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-toggle="modal" *ngIf="d.status.text == 'REJECTED'" data-target="#data" >
+                            <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-bs-toggle="modal" *ngIf="d.status.text == 'REJECTED'" data-bs-target="#data" >
                             <mat-icon>send</mat-icon>
                             </button>
-                            <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-toggle="modal" *ngIf="d.status.text != 'REJECTED'" data-target="#Dispatch" >
+                            <button mat-icon-button style="color: rgb(43, 166, 223);width: 40px ;height: 40px;margin-left: 20px;" data-bs-toggle="modal" *ngIf="d.status.text != 'REJECTED'" data-bs-target="#Dispatch" >
                                 <mat-icon>send</mat-icon>
                                 </button>
                     </td>
@@ -217,7 +217,7 @@
                   <div class="modal-content">
                     <div class="modal-header" style="background-color:rgb(58, 224, 147);color:#1f1d1d">
                       <h2 class="modal-title" style="text-align:center;margin-left:45%">Courier Details</h2>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
@@ -295,7 +295,7 @@
                     </div>
                     <div class="modal-footer" style="text-align: center;" >
                       <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;">Send Courier</button>
-                      <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;" data-bs-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
@@ -309,7 +309,7 @@
                       <div class="modal-content">
                         <div class="modal-header" style="background-color:rgb(58, 224, 147);color:#1f1d1d">
                           <h2 class="modal-title" style="text-align:center;margin-left:45%">Courier Details</h2>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
@@ -346,7 +346,7 @@
                            </div>
                         <div class="modal-footer" style="text-align: center;" >
                           <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;">Send Courier</button>
-                          <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-outline-primary" style="border-radius:40px;height: 44px;" data-bs-dismiss="modal">Close</button>
                         </div>
                       </div>
                     </div>

@@ -6,7 +6,7 @@
 
                 <div style="float:right;margin:20px">
 
-                    <button class="btn btn-success" data-target="#history1" data-toggle="modal" (click)="historyclick()"
+                    <button class="btn btn-success" data-bs-target="#history1" data-bs-toggle="modal" (click)="historyclick()"
                         style="border-radius: 10px;margin-left:10px" type="button">
                         History</button>
 
@@ -21,7 +21,7 @@
 
                         <a class="nav-item nav-link" [ngClass]="(tab.index == a)? 'active': '' "
                             (click)="activitychangeindex(a)" *ngFor="let tab of questiondata;let a=index"
-                            data-toggle="tab">{{tab.activity.name}}
+                            data-bs-toggle="tab">{{tab.activity.name}}
 
                         </a>
 
@@ -51,7 +51,7 @@
 
                             <a class="nav-item nav-link" [ngStyle]="getnavbarcolor(tab)"
                                 [ngClass]="(tab.index == i)? 'active': '' "
-                                *ngFor="let tab of tabs.type_data;let i=index" data-toggle="tab"
+                                *ngFor="let tab of tabs.type_data;let i=index" data-bs-toggle="tab"
                                 (click)="changeindex(b,i);currenttypeselected=tab">{{tab.type_id.name}}
                                 <div *ngIf="tab?.mapping[0]?.type_status?.id == 3" class="tickicon
                             ">&#10004;</div>
@@ -189,8 +189,8 @@
                                                         <table id="another">
                                                             <tr *ngFor="let upload of td.filedata;index as f"
                                                                 class="btn-link">
-                                                                <td style="color: blue;" data-target="#imagepreview"
-                                                                    data-toggle="modal" (click)="getfileview(i,k,l,f)">
+                                                                <td style="color: blue;" data-bs-target="#imagepreview"
+                                                                    data-bs-toggle="modal" (click)="getfileview(i,k,l,f)">
                                                                     {{f+1}}.
                                                                     {{upload.name}}</td>
                                                                 <td>
@@ -432,7 +432,7 @@
         <div class="modal-content">
             <div class="modal-header" >
                 <h2 class="modal-title">Image/PDF View</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -454,7 +454,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <!-- <h2 class="modal-title">Approve</h2> -->
-                <button type="button" class="close" #submitclose data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" #submitclose data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -606,8 +606,8 @@
 
                                                 <table id="another">
                                                     <tr *ngFor="let upload of td.filedata;index as f" class="btn-link">
-                                                        <td style="color: blue;" data-target="#imagepreview"
-                                                            data-toggle="modal" (click)="getfileview(i,k,l,f)"> {{f+1}}.
+                                                        <td style="color: blue;" data-bs-target="#imagepreview"
+                                                            data-bs-toggle="modal" (click)="getfileview(i,k,l,f)"> {{f+1}}.
                                                             {{upload.name}}</td>
                                                         <td>
                                                             <button mat-icon-button (click)="getdownload(i,k,l,f)">
@@ -714,8 +714,8 @@
     </div>
 </div>
 
-<button id="expiryopen" type="button" class="btn btn-primary" #closebutton1 data-target="#expirypopup"
-    data-toggle="modal" style="display: none;">
+<button id="expiryopen" type="button" class="btn btn-primary" #closebutton1 data-bs-target="#expirypopup"
+    data-bs-toggle="modal" style="display: none;">
     Launch demo modal
 </button>
 
@@ -724,7 +724,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <!-- <h2 class="modal-title">Approve</h2> -->
-                <button type="button" class="close" #expiryclose data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" #expiryclose data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>

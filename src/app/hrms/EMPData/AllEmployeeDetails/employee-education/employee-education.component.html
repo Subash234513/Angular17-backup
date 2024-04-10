@@ -16,14 +16,14 @@
     <div class="col-sm-2 col-md-2 col-2 col-lg-2 col-xl-2" style="margin-top: 1.2%;padding-left:100px;">
       <div class="popup-btn">
         <button class="btn btn-primary" style="background-color: #044063;margin-left: -32px;" type="button" (click)="showSaveButton()"
-          data-toggle="modal" data-target="#exampleModal">
+          data-bs-toggle="modal" data-bs-target="#exampleModal">
           <span>+ Add</span>
         </button>
       </div>
     </div>
     <!-- <div class="col-sm-2 col-md-2 col-2 col-lg-2 col-xl-2" style="margin-top: 1.2%;">
             <div class="popup-btn">
-              <button class="btn btn-primary" style="background-color: #044063;" type="button" data-toggle="modal" data-target="#docsModal">
+              <button class="btn btn-primary" style="background-color: #044063;" type="button" data-bs-toggle="modal" data-bs-target="#docsModal">
                 <span>Upload</span>
               </button>
             </div>
@@ -43,7 +43,7 @@
       </div>
 
       <div class="p-2" style="width: 100px;">
-        <a (click)="editRow(item)" data-toggle="modal" data-target="#exampleModal" style="    margin-left: -38%;">
+        <a (click)="editRow(item)" data-bs-toggle="modal" data-bs-target="#exampleModal" style="    margin-left: -38%;">
           <i class="fa solid fa-pencil"></i>
         </a>
         <i style="margin-left: 20%;" class="fa solid fa-trash-can" (click)="deleteAddress(item?.id)"></i>
@@ -51,7 +51,7 @@
         <i  style="margin-left: 20%;" class="fa solid fa-download" (click)="downloadfiles(item)"></i></span>
       </div>
       <!-- <div class="p-2" style="width: 100px;">
-        <a data-toggle="modal" data-target="#bankModalLabels">
+        <a data-bs-toggle="modal" data-bs-target="#bankModalLabels">
           <i class="fa solid fa-file"></i>
         </a>
       </div> -->
@@ -68,7 +68,7 @@
         <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: large;"><b>Education
             Details</b>
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButtons
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons
           style="color: white;opacity: 1;">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -207,7 +207,7 @@
                 <div class="cus-attachCard" *ngIf="reuploadfileArr?.file_name !== null">
                   <!-- H -->
                   <span>{{ reuploadfileArr?.file_name }}</span>
-                  <button mat-icon-button type="button" (click)="viewfile(reuploadfileArr)" data-target="#viewDownload" data-toggle="modal" style="margin-left: 20%;">
+                  <button mat-icon-button type="button" (click)="viewfile(reuploadfileArr)" data-bs-target="#viewDownload" data-bs-toggle="modal" style="margin-left: 20%;">
                     <mat-icon  aria-label="View" style="font-size: x-large;color: blue;
                     margin-top: -19px;">visibility</mat-icon>
                   
@@ -262,7 +262,7 @@
 
 
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
           #closebutton>
           <span aria-hidden="true">&times;</span>
         </button>
@@ -321,7 +321,7 @@
 
 
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
           #closebutton>
           <span aria-hidden="true">&times;</span>
         </button>
@@ -361,7 +361,7 @@
    
 
         </form> -->
-        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
+        <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="color: white;opacity: 1;"
         #closebutton>
         <span aria-hidden="true">&times;</span>
       </button> -->
@@ -395,7 +395,7 @@
         <!-- <mat-icon  style="margin-left: 7%;
         font-size: 25px; cursor: pointer;" (click)="onDownload()">cloud_download</mat-icon> -->
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closebutton style="color: white; opacity: 1;">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closebutton style="color: white; opacity: 1;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
