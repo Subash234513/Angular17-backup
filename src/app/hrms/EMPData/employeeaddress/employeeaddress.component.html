@@ -57,7 +57,9 @@
         <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: large;color: white;"><b>Address
             Details</b>
         </h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton style="    background-color: transparent;
+        font-size: x-large;
+        margin-top: -1%;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -146,7 +148,7 @@
           </div>
           <div class="row">
             <div class="col-sm-4">
-              <mat-form-field style="margin-left: 7%;">
+              <mat-form-field>
               <mat-label>Select Upload File</mat-label>
               <mat-select formControlName="filetype">
                 <mat-option *ngFor="let ftype of fileTypes" [value]="ftype.id">
@@ -194,7 +196,9 @@
 
         </h5>
 
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons style="    background-color: transparent;
+        font-size: x-large;
+        margin-top: -1%;">
           <span aria-hidden="true">&times;</span>
         </button>
 
