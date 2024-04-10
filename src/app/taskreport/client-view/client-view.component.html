@@ -8,13 +8,13 @@
 
     </div>
     <div class="row col-5 "  >
-        <div class="col-5 SearchLeft">
+        <div class="col-3 SearchLeft">
             <mat-form-field>
                 <mat-label>Client</mat-label>
                 <input matInput [formControl]="SearchClient">
             </mat-form-field>
         </div>
-        <div class="col-7 display">
+        <div class="col-4 display">
             <button mat-stroked-button (click)="Search()">
                 <i class="fa fa-search"></i>
             </button>
@@ -65,7 +65,7 @@
         <div *ngIf="clientList?.length==0 || clientList == undefined ; else paginationpro"
         class="NodataAlign text-center">No Records Found...</div>
     <ng-template #paginationpro>
-        <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
+        <!-- <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
             <button type="button" mat-icon-button [disabled]="has_previousclient === false" color="primary"
                 (click)="clientSearch('previous')">
                 <mat-icon>arrow_back</mat-icon>
@@ -74,7 +74,21 @@
                 (click)="clientSearch('next')">
                 <mat-icon>arrow_forward</mat-icon>
             </button>
-        </div>
+        </div> -->
+        <div class="cus-taskPageBtnsDiv">
+ 
+            <button mat-icon-button [disabled]="has_previousclient === false" (click)="clientSearch('previous')">
+              <mat-icon>arrow_backward</mat-icon>
+            </button>
+            <div class="cus-pageNumbers">
+      
+              <p class="cus-btnActive">{{presentpageclient}}</p>
+    
+            </div>
+            <button mat-icon-button [disabled]="has_nextclient === false" (click)="clientSearch('next')">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </div>
     </ng-template>
 
     </div>
@@ -90,15 +104,16 @@
                     <div>
 
                     </div>
-                        <mat-label style="margin-left: -162px;">Client Name <label style="color:red">*</label></mat-label><br>
                         <mat-form-field class="matformfieldstyle" style="width: 250px;" appearance="outline">
+                        <mat-label>Client Name <label style="color:red">*</label></mat-label>
+
                             <input matInput class="matformfieldinputstyle" type="text"
                                  formControlName="name" autocomplete="off">
                         </mat-form-field>
                     </td>
                     <td>
-                        <mat-label >Pipeline<label style="color:red">*</label> </mat-label><br>
                         <mat-form-field class="matformfieldstyle"   style="width: 250px;margin-left: 38%;"  appearance="outline">
+                        <mat-label >Pipeline<label style="color:red">*</label> </mat-label>
                           <mat-select formControlName="pipeline_template_id">
                             <mat-option *ngFor="let l of pipelinedropdown" [value]="l.id">
                               {{l.name}}
