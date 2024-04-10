@@ -9,13 +9,16 @@
                         <mat-form-field (click)="bank()" style="width: 100%;">
                             <mat-label class="font">Bank Name</mat-label>
                             <input matInput formControlName="bankname" [matAutocomplete]="auto" />
-                            <mat-autocomplete #auto="matAutocomplete">
-                                <mat-option *ngFor="let Bank of BankList" [value]="Bank.name" (focusout)="bankId(Bank)"
+                            <mat-autocomplete #auto="matAutocomplete" >
+                                <mat-option *ngFor="let Bank of BankList" [value]="Bank.name"  (mouseleave)="bankId(Bank)"
                                     title="{{Bank.name}}">
                                     {{Bank.name}}
                                 </mat-option>
-                                <!-- <mat-option *ngIf="!BankList.length">No Records Found</mat-option> -->
+                              
                             </mat-autocomplete>
+                           
+                            
+                            
                         </mat-form-field>
                     </div>
                     <div class="col-md-1">
@@ -78,16 +81,16 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Upload Bank Template</h4>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closebtn><span
+                <button class="btn close" data-bs-dismiss="modal" aria-label="Close" #closebtn style="margin-left: 52%;font-size: x-large;"><span
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
                 <form novalidate [formGroup]="uploadForms">
                     <div class="row">
-                        <div class col-sm-6>
+                        <div class col-sm-3>
 
-                            <mat-form-field style="    width: 69%;
-                            margin-left: 9%;">
+                            <mat-form-field style="    width: 32%;
+                            ">
                                 <mat-label>Month</mat-label>
                                 <mat-select matInput formControlName="month" placeholder="Month">
                                     <mat-option *ngFor="let option of options" [value]="option.value">
@@ -113,7 +116,7 @@
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" formControlName="files" id="importFile"
                                 (change)="fileChange($event, $event.target.files)">
-                            <label class="custom-file-label" #labelImport for="importFile">Choose file</label>
+                            <!-- <label class="custom-file-label" #labelImport for="importFile">Choose file</label> -->
                         </div>
                     </div>
                     <div class="form-group">
