@@ -75,6 +75,47 @@ body{
 .mat-form-field {
   font-size: 14px;
 }
+.mat-mdc-text-field-wrapper {
+  height: 48px !important;
+}
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-label-text-size: 14px;
+  --mat-form-field-outlined-label-text-populated-size: 14px;
+}
+.mat-mdc-form-field-icon-prefix,
+.mat-mdc-form-field-icon-suffix {
+  top: -3px;
+}
+.mat-mdc-form-field-icon-prefix,
+.mat-mdc-form-field-icon-suffix mat-icon {
+  font-size: 16px !important;
+}
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+  top: 23px !important;
+}
+.mat-mdc-input-element {
+  top: -3px !important;
+  position: relative !important;
+}
+.mat-mdc-select-value-text {
+  font-size: 14px !important;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input {
+  font-size: 14px !important;
+}
+.mat-mdc-form-field
+  .mdc-text-field--outlined
+  .mdc-notched-outline--upgraded
+  .mdc-floating-label--float-above {
+  top: 28px !important;
+  position: relative !important;
+  padding: 0 0 0 10px !important;
+  left: 0px;
+}
+.mat-mdc-select-trigger {
+  position: relative;
+  top: -3px;
+}
 
 /* .mat-form-field-flex{
   font-size: 12px;
@@ -720,12 +761,12 @@ table thead{
   background-color:  #eeeeef;
   /* background-color: #E4E8EA; */
 }
-table th:first-child{
+/* table th:first-child{
   border-radius: 8px 0 0 8px;
 }
 table th:last-child{
   border-radius: 0 8px 8px 0;
-}
+} */
 table thead th {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -733,6 +774,8 @@ table thead th {
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
+  background-color:  #eeeeef !important;
+  padding: 10px;
 }
 table td {
   font-family: 'Poppins', sans-serif;
