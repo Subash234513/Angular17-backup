@@ -1,8 +1,8 @@
-<div class="pl-5 mt-5">
+<div style="margin-top: 2%;margin-left: 3%;">
     <div *ngIf="Searchform">
         <h2 class="ReportColumns">ReportColumns</h2>
         <div class="row col-md-10">
-            <div class="col-3 display pad">
+            <div class="col-3 display pad" style="margin-left: 12px;">
                 <form action="">
                 <mat-form-field >
                     <mat-label>Name</mat-label>
@@ -53,8 +53,9 @@
                     <!-- <div class="col-6 row"> -->
                         <div class="col-4">
                             <!-- <div class="form-group"> -->
-                                <label>Name</label><br>
+                                
                             <mat-form-field>
+                                <mat-label>Name</mat-label>
                                 <input type="text" matInput formControlName="name">
                             </mat-form-field>
                                
@@ -62,8 +63,9 @@
                         </div>
                         <div class="col-4" style="    margin-left: -10%;">
                             <!-- <div class="form-group"> -->
-                            <label>Type</label><br>
+                            
                             <mat-form-field>
+                                <mat-label>Type</mat-label>
                                 <!-- <select name="" id="" formControlName="Dropdown" class="form-control pr-1" >
                                     <option value="">a</option>
                                     <option value="">B</option>
@@ -81,8 +83,9 @@
                         </div>
                         <div class="col-4" style="    margin-left: -10%;">
                             <!-- <div class="form-group"> -->
-                            <label>Linked Columns</label><br>
+                          
                             <mat-form-field>
+                                <mat-label>Linked Columns</mat-label>
                                 <!-- <select name="" id="" formControlName="Dropdown" class="form-control pr-1" >
                                     <option value="">a</option>
                                     <option value="">B</option>
@@ -118,8 +121,9 @@
                     <!-- <div class="col-6 row"> -->
                         <div class="col-4">
                             <!-- <div class="form-group"> -->
-                                <label>Name</label><br>
+                               
                             <mat-form-field>
+                                <mat-label>Name</mat-label>
                                 <input type="text" matInput formControlName="name">
                             </mat-form-field>
                                
@@ -127,8 +131,9 @@
                         </div>
                         <div class="col-4" style="margin-left: -10%;">
                             <!-- <div class="form-group"> -->
-                            <label>Type</label><br>
+                           
                             <mat-form-field>
+                                <mat-label>Type</mat-label>
                                 <!-- <select name="" id="" formControlName="Dropdown" class="form-control pr-1" >
                                     <option value="">a</option>
                                     <option value="">B</option>
@@ -145,8 +150,9 @@
                         </div>
                         <div class="col-4" style="margin-left: -10%;">
                             <!-- <div class="form-group"> -->
-                            <label>Linked Columns</label><br>
+                            <!-- <label>Linked Columns</label><br> -->
                             <mat-form-field>
+                                <mat-label>Linked Columns</mat-label>
                                 <!-- <select name="" id="" formControlName="Dropdown" class="form-control pr-1" >
                                     <option value="">a</option>
                                     <option value="">B</option>
@@ -176,8 +182,8 @@
         </form>
     </div>
     <div class="padTable" *ngIf="Summarytable">
-        <div class="table-responsive" style="width: 600px;">
-            <table class="table border text-center">
+        <div class="table-responsive">
+            <table class="table border text-center" style="width: 96%;">
                 <thead class="border">
                     <th class="border text-center">Name</th>
                     <th class="border text-center">Type</th>
@@ -196,7 +202,7 @@
                    
                 </tbody>
             </table>
-            <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
+            <!-- <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
                 <button type="button" (click)="prevpage()" mat-icon-button [disabled]="pagination.has_previous === false"
                     color="primary" >
                     <mat-icon>arrow_back</mat-icon>
@@ -206,7 +212,22 @@
                     >
                     <mat-icon>arrow_forward</mat-icon>
                 </button>
-            </div>
+            </div> -->
+
+            <div class="cus-taskPageBtnsDiv">
+ 
+                <button mat-icon-button [disabled]="pagination.has_previous === false" (click)="prevpage()">
+                  <mat-icon>arrow_backward</mat-icon>
+                </button>
+                <div class="cus-pageNumbers">
+          
+                  <p class="cus-btnActive">{{pagination.index}}</p>
+        
+                </div>
+                <button mat-icon-button [disabled]="pagination.has_next === false" (click)="nextpage()">
+                  <mat-icon>arrow_forward</mat-icon>
+                </button>
+              </div>
         </div>
         
     </div>
