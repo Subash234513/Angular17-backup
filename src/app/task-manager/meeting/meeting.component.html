@@ -250,9 +250,14 @@
       <mat-form-field>
         <mat-label>Start Date / Time</mat-label>
         <!-- <input matInput [matDatepicker]="picker" formControlName="from.date" /> -->
+<<<<<<< HEAD
         <input matInput type="datetime-local"  [matDatepicker]="picker5" formControlName="from_dates" (change)="clearToDate()" />
         <!-- <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle> -->
         <mat-datepicker #picker5></mat-datepicker>
+=======
+        <input matInput formControlName="from_dates" (change)="clearToDate()" />
+        <mat-datepicker #picker></mat-datepicker>
+>>>>>>> bbf2eff6788768107f1c1afd8531137bef6eb2e0
       </mat-form-field>
 
       <mat-form-field>

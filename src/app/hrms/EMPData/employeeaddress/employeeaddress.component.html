@@ -57,7 +57,9 @@
         <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: large;color: white;"><b>Address
             Details</b>
         </h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButton style="background-color: transparent;
+        font-size: x-large;
+        margin-top: -1%;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -107,11 +109,11 @@
               <mat-form-field class="nwidth">
                 <mat-label>Pincode</mat-label>
                 <input type="text" placeholder="Search Pincode" matInput formControlName="pincode" required
-                  autocomplete="off" [matAutocomplete]="pinlistCon"
+                  autocomplete="off" [matAutocomplete]="pinlistCon" (selectionchange)="onPincodeSelected($event)"
                   (focusout)="getpincodedata(address.get('pincode').value)"
                   (keyup)=" getpincodedata(address.get('pincode').value)" #pincodeInputCon>
-                <mat-autocomplete #pincodeinfoCon #pinlistCon="matAutocomplete" [displayWith]="getpincodeinterface">
-                  <mat-option *ngFor="let d of pincodelist" [value]="d" (focusout)="getpinlistfocus(d)">
+                <mat-autocomplete #pincodeinfoCon #pinlistCon="matAutocomplete" [displayWith]="getpincodeinterface" (optionSelected)='getpinlistfocus($event.option.value)'>
+                  <mat-option *ngFor="let d of pincodelist" [value]="d" (blur)="getpinlistfocus(d)">
                     {{d.no}}</mat-option>
                 </mat-autocomplete>
               </mat-form-field>
@@ -146,7 +148,7 @@
           </div>
           <div class="row">
             <div class="col-sm-4">
-              <mat-form-field style="margin-left: 7%;">
+              <mat-form-field>
               <mat-label>Select Upload File</mat-label>
               <mat-select formControlName="filetype">
                 <mat-option *ngFor="let ftype of fileTypes" [value]="ftype.id">
@@ -194,7 +196,9 @@
 
         </h5>
 
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeButtons style="    background-color: transparent;
+        font-size: x-large;
+        margin-top: -1%;">
           <span aria-hidden="true">&times;</span>
         </button>
 
@@ -249,8 +253,8 @@
                 <input type="text" placeholder="Search Pincode" matInput formControlName="pincode" required
                   autocomplete="off" [matAutocomplete]="pinlistCons"
                   (keyup)=" getpincodedata(addresse.get('pincode').value)" #pincodeInputCons>
-                <mat-autocomplete #pincodeinfoCons #pinlistCons="matAutocomplete" [displayWith]="getpincodeinterface">
-                  <mat-option *ngFor="let d of pincodelist" [value]="d" (focusout)="getpinlistfocuss(d)">
+                <mat-autocomplete #pincodeinfoCons #pinlistCons="matAutocomplete" [displayWith]="getpincodeinterface" (optionSelected)="getpinlistfocuss($event.option.value)">
+                  <mat-option *ngFor="let d of pincodelist" [value]="d" (blur)="getpinlistfocuss(d)">
                     {{d.no}}</mat-option>
                 </mat-autocomplete>
               </mat-form-field>
@@ -268,7 +272,7 @@
               <div class="width2">
                 <mat-form-field>
                   <mat-label>State</mat-label>
-                  <input matInput formControlName="state" [readonly]="addressEditReadonly">
+                  <input matInput formControlName="state" >
                 </mat-form-field>
               </div>
             </div>
@@ -285,7 +289,7 @@
             </div>
           </div>
           <div class="row" *ngIf="!fileupdate">
-            <div  class="col-sm-5" style="margin-left: 2%;">
+            <div  class="col-sm-10">
               <div class="cus-attachCard" *ngIf="reuploadfileArr?.file_name !== null">
                 <!-- H -->
                 <span>{{ reuploadfileArr?.file_name }}</span>
@@ -313,7 +317,7 @@
           </div>
           <div class="row" *ngIf="fileupdate">
             <div class="col-sm-4">
-              <mat-form-field style="margin-left: 7%;">
+              <mat-form-field >
               <mat-label>Select Upload File</mat-label>
               <mat-select formControlName="filetype">
                 <mat-option *ngFor="let ftype of fileTypes" [value]="ftype.id">

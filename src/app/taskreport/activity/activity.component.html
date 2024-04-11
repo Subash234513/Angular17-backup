@@ -9,10 +9,10 @@
         <div style="margin: 30px; margin-left: 17px; margin-top: 20px;">
             <form [formGroup]="taskAddForm" autocomplete="off">
                 <div class="row col-12">
-                    <div class="col-sm-4">
-                        <mat-label>Client<label style="color:red">*</label></mat-label><br>
+                    <div class="col-sm-3">
+                        
                         <mat-form-field class="matformfieldstyle" appearance="outline" (click)="getclt('')">
-
+                            <mat-label>Client</mat-label>
                             <input #cltInput class="matformfieldinputstyle" matInput 
                                 formControlName="client" [matAutocomplete]="clt" required (keyup)="getclt($event.target.value)">
                             <mat-icon matSuffix class="maticonsize">unfold_more</mat-icon>
@@ -30,11 +30,11 @@
                         </mat-form-field>
                     </div>
 
-                    <div class="col-sm-4">
-                        <mat-label style="margin-left: -128px;">Project Name<label
-                                style="color:red">*</label></mat-label><br>
-                        <mat-form-field class="matformfieldstyle" style="margin-left: -128px;" appearance="outline"
+                    <div class="col-sm-3" style="margin-left: 3%;">
+                    
+                        <mat-form-field class="matformfieldstyle"  appearance="outline"
                             (click)="getappName('')">
+                            <mat-label>Project Name</mat-label>
 
                             <input #appnmInput class="matformfieldinputstyle" matInput 
                             (input)="onActivityInputChange($event)" formControlName="app_id" [matAutocomplete]="appnm" required (keyup)="getappName($event.target.value)">
@@ -53,10 +53,10 @@
                         </mat-form-field>
                     </div>
 
-                    <div class="col-sm-4">
-                        <mat-label style="margin-left: -260px; width: 220px;">Activity<label
-                                style="color:red">*</label></mat-label><br>
-                        <mat-form-field style="margin-left: -260px;" class="matformfieldstyle" appearance="outline">
+                    <div class="col-sm-3" style="margin-left: 3%;">
+                      
+                        <mat-form-field class="matformfieldstyle" appearance="outline">
+                            <mat-label>Activity</mat-label>
                             <input matInput formControlName="activity" required>
                         </mat-form-field>
                     </div>
@@ -96,22 +96,23 @@
                 <div style=" margin-left: 45px;">
                     <div>
                         <h2>Activity Summary</h2>
-                        <mat-label>Name </mat-label>
+                       
                     </div>
 
                     <mat-form-field appearance="outline">
+                        <mat-label>Name</mat-label>
                         <input matInput type="name" formControlName="name" autocomplete="off" required>
                     </mat-form-field>
 
                 
 
                     <button mat-stroked-button type="button" (click)="searchform()"
-                        aria-label="Search"  style="margin-left: 20px;"><mat-icon>search</mat-icon></button>
+                        aria-label="Search"  style="margin-left: 20px;margin-top: -2%;"><mat-icon>search</mat-icon></button>
 
             
 
                 
-                    <button mat-stroked-button type="button" (click)="clearForm()"  style="margin-left: 20px;">Reset</button>
+                    <button mat-stroked-button type="button" (click)="clearForm()"  style="margin-left: 20px;margin-top: -2%;">Reset</button>
                 
 
               
@@ -154,7 +155,7 @@
                 Records Found...
             </div>
             <ng-template #paginationpro>
-                <div class="col-sm-4"
+                <!-- <div class="col-sm-4"
                     style="font-size: small;text-align: right;margin-left: 75%; margin-bottom: 121px;">
                     <button type="button" mat-icon-button [disabled]="has_previousactivity === false" color="primary"
                         (click)="teamSearch('previous')">
@@ -164,7 +165,21 @@
                         (click)="teamSearch('next')">
                         <mat-icon>arrow_forward</mat-icon>
                     </button>
-                </div>
+                </div> -->
+                <div class="cus-taskPageBtnsDiv">
+ 
+                    <button mat-icon-button [disabled]="has_previousactivity === false" (click)="teamSearch('previous')">
+                      <mat-icon>arrow_backward</mat-icon>
+                    </button>
+                    <div class="cus-pageNumbers">
+              
+                      <p class="cus-btnActive">{{presentpageteam}}</p>
+            
+                    </div>
+                    <button mat-icon-button [disabled]="has_nextactivity === false" (click)="teamSearch('next')">
+                      <mat-icon>arrow_forward</mat-icon>
+                    </button>
+                  </div>
             </ng-template>
             <!-- <div class="detailsside padings">
                     <div class="row marginsize">
