@@ -2,7 +2,7 @@
 <div class="row" *ngIf="projectSummary">
            
     <div class="col-sm-12 col-md-12 col-lg-12 MarginLeft">
-        <h2>project Summary</h2>
+        <h2>Project Summary</h2>
 
    
    <!-- <button type="button" mat-fab style="margin-left: 20px;background-color: #f5c68b;"
@@ -25,7 +25,7 @@
                                                 <button class="Margin" mat-stroked-button type="button"    (click)="clearForm()">Reset</button>
                                              </div>   
                                             
-                                            <div >
+                                            <div style="margin-top: -1%;">
                                                 <button type="button"  style=" background-color: #f5c68b;"   mat-fab (click)="addProject('Creation','')"><mat-icon >add</mat-icon></button>
                                             </div>
                                         
@@ -68,7 +68,7 @@
         class="NodataAlign text-center">No Records Found...
     </div>
     <ng-template #paginationpro>
-        <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
+        <!-- <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
             <button type="button" mat-icon-button [disabled]="has_previousproject === false" color="primary"
                 (click)="projectSearch('previous')">
                 <mat-icon>arrow_back</mat-icon>
@@ -77,7 +77,21 @@
                 (click)="projectSearch('next')">
                 <mat-icon>arrow_forward</mat-icon>
             </button>
-        </div>
+        </div> -->
+        <div class="cus-taskPageBtnsDiv">
+ 
+            <button mat-icon-button [disabled]="has_previousproject === false" (click)="projectSearch('previous')">
+              <mat-icon>arrow_backward</mat-icon>
+            </button>
+            <div class="cus-pageNumbers">
+      
+              <p class="cus-btnActive">{{presentpageproject}}</p>
+    
+            </div>
+            <button mat-icon-button [disabled]="has_nextproject === false" (click)="projectSearch('next')">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </div>
     </ng-template>
     </div>
     </div>
@@ -160,8 +174,10 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header" style="background-color: #044063;">
-                              <h5 class="modal-title" id="exampleModalLongTitle" style="color: white;">Team / Employee Add</h5>
-                              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" (click)="closememadd()" style="color: white;">
+                              <h3 class="modal-title" id="exampleModalLongTitle" style="color: white;">Team / Employee Add</h3>
+                              <button class="btn close" data-bs-dismiss="modal" aria-label="Close" (click)="closememadd()" style="color: white;background-color: transparent;margin-left: 58%;
+                              margin-top: -2%;
+                              font-size: large;">
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>

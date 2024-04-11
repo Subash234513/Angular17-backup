@@ -40,7 +40,7 @@
                 </mat-autocomplete>
             </mat-form-field>
         </div>
-        <div class="col-2">
+        <div class="col-2" style="margin-left: 5%;">
             <mat-form-field (click)="ProjectMaster('')">
                 <mat-label>Project</mat-label>
                 <input matInput [matAutocomplete]="auto2" (keyup)="ProjectMaster($event.target.value)" formControlName="project">
@@ -53,7 +53,7 @@
                 </mat-autocomplete>
             </mat-form-field>
         </div>
-        <div class="col-2">
+        <div class="col-2" style="margin-left: 5%;">
             <mat-form-field (click)="ModuleMaster('')">
                 <mat-label>Module</mat-label>
                 <input matInput [matAutocomplete]="auto3" (keyup)="ModuleMaster($event.target.value)" formControlName="module">
@@ -66,7 +66,7 @@
                 </mat-autocomplete>
             </mat-form-field>
         </div>
-        <div class="col-1 mt-1 ml-4">
+        <div class="col-1 mt-1 ml-4" style="margin-left: 6%;">
             <button mat-stroked-button (click)="Search()">
                 <i class="fa fa-search"></i>
             </button>
