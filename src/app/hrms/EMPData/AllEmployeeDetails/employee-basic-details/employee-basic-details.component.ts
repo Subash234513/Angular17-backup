@@ -38,6 +38,7 @@ export class EmployeeBasicDetailsComponent implements OnInit {
   EmpId: any
   EmpBasicDetails: any
   DropGrade: any;
+  isDisabled :boolean = false;
 
   EmpObjects = {
     employeeList: null,
@@ -81,7 +82,7 @@ export class EmployeeBasicDetailsComponent implements OnInit {
       businesssegment: ['', Validators.required],
       is_payroll: [false],
       workmode: ['', Validators.required],
-      shift: [''],
+      shift: ['', { disabled: true }],
       role: ['', Validators.required],
       email_id: ['', Validators.required],
       doj: ['', Validators.required],

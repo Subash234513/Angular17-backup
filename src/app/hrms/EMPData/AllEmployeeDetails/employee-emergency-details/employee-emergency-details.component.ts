@@ -1,7 +1,7 @@
 import { Component, OnInit,ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MasterHrmsService } from 'src/app/hrms/master-hrms.service';
-import { DatePipe } from '@angular/common';
+import { DatePipe, formatDate } from '@angular/common';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -23,6 +23,7 @@ export class EmployeeEmergencyDetailsComponent implements OnInit {
   addingMode: boolean = true;
   RelationshipList:any;
   updatedDate: string;
+  formattedPostDate: any;
 
   constructor(private activateroute:ActivatedRoute,private hrmsService:MasterHrmsService,private datePipe: DatePipe,
     private toastr:ToastrService, private spinner: NgxSpinnerService,
@@ -34,6 +35,7 @@ export class EmployeeEmergencyDetailsComponent implements OnInit {
       no:[''],
 
     });
+ 
 
    }
   familyInfoForm: FormGroup = new FormGroup({
@@ -121,9 +123,9 @@ export class EmployeeEmergencyDetailsComponent implements OnInit {
       }
     });
   }
-  formattedPostDate:any;
-  formatPostDate(date: string): string {
-    this.formattedPostDate = this.datePipe.transform(new Date(date), 'yyyy-MM-dd');
+
+  formatPostDate(date: any): string {
+    this.formattedPostDate = this.formatDates(date);
     return this.formattedPostDate || ''; 
   }
   formattedDate: string = this.formatPostDate('Thu Nov 16 2023 00:00:00 GMT+0530 (India Standard Time)');
@@ -315,6 +317,23 @@ keyPressNumbers(event) {
   } else {
     return true;
   }
+}
+formatDates(date: any): string {
+  // Check if the input is a valid date string
+  if (!(date instanceof Date) && isNaN(Date.parse(date))) {
+    throw new Error('Invalid date input');
+  }
+
+  // Convert the input to a Date object
+  const inputDate = date instanceof Date ? date : new Date(date);
+
+  // Extract components
+  const year = inputDate.getFullYear();
+  const month = ('0' + (inputDate.getMonth() + 1)).slice(-2); // Month is zero-based
+  const day = ('0' + inputDate.getDate()).slice(-2);
+
+  // Construct and return the formatted date string
+  return `${year}-${month}-${day}`;
 }
   }
   

@@ -8,24 +8,24 @@
         <form [formGroup]="pipelineform" autocomplete="off">
              <!-- <button class="btn btn-outline-primary" id="team">Team</button> -->
              <div class="row">
-                <div class="col-2">
+                <div class="col-3">
                     <mat-form-field>
                         <mat-label>Search</mat-label>
                         <input matInput [formControl]="Search">
                     </mat-form-field>
                 </div>
                 <div class="col-1 mt-1">
-                    <button mat-stroked-button (click)="search()">
+                    <button mat-stroked-button (click)="search()" style="    margin-top: 6%;">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
                 <div class="col-1 mt-1" (click)="Clear()">
-                    <button mat-stroked-button>
+                    <button mat-stroked-button style="    margin-top: 6%;">
                         Clear
                     </button>
                 </div>
                 <div class="col-1">
-                    <button type="button" mat-fab style="background-color: #f5c68b;"
+                    <button type="button" mat-fab style="background-color: #f5c68b;margin-top: -2%;"
                     (click)="addpipeline('','')">
                     <mat-icon matTooltip="Add">add</mat-icon>
                     </button>
@@ -33,7 +33,7 @@
                 <div class="col-2 mt-1">
                     <div class="popup-btn">
                         <button type="button" data-bs-toggle="modal"
-                            style=" max-width: 100%; background-color: #044063;"
+                            style=" max-width: 100%; background-color: #044063;margin-top: 4%;"
                             (click)="Ontemplatetimesheet()" class="btn btn-primary">
                             <span> &nbsp; Template</span>
                         </button>
@@ -78,7 +78,7 @@
              class="NodataAlign text-center">No Records Found...
             </div> -->
          <!-- <ng-template #paginationpro> -->
-             <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
+             <!-- <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
                  <button type="button" mat-icon-button [disabled]="has_previousclient === false" color="primary"
                      (click)="pipelineSearch('previous')">
                      <mat-icon>arrow_back</mat-icon>
@@ -87,14 +87,28 @@
                      (click)="pipelineSearch('next')">
                      <mat-icon>arrow_forward</mat-icon>
                  </button>
-             </div>
+             </div> -->
+             <div class="cus-taskPageBtnsDiv">
+ 
+                <button mat-icon-button [disabled]="has_previousclient === false" (click)="pipelineSearch('previous')">
+                  <mat-icon>arrow_backward</mat-icon>
+                </button>
+                <div class="cus-pageNumbers">
+          
+                  <p class="cus-btnActive">{{presentpagepipeline}}</p>
+        
+                </div>
+                <button mat-icon-button [disabled]="has_nextclient === false" (click)="pipelineSearch('next')">
+                  <mat-icon>arrow_forward</mat-icon>
+                </button>
+              </div>
          <!-- </ng-template> -->
          </div>
          </div>
      </div>
             
     </div> 
-    <div *ngIf="pipelinecreation">
+    <div *ngIf="pipelinecreation" style="margin-top: 4%;">
         <br/>
         <h2 class="h2pipel">Pipeline Creation</h2>
         <form [formGroup]="pipelineform" autocomplete="off">
@@ -103,8 +117,9 @@
                     <tr>
                         
                         <td class="names" style="margin-left: 40px;">
-                            <mat-label style="margin-left: 40px;"> Name </mat-label><br>
+                           
                             <mat-form-field class="matformfieldstyle" style="width: 250px; margin-left:40px;" appearance="outline">
+                                <mat-label>Name</mat-label>
                                 <input matInput class="matformfieldinputstyle" type="name"
                                      formControlName="name" autocomplete="off">
                             </mat-form-field>

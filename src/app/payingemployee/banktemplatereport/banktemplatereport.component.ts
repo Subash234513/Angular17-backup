@@ -54,6 +54,7 @@ export class BanktemplatereportComponent implements OnInit {
     this.bank()
     this.bankForm.get('bankname').valueChanges.pipe(switchMap(value=>this.apiservice.get_bank(value,1))).subscribe(data=>{
       this.BankList=data.data
+      console.log("Bank Data",this.BankList);
     })
     this.uploadForms = this.fb.group({
       files: ['', Validators.required],
@@ -65,6 +66,7 @@ export class BanktemplatereportComponent implements OnInit {
   bank(){
     this.apiservice.get_bank('',1).subscribe(data=>{
       this.BankList=data.data
+      console.log("Bank Data",this.BankList);
     })
   }
   bankId(bank){
