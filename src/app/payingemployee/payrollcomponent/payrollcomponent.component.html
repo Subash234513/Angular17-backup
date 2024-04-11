@@ -1,4 +1,4 @@
-<div *ngIf="payrollcreation" class="ml-5">
+<div *ngIf="payrollcreation" class="ml-5" style="margin-left: 2%;">
     <h2>Payroll {{TypeOfForm}}</h2>
     <form [formGroup]="payrollForm" autocomplete="off">
         <div class="d-flex">
@@ -127,13 +127,14 @@
             </div>
         </div>
         <button type="button" class="btn btns btn-light" (click)="oncancelPayroll()">Cancel</button>
-        <button type="submit" (click)="payrollSubmit()" class="btn btns btn-light">Submit</button>
+        <button type="submit" (click)="payrollSubmit()" class="btn btns btn-light" style="    background: #333A73;
+        color: white;">Submit</button>
     </form>
 </div>
 
-<div class="row" *ngIf="payrollSummary">
-    <div class="row">
-        <h2 class="sear">PayComponents</h2>
+<div class="row" *ngIf="payrollSummary" style="margin-top: 2%;margin-left: 2%;">
+    <div class="row" >
+        <h2>PayComponents</h2>
     </div>
     <div class="col-sm-12 col-md-12 col-lg-12">
         <!-- <h2>Payroll Summary</h2> -->
@@ -150,7 +151,7 @@
                             </mat-form-field>
                         </div>
 
-                        <div class="col-md-5 pl-0">
+                        <div class="col-md-5 pl-0" style="margin-top: -1%;">
                             <div>
                                 <button mat-stroked-button type="button" class="stroked" aria-label="Search"
                                     (click)="searchName()">
@@ -241,7 +242,7 @@
             <div *ngIf="payrollList?.length==0 || payrollList == undefined ; else paginationpro"
                 class="NodataAlign text-center">No Records Found...</div>
             <ng-template #paginationpro>
-                <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
+                <!-- <div class="col-sm-12" style="font-size: small;text-align: right;margin-bottom: 5%;">
                     <button type="button" mat-icon-button [disabled]="has_previouspayroll === false" color="primary"
                         (click)="payrollSearch('previous')">
                         <mat-icon>arrow_back</mat-icon>
@@ -250,7 +251,21 @@
                         (click)="payrollSearch('next')">
                         <mat-icon>arrow_forward</mat-icon>
                     </button>
-                </div>
+                </div> -->
+                <div class="cus-taskPageBtnsDiv">
+ 
+                    <button mat-icon-button [disabled]="has_previouspayroll === false" (click)="payrollSearch('previous')">
+                      <mat-icon>arrow_backward</mat-icon>
+                    </button>
+                    <div class="cus-pageNumbers">
+              
+                      <p class="cus-btnActive"> {{presentpagepayroll}}</p>
+            
+                    </div>
+                    <button mat-icon-button [disabled]="has_nextpayroll === false" (click)="payrollSearch('next')">
+                      <mat-icon>arrow_forward</mat-icon>
+                    </button>
+                  </div>
             </ng-template>
         </div>
     </div>
