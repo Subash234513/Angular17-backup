@@ -1,15 +1,15 @@
 <div class="row" *ngIf="employeePFStructure">
 
     <div class="col-sm-12 col-md-12 col-lg-12">
-        <div class="row">
+        <!-- <div class="row"> -->
             <h2 class="employee">Employee Contribution</h2>
-        </div>
+        <!-- </div> -->
 
         <div class="search">
 
             <form [formGroup]="datassearch"  class="form">
                 <section>
-                    <div class="row" style="width:100%">
+                    <div class="SearchRow" style="width:100%">
                         <div class="col-sm-3" style="text-align:left">
                             <mat-form-field  class="name">
                                 <mat-label>Name/Code</mat-label>
@@ -84,11 +84,14 @@
             <div *ngIf="PFStructureList?.length==0 || PFStructureList == undefined ; else paginationpro"
                 class="NodataAlign text-center">No Records Found...</div>
             <ng-template #paginationpro>
-                <div class="col-sm-12">
+                <div class="cus-taskPageBtnsDiv">
                     <button type="button" mat-icon-button [disabled]="has_previousPF === false" color="primary"
                         (click)="PFSearch('previous')">
                         <mat-icon>arrow_back</mat-icon>
-                    </button> {{presentpagepayroll}}
+                    </button> 
+                    <div class="cus-pageNumbers">
+                        <p class="cus-btnActive">{{presentpagepayroll}}</p>
+                    </div>
                     <button type="button" mat-icon-button [disabled]="has_nextPF === false" color="primary"
                         (click)="PFSearch('next')">
                         <mat-icon>arrow_forward</mat-icon>
