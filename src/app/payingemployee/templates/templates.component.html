@@ -1,6 +1,6 @@
 <div id="maincontent" *ngIf="isSummaryContent">
     <div class="search" id="width">
-        <div class="rows" >
+        <div class="rows" style="margin-top: 3%;">
             <h2 >Grade Mapping</h2>
         </div>
    
@@ -80,7 +80,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="col-sm-12" id="click" >
+                <!-- <div class="col-sm-12" id="click" >
                   <button (click)="prevpage()" mat-icon-button [disabled]="pagination.has_previous === false"
                       color="primary">
                       <mat-icon class="customIconSize">arrow_back</mat-icon>
@@ -91,6 +91,20 @@
                       <mat-icon class="customIconSize">arrow_forward</mat-icon>
                   </button>
       
+              </div> -->
+              <div class="cus-taskPageBtnsDiv">
+ 
+                <button mat-icon-button [disabled]="pagination.has_previous === false" (click)="prevpage()">
+                  <mat-icon>arrow_backward</mat-icon>
+                </button>
+                <div class="cus-pageNumbers">
+          
+                  <p class="cus-btnActive">{{pagination.index}}</p>
+        
+                </div>
+                <button mat-icon-button [disabled]="pagination.has_next === false" (click)="nextpage()">
+                  <mat-icon>arrow_forward</mat-icon>
+                </button>
               </div>
             </div>
         </div>

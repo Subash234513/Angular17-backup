@@ -1,4 +1,4 @@
-<div class="maincontent" *ngIf="isSummaryContent" >
+<div class="maincontent" *ngIf="isSummaryContent" style="margin-top: 3%;">
   <div class="search">
       <div class="row">
           <h2 class="segmentmaster" >Segment Master</h2>
@@ -15,8 +15,8 @@
                       </mat-form-field>
                   </div>
                  
-                  <div class="col-md-6" id="stroked">
-                      <div>
+                  <div class="col-md-3" id="stroked">
+                      
                           <button mat-stroked-button type="button" class="searched" (click)="searchData()"
                               aria-label="Search" >
                               <mat-icon>search</mat-icon>
@@ -24,6 +24,9 @@
                           <button mat-stroked-button type="button" class="cleardata" 
                           (click)="clearData()"
                               >Clear</button>
+                  </div>
+                  <div class="col-md-3" style="    margin-left: -6%;
+                  margin-top: -2%;">
                               <button type="button" mat-fab class="add"  (click)="newSegments()"
                                  >
                               <mat-icon matTooltip="Add" style="color: black;">add</mat-icon> 
@@ -32,11 +35,11 @@
                            (click)="uploadfile()">
                            <mat-icon matTooltip="Upload" style="color: black;">arrow_upward</mat-icon>
                        </button>
-                      </div>
+                      
                      
                   </div>
                   <div class="col-md-2">
-                      <button class="btn btn-outline-primary" type="button" id="Maps"  (click)="mapping()">
+                      <button class="btn btn-outline-primary" type="button"  (click)="mapping()">
                           Mapping
                        </button>
                   </div>
@@ -84,7 +87,7 @@
                       </tr>
                   </tbody>
               </table>
-              <div class="col-sm-12" id="primary">
+              <!-- <div class="col-sm-12" id="primary">
                 <button (click)="prevpage()" mat-icon-button [disabled]="pagination.has_previous === false"
                     color="primary">
                     <mat-icon class="customIconSize">arrow_back</mat-icon>
@@ -95,6 +98,20 @@
                     <mat-icon class="customIconSize">arrow_forward</mat-icon>
                 </button>
     
+            </div> -->
+            <div class="cus-taskPageBtnsDiv">
+ 
+              <button mat-icon-button [disabled]="pagination.has_previous === false" (click)="prevpage()">
+                <mat-icon>arrow_backward</mat-icon>
+              </button>
+              <div class="cus-pageNumbers">
+        
+                <p class="cus-btnActive">{{pagination.index}}</p>
+      
+              </div>
+              <button mat-icon-button [disabled]="pagination.has_next === false" (click)="nextpage()">
+                <mat-icon>arrow_forward</mat-icon>
+              </button>
             </div>
           </div>
       </div>
@@ -114,8 +131,9 @@
         <tr>
           <td> -->
             <div class="col-2">
-                <mat-label>Name<label class="appearance" >*</label> </mat-label><br>
+                
                 <mat-form-field class="matformfieldstyle1"  appearance="outline">
+                  <mat-label>Name<label class="appearance" >*</label> </mat-label>
                 <input matInput class="matformfieldinputstyle" type="name" formControlName="name" autocomplete="off">
                 </mat-form-field>
             </div>
@@ -133,9 +151,10 @@
               </mat-form-field>
           </td> -->
           <!-- <td> -->
-            <div class="col-2">
-              <mat-label class="paycomponenttype text-left">Pay Category Type<label class="appearance" >*</label></mat-label><br>
+            <div class="col-2" style="margin-left: 4%;">
+             
             <mat-form-field class="matformfieldstyle2"  appearance="outline" (click)="getFunctional('')">
+              <mat-label>Pay Category Type<label class="appearance" >*</label></mat-label>
             <input #getsegmentInput matInput formControlName="component_type" [matAutocomplete]="segment" (keyup)="getFunctional($event.target.value)">
             <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
             <mat-autocomplete #segment="matAutocomplete" [displayWith]="displayfnsegment" (opened)="autocompletesegmentScroll()">
@@ -169,9 +188,10 @@
             <mat-form-field (click)="deduction_type()"  appearance="outline" class="matformfieldstyle2">
           </td> -->
           <!-- <td> -->
-            <div class="col-2">
-              <mat-label class="paycomponenttype">Pay Frequency<label class="appearance" >*</label></mat-label><br>
+            <div class="col-2" style="    margin-left: 1%;">
+             
               <mat-form-field class="matformfieldstyle2"  appearance="outline" (click)="getFunctionalbonus('')">
+                <mat-label >Pay Frequency<label class="appearance" >*</label></mat-label>
               <input #getbonusInput matInput formControlName="type" [matAutocomplete]="Bonus" (keyup)="getFunctionalbonus($event.target.value)">
               <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
               <mat-autocomplete #Bonus="matAutocomplete" [displayWith]="displayfnBonus" (opened)="autocompleteBonusScroll()">
@@ -188,17 +208,19 @@
            
           <!-- </td>
           <td> -->
-            <div class="col-2">
-              <mat-label class="percentage" >Percentage<label class="Per" >*</label> </mat-label><br>
+            <div class="col-2" style="    margin-left: 1%;">
+              
               <mat-form-field class="matformfieldstyle3"  appearance="outline">
+                <mat-label>Percentage<label>*</label> </mat-label>
               <input matInput class="matformfieldinputstyle" type="name" formControlName="percentage"
                 autocomplete="off">
               </mat-form-field>
             </div>
           <!-- </div> -->
-          <div class="col-2">
-            <mat-label class="percentage" >GL NO<label class="Per" >*</label> </mat-label><br>
+          <div class="col-2" style="    margin-left: 4%;">
+            
             <mat-form-field class="matformfieldstyle3"  appearance="outline">
+              <mat-label>GL NO<label>*</label> </mat-label>
             <input matInput class="matformfieldinputstyle" type="name" formControlName="GlNo"
               autocomplete="off">
             </mat-form-field>
@@ -212,7 +234,8 @@
     </table> -->
   </div>
     <button type="button" class="btn" id="cancel" (click)="onCancelAdd()">Cancel</button>
-    <button type="submit"  id="cancel" (click)="onSubmitAdd()" class="btn ml-2">Submit</button>
+    <button type="submit"  id="cancel" (click)="onSubmitAdd()" class="btn ml-2" style="    background: #333A73;
+    color: white;">Submit</button>
   </form>
 </div>
 
@@ -227,15 +250,17 @@
           <td> -->
             <!-- <div class="col-10 row"> -->
             <div class="col-2">
-                <mat-label>Name<label class="formcontrol">*</label> </mat-label><br>
+                
                 <mat-form-field   appearance="outline">
+                  <mat-label>Name<label class="formcontrol">*</label> </mat-label>
                 <input matInput  type="name" formControlName="name" autocomplete="off">
                 </mat-form-field>
             </div>
-            <div class="col-2">
-              <mat-label class="paycomponenttype">Pay Category Type<label style="color: red;">*</label></mat-label><br>
+            <div class="col-2" style="margin-left: 4%;">
+              
             <mat-form-field id="un"  appearance="outline"
                 (click)="getComponentsegment('')" >
+                <mat-label >Pay Category Type<label style="color: red;">*</label></mat-label>
                 <input #getsegmentInput class="matformfieldinputstyle" matInput
                 formControlName="component_type" [matAutocomplete]="segment" (keyup)="getComponentsegment($event.target.value)">                    
                 <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -250,10 +275,11 @@
             </mat-autocomplete>
             </mat-form-field>
             </div>
-            <div class="col-2">
-              <mat-label class="BonusType">Pay Frequency<label style="color: red;">*</label></mat-label><br>
+            <div class="col-2" style="margin-left: 1%;">
+              
             <mat-form-field id="un"  appearance="outline"  
                 (click)="getComponentbonus('')" >
+                <mat-label>Pay Frequency<label style="color: red;">*</label></mat-label>
                 <input #getbonusInput  matInput class="matformfieldinputstyle" 
                 formControlName="type" [matAutocomplete]="Bonus" (keyup)="getComponentbonus(editForm.value.type)">                    
                 <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -268,17 +294,19 @@
             </mat-autocomplete>
             </mat-form-field>
             </div>
-            <div class="col-2">
-              <mat-label class="page">Percentage<label class="control">*</label> </mat-label><br>
+            <div class="col-2"  style="margin-left: 1%;">
+         
               <mat-form-field class="matformfieldstyle7"  appearance="outline">
+                <mat-label >Percentage<label class="control">*</label> </mat-label>
                 <input matInput class="matformfieldinputstyle" type="name" formControlName="percentage"
                   autocomplete="off">
               </mat-form-field>
             </div>
           <!-- </div> -->
-          <div class="col-2">
-            <mat-label class="page">GL NO<label class="control">*</label> </mat-label><br>
+          <div class="col-2"  style="margin-left: 4%;">
+            
             <mat-form-field class="matformfieldstyle7"  appearance="outline">
+              <mat-label>GL NO<label class="control">*</label> </mat-label>
               <input matInput class="matformfieldinputstyle" type="name" formControlName="GlNo"
                 autocomplete="off">
             </mat-form-field>
@@ -324,7 +352,8 @@
     </table> -->
   </div>
     <button type="button" id="CanCel" class="btn"  (click)="onCancel()">Cancel</button>
-    <button type="submit" id="CanCel"   (click)="update()" class="ml-2 btn">Update</button>
+    <button type="submit" id="CanCel"   (click)="update()" class="ml-2 btn" style="    background: #333A73;
+    color: white;">Update</button>
   </form>
 </div>
 

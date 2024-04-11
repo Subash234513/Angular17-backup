@@ -15,7 +15,7 @@
             </mat-form-field>
           </div>
 
-          <div class="col-md-5 pl-0" style="margin-top: 11px;" >
+          <div class="col-md-5 pl-0" style="margin-top: 3px;" >
             <div>
               <button mat-stroked-button type="button" class="stroke" 
                 aria-label="Search" (click)="searchName()">
@@ -79,7 +79,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="col-sm-12" style="margin-bottom:5%">
+        <!-- <div class="col-sm-12" style="margin-bottom:5%">
           <button (click)="prevpage()" mat-icon-button [disabled]="pagination.has_previous === false"
               color="primary">
               <mat-icon class="customIconSize">arrow_back</mat-icon>
@@ -90,7 +90,22 @@
               <mat-icon class="customIconSize">arrow_forward</mat-icon>
           </button>
 
+      </div> -->
+      <div class="cus-taskPageBtnsDiv">
+ 
+        <button mat-icon-button [disabled]="pagination.has_previous === false" (click)="prevpage()">
+          <mat-icon>arrow_backward</mat-icon>
+        </button>
+        <div class="cus-pageNumbers">
+  
+          <p class="cus-btnActive">{{pagination.index}}</p>
+
+        </div>
+        <button mat-icon-button [disabled]="pagination.has_next === false" (click)="nextpage()">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
       </div>
+
       </div>
     </div>
   </div>
@@ -104,9 +119,10 @@
       <div>
         <tr>
           <td>
-            <mat-label>Name<label  class="outline">*</label> </mat-label><br>
+          
             <mat-form-field class="matformfieldstyle1"  appearance="outline">
-              <input matInput class="matformfieldinputstyle" type="name" formControlName="name" autocomplete="off">
+              <mat-label>Name<label  class="outline">*</label> </mat-label>
+              <input matInput  type="name" formControlName="name" autocomplete="off">
             </mat-form-field>
           </td>
           <!-- <td>
@@ -117,8 +133,9 @@
             </mat-form-field>
           </td> -->
           <td class="ml-3">
-            <mat-label  class="appear" >Category<label class="rance">*</label> </mat-label><br>
+          
             <mat-form-field class="matformfieldstyle4"   appearance="outline">
+              <mat-label>Category<label class="rance">*</label> </mat-label>
               <mat-select formControlName="category">
                 <mat-option *ngFor="let l of DropDowndata" [value]="l.id">
                   {{l.name}}
@@ -130,7 +147,8 @@
       </div>
     </table>
     <button type="button" class="btn btn-light" (click)="onCancel()">Cancel</button>
-    <button type="submit" class="btn btn-light sub" (click)="onSubmit()">Submit</button>
+    <button type="submit" class="btn btn-light sub" (click)="onSubmit()" style="    background: #333A73;
+    color: white;">Update</button>
   </form>
 </div>
 
@@ -141,8 +159,9 @@
       <div>
         <tr>
           <td>
-            <mat-label>Name<label  class="complete">*</label> </mat-label><br>
+           
             <mat-form-field class="matformfieldstyle3"  appearance="outline">
+              <mat-label>Name<label  class="complete">*</label> </mat-label>
               <input matInput class="matformfieldinputstyle" type="name" formControlName="name" autocomplete="off">
             </mat-form-field>
           </td>
@@ -154,8 +173,9 @@
             </mat-form-field>
           </td> -->
           <td class="ml-3">
-            <mat-label  class="appear" >Category<label class="rance">*</label> </mat-label><br>
+            
             <mat-form-field class="matformfieldstyle4"   appearance="outline">
+              <mat-label>Category<label class="rance">*</label> </mat-label>
               <mat-select formControlName="category">
                 <mat-option *ngFor="let l of DropDowndata" [value]="l.id">
                   {{l.name}}
@@ -177,7 +197,8 @@
       </div>
     </table>
     <button type="button" class="btn btn-light" (click)="onCancelAdd()">Cancel</button>
-    <button type="submit" (click)="onSubmitAdd()" class="btn btn-light sub">Submit</button>
+    <button type="submit" (click)="onSubmitAdd()" class="btn btn-light sub" style="    background: #333A73;
+    color: white;">Submit</button>
   </form>
 </div>
 

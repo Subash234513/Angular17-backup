@@ -122,7 +122,7 @@
         <tr>
           <td>
            
-            <mat-form-field style="width: 303px;  height: 60px;" (click)="getSegments()">
+            <mat-form-field style="width: 303px;  height: 60px;" id="un"  (click)="getSegments()">
               <mat-label>Segment<label style="color: red;">*</label></mat-label>
               <mat-chip-grid #chiplist>
                 <mat-chip-row *ngFor="let segment of chipSelectedsegment" [removable]="true"
@@ -152,7 +152,8 @@
 </div>
 </table>
 <button type="button" class="btns btn" (click)="onCancelAdd()">Cancel</button>
-<button type="submit" class="btns btn ml-2" (click)="onSubmitAdd()">Submit</button>
+<button type="submit" class="btns btn ml-2" (click)="onSubmitAdd()" style="    background: #333A73;
+color: white;">Submit</button>
 </form>
 </div>
 
@@ -163,14 +164,16 @@
       <div>
         <tr>
           <td>
-            <mat-label>Template Name<label class="template">*</label> </mat-label><br>
+            <!-- <br> -->
             <mat-form-field class="matformfieldstyle4" appearance="outline">
+              <mat-label>Template Name<label class="template">*</label> </mat-label>
               <input matInput class="matformfieldinputstyle" type="name" formControlName="name" autocomplete="off">
             </mat-form-field>
           </td>
           <td>
-            <mat-label class="gra">Grade<label style="color: red;">*</label></mat-label><br>
+          
             <mat-form-field id="un" appearance="outline" (click)="getComponentgrade('')">
+              <mat-label>Grade<label style="color: red;">*</label></mat-label>
               <input #getcomponentInput class="matformfieldinputstyle" matInput formControlName="gradelevel"
                 [matAutocomplete]="component" (keyup)="getComponentgrade(editForm.value.gradelevel)">
               <mat-icon matSuffix class="maticonsize">unfold_more</mat-icon>
@@ -189,8 +192,9 @@
           <div class="modal-body">
         <tr>
           <td>
-            <mat-label>Segment<label style="color: red;">*</label></mat-label><br>
-            <mat-form-field style="width: 303px; height: 60px;" (click)="getSegments()">
+            
+            <mat-form-field style="width: 303px; height: 60px;" id="un" (click)="getSegments()">
+              <mat-label>Segment<label style="color: red;">*</label></mat-label>
               <mat-chip-grid #chiplist formControlName="segment">
                 <mat-chip-row *ngFor="let segment of chipeditselectedsegment" [removable]="true"
                   (removed)="editremovedsegment(segment)">
@@ -220,7 +224,8 @@
 </div>
 </table>
 <button type="button" class="btns btn" (click)="onCancel()">Cancel</button>
-<button type="submit" (click)="update()" class="btns btn ml-2">Update</button>
+<button type="submit" (click)="update()" class="btns btn ml-2" style="    background: #333A73;
+color: white;" >Update</button>
 </form>
 </div>
 

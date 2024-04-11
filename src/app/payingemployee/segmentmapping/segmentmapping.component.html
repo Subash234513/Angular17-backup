@@ -16,13 +16,13 @@
                       </mat-form-field>
                   </div>
                  
-                  <div class="col-md-4" id="aria">
+                  <div class="col-md-6" id="aria">
                       <div>
                           <button mat-stroked-button type="button" class="storked" 
                               aria-label="Search"  (click)="searchsegment()">
                               <mat-icon>search</mat-icon>
                           </button>
-                          <button mat-stroked-button type="button" class="clear" 
+                          <button mat-stroked-button type="button" class="clear"  style="    margin-top: 0%;"
                           (click)="clearData()"
                               >Clear</button>
                               <button type="button" mat-fab class="newsegments" (click)="newSegments()"
@@ -81,7 +81,7 @@
               
               
               <ng-template #paginationpro>
-                <div class="col-sm-12" id="prevpage">
+                <!-- <div class="col-sm-12" id="prevpage">
                   <button type="button" mat-icon-button [disabled]="has_previousmap === false" color="primary" (click)="mapSearch('previous')">
                     <mat-icon>arrow_back</mat-icon>
                   </button>
@@ -89,7 +89,8 @@
                   <button type="button" mat-icon-button [disabled]="has_nextmap === false" color="primary" (click)="mapSearch('next')">
                     <mat-icon>arrow_forward</mat-icon>
                   </button>
-                </div>
+                </div> -->
+
             
               </ng-template>
               
@@ -124,9 +125,10 @@
           </td> -->
           <!-- <td> -->
             <div class="col-3">
-              <mat-label class="">Segment<label style="color:red">*</label></mat-label><br>
+           
               <mat-form-field id=""  appearance="outline"
                   (click)="getSegments()" class="">
+                  <mat-label class="">Segment<label style="color:red">*</label></mat-label>
                   <input #getcomponentInput  class="matformfieldinputstyle" matInput
                   formControlName="segment_id" [matAutocomplete]="component" >
                   <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -156,9 +158,10 @@
           </td>        -->
           <!-- <td class="PayComponent"> -->
             <div class="col-3">
-              <mat-label  class="">Pay Component<label style="color:red">*</label></mat-label><br>
               <mat-form-field id=""  appearance="outline"
                   (click)="getpaymentcomponentinfo()" class="">
+              <mat-label  class="">Pay Component<label style="color:red">*</label></mat-label>
+
                   <input #getpaycomponentInput  class="matformfieldinputstyle" matInput
                   formControlName="paycomponent_id" [matAutocomplete]="paycomponent" >
                   <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -190,7 +193,7 @@
 
 
 <div *ngIf="isTypeCreation" class="segmentedit">
-  <h2 style="padding-left:15px">Segment Edit</h2>
+  <h2 style="padding-left:15px">Segment Mapping Edit</h2>
   <form [formGroup]="editForm" autocomplete="off">
     <table>
       <div>
@@ -208,9 +211,10 @@
           </td> -->
 
           <td class="col-3">
-            <mat-label class="">Segment<label style="color:red">*</label></mat-label><br>
+            
             <mat-form-field id=""  appearance="outline"
                 (click)="geteditSegments('')" class="">
+                <mat-label class="">Segment<label style="color:red">*</label></mat-label>
                 <input #getcomponentInput  class="matformfieldinputstyle" matInput
                 formControlName="segment_id" [matAutocomplete]="component" (keyup)="geteditSegments(editForm.value.segment_id)" >
                 <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -238,9 +242,9 @@
        
 
           <td>
-            <mat-label>Pay Component<label style="color:red">*</label></mat-label><br>
             <mat-form-field id="un"  appearance="outline"
                 (click)="geteditpaymentcomponentinfo('')">
+            <mat-label>Pay Component<label style="color:red">*</label></mat-label>
                 <input #getpayInput class="matformfieldinputstyle" matInput
                 formControlName="paycomponent_id" [matAutocomplete]="paycomponent" (keyup)="geteditpaymentcomponentinfo(editForm.value.paycomponent_id)">                    
                 <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -259,7 +263,8 @@
       </div>
     </table>
     <button type="button" class="btn" id="type"  (click)="onCancel()">Cancel</button>
-    <button type="submit"  class="btn" id="type"  (click)="update()" [disabled]="!editForm.valid">Submit</button>
+    <button type="submit"  class="btn" id="type"  (click)="update()" [disabled]="!editForm.valid" style="    background: #333A73;
+    color: white;">Submit</button>
   </form>
 </div>
 <div *ngIf="isFileUpload">

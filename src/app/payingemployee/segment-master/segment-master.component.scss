@@ -23,7 +23,8 @@
 }
 
 #stroked{
-    margin-top: -56px;
+    // margin-top: -56px;
+    margin-top: -21px;
 }
 
 .searched{
@@ -64,7 +65,8 @@
 }
 
 .segmentadd{
-    margin-left: 23px;
+    margin-left: 5px;
+    margin-top: 3%;
 }
 
 .appearance{
@@ -191,4 +193,45 @@
   }
   #un{
     width: 110%;
+  }
+
+  .cus-taskPageBtnsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 10px 20px 40px 20px;
+  }
+  
+  .cus-taskPageBtnsDiv button {
+    background-color: #044063;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 4px;
+    border-radius: 4px;
+  }
+  
+  .cus-taskBtnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .pointer {cursor: pointer;}
+  
+  .cus-btnActive {
+    background-color: #ededff;
+  }
+  
+  
+  .cus-pageNumbers p {
+    width: 40px;
+    height: 37px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 5px;
+    margin-bottom: 0;
   }
