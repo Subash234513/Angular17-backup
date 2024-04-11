@@ -3,14 +3,14 @@
       <div class="cus-brdFormContainer">
         <div class="cus-brdFormContainer1">
           <div>
-            <mat-form-field>
+            <mat-form-field class="MatFormMargin">
               <mat-label>Search Pipeline</mat-label>
               <input matInput formControlName="query" />
               <!-- <mat-icon matSuffix class="maticonsize" (click)="pipesSearch('')">search</mat-icon> -->
             </mat-form-field>
           </div>
           <div>
-            <mat-form-field (click)="clientdopdown()">
+            <mat-form-field (click)="clientdopdown()" class="MatFormMargin">
               <mat-label>Client</mat-label>
               <input
                 #clientclientInput
@@ -33,7 +33,7 @@
             </mat-form-field>
           </div>
           <div (click)="getModuledrop()">
-            <mat-form-field>
+            <mat-form-field class="MatFormMargin">
               <mat-label>Module </mat-label>
               <input
                 #moduleInput

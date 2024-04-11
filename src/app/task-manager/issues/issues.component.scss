@@ -1535,7 +1535,8 @@ tbody .ba-code {
   background-color: white;
   position: absolute;
   top: 104%;
-  left: 0;
+  // left: 0;
+  right: -471px;
   border-radius: 6px;
   z-index: 10;
 }

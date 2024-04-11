@@ -34,13 +34,19 @@
   border: none;
   cursor: pointer;
 }
-
+.SearchSprints{
+  width: 400px;
+  margin-top: 16px;
+}
 .marginset {
   margin: 0px auto;
 }
 .headname {
   font-weight: bold;
   font-size: 22px;
+}
+.modal-content{
+  width: 530px;
 }
 
 .list-group {

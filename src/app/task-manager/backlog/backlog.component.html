@@ -4,7 +4,7 @@
       <div class="cus-backlogFormContainer">
         <div class="cus-backlogContainer1">
           <div>
-            <mat-form-field>
+            <mat-form-field class="FilDropdown">
               <mat-label>Filter</mat-label>
               <mat-select formControlName="dropfilter">
                 <mat-option *ngFor="let pep of assigns" [value]="pep.id" (click)="newfun(pep)">
@@ -14,7 +14,7 @@
             </mat-form-field>
           </div>
           <div (click)="getDeveloperdrop()">
-            <mat-form-field style="width: 100%">
+            <mat-form-field  class="FilDropdown" >
               <mat-label> Employee</mat-label>
               <input
                 #developerinput
@@ -242,7 +242,7 @@
                   <!--  (selectionChange)="onSelectChange($event)" -->
                  
                   <div>
-                    <mat-form-field>
+                    <mat-form-field style="width:100%">
                       <mat-label>task</mat-label>
                       <input matInput formControlName="query"  placeholder="Type Tasks" />
                     </mat-form-field>

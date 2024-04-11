@@ -94,6 +94,10 @@
 .tooltipMark:hover .tooltipShow {
   visibility: visible;
 }
+.SearchStory{
+  width: 400px;
+  padding-top: 16px;
+}
 
 .tooltipShow ul li,
 .tooltipShow ul li > ul li {
@@ -140,6 +144,10 @@
   overflow: scroll;
   margin-bottom: 200px;
   z-index: 1;
+}
+.modal-body{
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .fontsize {

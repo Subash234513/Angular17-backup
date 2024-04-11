@@ -2,12 +2,12 @@
   <form [formGroup]="meetingSummaryForm" class="cus-meetingFormMain">
     <div class="cus-meetingFormContainer">
       <div class="cus-meetingFormContainer1">
-        <mat-form-field class="divWidth">
+        <mat-form-field class="divWidth MatFormMargin">
           <mat-label>Search Code</mat-label>
           <input matInput formControlName="query" />
         </mat-form-field>
 
-        <mat-form-field  class="divWidth">
+        <mat-form-field  class="divWidth MatFormMargin">
           <mat-label>Meeting Status</mat-label>
           <mat-select formControlName="meetstatus">
             <mat-option *ngFor="let i of statuslist" [value]="i">
@@ -16,14 +16,14 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field  class="divWidth">
+        <mat-form-field  class="divWidth MatFormMargin">
           <mat-label>Start Date</mat-label>
           <input matInput [matDatepicker]="picker" formControlName="from_date" />
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
-        <mat-form-field  class="divWidth">
+        <mat-form-field  class="divWidth MatFormMargin">
           <mat-label>End Date</mat-label>
           <input matInput [matDatepicker]="picker1" formControlName="to_date" />
           <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
@@ -250,15 +250,17 @@
       <mat-form-field>
         <mat-label>Start Date / Time</mat-label>
         <!-- <input matInput [matDatepicker]="picker" formControlName="from.date" /> -->
-        <input matInput type="datetime-local" formControlName="from_dates" (change)="clearToDate()" />
-        <mat-datepicker #picker></mat-datepicker>
+        <input matInput type="datetime-local"  [matDatepicker]="picker5" formControlName="from_dates" (change)="clearToDate()" />
+        <!-- <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle> -->
+        <mat-datepicker #picker5></mat-datepicker>
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>End Date / Time</mat-label>
         <!-- <input matInput [matDatepicker]="picker1" formControlName="to.date" /> -->
-        <input matInput type="datetime-local" formControlName="to_dates" [max]="this.meetingsubmit.value.from_dates" />
-        <mat-datepicker #picker1></mat-datepicker>
+        <input matInput type="datetime-local" [matDatepicker]="picker5" formControlName="to_dates" [max]="this.meetingsubmit.value.from_dates" />
+        <!-- <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle> -->
+        <mat-datepicker #picker6></mat-datepicker>  
       </mat-form-field>
     </form>
 

@@ -4,7 +4,7 @@
       <div class="cus-taskFormContainer">
         <div class="cus-taskFormContainer1">
           <!-- Filter -->
-          <div >
+          <div class="matFormMargin">
             <mat-form-field class="divWidth">
               <mat-label>Filter</mat-label>
               <mat-select formControlName="dropfilter">
@@ -17,7 +17,7 @@
 
           <!-- Search -->
 
-          <div >
+          <div class="matFormMargin">
             <mat-form-field  (click)="getDeveloperdrop()" class="divWidths">
               <mat-label>Employee</mat-label>
               <input #developerinput placeholder="Select Employee" matInput formControlName="developer_id"
@@ -35,7 +35,7 @@
             </mat-form-field>
           </div>
           <!-- Status -->
-          <div >
+          <div class="matFormMargin">
             <mat-form-field (click)="getemp('')" class="divWidth2">
               <mat-label>Status</mat-label>
               <mat-chip-grid #chipListemp>
@@ -209,8 +209,8 @@
                       </mat-form-field>
                     </div>
                     <!-- (selectionChange)="onSelectChange($event)" -->
-                    <div class="cus-taskFormSearch">
-                      <mat-form-field>
+                    <div >
+                      <mat-form-field class="cus-taskFormSearch">
                         <mat-label> Tasks </mat-label>
                         <input matInput formControlName="query" placeholder="Type Task" />
                         <!-- <mat-icon matSuffix class="maticonsize" (click)="TaskSearch('')">search</mat-icon> -->
