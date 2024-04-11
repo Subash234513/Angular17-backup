@@ -18,10 +18,8 @@
             <div class="row">
                 <div class="col-sm-3" *ngIf="adminUser || checkUser">
                     <mat-form-field style="width: 100%;">
-                        <mat-label style="margin-left: 7%;
-                    font-size: 17px;
-                    margin-top: -9px;
-                    font-family: 'Nunito';">Employee Search</mat-label>
+                        <mat-label 
+                    >Employee Search</mat-label>
                         <input matInput formControlName="empName">
                     </mat-form-field>
 
@@ -43,10 +41,7 @@
                 </div>
                 <div class="col-sm-3" *ngIf="adminUser || checkUser">
                     <mat-form-field style="width: 100%; ">
-                        <mat-label style="margin-left: 7%;
-                        font-size: 17px;
-                        margin-top: -9px;
-                        font-family: 'Nunito';">Advance Status</mat-label>
+                        <mat-label >Advance Status</mat-label>
                         <mat-select formControlName="advancesummary" required>
                            <mat-option *ngFor="let summary of summarylist" [value]="summary.id">
                              {{summary.text}}
@@ -80,7 +75,7 @@
                         <th class="AlignCenter">Employee Name</th>
                         <th class="AlignCenter">From Date</th>
                         <th class="AlignCenter">To Date</th>
-                        <td class="AlignCenter">
+                        <td class="AlignCenter" style="background-color: #eeeeef ;">
                             <span *ngIf="adminUser" style="font-weight: bold;">Approval</span>
                             <span *ngIf="normalUser" style="font-weight: bold;">Advance Status</span>
                             <span *ngIf="checkUser" style="font-weight: bold;">Approval</span>
@@ -218,7 +213,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="col-sm-12" style="font-size:x-small;text-align:right;padding-right:2%;">
+            <!-- <div class="col-sm-12" style="font-size:x-small;text-align:right;padding-right:2%;">
                 <button (click)="prevpage()" mat-icon-button [disabled]="pagination.has_previous === false"
                     color="primary">
                     <mat-icon class="customIconSize">arrow_back</mat-icon>
@@ -227,7 +222,21 @@
                 <button (click)="nextpage()" mat-icon-button [disabled]="pagination.has_next === false" color="primary">
                     <mat-icon class="customIconSize">arrow_forward</mat-icon>
                 </button>
-            </div>
+            </div> -->
+            <div class="cus-taskPageBtnsDiv">
+ 
+                <button mat-icon-button [disabled]="pagination.has_previous === false" (click)="prevpage()">
+                  <mat-icon>arrow_backward</mat-icon>
+                </button>
+                <div class="cus-pageNumbers">
+          
+                  <p class="cus-btnActive">{{pagination.index}}</p>
+        
+                </div>
+                <button mat-icon-button [disabled]="pagination.has_next === false" (click)="nextpage()">
+                  <mat-icon>arrow_forward</mat-icon>
+                </button>
+              </div>
             <br>
             <br>
         </div>
@@ -350,7 +359,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="col-sm-12" style="font-size:x-small;text-align:right;padding-right:2%;">
+        <!-- <div class="col-sm-12" style="font-size:x-small;text-align:right;padding-right:2%;">
             <button (click)="prevpages()" mat-icon-button [disabled]="paginations.has_previous === false"
                 color="primary">
                 <mat-icon class="customIconSize">arrow_back</mat-icon>
@@ -359,7 +368,21 @@
             <button (click)="nextpages()" mat-icon-button [disabled]="paginations.has_next === false" color="primary">
                 <mat-icon class="customIconSize">arrow_forward</mat-icon>
             </button>
-        </div>
+        </div> -->
+        <div class="cus-taskPageBtnsDiv">
+ 
+            <button mat-icon-button [disabled]="paginations.has_previous === false" (click)="prevpages()">
+              <mat-icon>arrow_backward</mat-icon>
+            </button>
+            <div class="cus-pageNumbers">
+      
+              <p class="cus-btnActive">{{paginations.index}}</p>
+    
+            </div>
+            <button mat-icon-button [disabled]="paginations.has_next === false" (click)="nextpages()">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </div>
         <br>
         <br>
     </div>
@@ -435,9 +458,12 @@
                              <section>
                               <label>EMI</label>
                                 <div style="margin-left: 26%; margin-top: -9%;">
-                                 <mat-slider thumbLabel min="0" style="width:100%" max="12" step="1" showTickMarks discrete
+                                 <mat-slider  min="0" style="width:100%" max="12" step="1" showTickMarks 
                                   type="text" id="loanTenure" name="loanTenure" [(ngModel)]="loanTenure" required aria-label="units">
                                   </mat-slider>
+                                  <!-- <mat-slider>
+                                    <input matSliderThumb>
+                                  </mat-slider> -->
                                 </div>
                               </section>
                             <button type="submit"  class="btn btn-outline-primary" style="margin-left: 340px;margin-bottom:10px">Calculate EMI</button> 
