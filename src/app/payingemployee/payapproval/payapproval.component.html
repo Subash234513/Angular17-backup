@@ -48,7 +48,7 @@
       background-color: whitesmoke;">
         <form [formGroup]="searchform">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2" style="margin-top: 1%;">
 
               <mat-form-field style="width: 100%;">
                 <mat-label>Filter</mat-label>
@@ -60,7 +60,7 @@
                 <!-- <mat-placeholder>Filter</mat-placeholder> -->
               </mat-form-field>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2" style="margin-top: 1%;">
 
               <mat-form-field style="width: 100%;">
                 <mat-label>Payroll Status</mat-label>
@@ -72,7 +72,7 @@
                 <!-- <mat-placeholder>Status</mat-placeholder> -->
               </mat-form-field>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2" style="margin-top: 1%;">
 
               <mat-form-field style="width: 114%;">
                 <mat-label>Business Segment</mat-label>
@@ -84,7 +84,7 @@
                 <!-- <mat-placeholder>Status</mat-placeholder> -->
               </mat-form-field>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2" style="margin-top: 1%;">
 
               <mat-form-field style="width: 86%;margin-left: 14%; ">
                 <mat-label>Cost Center</mat-label>
@@ -96,7 +96,7 @@
                 <!-- <mat-placeholder>Status</mat-placeholder> -->
               </mat-form-field>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2" style="margin-top: 1%;">
 
               <mat-form-field style="width: 100%;" (click)="functionalHead()">
                 <mat-label>Employee</mat-label>
@@ -121,15 +121,15 @@
                 
               </mat-form-field>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-1" style="margin-top: 1%;">
               <button mat-stroked-button type="button" style="background-color: white;margin-top: 11%;"
                 aria-label="Search" (click)="searchData()">Apply Filter
                 <!-- <mat-icon>Apply Filter</mat-icon> -->
               </button>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-1" style="margin-top: 1%;">
               <button mat-stroked-button type="button" (click)="resetForm()"
-                style="background-color: white;margin-top: 11%;margin-left: 18%;">Clear</button>
+                style="background-color: white;margin-top: 11%;margin-left: -12%;">Clear</button>
             </div>
           </div>
         </form>
@@ -504,7 +504,7 @@
        
                     <!-- else paginationpro -->
 
-        <div class="col-sm-12" style="font-size: x-small; text-align: right; padding-right: 2%" *ngIf="isShowTable">
+        <!-- <div class="col-sm-12" style="font-size: x-small; text-align: right; padding-right: 2%" *ngIf="isShowTable">
           <button (click)="prevpage()" mat-icon-button [disabled]="pagination.has_previous === false" color="primary">
             <mat-icon class="customIconSize">arrow_back</mat-icon>
           </button>
@@ -512,10 +512,24 @@
           <button (click)="nextpage()" mat-icon-button [disabled]="pagination.has_next === false" color="primary">
             <mat-icon class="customIconSize">arrow_forward</mat-icon>
           </button>
+        </div> -->
+        <div class="cus-taskPageBtnsDiv">
+ 
+          <button mat-icon-button [disabled]="pagination.has_previous === false" (click)="prevpage()">
+            <mat-icon>arrow_backward</mat-icon>
+          </button>
+          <div class="cus-pageNumbers">
+    
+            <p class="cus-btnActive">{{pagination.index}}</p>
+  
+          </div>
+          <button mat-icon-button [disabled]="pagination.has_next === false" (click)="nextpage()">
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
         </div>
 
         <div *ngIf="showButtons" style="margin-top: 11px; margin-left: 37%">
-          <div class="row">
+          <div>
             <button type="button" style="border-radius: 10px" (click)="approvePay()" class="btn btn-outline-success">
               Approve
             </button>
@@ -717,7 +731,7 @@
        
                     <!-- else paginationpro -->
 
-        <div class="col-sm-12" style="font-size: x-small; text-align: right; padding-right: 2%" *ngIf="isShowTableSpl">
+        <!-- <div class="col-sm-12" style="font-size: x-small; text-align: right; padding-right: 2%" *ngIf="isShowTableSpl">
           <button (click)="prevpages()" mat-icon-button [disabled]="pagination.has_previous === false" color="primary">
             <mat-icon class="customIconSize">arrow_back</mat-icon>
           </button>
@@ -725,10 +739,24 @@
           <button (click)="nextpages()" mat-icon-button [disabled]="pagination.has_next === false" color="primary">
             <mat-icon class="customIconSize">arrow_forward</mat-icon>
           </button>
+        </div> -->
+        <div class="cus-taskPageBtnsDiv">
+ 
+          <button mat-icon-button [disabled]="pagination.has_previous === false" (click)="prevpage()">
+            <mat-icon>arrow_backward</mat-icon>
+          </button>
+          <div class="cus-pageNumbers">
+    
+            <p class="cus-btnActive">{{pagination.index}}</p>
+  
+          </div>
+          <button mat-icon-button [disabled]="pagination.has_next === false" (click)="nextpage()">
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
         </div>
 
         <div *ngIf="showButtons" style="margin-top: 11px; margin-left: 37%">
-          <div class="row">
+          <div>
             <button type="button" style="border-radius: 10px" (click)="approvePay()" class="btn btn-outline-success">
               Approve
             </button>
