@@ -30,7 +30,7 @@
                                     (opened)="autocompleteCanScroll()" class="width">
                                         <mat-option *ngIf="isLoading" class="is-loading">Loading...</mat-option>
                                         <ng-container *ngIf="!isLoading">
-                                            <mat-option *ngFor="let can of candidateList" (focusout)="FocusOut_select_Candidate(can)" [value]="can">
+                                            <mat-option *ngFor="let can of candidateList" (mouseleave)="FocusOut_select_Candidate(can)" [value]="can">
                                                 {{can.full_name}}
                                             </mat-option>
 
@@ -61,8 +61,9 @@
 
                                     
                                         <div class="col-md-4">
-                                            <mat-label>First Name</mat-label><br>
+                                          
                                             <mat-form-field class="matformfieldform" class="width">
+                                                <mat-label>First Name</mat-label>
                                                 <input matInput placeholder="First Name" [readonly]="true" formControlName="first_name"
                                                         autocomplete="off">
                                             </mat-form-field>
@@ -71,8 +72,9 @@
         
                                     <!-- <td> -->
                                         <div class="col-md-4">
-                                            <mat-label class="">Middle Name</mat-label><br>
+                                           
                                             <mat-form-field class="matformfieldformleft" class="width">
+                                                <mat-label >Middle Name</mat-label>
                                                 <input matInput placeholder="Middle Name" [readonly]="true" formControlName="middle_name"
                                                         autocomplete="off">
                                             </mat-form-field>
@@ -81,8 +83,9 @@
                                     <!-- </td>
                                     <td> -->
                                         <div class="col-md-4">
-                                            <mat-label class="">Last Name</mat-label><br>
+                                            
                                             <mat-form-field class="matformfieldformleft" class="width">
+                                                <mat-label >Last Name</mat-label>
                                                 <input matInput placeholder="Last Name" [readonly]="true" formControlName="last_name"
                                                         autocomplete="off">
                                             </mat-form-field>
@@ -96,8 +99,9 @@
                                     <div class="col-md-4">
 
                                     
-                                    <mat-label>Full Name</mat-label><br>
+                                   
                                     <mat-form-field class="matformfieldform width">
+                                        <mat-label>Full Name</mat-label>
                                         <input matInput placeholder="Full Name" [readonly]="true" formControlName="full_name"
                                                 autocomplete="off">
                                     </mat-form-field>
@@ -105,8 +109,9 @@
                                 <!-- </td>
                                 <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Gender</mat-label><br>
+                                    
                                     <mat-form-field class=" width">
+                                        <mat-label >Gender</mat-label>
                                         <mat-select disabled formControlName="gender" [placeholder]="'Gender'">
                                             <mat-option *ngFor="let gender of genderList" [value]="gender.id">
                                                 {{gender.text}}
@@ -117,8 +122,9 @@
                                 <!-- </td>
                                 <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Email ID</mat-label><br>
+                                  
                                     <mat-form-field class="matformfieldformleft width">
+                                        <mat-label >Email ID</mat-label>
                                         <input matInput  [readonly]="true" placeholder="Email" formControlName="email_id" autocomplete="off">
                                     </mat-form-field>
                                 </div>
@@ -129,8 +135,9 @@
                                 <td> -->
                                     <div class="col-12 row">
                                         <div class="col-md-4">
-                                    <mat-label>Date of Birth</mat-label><br>
+                                    
                                     <mat-form-field class="matformfieldform">
+                                        <mat-label>Date of Birth</mat-label>
         
                                         <input matInput readonly [matDatepicker]="picker1"
                                              formControlName="dob">
@@ -142,8 +149,9 @@
                                 <!-- </td>
                                 <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Date of Joining<label class="color">*</label></mat-label><br>
+                                    
                                     <mat-form-field class="matformfieldformleft commonstyle">
+                                        <mat-label>Date of Joining<label class="color">*</label></mat-label>
         
                                         <input matInput readonly [matDatepicker]="picker2"
                                              formControlName="doj">
@@ -155,8 +163,9 @@
                                 <!-- </td>
                                 <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Work Mode<label class="color">*</label></mat-label><br>
+                                    
                                     <mat-form-field class="matformfieldformleft commonstyle">
+                                        <mat-label>Work Mode<label class="color">*</label></mat-label>
                                         <mat-select formControlName="workmode" [placeholder]="'Work Mode'">
                                             <mat-option *ngFor="let work of workmodeList" 
                                                 [value]="work.id">
@@ -182,8 +191,9 @@
                                 <td> -->
                                     <div class="col-12 row">
                                         <div class="col-md-4">
-                                    <mat-label>Mobile</mat-label><br>
+                                 
                                     <mat-form-field class="matformfieldform">
+                                        <mat-label>Mobile</mat-label>
                                         <input matInput formControlName="phone_no" [readonly]="true" placeholder="Mobile" autocomplete="off"
                                             pattern="\d{10}" (keypress)="numberOnly($event)" maxlength="10">
                                     </mat-form-field>
@@ -198,8 +208,9 @@
                                 </td> -->
                                 <!-- <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Designation<label class="color">*</label></mat-label><br>
+                                   
                                     <mat-form-field class="matformfieldformleft commonstyle" (click)="designationname()">
+                                        <mat-label >Designation<label class="color">*</label></mat-label>
                                         <input #designationInput matInput placeholder="Select Designation"
                                 formControlName="designation_id" autocomplete="off" [matAutocomplete]="desg">
                                 <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -217,9 +228,10 @@
                                 <!-- </td>
                                 <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Grade<label class="color">*</label></mat-label><br>
+                                  
                                     <mat-form-field class="matformfieldformleft commonstyle"
                                         (click)="gradeName()">
+                                        <mat-label>Grade<label class="color">*</label></mat-label>
                                         <input #rmInput matInput placeholder="Select Role"
                                             formControlName="grade" [matAutocomplete]="rmemp">
                                             <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -286,9 +298,10 @@
                                     </mat-form-field>
                                 </td> -->
                                 <div class="col-md-4">
-                                    <mat-label>Functional Head<label class="color">*</label></mat-label><br>
+                                   
                                     <mat-form-field class="matformfieldform"
                                         (click)="functionalHead()">
+                                        <mat-label>Functional Head<label class="color">*</label></mat-label>
                                         <input #fnInput matInput formControlName="functional_head" placeholder="Select Functional Head" [matAutocomplete]="fn">
                                             <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
                                         <mat-autocomplete #fn="matAutocomplete" [displayWith]="displayFnFunHead"
@@ -303,9 +316,10 @@
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Employee Branch<label class="color">*</label></mat-label><br>
+                                   
                                     <mat-form-field class="matformfieldformleft"
                                         (click)="employeeBranchName()">
+                                        <mat-label>Employee Branch<label class="color">*</label></mat-label>
                                         <input #empbranchInput matInput formControlName="emp_branch" placeholder="Select Employee Branch" [matAutocomplete]="empbranch">
                                             <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
                                         <mat-autocomplete #empbranch="matAutocomplete" [displayWith]="displayFnEmpbranch">
@@ -319,9 +333,10 @@
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Employment Type<label class="color">*</label></mat-label><br>
+                                   
                                     <mat-form-field class="matformfieldformleft"
-                                        (click)="getEmploymentType()">        
+                                        (click)="getEmploymentType()">   
+                                        <mat-label>Employment Type<label class="color">*</label></mat-label>     
                                             <mat-select formControlName="employment_type"  placeholder="Select Employment Type">                                
                                                 <mat-option *ngFor="let type of employmentTypeList" [value]="type.id">
                                                     {{type?.name}}
@@ -349,9 +364,10 @@
                                 </td> -->
                                 <!-- <td> -->
                                     <div class="col-md-4">
-                                    <mat-label>Business Segment<label class="color">*</label></mat-label><br>
+                                    
                                     <mat-form-field class="matformfieldform"
                                         (click)="businessSegmentName()">
+                                        <mat-label>Business Segment<label class="color">*</label></mat-label>
                                         <input #bsInput matInput formControlName="businesssegment" placeholder="Select BS" [matAutocomplete]="bs">
                                             <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
                                         <mat-autocomplete #bs="matAutocomplete" [displayWith]="displayFnBs">
@@ -367,9 +383,10 @@
                                 <!-- </td>
                                 <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Cost Center<label class="color">*</label></mat-label><br>
+                                   
                                     <mat-form-field class="matformfieldformleft"
                                         (click)="costCenterName()">
+                                         <mat-label>Cost Center<label class="color">*</label></mat-label>
                                         <input #ccInput matInput formControlName="costcentre" placeholder="Select CC" [matAutocomplete]="cc">
                                             <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
                                         <mat-autocomplete #cc="matAutocomplete" [displayWith]="displayFnCc">
@@ -385,9 +402,9 @@
                                 <!-- </td>
                                 <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">Department<label class="color">*</label></mat-label><br>
+                                  
                                     <mat-form-field class="matformfieldformleft" (click)="orgtypename()">
-        
+                                        <mat-label >Department<label class="color">*</label></mat-label>
                                         <input #orgtypesInput placeholder="Select Department"
                                             matInput formControlName="department_id" [matAutocomplete]="orgtype">
                                             <mat-icon matSuffix class="maticonsize" >unfold_more</mat-icon>
@@ -427,8 +444,9 @@
                                 </td> -->
                                 <!-- <td> -->
                                     <div class="col-md-4">
-                                    <mat-label>Standard CTC </mat-label><br>
+                                    
                                     <mat-form-field class="matformfieldform">
+                                        <mat-label>Standard CTC </mat-label>
                                         <input type="text" placeholder="Standard CTC"
                                             formControlName="standard_ctc" matInput autocomplete="off">
                                         <mat-hint>
@@ -439,8 +457,9 @@
                                 <!-- </td>
                                 <td> -->
                                     <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft">PF Type</mat-label><br>
+                                   
                                     <mat-form-field class="matformfieldformleft">
+                                        <mat-label>PF Type</mat-label>
                                         <mat-select formControlName="pf_type" [placeholder]="'PF Amount'">
                                             <mat-option *ngFor="let pfamount of pfamountList" (click)="regStatusDropDown(pfamount)"
                                                 [value]="pfamount.id">
@@ -451,15 +470,17 @@
                                 </div>
                                 <!-- </td> -->
                                 <div class="col-md-4" *ngIf="isShowPF_percentage">
-                                    <mat-label class="matformfieldformleft">PF%</mat-label><br>
+                                    
                                     <mat-form-field class="matformfieldformleft">
+                                        <mat-label >PF%</mat-label>
                                         <input matInput placeholder="PF%" (keypress)="keyPressNumbersDecimal($event)" maxlength="4"
                                          formControlName="pf_percentage" autocomplete="off">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
-                                    <mat-label class="matformfieldformleft" >Payroll Date<label class="color"></label></mat-label><br>
+                                    
                                     <mat-form-field class="matformfieldformleft margin_style">
+                                        <mat-label  >Payroll Date<label class="color"></label></mat-label>
             
                                         <input matInput readonly [matDatepicker]="picker3"
                                              formControlName="payroll_date">
