@@ -6,7 +6,7 @@
 table td:nth-child(7), td:nth-child(13), td:nth-child(19), td:nth-child(25),  td:nth-child(28), td:nth-child(34),
 th:nth-child(6), th:nth-child(12), th:nth-child(18), th:nth-child(24), th:nth-child(27),  th:nth-child(33)
 {
-  background-color:#909090;
+  background-color:#909090 !important;
   color: #ffffff
 }
 .nowrap{
@@ -45,8 +45,8 @@ th:nth-child(6), th:nth-child(12), th:nth-child(18), th:nth-child(24), th:nth-ch
   width: 210px;
 }
 
-.leaveHeader{
-  background-color:#909090;
+.LeaveTh{
+  background-color:#909090 !important   ;
   color: #ffffff;
   text-align: center;
 }
