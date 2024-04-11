@@ -92,7 +92,7 @@
                   matInput
                 />
               </mat-form-field> -->
-            <mat-form-field>
+            <mat-form-field class="TaskTextArea WidthMax">
               <mat-label>Task</mat-label>
               <textarea rows="2" type="text" placeholder="Enter Task here!" matInput autocomplete="off"
                 formControlName="task"></textarea>
@@ -113,7 +113,7 @@
           </div>
 
           <div>
-            <mat-form-field>
+            <mat-form-field class="WidthMax">
               <mat-label>Type</mat-label>
               <mat-select formControlName="type">
                 <mat-option [value]="devtype.id" *ngFor="let devtype of EmpTaskCreateObj.devtypelist"
@@ -159,7 +159,7 @@
 
             <div *ngIf="unassigned === 'Unassigned'">
               <div>
-                <mat-form-field style="width: 100%" (click)="developer(dataIndex)">
+                <mat-form-field class="WidthMax" (click)="developer(dataIndex)">
                   <mat-label>Employee</mat-label>
                   <input #developerinput placeholder="Select Employee" matInput formControlName="developer"
                     [matAutocomplete]="developerrole" />
@@ -198,7 +198,7 @@
           </div>
 
           <div>
-            <mat-form-field>
+            <mat-form-field class="WidthMax">
               <mat-label>Priority Type</mat-label>
               <mat-select formControlName="priority_type">
                 <mat-option [value]="pry.id" *ngFor="let pry of EmpTaskCreateObj.priorityList" (click)="

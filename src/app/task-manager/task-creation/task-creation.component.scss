@@ -386,6 +386,12 @@ body {
   grid-column-end: 4;
   width: 100%;
 }
+.TaskTextArea .mat-mdc-text-field-wrapper{
+  height: auto !important;
+}
+.TaskTextArea{
+  width: 100%;
+}
 
 .cus-taskCreateContainer3 {
   width: 100%;
