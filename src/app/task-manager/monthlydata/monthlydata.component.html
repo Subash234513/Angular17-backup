@@ -19,8 +19,8 @@
             </mat-form-field>
         </div>
         <div>
-            <button class="btn btn-primary searchBtn">
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="btn btn-primary searchBtn" (click)="SummaryFunc()">
+                <i class="fa-solid fa-magnifying-glass" ></i>
             </button>
         </div>
      
@@ -38,19 +38,22 @@
         
 
     </form>
-    <div class="table-responsive">
-        <table class="ml-4">
-            <thead >
+    <div class="table-responsive ml-4">
+        <table>
+            <thead>
                 <th>S.no</th>
                 <th>Employee</th>
-                <th *ngFor="let data of Date">{{data}}</th>
+                <th class="widthLogdata" *ngFor="let data of HeadDate">{{data?.LOG_DATE}}</th>
             </thead>
             <tbody>
                 <tr *ngFor="let data of Summary;let i=index">
                     <td>{{i+1}}</td>
-                    <td>{{data.Empname}}</td>
-                    <ng-container *ngFor="let date of data.Date">
-                        <td [ngClass]="{'BackGreen':date.currentStatus=='weekend','BackRed':date.currentStatus==null}">{{date.currentStatus}}</td>
+                    <td>{{data?.NAME}}</td>
+                    <ng-container *ngFor="let date of data?.INFO">
+                        <td  (click)="datass(date)"><div class="flagDisplay" *ngFor="let flag of date?.INFO?.flag"><span *ngIf="flag=='Present'">{{date?.INFO?.duration}}</span><span *ngIf="flag=='Absent'" class="BackRed">A</span><span *ngIf="flag=='Weekend'" class="BackGreen">W</span><span *ngIf="flag=='Holiday'" class="BackGreen">H</span></div></td>
+                        <!-- <span *ngIf="!date?.INFO?.flag.length">{{date?.INFO?.duration}}</span><span *ngIf="flag==='Absent'" [ngClass]="flag==='Absent'?'BackRed':''">{{flag}}</span><span *ngIf="flag==='Present'">{{flag}}</span> -->
+                        <!-- <td class="widthLogdata" *ngIf="date?.INFO['flag']='Absent'" [ngClass]="{'BackRed':date.INFO['flag']='Absent'}">{{date.INFO['flag']}}</td> -->
+
                     </ng-container>
                    
                     <!-- <td></td>
@@ -65,5 +68,17 @@
             </tbody>
         </table>
 
+    </div>
+    <div class="DownData">
+        <div class="TotalLimit">
+            Total Limit : {{TotalLimit}}
+        </div>
+        <div class="mt-4 LimitDiv"><mat-form-field class="LimitWidth">
+            <mat-label>Limit</mat-label>
+            <input matInput [formControl]="Limit">
+        </mat-form-field></div>
+        <div>
+            <button class="btn btn-primary" (click)="Submit()">Submit</button>
+        </div>
     </div>
 </div>

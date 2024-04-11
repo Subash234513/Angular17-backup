@@ -68,7 +68,7 @@ body{
   width: 100px;
 }
 
-/* .mat-form-field-outline {
+.mat-form-field-outline {
   color: grey !important;
 }
 
@@ -78,6 +78,7 @@ body{
 .mat-mdc-text-field-wrapper {
   height: 48px !important;
 }
+
 .mat-mdc-form-field {
   --mdc-outlined-text-field-label-text-size: 14px;
   --mat-form-field-outlined-label-text-populated-size: 14px;
@@ -115,15 +116,15 @@ body{
 .mat-mdc-select-trigger {
   position: relative;
   top: -3px;
-} */
+}
 
-/* .mat-form-field-flex{
+.mat-form-field-flex{
   font-size: 12px;
 }
 .mat-input-element::-webkit-input-placeholder{
   font-size: 14px;
-} */
-/* .mat-form-field input {
+}
+.mat-form-field input {
   height: 20px;
   transition: height ease-in-out 400ms;
 }
@@ -132,7 +133,7 @@ body{
   background-color: red !important;
   height: 50px;
   transition: height ease-in-out 400ms; 
-}*/
+}
 
 mat-form-field.mat-form-field.mat-form-field-appearance-outline > div.mat-form-field-wrapper > div.mat-form-field-flex > div.mat-form-field-infix  { padding: 0.6em 0px }
 mat-form-field.mat-form-field.mat-form-field-appearance-outline > div.mat-form-field-wrapper > div.mat-form-field-flex > div.mat-form-field-infix > span.mat-form-field-label-wrapper { top: -1.5em; }
@@ -830,6 +831,15 @@ table td {
 }
 .WidthMaxEigth{
   width: 87%;
+}
+.Pagination{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 5px;
+}
+.TaskTextArea .mat-mdc-text-field-wrapper{
+  height: auto !important;
 }
 /* .input-group{
   position: relative;

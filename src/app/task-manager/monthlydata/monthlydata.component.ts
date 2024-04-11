@@ -50,6 +50,8 @@ export class MonthlydataComponent implements OnInit {
   @Output() OnCancel = new EventEmitter<any>();
   ReportMonthly : FormGroup;
   send_value: String = "";
+  Limit=new FormControl('')
+  TotalLimit:any=0
 
   ngOnInit(): void {
     this.ReportMonthly = this.fb.group({
@@ -128,69 +130,455 @@ export class MonthlydataComponent implements OnInit {
     Date=['21/11/2002','22/11/2002','23/11/2002','24/11/2002','25/11/2002','26/11/2002','27/11/2002','28/11/2002']
     Summary=[
       {
-        Empname:'Rahul D',
-        Date:[
-          {
-            currentStatus:null 
-          },
-          {
-            currentStatus:null 
-          },
-          {
-            currentStatus:'weekend' 
-          },
-          {
-            currentStatus:8 
-          },
-          {
-            currentStatus:9 
-          },
-          {
-            currentStatus:null 
-          },
-          {
-            currentStatus:'weekend' 
-          },
-          {
-            currentStatus:10 
-          }
-        ]
-           
-        
-        
-      },
-      {
-        Empname:'HariKrishnan M',
-        Date:[
-          {
-            currentStatus:'weekend'  
-          },
-          {
-            currentStatus:null 
-          },
-          {
-            currentStatus:null
-          },
-          {
-            currentStatus:8 
-          },
-          {
-            currentStatus:9 
-          },
-          {
-            currentStatus:null 
-          },
-          {
-            currentStatus:'weekend' 
-          },
-          {
-            currentStatus:10 
-          }
-        ]
-           
-        
-        
-      },
+        "INFO": [
+            {
+                "INFO": {
+                    "duration": "7.00",
+                    "flag": [
+                        "Absent"
+                    ]
+                },
+                "LOG_DATE": "2024-04-01"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": ["Present"]
+                },
+                "LOG_DATE": "2024-04-02"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-03"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": ["Absent"]
+                },
+                "LOG_DATE": "2024-04-04"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-05"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": ["Holiday"]
+                },
+                "LOG_DATE": "2024-04-06"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-07"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-08"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": ["Weekend"]
+                },
+                "LOG_DATE": "2024-04-09"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-10"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-11"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-12"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-13"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-14"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-15"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-16"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-17"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-18"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-19"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-20"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-21"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-22"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-23"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-24"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-25"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-26"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-27"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-28"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-29"
+            },
+            {
+                "INFO": {
+                    "duration": "0",
+                    "flag": []
+                },
+                "LOG_DATE": "2024-04-30"
+            }
+        ],
+        "NAME": "HARIKRISHNAN M-VS0251"
+    }
 
     ]
+    HeadDate= [
+      {
+          "INFO": {
+              "duration": "7.00",
+              "flag": [
+                  "Absent"
+              ]
+          },
+          "LOG_DATE": "2024-04-01"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-02"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-03"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-04"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-05"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-06"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-07"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-08"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-09"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-10"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-11"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-12"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-13"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-14"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-15"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-16"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-17"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-18"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-19"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-20"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-21"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-22"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-23"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-24"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-25"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-26"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-27"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-28"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-29"
+      },
+      {
+          "INFO": {
+              "duration": "0",
+              "flag": []
+          },
+          "LOG_DATE": "2024-04-30"
+      }
+  ]
+  datass(data){
+    console.log('datas',data)
+  }
+  Submit(){
+    console.log('Value',this.Limit.value)
+  }
+  SummaryFunc(){
+    const date=this.ReportMonthly.get('monthyear').value._d
+    console.log(this.datePipe.transform(date,'MM'))
+    const month=this.datePipe.transform(date,'MM')
+    const year=this.datePipe.transform(date,'yyyy')
+    console.log('year',this.datePipe.transform(date,'yyyy'))
+
+    this.TaskManagerService.TaskSheetMonthReport(month,year).subscribe(data=>{
+      this.Summary=data['data']
+      this.HeadDate=this.Summary[0]['INFO']
+      console.log(this.HeadDate)
+    })
+  }
 }

@@ -160,7 +160,7 @@
 
     </div>
 </div> -->
-<div>
+<div class="Main">
     <div Class="MainSearch">
         <form action="" [formGroup]="SearchForm">
             <div class="SummarySearch">
@@ -258,9 +258,9 @@
                         <input matInput formControlName="radius">
                     </mat-form-field></td>
                     <td class="text-center">
-                        <span *ngIf="section?.value?.status?.text==='Pending'" class="badge badge-pill badge-secondary">{{section?.value?.status?.text}}</span>
-                        <span *ngIf="section?.value?.status?.text==='Rejected'" class="badge badge-pill badge-danger">{{section?.value?.status?.text}}</span>
-                        <span *ngIf="section?.value?.status?.text==='Approved'" class="badge badge-pill badge-success">{{section?.value?.status?.text}}</span>
+                        <span *ngIf="section?.value?.status?.text==='Pending'" class="badge badge-pill bg-secondary">{{section?.value?.status?.text}}</span>
+                        <span *ngIf="section?.value?.status?.text==='Rejected'" class="badge badge-pill bg-danger">{{section?.value?.status?.text}}</span>
+                        <span *ngIf="section?.value?.status?.text==='Approved'" class="badge badge-pill bg-success">{{section?.value?.status?.text}}</span>
                     </td>
                     <td class="text-center width" *ngIf="!admin && (section?.value?.status?.text==='Pending')"><i class="fa fa-trash-can" (click)="delete(i,section)"></i></td>
                     <td class="text-center" *ngIf="admin && (section?.value?.status?.text==='Pending')"><input type="checkbox" [checked]="InputCheckBox" (change)="checkBox($event,section)"></td>
