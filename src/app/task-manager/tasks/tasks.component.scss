@@ -1785,7 +1785,7 @@ td {
   gap: 10px;
 }
 
-.cus-taskFormSearch .mat-form-field {
+.cus-taskFormSearch {
   width: 100%;
 }
 
@@ -1863,6 +1863,9 @@ td {
   top: 100%;
   right: 400px;
   padding: 25px;
+}
+.matFormMargin{
+  margin-top: 16px;
 }
 
 @media screen and (max-width: 1290px) {

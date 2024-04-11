@@ -2,7 +2,7 @@
 //   margin: 10px 15px 100px 10px;
 // }
 .smallinput{
-  width: 120px;
+  width: 140px;
 }
 
 .placingOnRight {
@@ -335,7 +335,7 @@
   }
 
 .outertable td:nth-child(2), .outertable th:nth-child(2){
-    left: 156px; 
+    left: 187px; 
   }
 
 // .outertable td:nth-child(3),  .outertable th:nth-child(3){
@@ -552,6 +552,12 @@
 
 .btnalignbtm{
   margin-bottom: 20px;
+}
+.badge-secondary{
+  background-color: #6c757d;
+}
+.badge-success{
+  background-color: #28a745;
 }
 // .alignleft{
 //   margin-left: 20px;

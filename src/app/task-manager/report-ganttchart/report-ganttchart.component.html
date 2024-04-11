@@ -1,6 +1,6 @@
 <div>
  
-<div class="col-lg-12 col-md-12 col-sm-12" style="display: flex;">
+<div class="col-lg-12 col-md-12 col-sm-12" style="display: flex;padding-left:15px">
   <span
   (click)="backtoTaskSummary()"
   class="material-icons pointer">arrow_back</span>
@@ -9,7 +9,7 @@
 
   <form [formGroup]="reportChartt" class="reportContainer">
       <div (click)="getteamdrop()">
-        <mat-form-field>
+        <mat-form-field class="WidthMax">
             <mat-label>Team</mat-label>
             <input  #teamInput placeholder="Select Team" matInput formControlName="team"  [matAutocomplete]="teamsrole"
             (click)="teamclick()" >
@@ -27,7 +27,7 @@
       </div>
 
      <div (click)="getDeveloperdrop()">
-      <mat-form-field>
+      <mat-form-field class="WidthMax">
           <mat-label> Employee</mat-label>
           <input #developerinput placeholder="Select Employee" matInput
               formControlName="developer_id" [matAutocomplete]="developerrole"

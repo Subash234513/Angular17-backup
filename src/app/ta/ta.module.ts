@@ -78,6 +78,6 @@ import { TravelreasonexpenseComponent } from './travelreasonexpense/travelreason
   ],
   providers:[],
   bootstrap:[TaMasterComponent],
-  entryComponents:[OnbehalfMakerComponent]
+  // entryComponents:[OnbehalfMakerComponent]
 })
 export class TAModule { }

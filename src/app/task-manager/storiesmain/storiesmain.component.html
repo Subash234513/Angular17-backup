@@ -3,7 +3,7 @@
     <form [formGroup]="storySummaryForm" class="cus-storiesFormMain">
       <div class="cus-storiesFormContainer">
         <div class="cus-storiesFormContainer1">
-          <div style="width: 400px">
+          <div Class="SearchStory">
             <mat-form-field style="width: 100%">
               <mat-label>Search Story</mat-label>
               <input matInput formControlName="query" />
@@ -168,10 +168,10 @@
           </button>
 
           <!-- StoriesCreation popup -->
-          <div class="modal fade" id="storiesModal" tabindex="-1" role="dialog" aria-labelledby="storiesModalLabel"
+          <div class="modal" id="storiesModal" tabindex="-1" role="dialog" aria-labelledby="storiesModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
-              <div class="modal-content" style="width: 700px; transform: translateX(-10%)">
+              <div class="modal-content" style="width: 727px; transform: translateX(-10%)">
                 <div class="modal-header" style="background-color: #044063;color: white;">
                   <p class="modal-title" id="storiesModalLabel" style="margin-bottom: 0">
                     New Story Creation

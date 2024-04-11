@@ -7,6 +7,15 @@
 // /* Importing Bootstrap SCSS file. */
 // // @import '~bootstrap/scss/bootstrap';
 
+/* Importing Bootstrap SCSS file. */
+@import "node_modules/bootstrap/scss/bootstrap";
+/* Importing Bootstrap SCSS file. */
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Angular Material
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+// Google Fonts
 .mat-form-field,div,.mat-option,.mat-fab,.mat-button,button,.mat-menu-item,p {
   font-family: "Montserrat";
 }

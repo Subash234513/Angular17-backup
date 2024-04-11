@@ -68,7 +68,7 @@ body{
   width: 100px;
 }
 
-.mat-form-field-outline {
+/* .mat-form-field-outline {
   color: grey !important;
 }
 
@@ -115,7 +115,7 @@ body{
 .mat-mdc-select-trigger {
   position: relative;
   top: -3px;
-}
+} */
 
 /* .mat-form-field-flex{
   font-size: 12px;
@@ -807,3 +807,50 @@ table td {
 .width{
   width: 90px;
 }
+.close{
+  font-size: 20px;
+  background: transparent;
+  padding-top: 0;
+  color: gray !important;
+  border: none;
+}
+.close:hover{
+  color: white !important;
+}
+.modal-header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.MatFormMargin{
+  margin-top: 16px;
+}
+.WidthMax{
+  width: 100%;
+}
+.WidthMaxEigth{
+  width: 87%;
+}
+/* .input-group{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.custom-file{
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.custom-file-input{
+  position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    margin: 0;
+    overflow: hidden;
+    opacity: 0;
+} */
