@@ -74,9 +74,9 @@
   min-width: 357px;
 }
 ​
-mat-slider{
-  width: 350px;
-}
+// mat-slider{
+//   width: 350px;
+// }
 #myModalLabel
 {
   font-family: 'Nunito';
@@ -228,4 +228,7 @@ mat-slider{
   padding: 8px 16px 8px 16px;
   border-radius: 5px;
   margin-bottom: 0;
+}
+mat-slider{
+  width: 300px;
 }

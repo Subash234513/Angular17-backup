@@ -24,6 +24,7 @@ import { BulkuploadComponent } from './bulkupload/bulkupload.component';
 import { OffertemplateComponent } from './offertemplate/offertemplate.component';
 import { PaysummaryComponent } from './paysummary/paysummary.component';
 import { PayapprovalComponent } from './payapproval/payapproval.component';
+import {MatSliderModule} from '@angular/material/slider';
 import { TemplatesComponent } from './templates/templates.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CurrencyFormatPipe } from './currency-format.pipe';
@@ -59,6 +60,7 @@ import { IncrementviewComponent } from './incrementview/incrementview.component'
     CommonModule,
     PayingempRoutingModule,
     ReactiveFormsModule, FormsModule,
+    MatSliderModule,
     MaterialModule, SharedModule, PdfViewerModule,MatFormFieldModule
   ],
   providers:[CurrencyPipe, DecimalPipe]

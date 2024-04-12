@@ -151,7 +151,7 @@ export class NewadvanceComponent implements OnInit {
   isshowtable: boolean = true;
   showedit: boolean;
   showdelete: boolean = true;
-
+  Loan=new FormControl('')
   functionalHead: any;
   functionheads: any
   employees: any[];
@@ -1374,7 +1374,11 @@ export class NewadvanceComponent implements OnInit {
           : this.pagination;
       });
   }
-
+  MatSliderFunc(data){
+    console.log(data)
+    console.log(this.loanTenure)
+    console.log(this.Loan.value)
+  }
   calculateEMI() {
     if (!this.principal) {
       this.notification.showError('Please Enter a Requested Amount Greater than 0')

@@ -455,12 +455,29 @@
                              </mat-form-field>
                             </div>
                         </div>
+                      
                              <section>
                               <label>EMI</label>
-                                <div style="margin-left: 26%; margin-top: -9%;">
-                                 <mat-slider  min="0" style="width:100%" max="12" step="1" showTickMarks 
+                                <div>
+                                 <!-- <mat-slider  min="0" style="width:100%" max="12" step="1" showTickMarks 
                                   type="text" id="loanTenure" name="loanTenure" [(ngModel)]="loanTenure" required aria-label="units">
+                                  
+                                  </mat-slider> -->
+                                  <mat-slider #loanTenure showTickMarks discrete   min="0" max="12" step="1"  >
+                                    <input matSliderThumb  (change)="MatSliderFunc($event)" [value]="loanTenure">
                                   </mat-slider>
+                                 
+                                  <!-- <mat-slider min="1" max="10" thumbLabel tickInterval="1"></mat-slider>
+                                  <mat-slider invert="true">
+                             
+                                  </mat-slider>
+
+                                  <mat-slider min=”30″ max=”75″>
+                                    <input matSliderStartThumb />
+                                    <input matSliderEndThumb />
+                                    </mat-slider> -->
+                                  <!-- <input type="range" min="0" max="100" value="0"> -->
+                                  
                                   <!-- <mat-slider min="0" max="10">
                                     <mat-slider-start-thumb value="3"></mat-slider-start-thumb>
                                     <mat-slider-end-thumb value="7"></mat-slider-end-thumb>
@@ -836,8 +853,11 @@
                      <section>
                         <label>EMI</label>
                         <div style="margin-left: 26%; margin-top: -9%;">
-                          <mat-slider thumbLabel min="0" style="width: 100%;"  max="12" step="1" showTickMarks discrete
+                          <!-- <mat-slider thumbLabel min="0" style="width: 100%;"  max="12" step="1" showTickMarks discrete
                           type="text" id="loanTenure" name="editloanTenure" [(ngModel)]="editloanTenure" required aria-label="units">
+                          </mat-slider> -->
+                          <mat-slider showTickMarks discrete min="0" max="12" step="1">
+                            <input matSliderThumb [(ngModel)]="editloanTenure">
                           </mat-slider>
                         </div>
                       </section>

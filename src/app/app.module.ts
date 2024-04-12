@@ -124,7 +124,7 @@ const appearance: MatFormFieldDefaultOptions = {
     // TQModule,
     // TQRoutingModule,
      NgbModule, PdfViewerModule,
-     MatSliderModule,
+     
     //  AgmCoreModule.forRoot({
       // please get your own API key here:
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
