@@ -1,12 +1,16 @@
 
 .name{
     font-size: 30px;
+    padding-left: 26px;
 }
 .body{
     background-color: white;
 }
 .skyblue{
     background-color:white;
+}
+.row{
+  width: 98% !important;
 }
 .perwidth{
     width:30%;
@@ -30,12 +34,20 @@
     border-left-color: rgb(77, 77, 77);
     border-top-color: rgb(77, 77, 77);
     border-bottom-color: rgb(77, 77, 77);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     
+}
+
+.Grade{
+  margin-left: 15px;
 }
 .Append{
     border-right-color: rgb(77, 77, 77);
     border-top-color: rgb(77, 77, 77);
     border-bottom-color: rgb(77, 77, 77);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
    
 }
 .alignValue{
@@ -147,5 +159,8 @@
 ::ng-deep .custom-mat-form-field .mat-form-field-outline {
   background: #EEEDEB;
 }
-
+.ButtonClass{
+  margin-bottom: 40px;
+  margin-left: -15px;
+}
 
