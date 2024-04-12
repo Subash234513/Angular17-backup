@@ -38,9 +38,9 @@
         
 
     </form>
-    <div class="table-responsive ml-4">
+    <div class="table-responsive ml-4" *ngIf="Summary.length">
         <table>
-            <thead>
+            <thead >
                 <th>S.no</th>
                 <th>Employee</th>
                 <th class="widthLogdata" *ngFor="let data of HeadDate">{{data?.LOG_DATE}}</th>
@@ -69,7 +69,7 @@
         </table>
 
     </div>
-    <div class="DownData">
+    <div class="DownData" *ngIf="Summary.length">
         <div class="TotalLimit">
             Total Limit : {{TotalLimit}}
         </div>

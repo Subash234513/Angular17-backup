@@ -621,19 +621,19 @@
               <!-- <p class="pLetter" style=" margin-left: 38%;font-weight: 600;">Payroll</p> -->
               <p class="pLetter" style=" margin-left: 38%;font-weight: 600;">Work Mode</p>
             </div>
-            <div style="width: 100%">
+            <div style="width: 100%" disabled="true">
               <!-- <mat-form-field >
               <input type="checkbox" formControlName="is_payroll"
               (change)="updateCheckboxValue($event)">
             </mat-form-field> -->
-              <mat-form-field style="width: 100%;">
+              <mat-form-field style="width: 100%;" >
                 <!-- <mat-select  [(value)]="selectedShift" (selectionChange)="onShiftSelect($event)"
               formControlName="workmode" >
               <mat-option *ngFor="let shift of workshiftList" [value]="shift.id" >
                 {{ shift.shift_name }}
               </mat-option>
             </mat-select> -->
-                <mat-select formControlName="workmode" readOnly>
+                <mat-select formControlName="workmode" >
                   <mat-option *ngFor="let work of workmodeList" [value]="work.id">
                     {{work.text}}
                   </mat-option>

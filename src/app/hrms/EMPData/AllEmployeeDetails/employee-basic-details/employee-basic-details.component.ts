@@ -202,6 +202,7 @@ export class EmployeeBasicDetailsComponent implements OnInit {
   maritalList: any;
   differentlyable: any;
   ngOnInit(): void {
+   
     this.allDetailsForm = this.fb.group({
       code: new FormControl(),
       full_name: new FormControl(),
@@ -237,6 +238,9 @@ export class EmployeeBasicDetailsComponent implements OnInit {
 
 
     });
+    this.allDetailsForm.get('shift').disable()
+    this.allDetailsForm.get('grade').disable()
+    this.allDetailsForm.get('workmode').disable()
     this.address = this.fb.group({
       line1: new FormControl(),
       line2: new FormControl(),
