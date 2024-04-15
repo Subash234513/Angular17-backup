@@ -48,15 +48,15 @@ export interface Emplistss {
   full_name: string;
   name: string;
 }
-export interface clientlists{
-  id:string;
-  client_code:string;
-  client_name:string;
+export interface clientlists {
+  id: string;
+  client_code: string;
+  client_name: string;
 }
-export interface modulelists{
-  id:string;
-  client_code:string;
-  module_name:string;
+export interface modulelists {
+  id: string;
+  client_code: string;
+  module_name: string;
 }
 
 
@@ -231,43 +231,43 @@ class PickDateAdapter extends NativeDateAdapter {
 export class TaskviewsComponent implements OnInit {
 
   selectedDate: Date;
-  sprintfilter:[{"name":"Start Date","id":1},{"name":"End Date","id":2},{"name":"Query","id":3}]
-  sprintfilterss:[{"name":"Start Date","id":1},{"name":"End Date","id":2},{"name":"Query","id":3},{"name":"Team","id":4},{"name":"Sprint","id":5}]
-  taskfilter:[{"name":"Start Date","id":1},{"name":"End Date","id":2},{"name":"Query","id":3},{"name":"App id","id":4},{"name":"Client ","id":5},{"name":"Module id  ","id":6},{"name":"Developer id ","id":7},{"name":"Team lead ","id":8},{"name":"Status ","id":9}]  
-  backlogfilter:[{"name":"Start Date","id":1},{"name":"End Date","id":2},{"name":"Query","id":3},{"name":"App id","id":4},{"name":"Client ","id":5},{"name":"Module id  ","id":6},{"name":"Developer id ","id":7},{"name":"Team lead ","id":8}]
-  pipelinefilter:[{"name":"Start Date","id":1},{"name":"End Date","id":2},{"name":"Pipeline Status","id":3},{"name":"App id","id":4},{"name":"Client ","id":5},{"name":"Module id  ","id":6},{"name":"Developer id ","id":7},{"name":"Team lead ","id":8}]
-  issuefilter:[{"name":"Start Date","id":1},{"name":"End Date","id":2},{"name":"Query","id":3},{"name":"App id","id":4},{"name":"Client ","id":5},{"name":"Module id  ","id":6},{"name":"Priority  ","id":7},{"name":"Status ","id":8}]
-  Tran_Menu_List : any;
+  sprintfilter: [{ "name": "Start Date", "id": 1 }, { "name": "End Date", "id": 2 }, { "name": "Query", "id": 3 }]
+  sprintfilterss: [{ "name": "Start Date", "id": 1 }, { "name": "End Date", "id": 2 }, { "name": "Query", "id": 3 }, { "name": "Team", "id": 4 }, { "name": "Sprint", "id": 5 }]
+  taskfilter: [{ "name": "Start Date", "id": 1 }, { "name": "End Date", "id": 2 }, { "name": "Query", "id": 3 }, { "name": "App id", "id": 4 }, { "name": "Client ", "id": 5 }, { "name": "Module id  ", "id": 6 }, { "name": "Developer id ", "id": 7 }, { "name": "Team lead ", "id": 8 }, { "name": "Status ", "id": 9 }]
+  backlogfilter: [{ "name": "Start Date", "id": 1 }, { "name": "End Date", "id": 2 }, { "name": "Query", "id": 3 }, { "name": "App id", "id": 4 }, { "name": "Client ", "id": 5 }, { "name": "Module id  ", "id": 6 }, { "name": "Developer id ", "id": 7 }, { "name": "Team lead ", "id": 8 }]
+  pipelinefilter: [{ "name": "Start Date", "id": 1 }, { "name": "End Date", "id": 2 }, { "name": "Pipeline Status", "id": 3 }, { "name": "App id", "id": 4 }, { "name": "Client ", "id": 5 }, { "name": "Module id  ", "id": 6 }, { "name": "Developer id ", "id": 7 }, { "name": "Team lead ", "id": 8 }]
+  issuefilter: [{ "name": "Start Date", "id": 1 }, { "name": "End Date", "id": 2 }, { "name": "Query", "id": 3 }, { "name": "App id", "id": 4 }, { "name": "Client ", "id": 5 }, { "name": "Module id  ", "id": 6 }, { "name": "Priority  ", "id": 7 }, { "name": "Status ", "id": 8 }]
+  Tran_Menu_List: any;
   statusList = [{ 'id': 1, 'name': 'Createdby Me' }, { 'id': 2, 'name': 'Others' }];
-  teamdrop:any
-  appdrop:any
-  sprinttdrop:any
-  clientdrop:any
-  moduledrop:any
-  teams:any
-  statusdrops:any
-  develop:any
+  teamdrop: any
+  appdrop: any
+  sprinttdrop: any
+  clientdrop: any
+  moduledrop: any
+  teams: any
+  statusdrops: any
+  develop: any
   returnnav: number;
-  startdate:boolean=false
-  enddate:boolean=false
-  query:boolean=false
-  app_id:boolean=false
-  client:boolean=false
-  module_id:boolean=false
-  priority:boolean=false
-  statuss:boolean=false
-  statusss:boolean=false
-  developer_id : boolean=false
-  team_lead  : boolean=false
-  pipeline_status : boolean=false
-  team:boolean=false
-  sprintss:boolean=false
-  inpstartdatesprint:any
-  inpenddatesprint:any
+  startdate: boolean = false
+  enddate: boolean = false
+  query: boolean = false
+  app_id: boolean = false
+  client: boolean = false
+  module_id: boolean = false
+  priority: boolean = false
+  statuss: boolean = false
+  statusss: boolean = false
+  developer_id: boolean = false
+  team_lead: boolean = false
+  pipeline_status: boolean = false
+  team: boolean = false
+  sprintss: boolean = false
+  inpstartdatesprint: any
+  inpenddatesprint: any
   taskcreate: boolean;
   isShowTasksummary: boolean = true;
   isShowStory: boolean;
-  isShowStorySpr : boolean;
+  isShowStorySpr: boolean;
   storycreate: boolean;
   storyiew: boolean;
   story_taskView: boolean;
@@ -357,7 +357,7 @@ export class TaskviewsComponent implements OnInit {
   isStorySearch: boolean = true;
   backlogList: any;
   taskedit: boolean;
-  assignedit:boolean
+  assignedit: boolean
   objs: any;
   pageNumbersContainer = document.querySelector('.cus-pageNumbers');
   nextButton = document.querySelector('.cus-btnNext');
@@ -382,7 +382,7 @@ export class TaskviewsComponent implements OnInit {
   showMoreInfo: boolean;
   issuecreate: boolean = false;
   storySearchForm: FormGroup;
-  allChecked : boolean = false;
+  allChecked: boolean = false;
   showMoveToTaskButton: boolean = false;
   selectedItems: any[] = [];
   today: Date = new Date();
@@ -412,18 +412,18 @@ export class TaskviewsComponent implements OnInit {
   formArray: FormArray;
   issueView: boolean;
   showChatbox = false;
-  isShowbuttons : boolean = false;
+  isShowbuttons: boolean = false;
   isShowComments: boolean = false;
   isShowWorklogs: boolean = true;
-  isShowCommentTask: boolean = false; 
-  isShowHistory : boolean = false;
-  clientdata : any;
-  moduledata : any;
+  isShowCommentTask: boolean = false;
+  isShowHistory: boolean = false;
+  clientdata: any;
+  moduledata: any;
   filteredOptions: any[] = [];
   sprintlsts: any;
   selectedFilters: any[] = [];
-  sprstartdate : any = '';
-  sprenddate : any = '';
+  sprstartdate: any = '';
+  sprenddate: any = '';
   images: string[] = [];
 
 
@@ -479,7 +479,7 @@ export class TaskviewsComponent implements OnInit {
   storiesget: any;
   sprintdata: any;
   storysList: any;
-  pageNumbi : any = 1;
+  pageNumbi: any = 1;
   droplist: any;
   textValues = [{ id: 'startdate', name: "Start Date" }, { id: 'enddate', name: "End Date" }]
   storyrId: any;
@@ -492,7 +492,7 @@ export class TaskviewsComponent implements OnInit {
   singleissueViewData: any;
   commentText: string = '';
   commentTexts: string = '';
- 
+
   showCommentBox: boolean = false;
   showCommentBoxs: boolean = false;
   commenthistoryarr: any;
@@ -516,20 +516,20 @@ export class TaskviewsComponent implements OnInit {
   };
   send_value: string;
   pipelinecreate: boolean;
-  pagePipe : any = 1;
+  pagePipe: any = 1;
   statusLists: { name: string; }[];
   isLastPage: boolean = true;
   filterForm: FormGroup;
   showPopup: boolean = false;
   showPopupss: boolean = false;
-  taskpopup : boolean = false;
-  taskPopups : boolean = false;
-  backlogPopus : boolean = false;
-  issuePopus : boolean = false
-  pipelinePopup : boolean = false
-  teamList : any;
+  taskpopup: boolean = false;
+  taskPopups: boolean = false;
+  backlogPopus: boolean = false;
+  issuePopus: boolean = false
+  pipelinePopup: boolean = false
+  teamList: any;
   assignForm: FormGroup;
-  showpagedata : boolean = true;
+  showpagedata: boolean = true;
 
   showtabledatas: boolean = true
   isShowtimesheet: boolean;
@@ -538,17 +538,17 @@ export class TaskviewsComponent implements OnInit {
   activityArr2: any;
   timesumtable: any;
   timeSheet: FormGroup;
-  actualdate : any;
-  endadate : any;
+  actualdate: any;
+  endadate: any;
   isActualDate: any;
-  isTaskView : boolean = true;
+  isTaskView: boolean = true;
   storyName: any;
-  currentDates: Date =  new Date();
+  currentDates: Date = new Date();
   endday: any;
   isShowRemarks: boolean = false;
   lastDate: any = '';
   isgotostory: boolean = false;
-  reuploadfileArr: any=[];
+  reuploadfileArr: any = [];
   storyIds: any;
   sprintEndDay: any;
   storyCode: any;
@@ -572,15 +572,15 @@ export class TaskviewsComponent implements OnInit {
 
 
   constructor(
-    private fb: FormBuilder, private router: Router, private toastr: ToastrService,  private notify: imp.ToastrService,
+    private fb: FormBuilder, private router: Router, private toastr: ToastrService, private notify: imp.ToastrService,
     private SpinnerService: NgxSpinnerService, private errorHandler: ErrorHandlingServiceService,
     private TaskManagerService: TaskManagerService, private datepipe: DatePipe, private taskreportservice: TaskService,
     private notification: NotificationService, private datePipe: DatePipe, private shareservice: SharedService,
     private dialog: MatDialog, private taskmanagerservice: TaskManagerService, private route: ActivatedRoute,
-    private LocalShareService:ShareddataService
+    private LocalShareService: ShareddataService
 
-  ) { 
- 
+  ) {
+
   }
 
 
@@ -588,14 +588,14 @@ export class TaskviewsComponent implements OnInit {
   @Output() OnCancel = new EventEmitter<any>();
   @Output() OnCancel1 = new EventEmitter<any>();
 
-  selectedFile: File [] =[];
-ngOnInit(): void {
-  
-  
-this.toggleButtons(2);
+  selectedFile: File[] = [];
+  ngOnInit(): void {
+
+
+    this.toggleButtons(2);
     this.reassignForm = this.fb.group({
       developer_id: '',
-      story:''
+      story: ''
     })
     this.assignForm = this.fb.group({
       developer_id: '',
@@ -606,15 +606,15 @@ this.toggleButtons(2);
     //   console.log(typeId);
     //   this.storyTaskView(typeId)
     // });
-    let typeId=this.LocalShareService.taskid.value
+    let typeId = this.LocalShareService.taskid.value
     this.storyTaskView(typeId)
     this.taskupdateForm = this.fb.group({
-      actual_start_date:'',
-      actual_end_date:''
+      actual_start_date: '',
+      actual_end_date: ''
     })
 
-    this.sprstartdate =  this.LocalShareService.sprintfromdate.value
-    this.sprenddate =  this.LocalShareService.sprinttodate.value
+    this.sprstartdate = this.LocalShareService.sprintfromdate.value
+    this.sprenddate = this.LocalShareService.sprinttodate.value
 
 
     this.getSprintDropDown();
@@ -624,38 +624,35 @@ this.toggleButtons(2);
     const date = new Date(milliseconds);
     return new DatePipe('en-US').transform(date, 'medium'); // Adjust the format as needed
   }
-  reassignTask()
-  {
-    
+  reassignTask() {
+
     let data = this.reassignForm.value
     let payload = {
-      "emp_id" : data.developer_id.id,
-      "task_id":  this.storyrId
+      "emp_id": data.developer_id.id,
+      "task_id": this.storyrId
     }
     console.log("Reassigner", data)
     console.log("ReassignerPay", payload)
-  
+
     this.taskmanagerservice.reassignTask(payload).subscribe(
-      results=>{
+      results => {
         this.SpinnerService.hide()
-        if(results.code)
-        {
+        if (results.code) {
           this.notification.showError(results.description)
           this.reassignForm.reset()
         }
-        else
-        {
+        else {
           this.notification.showSuccess(results.message)
-          let typeId=this.LocalShareService.taskid.value
+          let typeId = this.LocalShareService.taskid.value
           this.storyTaskView(typeId)
           this.reassignForm.reset()
-          return true 
+          return true
         }
-        }, error =>{
+      }, error => {
         this.SpinnerService.hide()
-        
-        }) 
-    
+
+      })
+
   }
   developerName() {
     let teamldkeyvalue: String = "";
@@ -735,80 +732,74 @@ this.toggleButtons(2);
       }
     });
   }
-  assignTask()
-  {
-    
+  assignTask() {
+
     let data = this.assignForm.value
     let payload = [{
-      "emp_id" : data.developer_id.id,
-      "task_id":  this.storyrId
+      "emp_id": data.developer_id.id,
+      "task_id": this.storyrId
     }]
     console.log("Reassigner", data)
     console.log("ReassignerPay", payload)
-  
+
     this.taskmanagerservice.assignTask(payload).subscribe(
-      results=>{
+      results => {
         this.SpinnerService.hide()
-        if(results.code)
-        {
+        if (results.code) {
           this.notification.showError(results.description)
         }
-        else
-        {
+        else {
           this.notification.showSuccess(results.message)
-          return true 
+          return true
         }
-        }, error =>{
+      }, error => {
         this.SpinnerService.hide()
-        
-        }) 
-    
+
+      })
+
   }
   storyTaskView(story_taskID) {
     this.storyrId = story_taskID
     this.SpinnerService.show()
     this.TaskManagerService.getStories_taskView(story_taskID)
-      .subscribe(result => { 
-         this.SpinnerService.hide()
+      .subscribe(result => {
+        this.SpinnerService.hide()
 
 
-      //date validation
-        this.sprintstartdate=result.sprint?.start_date
-        this.sprintenddate=result.sprint?.end_date
-        this.spgetstartdate=this.sprintstartdate
-        this.spgetenddate=this.sprintenddate
+        //date validation
+        this.sprintstartdate = result.sprint?.start_date
+        this.sprintenddate = result.sprint?.end_date
+        this.spgetstartdate = this.sprintstartdate
+        this.spgetenddate = this.sprintenddate
         this.LocalShareService.taskstartdate.next(result.sprint?.start_date)
         this.LocalShareService.taskenddate.next(result.sprint?.end_date)
         this.LocalShareService.taskcode.next(result.id)
         this.LocalShareService.dependency.next(result.dependency)
         this.LocalShareService.taskstatus.next(result.task_status_id)
-        this. presenttDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd')
-        if(this.spgetenddate >= this. presenttDate || this.spgetenddate== null  ){
+        this.presenttDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd')
+        if (this.spgetenddate >= this.presenttDate || this.spgetenddate == null) {
           this.spgetenddate = this.presenttDate;
         }
-        
+
         console.log("story task View", result)
         this.LocalShareService.story_Id.next(result?.story?.id)
         console.log("STOORY DATTA", result)
-        if(result.story)
-        {
+        if (result.story) {
           this.storyName = result.story.name;
           this.storyCode = result?.story?.code;
-         
+
           // this.LocalShareService.taskid.next(typeId)
         }
-        if(result.sprint){
-          this.sprintName=result.sprint.name
+        if (result.sprint) {
+          this.sprintName = result.sprint.name
         }
-        if(result.actual_start_date)
-        {
+        if (result.actual_start_date) {
           this.isActualDate = false;
         }
-        else
-        {
+        else {
           this.isActualDate = true;
         }
-      
+
         // this.ViewData = result;
 
         let currentDate = new Date()
@@ -827,15 +818,15 @@ this.toggleButtons(2);
           PlanDaysCalculate = Plan_Start.getTime() - Plan_End.getTime()
           TotalPlanDays = (Math.abs(PlanDaysCalculate) / (1000 * 60 * 60 * 24)) + 1;
         } else {
-  
+
           console.error('start_date or end_date is null');
         }
-        
+
 
         // Plan_Start = new Date(this.datePipe.transform(result.start_date, 'yyyy-MM-dd'));
         // Plan_End = new Date(this.datePipe.transform(result.end_date, 'yyyy-MM-dd'));
 
-      
+
 
         let json = {
           "DynamicStatusCall": false,
@@ -850,49 +841,45 @@ this.toggleButtons(2);
         console.log("data", this.story_TaskViewData)
         this.filterOptions();
 
-        this.checkAssignee  = this.story_TaskViewData?.task_assignee;
+        this.checkAssignee = this.story_TaskViewData?.task_assignee;
         this.getLastAssigned = this.getLastFullName(this.checkAssignee);
 
-       this.endday =   this.story_TaskViewData.end_date;
-       if(result?.last_timesheet_updated_on != null)
-       {
-       this.lastDate = new Date(this.datePipe.transform(result?.last_timesheet_updated_on, 'yyyy-MM-dd'))
-       }
-              if(result?.actual_start_date != null && result?.actual_start_date != "" && result?.actual_start_date != undefined)
-       {
-       let startt_date= new Date(this.datePipe.transform(result?.actual_start_date, 'yyyy-MM-dd'))
-       this.taskupdateForm.get('actual_start_date').patchValue(startt_date)
-       }
+        this.endday = this.story_TaskViewData.end_date;
+        if (result?.last_timesheet_updated_on != null) {
+          this.lastDate = new Date(this.datePipe.transform(result?.last_timesheet_updated_on, 'yyyy-MM-dd'))
+        }
+        if (result?.actual_start_date != null && result?.actual_start_date != "" && result?.actual_start_date != undefined) {
+          let startt_date = new Date(this.datePipe.transform(result?.actual_start_date, 'yyyy-MM-dd'))
+          this.taskupdateForm.get('actual_start_date').patchValue(startt_date)
+        }
 
-      //  if(result.story == null)
-      //  {
-      //   this.notification.showWarning("Task not mapped to Story")
-      //  }
+        //  if(result.story == null)
+        //  {
+        //   this.notification.showWarning("Task not mapped to Story")
+        //  }
 
-       this.storyIds = result?.story?.id;
-       if(this.storyIds !== undefined)
-       {
-       console.log("Strory IDDSSS", this.storyIds)
-      //  this.SpinnerService.show() 
-       this.TaskManagerService.getStoriesView(this.storyIds)
-       .subscribe(result => {
-         this.SpinnerService.hide();
-         console.log("story View", result)
-         this.storyViewDaata = result;
-         this.sprintEndDay = this.storyViewDaata?.sprint?.to_date;
-         console.log("Data this end date", this.sprintEndDay) 
-       }, (error) => {
-         this.errorHandler.handleError(error);
-         this.SpinnerService.hide();
-       }
-   
-       )
-      }
-       
-       if(this.currentDates < this.sprstartdate)
-       {
-        this.isShowRemarks  = true;
-       }
+        this.storyIds = result?.story?.id;
+        if (this.storyIds !== undefined) {
+          console.log("Strory IDDSSS", this.storyIds)
+          //  this.SpinnerService.show() 
+          this.TaskManagerService.getStoriesView(this.storyIds)
+            .subscribe(result => {
+              this.SpinnerService.hide();
+              console.log("story View", result)
+              this.storyViewDaata = result;
+              this.sprintEndDay = this.storyViewDaata?.sprint?.to_date;
+              console.log("Data this end date", this.sprintEndDay)
+            }, (error) => {
+              this.errorHandler.handleError(error);
+              this.SpinnerService.hide();
+            }
+
+            )
+        }
+
+        if (this.currentDates < this.sprstartdate) {
+          this.isShowRemarks = true;
+        }
 
       }, (error) => {
         this.errorHandler.handleError(error);
@@ -900,9 +887,9 @@ this.toggleButtons(2);
       }
 
       )
-      
+
   }
-  
+
 
 
   ChangeDateFormat(data) {
@@ -925,76 +912,75 @@ this.toggleButtons(2);
     TotalPlanDays = (Math.abs(PlanDaysCalculate) / (1000 * 60 * 60 * 24)) + 1;
 
     data.DynamicDelayDaysCount = (TotalPlanDays - data?.DynamicPlannedDays) > 0 ? (TotalPlanDays - data?.DynamicPlannedDays) : 0
-    if(data.DynamicDelayDaysCount)
-    {
+    if (data.DynamicDelayDaysCount) {
       this.isShowRemarks = true;
     }
 
   }
 
   ChaneStatus(status, taskstatus) {
-    
+
     let obj: any
-    
-    this.actualdate =  this.datePipe.transform(this.taskupdateForm.get('actual_start_date').value, "yyyy-MM-dd");
-    if(this.startsDate !== 'None' )
-    { 
-    this.planStartDate = this.datePipe.transform(this.startsDate, "yyyy-MM-dd");
+
+    this.actualdate = this.datePipe.transform(this.taskupdateForm.get('actual_start_date').value, "yyyy-MM-dd");
+    if (this.startsDate !== 'None') {
+      this.planStartDate = this.datePipe.transform(this.startsDate, "yyyy-MM-dd");
     }
-    if(this.endsDate !== 'None' )
-    {
-    this.planEndDate = this.datePipe.transform(this.endsDate, "yyyy-MM-dd");
+    if (this.endsDate !== 'None') {
+      this.planEndDate = this.datePipe.transform(this.endsDate, "yyyy-MM-dd");
     }
-   
+
     // this.endadate =  this.datePipe.transform(taskstatus?.actual_end_date, "yyyy-MM-dd");
-    this.endadate =  this.datePipe.transform(this.taskupdateForm.get('actual_end_date').value, "yyyy-MM-dd");
-   
+    this.endadate = this.datePipe.transform(this.taskupdateForm.get('actual_end_date').value, "yyyy-MM-dd");
+
+    if (this.endadate === null || this.endadate === undefined) {
+      this.endadate = this.datePipe.transform(taskstatus?.actual_end_date, "yyyy-MM-dd");
+    }
+
     console.log("taskstatus", taskstatus)
 
 
     if (taskstatus?.task_status_id == 0) {
 
-      if(this.startsDate === null || this.startsDate === undefined || this.startsDate === '' || this.startsDate === 'None') { 
+      if (this.startsDate === null || this.startsDate === undefined || this.startsDate === '' || this.startsDate === 'None') {
         obj = {
           actual_start_date: this.actualdate,
           task_status: status,
-        
-        
-        }
-      } 
 
-      
-      else if(this.endadate == undefined || this.endadate == '' || this.endadate == null  )
-      {
-        
+
+        }
+      }
+
+
+      else if (this.endadate == undefined || this.endadate == '' || this.endadate == null) {
+
         obj = {
           actual_start_date: this.actualdate,
           task_status: status,
           start_date: this.planStartDate
-        
+
         }
-      
+
       }
-      else if(this.isActualDate == true && !this.endadate )
-      {
+      else if (this.isActualDate == true && !this.endadate) {
         obj = {
           actual_start_date: this.actualdate,
-           task_status: status,
-           start_date: this.planStartDate
-        
+          task_status: status,
+          start_date: this.planStartDate
+
         }
       }
-      else{
+      else {
 
-      obj = {
-        actual_start_date: this.actualdate,
-        task_status: status,
-        actual_end_date : this.endadate,
-        start_date: this.planStartDate,
-        end_date : this.planEndDate
+        obj = {
+          actual_start_date: this.actualdate,
+          task_status: status,
+          actual_end_date: this.endadate,
+          start_date: this.planStartDate,
+          end_date: this.planEndDate
 
+        }
       }
-    }
     }
     else if (taskstatus?.task_status_id == 1) {
       obj = {
@@ -1014,7 +1000,7 @@ this.toggleButtons(2);
     else if (taskstatus?.task_status_id == 2) {
       obj = {
         task_status: status,
-        actual_end_date : this.endadate
+        actual_end_date: this.endadate
       }
     }
 
@@ -1027,22 +1013,20 @@ this.toggleButtons(2);
     this.SpinnerService.show();
     this.TaskManagerService.ChaneStatus(obj, taskstatus.id)
       .subscribe(results => {
-        if(results.code)
-        {
+        if (results.code) {
           this.notification.showError(results.description)
           this.SpinnerService.hide();
 
         }
-        else
-        {
+        else {
           this.notification.showSuccess(results.message)
           this.storyTaskView(taskstatus.id)
           this.SpinnerService.hide();
         }
-      
-      })  
-        
-        
+
+      })
+
+
 
   }
 
@@ -1055,11 +1039,11 @@ this.toggleButtons(2);
       data.employee_hours[i].employee_id = data.employee_hours[i].employee_id;
     }
     let startsdate = this.datepipe.transform(data.actual_start_date, 'yyyy-MM-dd');
-    let endsdate = this.datepipe.transform(data.actual_end_date, 'yyyy-MM-dd'); 
+    let endsdate = this.datepipe.transform(data.actual_end_date, 'yyyy-MM-dd');
     let obj = {
       id: data.id,
       actual_start_date: startsdate,
-      actual_end_date : endsdate,
+      actual_end_date: endsdate,
       // task_status: data.task_status_id,
       emp_hr: data?.employee_hours,
       delay_days: data.DynamicDelayDaysCount,
@@ -1068,17 +1052,17 @@ this.toggleButtons(2);
     console.log(data, obj)
     this.TaskManagerService.ChaneStatus(obj, data.id)
       .subscribe(results => {
-        if(results.code){
+        if (results.code) {
           this.notification.showError(results.description)
           this.SpinnerService.hide()
         }
-        else{
+        else {
           this.notification.showSuccess(results.message)
           this.SpinnerService.hide()
           this.storyTaskView(data.id)
         }
-      
-        
+
+
       })
 
   }
@@ -1113,9 +1097,9 @@ this.toggleButtons(2);
       this.reuploadfileArr.push(e.target.files[i])
     }
   }
-  
-  
-  
+
+
+
   saveCommentTask() {
     // Here, you can handle the logic to save the comment and the attached file.
     console.log('Comment Text:', this.commentTexts);
@@ -1123,46 +1107,47 @@ this.toggleButtons(2);
     let payload = {
       "comment": this.commentTexts
     }
-    const formData: FormData = new FormData(); 
+    const formData: FormData = new FormData();
     let reuploadfiles = this.reuploadfileArr
-    if(reuploadfiles.length!=0){
-      for (let reuploadindividual in reuploadfiles ) {
+    if (reuploadfiles.length != 0) {
+      for (let reuploadindividual in reuploadfiles) {
         let reuploadfilekeydata = 'file'
         let datavalue = JSON.stringify(payload)
         formData.append('data', datavalue);
         formData.append(reuploadfilekeydata, reuploadfiles[reuploadindividual])
-  
+
       }
-    
+
     }
-    else{
+    else {
       let datavalue = JSON.stringify(payload)
-        formData.append('data', datavalue);
+      formData.append('data', datavalue);
     }
-    
-  
+
+
     this.taskmanagerservice.addCommentTask(formData, this.storyrId).subscribe(
-      results=>{
-        if(results.status){
-        this.SpinnerService.hide()
+      results => {
+        if (results.status) {
+          this.SpinnerService.hide()
           this.notification.showSuccess(results.message)
           this.getCommentHistorys();
           // this.OnSubmit.emit() 
           this.commentTexts = ''
-          this.reuploadfileArr=[]
+          this.reuploadfileArr = []
           // this.selectedFile=[]
-          return true }
-          else{
-            this.SpinnerService.hide()
-        this.notification.showError(results.description)
-        this.reuploadfileArr=[]
-        // this.selectedFile=[]
-        } 
-        
-        
-        
-        }) 
-  
+          return true
+        }
+        else {
+          this.SpinnerService.hide()
+          this.notification.showError(results.description)
+          this.reuploadfileArr = []
+          // this.selectedFile=[]
+        }
+
+
+
+      })
+
   }
   toggleCommentBox() {
     this.showCommentBox = true;
@@ -1172,20 +1157,19 @@ this.toggleButtons(2);
     this.showCommentBoxs = true;
     this.getCommentHistorys();
   }
-  
-  getCommentHistory()
-  {
+
+  getCommentHistory() {
     this.taskmanagerservice.getCommentHistory(this.issueId).subscribe(
-      results=>{
+      results => {
         this.SpinnerService.hide()
-            this.commenthistoryarr = results['data']
-          // this.OnSubmit.emit() 
-          return true 
-        }, error =>{
+        this.commenthistoryarr = results['data']
+        // this.OnSubmit.emit() 
+        return true
+      }, error => {
         this.SpinnerService.hide()
-        
-        
-        }) 
+
+
+      })
     // this.commenthistoryarr =  [
     //       {
     //           "comment": "issue1",
@@ -1218,38 +1202,37 @@ this.toggleButtons(2);
     //           }
     //       }
     //   ]
-  
+
   }
-  
+
   deleteComment(commentId: number) {
     // Add your code here to delete the comment with the given commentId
     console.log(`Deleting comment with ID: ${commentId}`);
     // You can make an API call to delete the comment here
   }
-  fileview(data){
-    this.fileviews=data.file
+  fileview(data) {
+    this.fileviews = data.file
   }
-  getCommentHistorys()
-  {
+  getCommentHistorys() {
     this.taskmanagerservice.getCommentHistorys(this.storyrId).subscribe(
-      results=>{
+      results => {
         this.SpinnerService.hide()
-            this.commenthistoryarrs = results['data']
-            console.log("file", this.commenthistoryarrs)
-          // this.OnSubmit.emit() 
-          return true 
-        }, error =>{
+        this.commenthistoryarrs = results['data']
+        console.log("file", this.commenthistoryarrs)
+        // this.OnSubmit.emit() 
+        return true
+      }, error => {
         this.SpinnerService.hide()
-        
-        
-        }) 
-  
+
+
+      })
+
   }
-  
+
   toggleButton(buttonNumber: number): void {
     // Reset styles for all buttons
     this.resetButtonStyles();
-  
+
     // Update the clicked button's styles
     switch (buttonNumber) {
       case 1:
@@ -1279,7 +1262,7 @@ this.toggleButtons(2);
         break;
     }
   }
-  
+
   resetButtonStyles(): void {
     this.button1Styles = {
       'background-color': 'white',
@@ -1294,7 +1277,7 @@ this.toggleButtons(2);
       color: '#172b4d'
     };
   }
-  
+
   toggleButtons(buttonNumber: number): void {
     this.resetButtonStyle();
     switch (buttonNumber) {
@@ -1304,8 +1287,8 @@ this.toggleButtons(2);
           color: 'white'
         };
         this.isShowWorklogs = true;
-         this.isShowCommentTask = true;
-         this.isShowHistory = true;
+        this.isShowCommentTask = true;
+        this.isShowHistory = true;
         break;
       case 2:
         this.button2Styles = {
@@ -1323,25 +1306,25 @@ this.toggleButtons(2);
         };
         this.getCommentHistorys();
         this.isShowWorklogs = false;
-         this.isShowCommentTask = true;
+        this.isShowCommentTask = true;
         this.isShowHistory = false;
-        
+
         break;
-  
-        case 4:
-          this.button4Styles = {
-            'background-color': '#172b4d',
-            color: 'white'
-          };
-          this.isShowWorklogs = false;
-         this.isShowCommentTask = false;
-         this.isShowHistory = true;
-          break;
-        
-        
+
+      case 4:
+        this.button4Styles = {
+          'background-color': '#172b4d',
+          color: 'white'
+        };
+        this.isShowWorklogs = false;
+        this.isShowCommentTask = false;
+        this.isShowHistory = true;
+        break;
+
+
+    }
   }
-  }
-  
+
 
 
   resetButtonStyle(): void {
@@ -1362,59 +1345,56 @@ this.toggleButtons(2);
       color: '#172b4d'
     };
   }
-  onclickTaskEdit(data)
-  {
-    if (data.task_status_id==8){
+  onclickTaskEdit(data) {
+    if (data.task_status_id == 8) {
       this.LocalShareService.unassignedit.next("Unassigned")
-     
+
     }
-    else{
+    else {
       this.LocalShareService.unassignedit.next("")
 
     }
     this.taskedit = true;
     this.isTaskView = true;
   }
-  assignEdit(data)
-  {
-    if (data.task_status_id==8){
+  assignEdit(data) {
+    if (data.task_status_id == 8) {
       this.LocalShareService.unassignedit.next("Unassigned")
-     
+
     }
-    else{
+    else {
       this.LocalShareService.unassignedit.next("")
 
     }
-  
+
     this.assignedit = true;
     this.isTaskView = true;
   }
-  popassignclose(){
+  popassignclose() {
     this.assignedit = false;
     this.isTaskView = true;
-    let typeId=this.LocalShareService.taskid.value
+    let typeId = this.LocalShareService.taskid.value
 
     this.storyTaskView(typeId)
   }
-  popclose(){
+  popclose() {
     this.taskedit = false;
     this.isTaskView = true;
-    let typeId=this.LocalShareService.taskid.value
+    let typeId = this.LocalShareService.taskid.value
 
     this.storyTaskView(typeId)
   }
-  updateTaskProgress()
-  {
-    if (this.taskupdateForm.value.actual_start_date==='' || this.taskupdateForm.value.actual_start_date===null || this.taskupdateForm.value.actual_start_date===undefined  ) {
+  updateTaskProgress() {
+    if (this.taskupdateForm.value.actual_start_date === '' || this.taskupdateForm.value.actual_start_date === null || this.taskupdateForm.value.actual_start_date === undefined) {
       this.toastr.error("Choose Actual start date");
-      return; 
+      return;
     }
     this.ChaneStatus(1, this.story_TaskViewData);
     this.taskupdateForm.reset()
 
   }
-  ChaneStatuss(story_TaskViewData){
-    this.story_TaskViewData=story_TaskViewData
+  ChaneStatuss(story_TaskViewData) {
+    this.story_TaskViewData = story_TaskViewData
 
   }
   getBorderColor(taskStatus: string): string {
@@ -1426,53 +1406,47 @@ this.toggleButtons(2);
       case "Yet to Start":
         return 'red';
       case "Work In Progress":
-        return 'blueviolet'  
+        return 'blueviolet'
       default:
         return 'brown';
     }
   }
-  backtoTaskSummary()
-  {
+  backtoTaskSummary() {
     this.OnCancel.emit()
     this.OnCancel1.emit()
   }
-  updateTaskProgresss()
-  {
-    if (this.taskupdateForm.value.actual_start_date==='' || this.taskupdateForm.value.actual_start_date===null || this.taskupdateForm.value.actual_start_date===undefined  ) {
+  updateTaskProgresss() {
+    if (this.taskupdateForm.value.actual_start_date === '' || this.taskupdateForm.value.actual_start_date === null || this.taskupdateForm.value.actual_start_date === undefined) {
       this.toastr.error("Choose Actual start date");
-      return; 
+      return;
     }
-    if (this.taskupdateForm.value.actual_end_date==='' || this.taskupdateForm.value.actual_end_date===null || this.taskupdateForm.value.actual_end_date===undefined  ) {
+    if (this.taskupdateForm.value.actual_end_date === '' || this.taskupdateForm.value.actual_end_date === null || this.taskupdateForm.value.actual_end_date === undefined) {
       this.toastr.error("Choose Actual End date");
-      return; 
+      return;
     }
     this.ChaneStatus(2, this.story_TaskViewData);
     this.taskupdateForm.reset()
 
   }
 
-  updateTaskProgressHold()
-  {
+  updateTaskProgressHold() {
     this.ChaneStatus(2, this.story_TaskViewData);
   }
-  resetdate()
-{
-  this.taskupdateForm.get('actual_end_date').setValue("")
-}
-  SubmitbackToView()
-  {
+  resetdate() {
+    this.taskupdateForm.get('actual_end_date').setValue("")
+  }
+  SubmitbackToView() {
     this.taskedit = false;
     this.isTaskView = true;
-    let typeId=this.LocalShareService.taskid.value
+    let typeId = this.LocalShareService.taskid.value
 
     this.storyTaskView(typeId)
     this.closebutton.nativeElement.click();
 
 
   }
-  SubmitbackToSummary()
-  {
-    this.ChaneStatus(3, this.story_TaskViewData); 
+  SubmitbackToSummary() {
+    this.ChaneStatus(3, this.story_TaskViewData);
   }
 
   validateInput(dateHours: any) {
@@ -1487,56 +1461,53 @@ this.toggleButtons(2);
     }
   }
 
-  checkendDate(event)
-  {
+  checkendDate(event) {
     // let selectedDate =new Date(this.datepipe.transform(event, 'yyyy-MM-dd'));
     let endDater = new Date(this.datePipe.transform(this.endday, 'yyyy-MM-dd'))
     // let events = new Date(this.datePipe.transform(selectedDate, 'yyyy-MM-dd'))
     let events = new Date(this.datePipe.transform(event, 'yyyy-MM-dd'))
-   
-    if(events >  endDater)
-    {
+
+    if (events > endDater) {
       this.isShowRemarks = true;
     }
-    else{
+    else {
       this.isShowRemarks = false;
     }
   }
 
-  assignStoryTasks()
-  {
+  assignStoryTasks() {
     let sprintName = this.reassignForm.get('story').value;
-  let payload = {
-    "task_id": this.storyrId,
-    "story_id": sprintName.id
-  }
-  this.taskmanagerservice.addStorytoTask(payload)
-  .subscribe(res => {
-    console.log("story added to Task click", res)
-    if(res.status){
-      this.notify.success(res.message);
-      this.SpinnerService.hide();
-      // this.taskSummaryForm.reset();
-      let typeId=this.LocalShareService.taskid.value
-    this.storyTaskView(typeId)
-    this.reassignForm.reset();
-     } else {
-      this.notify.error(res.description)
-      this.SpinnerService.hide();
-      this.reassignForm.reset();
-      return false;
+    let payload = {
+      "task_id": this.storyrId,
+      "story_id": sprintName.id
     }
-  },
-  error => {
-    this.errorHandler.handleError(error);
-    this.SpinnerService.hide();
-    this.reassignForm.reset();
-  }
-  )
+    this.taskmanagerservice.addStorytoTask(payload)
+      .subscribe(res => {
+        console.log("story added to Task click", res)
+        if (res.status) {
+          this.notify.success(res.message);
+          this.SpinnerService.hide();
+          // this.taskSummaryForm.reset();
+          let typeId = this.LocalShareService.taskid.value
+          this.storyTaskView(typeId)
+          this.reassignForm.reset();
+        } else {
+          this.notify.error(res.description)
+          this.SpinnerService.hide();
+          this.reassignForm.reset();
+          return false;
+        }
+      },
+        error => {
+          this.errorHandler.handleError(error);
+          this.SpinnerService.hide();
+          this.reassignForm.reset();
+        }
+      )
   }
 
   getSprintDropDown() {
-    this.taskmanagerservice.getStoriesdd('',1).subscribe(res => {
+    this.taskmanagerservice.getStoriesdd('', 1).subscribe(res => {
       this.sprintlsts = res['data']
     })
 
@@ -1553,9 +1524,9 @@ this.toggleButtons(2);
         tap(() => {
           this.isLoading = true;
           console.log('inside tap')
-  
+
         }),
-        switchMap(value => this.taskmanagerservice.getStoriesdd(value,1)
+        switchMap(value => this.taskmanagerservice.getStoriesdd(value, 1)
           .pipe(
             finalize(() => {
               this.isLoading = false
@@ -1566,15 +1537,15 @@ this.toggleButtons(2);
       .subscribe((results: any[]) => {
         let datas = results["data"];
         this.sprintlsts = datas;
-  
-  
-  
-  
+
+
+
+
       })
-  
-  
-  
-  
+
+
+
+
   }
 
   public displaysprintteamclient(clt?: teamopClient): string | undefined {
@@ -1582,13 +1553,11 @@ this.toggleButtons(2);
     return clt ? clt.name : undefined;
   }
 
-  gotoStories()
-  {
+  gotoStories() {
     this.isgotostory = true;
     this.isTaskView = false;
   }
-  SubmitbackToStorySummary()
-  {
+  SubmitbackToStorySummary() {
     this.isgotostory = false;
     this.isTaskView = true;
     this.getSprintDropDown()
@@ -1603,36 +1572,35 @@ this.toggleButtons(2);
     }
   }
 
-  downloadfile(data)
-{
-  // this.taskmanagerservice.downloadIssueData(data.file[0].file_id).subscribe(res=>{
-  //   this.SpinnerService.hide()
-  //     let binaryData = [];
-  //     binaryData.push(res)
-  //     let downloadUrl = window.URL.createObjectURL(new Blob(binaryData));
-  //     let link = document.createElement('a');
-  //     link.href = downloadUrl;
-  //     link.download = 'new'+".pdf";
-  //     link.click();
-  //     }, error=>{
-  //       this.SpinnerService.hide()
-  //     })
-  this.taskmanagerservice.downloadIssueData(data.file_id).subscribe(
-    (res: any) => {
-      this.SpinnerService.hide();
+  downloadfile(data) {
+    // this.taskmanagerservice.downloadIssueData(data.file[0].file_id).subscribe(res=>{
+    //   this.SpinnerService.hide()
+    //     let binaryData = [];
+    //     binaryData.push(res)
+    //     let downloadUrl = window.URL.createObjectURL(new Blob(binaryData));
+    //     let link = document.createElement('a');
+    //     link.href = downloadUrl;
+    //     link.download = 'new'+".pdf";
+    //     link.click();
+    //     }, error=>{
+    //       this.SpinnerService.hide()
+    //     })
+    this.taskmanagerservice.downloadIssueData(data.file_id).subscribe(
+      (res: any) => {
+        this.SpinnerService.hide();
 
-      // Determine the content type (MIME type) from the response
-      // const contentType = res.type;
+        // Determine the content type (MIME type) from the response
+        // const contentType = res.type;
 
-      // Create a blob for the response
-      // const blob = new Blob([res], { type: contentType });
+        // Create a blob for the response
+        // const blob = new Blob([res], { type: contentType });
 
-      // Create a download link element
-      // const link = document.createElement('a');
-      // link.href = window.URL.createObjectURL(blob);
+        // Create a download link element
+        // const link = document.createElement('a');
+        // link.href = window.URL.createObjectURL(blob);
 
-      // Set the appropriate download filename based on the content type
-      let binaryData = [];
+        // Set the appropriate download filename based on the content type
+        let binaryData = [];
         binaryData.push(res)
         let downloadUrl = window.URL.createObjectURL(new Blob(binaryData));
         let link = document.createElement('a');
@@ -1640,97 +1608,94 @@ this.toggleButtons(2);
         link.download = data.file_name;
         link.click();
 
-      // Trigger the download by clicking the link
-      // link.click();
-    },
-    (error: any) => {
-      this.SpinnerService.hide();
-      console.error('Error:', error);
-    }
-  );
-    
+        // Trigger the download by clicking the link
+        // link.click();
+      },
+      (error: any) => {
+        this.SpinnerService.hide();
+        console.error('Error:', error);
+      }
+    );
+
   }
 
-  
+
   deleteComments(commentId) {
     this.taskmanagerservice.deleteComment(commentId).subscribe(
-      results=>{
+      results => {
         this.SpinnerService.show()
-        if(results.code)
-        {
+        if (results.code) {
           this.notification.showError(results.code);
           this.SpinnerService.hide();
         }
-        else
-        {
+        else {
           this.notification.showSuccess(results.message);
           this.getCommentHistorys();
           this.SpinnerService.hide();
-          return true 
+          return true
         }
-        }, error =>{
+      }, error => {
         this.SpinnerService.hide();
-        
-        
-        }) 
-        
+
+
+      })
+
     // You can make an API call to delete the comment here
   }
 
- attachmentDelete(file, index) {
+  attachmentDelete(file, index) {
 
-  this.reuploadfileArr.splice(index,1)
-  
-}
+    this.reuploadfileArr.splice(index, 1)
 
-deletetask_task(typeId) {
-  
-  if (confirm("Confirm?")) {
-  this.SpinnerService.show();
-  this.taskmanagerservice.deletetask(typeId)
-      .subscribe(res => {
-       
-        if(res.code){
-          this.notification.showError(res.description)
-        }
-        else{
-        
-          this.notification.showSuccess(res.message)
-       this.backtoTaskSummary()
-         
-        }
-        this.SpinnerService.hide()
-     
-      }
-      
-      
-      )}
-   
-   
-}
-opentask()
-{
-  if(this.startsDate === 'None' || this.startsDate === null || this.startsDate === undefined || this.startsDate === '') {
-  this.notify.error("Please fill the Planned Start Date and End Date in Task Edit to continue")
-}
-}
-updateTaskProgressOne()
-{
-  if (this.taskupdateForm.value.actual_end_date==='' || this.taskupdateForm.value.actual_end_date===null || this.taskupdateForm.value.actual_end_date===undefined  ) {
-    this.toastr.error("Choose Actual end date");
-    return; 
   }
-  this.ChaneStatus(6, this.story_TaskViewData);
-  this.taskupdateForm.reset()
 
-}
+  deletetask_task(typeId) {
 
-getLastFullName(data): string | undefined {
-  if (data.length === 0) {
-    return undefined; 
-  } else {
-    return data[data.length - 1].full_name; 
+    if (confirm("Confirm?")) {
+      this.SpinnerService.show();
+      this.taskmanagerservice.deletetask(typeId)
+        .subscribe(res => {
+
+          if (res.code) {
+            this.notification.showError(res.description)
+          }
+          else {
+
+            this.notification.showSuccess(res.message)
+            this.backtoTaskSummary()
+
+          }
+          this.SpinnerService.hide()
+
+        }
+
+
+        )
+    }
+
+
   }
-}
+  opentask() {
+    if (this.startsDate === 'None' || this.startsDate === null || this.startsDate === undefined || this.startsDate === '') {
+      this.notify.error("Please fill the Planned Start Date and End Date in Task Edit to continue")
+    }
+  }
+  updateTaskProgressOne() {
+    if (this.taskupdateForm.value.actual_end_date === '' || this.taskupdateForm.value.actual_end_date === null || this.taskupdateForm.value.actual_end_date === undefined) {
+      this.toastr.error("Choose Actual end date");
+      return;
+    }
+    this.ChaneStatus(6, this.story_TaskViewData);
+    this.taskupdateForm.reset()
+
+  }
+
+  getLastFullName(data): string | undefined {
+    if (data.length === 0) {
+      return undefined;
+    } else {
+      return data[data.length - 1].full_name;
+    }
+  }
 
 }
