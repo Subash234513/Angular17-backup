@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit,ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinnerService } from "ngx-spinner";
@@ -118,6 +118,8 @@ export class MeetingComponent implements OnInit {
   editid: any;
   resechduleform: FormGroup;
   // meetingnote: any;
+  startDate = new FormControl();
+  endDate = new FormControl();
 
   constructor( private fb: FormBuilder, private router: Router, private toastr: ToastrService,
     private SpinnerService: NgxSpinnerService, private errorHandler: ErrorHandlingServiceService,

@@ -20,6 +20,7 @@ import {
   MatSnackBarConfig,
   MatSnackBarRef,
 } from '@angular/material/snack-bar';
+// import {MatSlider } from '@angular/material/slider';
 
 const moment = _rollupMoment || _moment;
 export const MY_FORMATS = {
@@ -107,7 +108,8 @@ export class NewadvanceComponent implements OnInit {
     private SpinnerService: NgxSpinnerService,
     public datepipe: DatePipe,
     private sharedservice: SharedService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    // private sliders : MatSlider
 
   ) {
 
@@ -1374,8 +1376,8 @@ export class NewadvanceComponent implements OnInit {
           : this.pagination;
       });
   }
-  MatSliderFunc(data){
-    console.log(data)
+  MatSliderFunc(event : any){
+    console.log(event)
     console.log(this.loanTenure)
     console.log(this.Loan.value)
   }

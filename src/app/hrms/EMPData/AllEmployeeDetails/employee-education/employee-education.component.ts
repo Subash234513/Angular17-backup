@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
-import { Location } from '@angular/common';
+import { DatePipe, Location } from '@angular/common';
 import { MatDatepicker } from '@angular/material/datepicker';
 import * as imp from '../../../../AppAutoEngine/import-services/CommonimportFiles'
 import * as _moment from 'moment';
@@ -92,7 +92,7 @@ export class EmployeeEducationComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder, private http: HttpClient,
     private hrmsService: MasterHrmsService, private activateroute: ActivatedRoute,
     public dialog: MatDialog, private modalService: MasterHrmsService, private spinner: NgxSpinnerService,
-    private toastr: ToastrService, private fb: FormBuilder, private router: Router,
+    private toastr: ToastrService, private fb: FormBuilder, private router: Router, private datePipe: DatePipe,
     private location: Location, private renderer: Renderer2) {
 
     this.educationForm = this.fb.group({
@@ -107,7 +107,7 @@ export class EmployeeEducationComponent implements OnInit {
         ]],
       stream: [{ value: '', disabled: true }],
       city: [''],
-      monthyear: [''],
+      monthyear: [moment()],
       percentage: ['', [this.percentageValidator()]],
     });
   }
@@ -164,7 +164,7 @@ export class EmployeeEducationComponent implements OnInit {
     ctrlValue.setMonth(monthDate.getMonth());
     this.monyear.setValue(ctrlValue);
     datepicker.close();
-    this.LeaveTrackerReportsearchForm.patchValue({
+    this.educationForm.patchValue({
       monthyear: this.monyear.value
     })
   }
@@ -490,8 +490,8 @@ export class EmployeeEducationComponent implements OnInit {
     if (this.educationForm.valid ||
       (this.educationForm.get('stream').value === '' && this.educationForm.get('percentage').value === '')) {
       const monthYearValue = this.educationForm.get('monthyear').value;
-      this.normalDateFormat = monthYearValue._d;
-      this.dateString = this.normalDateFormat.toString();
+      // this.normalDateFormat = monthYearValue._d;
+      // this.dateString = this.normalDateFormat.toString();
 
       const formIntoJson = {
         inst_name: formValue.inst_name || null,
@@ -744,13 +744,15 @@ export class EmployeeEducationComponent implements OnInit {
 
     const formValue = this.educationForm.value;
     const monthYearValue = this.educationForm.get('monthyear').value;
-    this.normalDateFormat = monthYearValue._d;
-    this.dateString = this.normalDateFormat.toString();
-
+    let monthyeardata: any = this.datePipe.transform(formValue.monthyear, 'yyyy-MM')
+    let splitdata = monthyeardata.split('-')
+    let month = splitdata[1]
+    let year = splitdata[0]
+    
     let data = {
       inst_name: formValue.inst_name || null,
-      passing_year: monthYearValue._i.year || null,
-      passing_month: monthYearValue._i.month + 1 || null,
+      passing_year: year || null,
+      passing_month: month + 1 || null,
       percentage: formValue.percentage || null,
       city: formValue.city.name || null,
       title: formValue.title.name || null,
