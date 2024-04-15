@@ -73,8 +73,8 @@
                     story_TaskViewData?.task_status_id === 2 ||
                     story_TaskViewData?.task_status_id === 5
                   ">
-                <button class="btn" (click)="ChaneStatuss(story_TaskViewData)" data-bs-target="#returnModal"
-                data-bs-toggle="modal">
+                <button class="btn" (click)="ChaneStatuss(story_TaskViewData)" 
+              (click)="ChaneStatus(6, story_TaskViewData)">
                 <!-- (click)="ChaneStatus(6, story_TaskViewData)"> -->
                   Return</button><br />
               </ng-container>
