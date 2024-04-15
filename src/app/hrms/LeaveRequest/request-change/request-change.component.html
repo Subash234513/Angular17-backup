@@ -114,16 +114,16 @@
                             </td>
                             <td class="cursor">
                                 <div *ngIf="type?.approve_status?.text == 'Pending';else ApproveStatus"> <span
-                                        class="badge badge-pill badge-secondary">Pending</span>
+                                        class="badge badge-pill badge bg-secondary">Pending</span>
                                 </div>
                                 <ng-template #ApproveStatus>
                                     <div *ngIf="type?.approve_status?.text == 'Approved';else RejectStatus">
-                                        <span class="badge badge-pill badge-success">Approved</span>
+                                        <span class="badge badge-pill badge bg-success">Approved</span>
                                     </div>
                                 </ng-template>
                                 <ng-template #RejectStatus>
                                     <div *ngIf="type?.approve_status?.text == 'Rejected'">
-                                        <span class="badge badge-pill badge-danger">Rejected</span>
+                                        <span class="badge badge-pill badge bg-danger">Rejected</span>
                                     </div>
                                 </ng-template>
                             </td>
@@ -174,7 +174,7 @@
                 <h3>No Records Found.. </h3>
             </div>
             <ng-template #reqchange>
-                <div class="col-sm-12" style="font-size: small;text-align: right; margin-bottom: 50px;">
+                <!-- <div class="col-sm-12" style="font-size: small;text-align: right; margin-bottom: 50px;">
                     <button mat-icon-button [disabled]="RequestObjects?.has_previousRequest === false" color="primary"
                         (click)="RequestSearch('previous')">
                         <mat-icon>arrow_back</mat-icon>
@@ -184,7 +184,21 @@
                         (click)="RequestSearch('next')">
                         <mat-icon>arrow_forward</mat-icon>
                     </button>
-                </div>
+                </div> -->
+                <div class="cus-taskPageBtnsDiv">
+ 
+                    <button mat-icon-button [disabled]="RequestObjects?.has_previousRequest === false" (click)="RequestSearch('previous')">
+                      <mat-icon>arrow_backward</mat-icon>
+                    </button>
+                    <div class="cus-pageNumbers">
+              
+                      <p class="cus-btnActive">{{RequestObjects?.presentpageRequest}}</p>
+            
+                    </div>
+                    <button mat-icon-button [disabled]="RequestObjects?.has_nextRequest === false" (click)="RequestSearch('next')">
+                      <mat-icon>arrow_forward</mat-icon>
+                    </button>
+                  </div>
             </ng-template>
 
 
