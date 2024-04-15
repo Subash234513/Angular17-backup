@@ -889,10 +889,10 @@ this.toggleButtons(2);
        )
       }
        
-      //  if(this.currentDates < this.sprstartdate)
-      //  {
-      //   this.isShowRemarks  = true;
-      //  }
+       if(this.currentDates < this.sprstartdate)
+       {
+        this.isShowRemarks  = true;
+       }
 
       }, (error) => {
         this.errorHandler.handleError(error);
@@ -1487,11 +1487,12 @@ this.toggleButtons(2);
     }
   }
 
-  checkendDate(event : MatDatepickerInputEvent<any>)
+  checkendDate(event)
   {
-    let selectedDate:Date | null=event.value
+    // let selectedDate =new Date(this.datepipe.transform(event, 'yyyy-MM-dd'));
     let endDater = new Date(this.datePipe.transform(this.endday, 'yyyy-MM-dd'))
-    let events = new Date(this.datePipe.transform(selectedDate, 'yyyy-MM-dd'))
+    // let events = new Date(this.datePipe.transform(selectedDate, 'yyyy-MM-dd'))
+    let events = new Date(this.datePipe.transform(event, 'yyyy-MM-dd'))
    
     if(events >  endDater)
     {
