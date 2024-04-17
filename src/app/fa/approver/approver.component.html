@@ -8,7 +8,7 @@
             <mat-form-field class="example-full-width" style="margin-left: 25px;">
                 <mat-label>Branch</mat-label>
                 <input class="toolbar-search" type="text" matInput autocomplete="off" matInput [matAutocomplete]="checkerbranch" [hidden]="flagSearch" #branchidInput formControlName="branch" style="width:250px">
-                <mat-placeholder>Branch</mat-placeholder>
+                
                 <mat-autocomplete #checkerbranch="matAutocomplete" #branch (opened)="autocompleteScroll_branch()">
                     <mat-option *ngIf="isLoading">Loading..</mat-option>
                     <ng-container>
@@ -27,7 +27,7 @@
            <mat-form-field class="example-full-width" style="margin-left: 25px;">
                <mat-label>Branch DO</mat-label>
                <input class="toolbar-search" type="text" matInput autocomplete="off" [hidden]='doBranch' matInput [matAutocomplete]="checkerbranchdo" #branchdoidInput formControlName="branch_do" style="width:250px">
-               <mat-placeholder>Branch DO</mat-placeholder>
+            
                <mat-autocomplete #checkerbranchdo="matAutocomplete" #branch_do (opened)="autocompleteScroll_branchdo()">
                    <mat-option *ngIf="isLoading">Loading..</mat-option>
                    <ng-container>
