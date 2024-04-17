@@ -43,6 +43,8 @@ export class BulkuploadComponent implements OnInit {
   filedata: any;
   paycomponent_earn: any;
   paycomponent_deduct: any;
+  currentFile?: any;
+  fileName = 'Select File';
 
   constructor(private fb: FormBuilder, private uploadservice: PayingempService, private notification: NotificationService, public datepipe: DatePipe, private SpinnerService: NgxSpinnerService) { 
     this.fromDateControl.setValue(this.currentDate);
@@ -286,11 +288,14 @@ this.SpinnerService.hide();
       })
   }
 
-  fileChange(file, files:FileList) {
-    this.labelImport.nativeElement.innerText = Array.from(files)
-    .map(f => f.name)
-    .join(', ');
-    this.images = <File>file.target.files[0];
+  fileChange(event, files:FileList) {
+    const file: File = event.target.files[0];
+    this.currentFile = file;
+    this.fileName = this.currentFile.name;
+    // this.labelImport.nativeElement.innerText = Array.from(files)
+    // .map(f => f.name)
+    // .join(', ');
+    this.images = <File>event.target.files[0];
   }
 
   uploadDocument() {

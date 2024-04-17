@@ -45,6 +45,9 @@ export class LeaveRequestCreateComponent implements OnInit {
     MinuteTimeDifference: 0
   }
 
+  uploaded: boolean = false;
+  inputGroupFile01: any;
+
   ngOnInit(): void {
 
     let currentDate = new Date()

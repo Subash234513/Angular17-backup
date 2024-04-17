@@ -121,6 +121,20 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    let loginData = this.loginForm.value;
+    if (loginData.entity === undefined || loginData.entity === null || loginData.entity === '') {
+      this.notification.showError("Please select Entity");
+      return false;
+    }
+    if (loginData.username === undefined || loginData.username === null || loginData.username === '') {
+      this.notification.showError("Please enter User Name");
+      return false;
+    }
+    if (loginData.password === undefined || loginData.password === null || loginData.password === '') {
+      this.notification.showError("Please enter Password");
+      return false;
+    }
+
     localStorage.removeItem("memosearch_data")
     localStorage.removeItem("ls_approvaltypeiom");
     localStorage.removeItem("ls_approvaltype");
@@ -129,8 +143,9 @@ export class LoginComponent implements OnInit {
     this.dataService.login(this.loginForm.value, this.loginForm.value.entity)
       .subscribe(datas => {
         this.session_data = datas;
+       
         if(datas.code == 403 && datas.description == "Invalid user account" ){
-          this.notification.showWarning("No User Found, Invald Credentials")
+          this.notification.showWarning("No User Found, Invalid Credentials")
           return false 
       }
         if (datas.id) {

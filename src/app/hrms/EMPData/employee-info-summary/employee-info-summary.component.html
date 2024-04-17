@@ -226,11 +226,11 @@
                     <td>{{emp?.costcentre?.name}}</td>  
                     <td><span class="badge" 
 
-                        [ngClass]="emp.noticeperiod?.text == 'Working' ? 'badge-success' : 
-                        emp.noticeperiod?.text == 'Service Noticeperiod' ? 'badge-warning' : 
-                        emp.noticeperiod?.text == 'Relieved' ? 'badge-danger' : 
-                        emp.noticeperiod?.text == 'Designation Submit' ? 'badge-info' : 
-                        emp.noticeperiod?.text == 'Onboard' ? 'badge-primary' : '-'    ">
+                        [ngClass]="emp.noticeperiod?.text == 'Working' ? 'badge bg-success' : 
+                        emp.noticeperiod?.text == 'Service Noticeperiod' ? 'badge bg-warning' : 
+                        emp.noticeperiod?.text == 'Relieved' ? 'badge bg-danger' : 
+                        emp.noticeperiod?.text == 'Designation Submit' ? 'badge bg-info' : 
+                        emp.noticeperiod?.text == 'Onboard' ? 'badge bg-primary' : '-'    ">
 
 
                     {{emp?.noticeperiod?.text}}</span></td>

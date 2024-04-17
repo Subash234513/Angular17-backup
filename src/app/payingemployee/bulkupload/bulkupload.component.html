@@ -18,7 +18,7 @@
       </div>
     </div>
   </mat-card>
-  
+
 
   <div *ngIf="selectedOption === 2">
     <div class="maindiv">
@@ -34,18 +34,32 @@
         <div class="card cards">
           <div class="card-body">
             <form novalidate [formGroup]="uploadForms">
-              <div class="input-group mb-3">
-                <div class="custom-file">
+              <div >
+                <!-- <div class="custom-file">
                   <input type="file" class="custom-file-input" formControlName="files" id="importFile"
                     (change)="fileChange($event, $event.target.files)">
-                  <!-- <label class="custom-file-label" #labelImport for="importFile">Choose file</label> -->
-                </div>
+                  <label class="custom-file-label" #labelImport for="importFile">Choose file</label>
+                </div> -->
+                <mat-form-field>
+                  <div>
+                    <mat-toolbar>
+                      <input matInput [value]="fileName" />
+
+                      <!-- <button mat-flat-button color="primary" [disabled]="!currentFile" (click)="uploadDocuments()">
+                        Upload
+                      </button> -->
+                    </mat-toolbar>
+
+                    <input type="file" id="fileInput" (change)="fileChange($event, $event.target.files)" name="fileInput" />
+                  </div>
+                </mat-form-field>
               </div>
               <div class="form-group">
-                <button class="btn btn-warning" type="button" (click)="uploadDocuments()">
+                <button class="btn btn-warning" type="button" (click)="uploadDocuments()"  [disabled]="!currentFile">
                   <i class="fas fa-file-import"></i> Upload
                 </button>
-                <button style="margin-left: 47%;" class="btn btn-outline-info" type="button" (click)="downloadTemplate()">
+                <button style="margin-left: 47%;" class="btn btn-outline-info" type="button"
+                  (click)="downloadTemplate()">
                   Download Template
                 </button>
               </div>
@@ -59,7 +73,7 @@
   <div *ngIf="selectedOption === 3">
     <div class="maindiv">
       <div class="row">
-      <h2>Additional Allowance</h2>
+        <h2>Additional Allowance</h2>
       </div>
       <div *ngIf="isShowSummarys">
         <form [formGroup]="empSearchForms" class="formposition">
@@ -95,7 +109,8 @@
             <div class="col-md-3">
               <mat-label>End Date</mat-label><br>
               <mat-form-field>
-                <input matInput [matDatepicker]="picker22" formControlName="to_date" [min]="empSearchForms.get('from_date').value">
+                <input matInput [matDatepicker]="picker22" formControlName="to_date"
+                  [min]="empSearchForms.get('from_date').value">
                 <mat-datepicker-toggle matSuffix [for]="picker22"></mat-datepicker-toggle>
                 <mat-datepicker #picker22></mat-datepicker>
               </mat-form-field>
@@ -103,14 +118,11 @@
             <div class="col-md-3" style="    margin-left: -2%;
           margin-top: 10px;">
               <div>
-                <button mat-stroked-button type="button"class=SearchButton
-                  aria-label="Search" (click)="getSearchs()">
+                <button mat-stroked-button type="button" class=SearchButton aria-label="Search" (click)="getSearchs()">
                   <mat-icon>search</mat-icon>
                 </button>
-                <button mat-stroked-button type="button" class="ClearButton" 
-                  (click)=clearForm();>Clear</button>
-                  <button type="button" mat-fab class="AddButton"
-                  (click)="addNewAllowance()">
+                <button mat-stroked-button type="button" class="ClearButton" (click)=clearForm();>Clear</button>
+                <button type="button" mat-fab class="AddButton" (click)="addNewAllowance()">
                   <mat-icon matTooltip="Add" style="color: black;">add</mat-icon>
                 </button>
               </div>
@@ -119,7 +131,7 @@
         </form>
         <div id="summary" *ngIf="isShowTables">
           <div class="table-responsive">
-            <table class="table table-bordered" fixed-header >
+            <table class="table table-bordered" fixed-header>
               <thead class="">
                 <tr>
                   <th class="text-center">S.no</th>
@@ -136,7 +148,8 @@
               <tbody>
                 <tr *ngFor="let sum of Summarys; index as i">
                   <td class="text-center">{{(pagination.index-1)*limit+i+1}}</td>
-                  <td class="text-center"> {{ (sum?.Employee_info?.Employeecode != "") ? sum?.Employee_info?.Employeecode : "-" }}
+                  <td class="text-center"> {{ (sum?.Employee_info?.Employeecode != "") ?
+                    sum?.Employee_info?.Employeecode : "-" }}
                   </td>
                   <td class="summarytextstyle text-center">{{sum?.Employee_info?.Employeename}}</td>
                   <td class="text-center">{{sum?.active_date | date:'dd-MMM-yyyy'}}</td>
@@ -152,7 +165,7 @@
                     <!-- <i class="fa fa-trash " style=" font-size:30px"></i> -->
                     <!-- <img (click)="deleteAllowance(sum)" class="delete" src="../../../assets/images/trash-can-regular.svg" alt=""> -->
                     <!-- src\assets\images\trash-can-regular.svg -->
-                  </td> 
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -184,7 +197,7 @@
           </table>
 
           <div class="table-responsive" style="width:95%;margin-top: 1%;">
-            <table class="table " fixed-header >
+            <table class="table " fixed-header>
               <thead class="" style="text-align: left;">
                 <tr>
                   <th>S.No</th>
@@ -206,7 +219,7 @@
                     <mat-form-field (click)="functionalHeade()">
                       <mat-label>Employee</mat-label>
                       <input #fnInput matInput formControlName="functional_head" placeholder="Select Employee"
-                        [matAutocomplete]="fnd"  (keyup)="employeecomponent_search($event.target.value)"
+                        [matAutocomplete]="fnd" (keyup)="employeecomponent_search($event.target.value)"
                         (keypress)="validation($event)">
                       <mat-icon matSuffix class="maticonsize">unfold_more</mat-icon>
                       <mat-autocomplete #fnd="matAutocomplete" [displayWith]="displayFnFunHea"
@@ -243,16 +256,17 @@
                     <mat-form-field>
                       <mat-label>Active Date</mat-label>
                       <input matInput [matDatepicker]="picker1" formControlName="fromDate">
-                      <mat-datepicker-toggle matSuffix [for]="picker1" ></mat-datepicker-toggle>
+                      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                       <mat-datepicker #picker1></mat-datepicker>
                     </mat-form-field>
                   </td>
                   <td>
                     <mat-form-field (click)="ActiveDate(i)">
                       <mat-label>End Date</mat-label>
-                      <input matInput [matDatepicker]="picker" formControlName="toDate" [min]="emp_paysrtuctureform.get('employeepay_detail').value[i]?.fromDate">
+                      <input matInput [matDatepicker]="picker" formControlName="toDate"
+                        [min]="emp_paysrtuctureform.get('employeepay_detail').value[i]?.fromDate">
                       <!-- [min]="(emp_paysrtuctureform.get('employeepay_detail').get(i) as FormGroup).get('fromDate').value" -->
-                      <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                       <mat-datepicker #picker (opened)="ActiveDate(i)"></mat-datepicker>
                     </mat-form-field>
                   </td>
@@ -264,9 +278,10 @@
                   </td>
                   <td>
                     <!-- <button mat-icon-button type="button" (click)="deletepay(i);deleteAllowance(section);"> -->
-                      <!-- <i  aria-hidden="true"></i> -->
-                      <mat-icon style="    margin-top: 12px;
-                      margin-left: 8px;" (click)="deletepay(i);deleteAllowance(section);"  aria-hidden="true">delete</mat-icon>
+                    <!-- <i  aria-hidden="true"></i> -->
+                    <mat-icon style="    margin-top: 12px;
+                      margin-left: 8px;" (click)="deletepay(i);deleteAllowance(section);"
+                      aria-hidden="true">delete</mat-icon>
                     <!-- </button> -->
                   </td>
                 </tr>
@@ -291,7 +306,7 @@
           </table>
 
           <div class="table-responsive" style="width:95%;margin-top: 1%;">
-            <table class="table " fixed-header >
+            <table class="table " fixed-header>
               <thead class="" style="text-align: left;">
                 <tr>
                   <th>Employee</th>
@@ -334,7 +349,8 @@
                   <td>
                     <mat-form-field>
                       <mat-label>End Date</mat-label>
-                      <input matInput [matDatepicker]="picker66" formControlName="end_date" [min]="editForms.get('active_date').value">
+                      <input matInput [matDatepicker]="picker66" formControlName="end_date"
+                        [min]="editForms.get('active_date').value">
                       <mat-datepicker-toggle matSuffix [for]="picker66"></mat-datepicker-toggle>
                       <mat-datepicker #picker66></mat-datepicker>
                     </mat-form-field>
@@ -387,7 +403,7 @@
                 </ng-container>
                 <mat-option *ngIf="!functionalHeadList || !functionalHeadList.length">
                   NO RECORDS FOUND
-              </mat-option>
+                </mat-option>
               </mat-autocomplete>
             </mat-form-field>
           </div>
@@ -402,26 +418,25 @@
           <div class="col-md-3">
             <mat-label>End Date</mat-label><br>
             <mat-form-field>
-              <input matInput [matDatepicker]="picker22" formControlName="to_date" [min]="empDSearchForms.get('from_date').value">
+              <input matInput [matDatepicker]="picker22" formControlName="to_date"
+                [min]="empDSearchForms.get('from_date').value">
               <mat-datepicker-toggle matSuffix [for]="picker22"></mat-datepicker-toggle>
               <mat-datepicker #picker22></mat-datepicker>
             </mat-form-field>
           </div>
           <div class="col-md-3 pr-0" style="    margin-left: -5%;
           margin-top: 8px;">
-            <div style="    margin-left: 6%;"> 
-              <button mat-stroked-button type="button" class="SearchButton"
-                aria-label="Search" (click)="getDSearchs()">
+            <div style="    margin-left: 6%;">
+              <button mat-stroked-button type="button" class="SearchButton" aria-label="Search" (click)="getDSearchs()">
                 <mat-icon>search</mat-icon>
               </button>
-              <button mat-stroked-button type="button" class="ClearButton"
-                (click)=clearDForm();>Clear</button>
-              <button type="button" mat-fab class="AddButton"
-                (click)="addNewDeduction()">
+              <button mat-stroked-button type="button" class="ClearButton" (click)=clearDForm();>Clear</button>
+              <button type="button" mat-fab class="AddButton" (click)="addNewDeduction()">
                 <mat-icon matTooltip="Add" style="color: black ;">add</mat-icon>
               </button>
               <div class="uploadIcon">
-                <i class="fa-solid fa-file-csv fa-2xl fa-bounce" style="color:green" data-bs-toggle="modal" data-bs-target="#UploadScreen" matTooltip="Excel Upload"></i>
+                <i class="fa-solid fa-file-csv fa-2xl fa-bounce" style="color:green" data-bs-toggle="modal"
+                  data-bs-target="#UploadScreen" matTooltip="Excel Upload"></i>
               </div>
             </div>
           </div>
@@ -429,7 +444,7 @@
       </form>
       <div id="summary" *ngIf="isShowTables">
         <div class="table-responsive">
-          <table class="table table-bordered" fixed-header >
+          <table class="table table-bordered" fixed-header>
             <thead class="">
               <tr>
                 <th class="text-center">S.no</th>
@@ -446,7 +461,8 @@
             <tbody>
               <tr *ngFor="let sum of DSummary; index as i">
                 <td class="text-center">{{(pagination.index-1)*limit+i+1}}</td>
-                <td class="text-center"> {{ (sum?.Employee_info?.Employeecode != "") ? sum?.Employee_info?.Employeecode : "-" }}
+                <td class="text-center"> {{ (sum?.Employee_info?.Employeecode != "") ? sum?.Employee_info?.Employeecode
+                  : "-" }}
                 </td>
                 <td class="summarytextstyle text-center">{{sum?.Employee_info?.Employeename}}</td>
                 <td class="text-center">{{sum?.active_date | date:'dd-MMM-yyyy'}}</td>
@@ -485,25 +501,25 @@
       <form [formGroup]="deductsrtuctureform" autocomplete="off" (ngSubmit)="DeductFormsubmission()">
         <!-- <table>
           <tr> -->
-            <div class="AdditionalDeductionNav">
-              <div style="font-size: large;">Custom Deductions</div>
-            <div (click)="addSectionded()">
-              <mat-icon matTooltip="Add" style="color:sandybrown;">add_circle_outline</mat-icon>
-            </div>
-            <!-- <div class="uploadIcon">
+        <div class="AdditionalDeductionNav">
+          <div style="font-size: large;">Custom Deductions</div>
+          <div (click)="addSectionded()">
+            <mat-icon matTooltip="Add" style="color:sandybrown;">add_circle_outline</mat-icon>
+          </div>
+          <!-- <div class="uploadIcon">
                <i class="fa-solid fa-file-csv fa-2xl" data-bs-toggle="modal" data-bs-target="#UploadScreen"></i>
             </div> -->
-            <!-- <div class="DownloadButton">
+          <!-- <div class="DownloadButton">
               <button class="btn btn-info">Download Template</button>
             </div> -->
-            </div>
-            
-          <!-- </tr>
+        </div>
+
+        <!-- </tr>
         </table> -->
-       
+
 
         <div class="table-responsive" style="width:95%;margin-top: 1%;">
-          <table class="table " fixed-header >
+          <table class="table " fixed-header>
             <thead class="" style="text-align: left;">
               <tr>
                 <th>S.No</th>
@@ -566,7 +582,8 @@
                 <td>
                   <mat-form-field>
                     <mat-label>To Date</mat-label>
-                    <input matInput [matDatepicker]="picker3" formControlName="toDate" [min]="deductsrtuctureform.get('employeepay_detail').value[i].fromDate">
+                    <input matInput [matDatepicker]="picker3" formControlName="toDate"
+                      [min]="deductsrtuctureform.get('employeepay_detail').value[i].fromDate">
                     <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
                     <mat-datepicker #picker3></mat-datepicker>
                   </mat-form-field>
@@ -579,9 +596,9 @@
                 </td>
                 <td>
                   <!-- <button mat-icon-button type="button" (click)="deletepayded(i);"> -->
-                    <!-- <i class="fa fa-trash-o" aria-hidden="true"></i> -->
-                    <mat-icon  style="margin-top: 12px;
-                    margin-left: 8px;"(click)="deletepayded(i);">delete</mat-icon>
+                  <!-- <i class="fa fa-trash-o" aria-hidden="true"></i> -->
+                  <mat-icon style="margin-top: 12px;
+                    margin-left: 8px;" (click)="deletepayded(i);">delete</mat-icon>
                   <!-- </button> -->
                 </td>
               </tr>
@@ -610,7 +627,7 @@
         </table>
 
         <div class="table-responsive" style="width:95%;margin-top: 1%;">
-          <table class="table " fixed-header >
+          <table class="table " fixed-header>
             <thead class="" style="text-align: left;">
               <tr>
                 <th>Employee</th>
@@ -653,7 +670,8 @@
                 <td>
                   <mat-form-field>
                     <mat-label>End Date</mat-label>
-                    <input matInput [matDatepicker]="picker66" formControlName="end_date" [min]="editFormD.get('active_date').value">
+                    <input matInput [matDatepicker]="picker66" formControlName="end_date"
+                      [min]="editFormD.get('active_date').value">
                     <mat-datepicker-toggle matSuffix [for]="picker66"></mat-datepicker-toggle>
                     <mat-datepicker #picker66></mat-datepicker>
                   </mat-form-field>
@@ -705,7 +723,7 @@
                 </ng-container>
                 <mat-option *ngIf="!functionalHeadList || !functionalHeadList.length">
                   NO RECORDS FOUND
-              </mat-option>
+                </mat-option>
               </mat-autocomplete>
             </mat-form-field>
           </div>
@@ -720,7 +738,8 @@
           <div class="col-md-3">
             <mat-label>To Date</mat-label><br>
             <mat-form-field>
-              <input matInput [matDatepicker]="picker22" formControlName="to_date" [min]="empSearchForm.get('from_date').value">
+              <input matInput [matDatepicker]="picker22" formControlName="to_date"
+                [min]="empSearchForm.get('from_date').value">
               <mat-datepicker-toggle matSuffix [for]="picker22"></mat-datepicker-toggle>
               <mat-datepicker #picker22></mat-datepicker>
             </mat-form-field>
@@ -728,14 +747,11 @@
           <div class="col-md-3" style="    margin-left: -2%;
           margin-top: 8px;">
             <div>
-              <button mat-stroked-button type="button" class="SearchButton"
-                aria-label="Search" (click)="getSearch()">
+              <button mat-stroked-button type="button" class="SearchButton" aria-label="Search" (click)="getSearch()">
                 <mat-icon>search</mat-icon>
               </button>
-              <button mat-stroked-button type="button" class="ClearButton"
-                (click)=clearForms();>Clear</button>
-              <button type="button" mat-fab class="AddButton"
-                (click)="getAddScreen()">
+              <button mat-stroked-button type="button" class="ClearButton" (click)=clearForms();>Clear</button>
+              <button type="button" mat-fab class="AddButton" (click)="getAddScreen()">
                 <mat-icon matTooltip="Add" style="color: black;">add</mat-icon>
               </button>
             </div>
@@ -744,7 +760,7 @@
       </form>
       <div id="summary" *ngIf="isShowTable">
         <div class="table-responsive">
-          <table class="table table-bordered" fixed-header >
+          <table class="table table-bordered" fixed-header>
             <thead class="">
               <tr>
                 <th class="text-center">S.no</th>
@@ -762,7 +778,8 @@
             <tbody>
               <tr *ngFor="let sum of Summary; index as i">
                 <td class="text-center">{{i+1}}</td>
-                <td class="text-center"> {{ (sum?.Employee_info?.Employeecode != "") ? sum?.Employee_info?.Employeecode : "-" }}
+                <td class="text-center"> {{ (sum?.Employee_info?.Employeecode != "") ? sum?.Employee_info?.Employeecode
+                  : "-" }}
                 </td>
                 <td class="summarytextstyle text-center">{{sum?.Employee_info?.Employeename}}</td>
                 <td class="text-center">{{sum?.from_date | date:'dd-MMM-yyyy'}}</td>
@@ -808,7 +825,7 @@
         </table>
 
         <div class="table-responsive" style="width:95%;margin-top: 1%;">
-          <table class="table" fixed-header >
+          <table class="table" fixed-header>
             <thead class="" style="text-align: left;">
               <tr>
                 <th>S.No</th>
@@ -856,7 +873,8 @@
                 <td>
                   <mat-form-field>
                     <mat-label>To Date</mat-label>
-                    <input matInput [matDatepicker]="picker6" formControlName="to_date" [min]="paystatusform.get('paydetail').value[i].from_date">
+                    <input matInput [matDatepicker]="picker6" formControlName="to_date"
+                      [min]="paystatusform.get('paydetail').value[i].from_date">
                     <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
                     <mat-datepicker #picker6></mat-datepicker>
                   </mat-form-field>
@@ -880,8 +898,8 @@
                 </td>
                 <td>
                   <!-- <button mat-icon-button type="button" (click)="deletepays(i);"> -->
-                    <!-- <i class="fa fa-trash-o" aria-hidden="true"></i> -->
-                    <mat-icon style="margin-top: 12px;
+                  <!-- <i class="fa fa-trash-o" aria-hidden="true"></i> -->
+                  <mat-icon style="margin-top: 12px;
                     margin-left: 8px;" (click)="deletepays(i);">delete</mat-icon>
                   <!-- </button> -->
                 </td>
@@ -911,7 +929,7 @@
         </table>
 
         <div class="table-responsive" style="width:95%;margin-top: 1%;">
-          <table class="table " fixed-header >
+          <table class="table " fixed-header>
             <thead class="" style="text-align: left;">
               <tr>
                 <th>Employee</th>
@@ -943,7 +961,8 @@
                 <td>
                   <mat-form-field>
                     <mat-label>To Date</mat-label>
-                    <input matInput [matDatepicker]="picker6" formControlName="to_date" [min]="editForm.get('from_date').value">
+                    <input matInput [matDatepicker]="picker6" formControlName="to_date"
+                      [min]="editForm.get('from_date').value">
                     <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
                     <mat-datepicker #picker6></mat-datepicker>
                   </mat-form-field>
@@ -1010,10 +1029,10 @@
                   <button class="btn btn-warning" type="button" (click)="Upload()">
                     <i class="fas fa-file-import"></i> Upload
                   </button>
-                  <button class="btn btn-outline-info" type="button"  style="margin-left: 4%;" data-bs-dismiss="modal">
+                  <button class="btn btn-outline-info" type="button" style="margin-left: 4%;" data-bs-dismiss="modal">
                     Cancel
                   </button>
-                  <button class="btn btn-outline-info" type="button"  style="    margin-left:35%;" (click)="Download()">
+                  <button class="btn btn-outline-info" type="button" style="    margin-left:35%;" (click)="Download()">
                     Download Template
                   </button>
                 </div>
