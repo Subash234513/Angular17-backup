@@ -123,7 +123,7 @@
                     <mat-label>Bank Name</mat-label>
                     <input matInput formControlName="bankname" [matAutocomplete]="auto" />
                     <mat-autocomplete #auto="matAutocomplete">
-                        <mat-option *ngFor="let Bank of BankList" [value]="Bank.name" (focusout)="bankId(Bank)"
+                        <mat-option *ngFor="let Bank of BankList" [value]="Bank.name" (mouseleave)="bankId(Bank)"
                             title="{{Bank.name}}">
                             {{Bank.name}}
                         </mat-option>
@@ -134,7 +134,7 @@
             </div>
             <div class="col-md-3" style="margin-left: 5%;">
                 
-                <mat-form-field class="example-chip-list" style="margin-left: 25%;width:150%;" (click)="SearchBank()">
+                <mat-form-field class="example-chip-list" style="margin-left: 25%;width:150%;" (click)="SearchBank()" class="TaskTextArea">
                     <mat-label>Fields</mat-label>
                     <mat-chip-grid #chipList>
                         <mat-chip-row *ngFor="let chip of FieldChiplist"  [removable]="removable"
@@ -188,7 +188,7 @@
 
             </div>
             <div class="col-md-3" style="margin-left: 15%;">
-                <mat-form-field class="example-chip-list" style="margin-left:5%;width:150%" (click)="SearchBank()">
+                <mat-form-field class="example-chip-list" style="margin-left:5%;width:150%" (click)="SearchBank()" class="TaskTextArea">
                     <mat-label>Fields</mat-label>
                     <mat-chip-grid #chipList>
                         <mat-chip-row *ngFor="let chip of FieldChiplistEdit" 

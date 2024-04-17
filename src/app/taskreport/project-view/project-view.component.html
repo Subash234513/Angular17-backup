@@ -185,7 +185,7 @@
                            
                             
                                 <div>
-                                    <mat-form-field style="width: 459px; margin-top: 10px;"
+                                    <mat-form-field style="width: 459px; margin-top: 10px;" class="TaskTextArea"
                                     >
                                         <mat-label>Teams</mat-label>
                                         <mat-chip-grid #chiplist>
@@ -206,7 +206,7 @@
                                 </div>
                            
                                 <div>
-                                    <mat-form-field style="width: 459px; margin-top: 10px;">
+                                    <mat-form-field style="width: 459px; margin-top: 10px;"  class="TaskTextArea">
                                         <mat-label>Employees</mat-label>
                                         <mat-chip-grid #chiplistemp>
                                             <mat-chip-row *ngFor="let emp of chipselectemp"  [removable]="true" (removed)="clientempremove(emp)">

@@ -133,7 +133,7 @@
       </div>
       <div class="col-2" style="margin-left: 5%;">
        
-        <mat-form-field (click)="paycomponent_search('')">
+        <mat-form-field (click)="paycomponent_search('')" class="TaskTextArea">
           <mat-label>Pay Component<label class="Component">*</label></mat-label>
           <mat-chip-grid #chiplist>
             <mat-chip-row *ngFor="let company of chipSelectedcompany" [removable]="true"
@@ -305,7 +305,7 @@
       </div>
       <div class="col-2" style="margin-left: 5%;">
         
-        <mat-form-field (click)="paycomponent_search('')">
+        <mat-form-field (click)="paycomponent_search('')" class="TaskTextArea">
           <mat-label>Pay Component<label class="Component">*</label></mat-label>
           <mat-chip-grid #chiplist>
             <mat-chip-row *ngFor="let company of chipeditSelectedcompany"  [removable]="true"

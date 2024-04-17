@@ -463,9 +463,10 @@
                                   type="text" id="loanTenure" name="loanTenure" [(ngModel)]="loanTenure" required aria-label="units">
                                   
                                   </mat-slider> -->
-                                  <mat-slider #loanTenure showTickMarks discrete   min="0" max="1000" step="1"   >
+                                  <mat-slider #loanTenure showTickMarks discrete   min="0" max="12" step="1"   >
                                     <input matSliderThumb  [value]="loanTenure" (input)="MatSliderFunc($event)">
                                   </mat-slider>
+
                                  
                                   <!-- <mat-slider min="1" max="10" thumbLabel tickInterval="1"></mat-slider>
                                   <mat-slider invert="true">
