@@ -257,3 +257,24 @@ td {
 
   
 }
+
+.mat-input-element {
+  
+  display: block;
+  width: 100%;
+  padding: 8px 12px; // Adjust as needed
+  font-size: 16px; // Adjust as needed
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.mat-input-element:focus {
+  outline: 0;
+  border-color: #80bdff; // Adjust as needed
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); // Adjust as needed
+}
