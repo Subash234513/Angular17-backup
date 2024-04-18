@@ -418,9 +418,9 @@
                       <th class="position-stick">Hours</th>
                       <td  *ngFor="
                           let dateHours of employee.hour_data;
-                          let index = index
+                          let index = index 
                         ">
-                        <input class="cus-taskView-imp" placeholder="Hours" type="number" [readOnly]="
+                        <input class="cus-taskView-imp" placeholder="Hours"  [readOnly]="
                             story_TaskViewData?.task_status_id == 4 &&
                             story_TaskViewData?.task_status_id == 7 &&
                             story_TaskViewData?.task_status_id == 8 &&
