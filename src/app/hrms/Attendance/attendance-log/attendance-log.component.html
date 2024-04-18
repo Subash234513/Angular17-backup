@@ -1,7 +1,7 @@
 <div class="container">
     <!-- <h2>
          <span *ngIf="AttendanceLogObjects.ActivityStatus?.status == 1"
-            class="badge badge-pill badge-success sizepill aligniconBtn" matTooltip="Logged In"><span
+            class="badge badge-pill badge bg-success sizepill aligniconBtn" matTooltip="Logged In"><span
                 style="color:#28a745">.</span></span>
     </h2> -->
 
@@ -51,9 +51,9 @@
                         </td>
                         <td>
 
-                            <span *ngIf="dataAttendance?.log_type == 1" class="badge badge-success badgesPaddings">
+                            <span *ngIf="dataAttendance?.log_type == 1" class="badge badge bg-success badgesPaddings">
                                 In</span>
-                            <span *ngIf="dataAttendance?.log_type == 2" class="badge badge-danger badgesPaddings">
+                            <span *ngIf="dataAttendance?.log_type == 2" class="badge badge bg-danger badgesPaddings">
                                 Out</span>
 
                         </td>
@@ -138,39 +138,39 @@
                                     <span> <span class="material-icons colorsicons">logout</span>
                                         {{data?.index_0?.dataShow?.last_check_in | date: 'shortTime'}} </span>
                                     <br>
-                                    <span class="badge badge-pill badge-success" *ngIf="data?.index_0?.dataShow?.duration !== 0" >
+                                    <span class="badge badge-pill badge bg-success" *ngIf="data?.index_0?.dataShow?.duration !== 0" >
                                         {{data?.index_0?.dataShow?.is_present == 1 ? 'P' : data?.index_0?.dataShow?.is_present == 2 ? 'HD' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_0?.dataShow?.is_present == 0 || data?.index_0?.dataShow?.is_present == 3 ">
                                      
-                                    <span class="badge badge-pill" [ngClass]="data?.index_0?.dataShow?.is_present === 0 ? 'badge-danger' : data?.index_0?.dataShow?.is_present == 3 ? 'badge-danger' : 'whiteClass' " >
+                                    <span class="badge badge-pill" [ngClass]="data?.index_0?.dataShow?.is_present === 0 ? 'badge bg-danger' : data?.index_0?.dataShow?.is_present == 3 ? 'badge bg-danger' : 'whiteClass' " >
                                         {{data?.index_0?.dataShow?.is_present === 0 ? 'L' : data?.index_0?.dataShow?.is_present == 3 ? 'AB' : null}}
                                         <!-- ==>{{data?.index_0?.dataShow?.is_present}} -->
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_0?.dataShow?.is_present == 5">
                                      
-                                    <span class="badge badge-pill badge-primary">
+                                    <span class="badge badge-pill badge bg-primary">
                                         {{data?.index_0?.dataShow?.is_present == 5 ? 'PP' : ''}}
                                     </span>
                                 </div>
                                 <div class="arrangehorizontally">
                                     <div *ngFor="let dataWeekend of AttendanceLogObjects.OtherDaysList?.weekend">
                                         <span *ngIf="data?.index_0?.showmonth == dataWeekend">
-                                            <span class="badge badge-pill badge-secondary">Weekend</span>
+                                            <span class="badge badge-pill badge bg-secondary">Weekend</span>
                                         </span>
 
                                     </div>
                                     <div *ngFor="let dataholiday of AttendanceLogObjects.OtherDaysList?.holiday">
                                         <span *ngIf="data?.index_0?.showmonth == dataholiday?.date">
-                                            <span class="badge badge-pill badge-secondary">{{dataholiday?.name}}</span>
+                                            <span class="badge badge-pill badge bg-secondary">{{dataholiday?.name}}</span>
                                         </span>
                                     </div>
                                     <div *ngFor="let dataleave of AttendanceLogObjects.OtherDaysList?.leave">
                                         <span *ngIf="data?.index_0?.showmonth == dataleave?.date">
-                                            <span class="badge badge-pill badge-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
-                                            <span class="badge badge-pill badge-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
+                                            <span class="badge badge-pill badge bg-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
+                                            <span class="badge badge-pill badge bg-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
 
                                         </span>
                                     </div>
@@ -197,39 +197,39 @@
                                     <span> <span class="material-icons colorsicons">logout</span>
                                         {{data?.index_1?.dataShow?.last_check_in | date: 'shortTime'}} </span>
                                     <br>
-                                    <span class="badge badge-pill badge-success" *ngIf="data?.index_1?.dataShow?.duration !== 0" >
+                                    <span class="badge badge-pill badge bg-success" *ngIf="data?.index_1?.dataShow?.duration !== 0" >
                                         {{data?.index_1?.dataShow?.is_present == 1 ? 'P' : data?.index_1?.dataShow?.is_present == 2 ? 'HD' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_1?.dataShow?.is_present == 0 || data?.index_1?.dataShow?.is_present == 3 ">
                                      
-                                    <span class="badge badge-pill badge-danger">
+                                    <span class="badge badge-pill badge bg-danger">
                                         {{data?.index_1?.dataShow?.is_present == 0 ? 'L' : data?.index_1?.dataShow?.is_present == 3 ? 'AB' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_1?.dataShow?.is_present == 5">
                                      
-                                    <span class="badge badge-pill badge-primary">
+                                    <span class="badge badge-pill badge bg-primary">
                                         {{data?.index_1?.dataShow?.is_present == 5 ? 'PP' : ''}}
                                     </span>
                                 </div>
                                 <div class="arrangehorizontally">
                                     <div *ngFor="let dataWeekend of AttendanceLogObjects.OtherDaysList?.weekend">
                                         <span *ngIf="data?.index_1?.showmonth == dataWeekend">
-                                            <span class="badge badge-pill badge-secondary">Weekend</span>
+                                            <span class="badge badge-pill badge bg-secondary">Weekend</span>
                                         </span>
 
                                     </div>
                                     <div *ngFor="let dataholiday of AttendanceLogObjects.OtherDaysList?.holiday">
                                         <span *ngIf="data?.index_1?.showmonth == dataholiday?.date">
-                                            <span class="badge badge-pill badge-secondary">{{dataholiday?.name}}</span>
+                                            <span class="badge badge-pill badge bg-secondary">{{dataholiday?.name}}</span>
                                         </span>
                                     </div>
                                     <div *ngFor="let dataleave of AttendanceLogObjects.OtherDaysList?.leave">
                                         <span *ngIf="data?.index_1?.showmonth == dataleave?.date">
-                                            <!-- <span class="badge badge-pill badge-danger">L {{dataleave?.status}}</span> -->
-                                            <span class="badge badge-pill badge-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
-                                            <span class="badge badge-pill badge-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
+                                            <!-- <span class="badge badge-pill badge bg-danger">L {{dataleave?.status}}</span> -->
+                                            <span class="badge badge-pill badge bg-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
+                                            <span class="badge badge-pill badge bg-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
 
                                         </span>
                                     </div>
@@ -238,7 +238,7 @@
                                     <span *ngIf="dataleave.leave_date?.length > 0">
                                         <div *ngFor="let leaveArr of dataleave.leave_date"> 
                                             <span *ngIf="data?.index_1?.showmonth == dataleave">
-                                                <span class="badge badge-pill badge-danger">L</span>
+                                                <span class="badge badge-pill badge bg-danger">L</span>
                                             </span>
                                         </div>
                                     </span>
@@ -262,39 +262,39 @@
                                     <span> <span class="material-icons colorsicons">logout</span>
                                         {{data?.index_2?.dataShow?.last_check_in | date: 'shortTime'}} </span>
                                     <br>
-                                    <span class="badge badge-pill badge-success" *ngIf="data?.index_2?.dataShow?.duration !== 0">
+                                    <span class="badge badge-pill badge bg-success" *ngIf="data?.index_2?.dataShow?.duration !== 0">
                                         {{data?.index_2?.dataShow?.is_present == 1 ? 'P' : data?.index_2?.dataShow?.is_present == 2 ? 'HD' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_2?.dataShow?.is_present == 0 || data?.index_2?.dataShow?.is_present == 3 ">
                                      
-                                    <span class="badge badge-pill badge-danger">
+                                    <span class="badge badge-pill badge bg-danger">
                                         {{data?.index_2?.dataShow?.is_present == 0 ? 'L' : data?.index_2?.dataShow?.is_present == 3 ? 'AB' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_2?.dataShow?.is_present == 5">
                                      
-                                    <span class="badge badge-pill badge-primary">
+                                    <span class="badge badge-pill badge bg-primary">
                                         {{data?.index_2?.dataShow?.is_present == 5 ? 'PP' : ''}}
                                     </span>
                                 </div>
                                 <div class="arrangehorizontally">
                                     <div *ngFor="let dataWeekend of AttendanceLogObjects.OtherDaysList?.weekend">
                                         <span *ngIf="data?.index_2?.showmonth == dataWeekend">
-                                            <span class="badge badge-pill badge-secondary">Weekend</span>
+                                            <span class="badge badge-pill badge bg-secondary">Weekend</span>
                                         </span>
 
                                     </div>
                                     <div *ngFor="let dataholiday of AttendanceLogObjects.OtherDaysList?.holiday">
                                         <span *ngIf="data?.index_2?.showmonth == dataholiday?.date">
-                                            <span class="badge badge-pill badge-secondary">{{dataholiday?.name}}</span>
+                                            <span class="badge badge-pill badge bg-secondary">{{dataholiday?.name}}</span>
                                         </span>
                                     </div>
                                     <div *ngFor="let dataleave of AttendanceLogObjects.OtherDaysList?.leave">
                                         <span *ngIf="data?.index_2?.showmonth == dataleave?.date">
-                                            <!-- <span class="badge badge-pill badge-danger">L {{dataleave?.status}}</span> -->
-                                            <span class="badge badge-pill badge-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
-                                            <span class="badge badge-pill badge-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
+                                            <!-- <span class="badge badge-pill badge bg-danger">L {{dataleave?.status}}</span> -->
+                                            <span class="badge badge-pill badge bg-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
+                                            <span class="badge badge-pill badge bg-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
 
                                         </span>
                                     </div>
@@ -303,7 +303,7 @@
                                     <span *ngIf="dataleave.leave_date?.length > 0">
                                         <div *ngFor="let leaveArr of dataleave.leave_date"> 
                                             <span *ngIf="data?.index_2?.showmonth == dataleave">
-                                                <span class="badge badge-pill badge-danger">L</span>
+                                                <span class="badge badge-pill badge bg-danger">L</span>
                                             </span>
                                         </div>
                                     </span>
@@ -327,39 +327,39 @@
                                     <span> <span class="material-icons colorsicons">logout</span>
                                         {{data?.index_3?.dataShow?.last_check_in | date: 'shortTime'}} </span>
                                     <br>
-                                    <span class="badge badge-pill badge-success" *ngIf="data?.index_3?.dataShow?.duration !== 0">
+                                    <span class="badge badge-pill badge bg-success" *ngIf="data?.index_3?.dataShow?.duration !== 0">
                                         {{data?.index_3?.dataShow?.is_present == 1 ? 'P' : data?.index_3?.dataShow?.is_present == 2 ? 'HD' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_3?.dataShow?.is_present == 0 || data?.index_3?.dataShow?.is_present == 3 ">
                                      
-                                    <span class="badge badge-pill badge-danger">
+                                    <span class="badge badge-pill badge bg-danger">
                                         {{data?.index_3?.dataShow?.is_present == 0 ? 'L' : data?.index_3?.dataShow?.is_present == 3 ? 'AB' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_3?.dataShow?.is_present == 5">
                                      
-                                    <span class="badge badge-pill badge-primary">
+                                    <span class="badge badge-pill badge bg-primary">
                                         {{data?.index_3?.dataShow?.is_present == 5 ? 'PP' : ''}}
                                     </span>
                                 </div>
                                 <div class="arrangehorizontally">
                                     <div *ngFor="let dataWeekend of AttendanceLogObjects.OtherDaysList?.weekend">
                                         <span *ngIf="data?.index_3?.showmonth == dataWeekend">
-                                            <span class="badge badge-pill badge-secondary">Weekend</span>
+                                            <span class="badge badge-pill badge bg-secondary">Weekend</span>
                                         </span>
 
                                     </div>
                                     <div *ngFor="let dataholiday of AttendanceLogObjects.OtherDaysList?.holiday">
                                         <span *ngIf="data?.index_3?.showmonth == dataholiday?.date">
-                                            <span class="badge badge-pill badge-secondary">{{dataholiday?.name}}</span>
+                                            <span class="badge badge-pill badge bg-secondary">{{dataholiday?.name}}</span>
                                         </span>
                                     </div>
                                     <div *ngFor="let dataleave of AttendanceLogObjects.OtherDaysList?.leave">
                                         <span *ngIf="data?.index_3?.showmonth == dataleave?.date">
-                                            <!-- <span class="badge badge-pill badge-danger">L {{dataleave?.status}}</span> -->
-                                            <span class="badge badge-pill badge-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
-                                            <span class="badge badge-pill badge-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
+                                            <!-- <span class="badge badge-pill badge bg-danger">L {{dataleave?.status}}</span> -->
+                                            <span class="badge badge-pill badge bg-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
+                                            <span class="badge badge-pill badge bg-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
 
                                         </span>
                                     </div>
@@ -368,7 +368,7 @@
                                     <span *ngIf="dataleave.leave_date?.length > 0">
                                         <div *ngFor="let leaveArr of dataleave.leave_date"> 
                                             <span *ngIf="data?.index_3?.showmonth == dataleave">
-                                                <span class="badge badge-pill badge-danger">L</span>
+                                                <span class="badge badge-pill badge bg-danger">L</span>
                                             </span>
                                         </div>
                                     </span>
@@ -392,39 +392,39 @@
                                     <span> <span class="material-icons colorsicons">logout</span>
                                         {{data?.index_4?.dataShow?.last_check_in | date: 'shortTime'}} </span>
                                     <br>
-                                    <span class="badge badge-pill badge-success"  *ngIf="data?.index_4?.dataShow?.duration !== 0">
+                                    <span class="badge badge-pill badge bg-success"  *ngIf="data?.index_4?.dataShow?.duration !== 0">
                                         {{data?.index_4?.dataShow?.is_present == 1 ? 'P' : data?.index_4?.dataShow?.is_present == 2 ? 'HD' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_4?.dataShow?.is_present == 0 || data?.index_4?.dataShow?.is_present == 3 ">
                                      
-                                    <span class="badge badge-pill badge-danger">
+                                    <span class="badge badge-pill badge bg-danger">
                                         {{data?.index_4?.dataShow?.is_present == 0 ? 'L' : data?.index_4?.dataShow?.is_present == 3 ? 'AB' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_4?.dataShow?.is_present == 5">
                                      
-                                    <span class="badge badge-pill badge-primary">
+                                    <span class="badge badge-pill badge bg-primary">
                                         {{data?.index_4?.dataShow?.is_present == 5 ? 'PP' : ''}}
                                     </span>
                                 </div>
                                 <div class="arrangehorizontally">
                                     <div *ngFor="let dataWeekend of AttendanceLogObjects.OtherDaysList?.weekend">
                                         <span *ngIf="data?.index_4?.showmonth == dataWeekend">
-                                            <span class="badge badge-pill badge-secondary">Weekend</span>
+                                            <span class="badge badge-pill badge bg-secondary">Weekend</span>
                                         </span>
 
                                     </div>
                                     <div *ngFor="let dataholiday of AttendanceLogObjects.OtherDaysList?.holiday">
                                         <span *ngIf="data?.index_4?.showmonth == dataholiday?.date">
-                                            <span class="badge badge-pill badge-secondary">{{dataholiday?.name}}</span>
+                                            <span class="badge badge-pill badge bg-secondary">{{dataholiday?.name}}</span>
                                         </span>
                                     </div>
                                     <div *ngFor="let dataleave of AttendanceLogObjects.OtherDaysList?.leave">
                                         <span *ngIf="data?.index_4?.showmonth == dataleave?.date">
-                                            <!-- <span class="badge badge-pill badge-danger">L {{dataleave?.status}}</span> -->
-                                            <span class="badge badge-pill badge-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
-                                            <span class="badge badge-pill badge-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
+                                            <!-- <span class="badge badge-pill badge bg-danger">L {{dataleave?.status}}</span> -->
+                                            <span class="badge badge-pill badge bg-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
+                                            <span class="badge badge-pill badge bg-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
 
                                         </span>
                                     </div>
@@ -433,7 +433,7 @@
                                     <span *ngIf="dataleave.leave_date?.length > 0">
                                         <div *ngFor="let leaveArr of dataleave.leave_date"> 
                                             <span *ngIf="data?.index_4?.showmonth == dataleave">
-                                                <span class="badge badge-pill badge-danger">L</span>
+                                                <span class="badge badge-pill badge bg-danger">L</span>
                                             </span>
                                         </div>
                                     </span>
@@ -458,39 +458,39 @@
                                     <span> <span class="material-icons colorsicons">logout</span>
                                         {{data?.index_5?.dataShow?.last_check_in | date: 'shortTime'}} </span>
                                     <br>
-                                    <span class="badge badge-pill badge-success" *ngIf="data?.index_5?.dataShow?.duration !== 0" >
+                                    <span class="badge badge-pill badge bg-success" *ngIf="data?.index_5?.dataShow?.duration !== 0" >
                                         {{data?.index_5?.dataShow?.is_present == 1 ? 'P' : data?.index_5?.dataShow?.is_present == 2 ? 'HD' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_5?.dataShow?.is_present == 0 || data?.index_5?.dataShow?.is_present == 3 ">
                                      
-                                    <span class="badge badge-pill badge-danger">
+                                    <span class="badge badge-pill badge bg-danger">
                                         {{data?.index_5?.dataShow?.is_present == 0 ? 'L' : data?.index_5?.dataShow?.is_present == 3 ? 'AB' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_5?.dataShow?.is_present == 5">
                                      
-                                    <span class="badge badge-pill badge-primary">
+                                    <span class="badge badge-pill badge bg-primary">
                                         {{data?.index_5?.dataShow?.is_present == 5 ? 'PP' : ''}}
                                     </span>
                                 </div>
                                 <div class="arrangehorizontally">
                                     <div *ngFor="let dataWeekend of AttendanceLogObjects.OtherDaysList?.weekend">
                                         <span *ngIf="data?.index_5?.showmonth == dataWeekend">
-                                            <span class="badge badge-pill badge-secondary">Weekend</span>
+                                            <span class="badge badge-pill badge bg-secondary">Weekend</span>
                                         </span>
 
                                     </div>
                                     <div *ngFor="let dataholiday of AttendanceLogObjects.OtherDaysList?.holiday">
                                         <span *ngIf="data?.index_5?.showmonth == dataholiday?.date">
-                                            <span class="badge badge-pill badge-secondary">{{dataholiday?.name}}</span>
+                                            <span class="badge badge-pill badge bg-secondary">{{dataholiday?.name}}</span>
                                         </span>
                                     </div>
                                     <div *ngFor="let dataleave of AttendanceLogObjects.OtherDaysList?.leave">
                                         <span *ngIf="data?.index_5?.showmonth == dataleave.date">
-                                            <!-- <span class="badge badge-pill badge-danger">L {{dataleave?.status}}</span> -->
-                                            <span class="badge badge-pill badge-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
-                                            <span class="badge badge-pill badge-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
+                                            <!-- <span class="badge badge-pill badge bg-danger">L {{dataleave?.status}}</span> -->
+                                            <span class="badge badge-pill badge bg-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
+                                            <span class="badge badge-pill badge bg-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
 
                                         </span>
                                     </div>
@@ -499,7 +499,7 @@
                                     <span *ngIf="dataleave.leave_date?.length > 0">
                                         <div *ngFor="let leaveArr of dataleave.leave_date"> 
                                             <span *ngIf="data?.index_5?.showmonth == dataleave">
-                                                <span class="badge badge-pill badge-danger">L</span>
+                                                <span class="badge badge-pill badge bg-danger">L</span>
                                             </span>
                                         </div>
                                     </span>
@@ -524,39 +524,39 @@
                                     <span> <span class="material-icons colorsicons">logout</span>
                                         {{data?.index_6?.dataShow?.last_check_in | date: 'shortTime'}} </span>
                                     <br>
-                                    <span class="badge badge-pill badge-success" *ngIf="data?.index_6?.dataShow?.duration !== 0">
+                                    <span class="badge badge-pill badge bg-success" *ngIf="data?.index_6?.dataShow?.duration !== 0">
                                         {{data?.index_6?.dataShow?.is_present == 1 ? 'P' : data?.index_6?.dataShow?.is_present == 2 ? 'HD' : ''}}
                                     </span>                                    
                                 </div>
                                 <div *ngIf="data?.index_6?.dataShow?.is_present == 0 || data?.index_6?.dataShow?.is_present == 3 ">
                                      
-                                    <span class="badge badge-pill badge-danger">
+                                    <span class="badge badge-pill badge bg-danger">
                                         {{data?.index_6?.dataShow?.is_present == 0 ? 'L' : data?.index_6?.dataShow?.is_present == 3 ? 'AB' : ''}}
                                     </span>
                                 </div>
                                 <div *ngIf="data?.index_6?.dataShow?.is_present == 5">
                                      
-                                    <span class="badge badge-pill badge-primary">
+                                    <span class="badge badge-pill badge bg-primary">
                                         {{data?.index_6?.dataShow?.is_present == 5 ? 'PP' : ''}}
                                     </span>
                                 </div>
                                 <div class="arrangehorizontally">
                                     <div *ngFor="let dataWeekend of AttendanceLogObjects.OtherDaysList?.weekend">
                                         <span *ngIf="data?.index_6?.showmonth == dataWeekend">
-                                            <span class="badge badge-pill badge-secondary">Weekend</span>
+                                            <span class="badge badge-pill badge bg-secondary">Weekend</span>
                                         </span>
 
                                     </div>
                                     <div *ngFor="let dataholiday of AttendanceLogObjects.OtherDaysList?.holiday">
                                         <span *ngIf="data?.index_6?.showmonth == dataholiday?.date">
-                                            <span class="badge badge-pill badge-secondary">{{dataholiday?.name}}</span>
+                                            <span class="badge badge-pill badge bg-secondary">{{dataholiday?.name}}</span>
                                         </span>
                                     </div>
                                     <div *ngFor="let dataleave of AttendanceLogObjects.OtherDaysList?.leave">
                                         <span *ngIf="data?.index_6?.showmonth == dataleave.date">
-                                            <!-- <span class="badge badge-pill badge-danger">L {{dataleave?.status}}</span> -->
-                                            <span class="badge badge-pill badge-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
-                                            <span class="badge badge-pill badge-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
+                                            <!-- <span class="badge badge-pill badge bg-danger">L {{dataleave?.status}}</span> -->
+                                            <span class="badge badge-pill badge bg-secondary" *ngIf="dataleave?.status == 'Pending'">L {{dataleave?.status}}</span>
+                                            <span class="badge badge-pill badge bg-success" *ngIf="dataleave?.status == 'Approved'">L {{dataleave?.status}}</span>
 
                                         </span>
                                     </div>
@@ -565,7 +565,7 @@
                                     <span *ngIf="dataleave.leave_date?.length > 0">
                                         <div *ngFor="let leaveArr of dataleave.leave_date"> 
                                             <span *ngIf="data?.index_6?.showmonth == dataleave">
-                                                <span class="badge badge-pill badge-danger">L</span>
+                                                <span class="badge badge-pill badge bg-danger">L</span>
                                             </span>
                                         </div>
                                     </span>

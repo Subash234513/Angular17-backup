@@ -110,29 +110,12 @@
   }
   .BackRed{
     background-color: red;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-  }
-  .BackGreen{
-    background-color: green;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-  }
-  .widthLogdata{
-    width: 200px;
-  }
-  .table-responsive{
-    width: 98%;
-  }
-  .flagDisplay{
+    // width: 100%;
+    // height: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,7 +123,40 @@
     width: 30px;
     border-radius: 15px;
     border: 1px solid #00000036;
+    font-weight: 500;
   }
+  .BackGreen{
+    background-color: green;
+    // width: 100%;
+    // height: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: 1px solid #00000036;
+    font-weight: 500;
+  }
+  .widthLogdata{
+    width: 200px;
+  }
+  .table-responsive{
+    width: 98%;
+  }
+  // .flagDisplay{
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   height: 30px;
+  //   width: 30px;
+  //   border-radius: 15px;
+  //   border: 1px solid #00000036;
+  // }
   .TotalLimit{
     border: 1px solid #00000036;
     border-radius: 10px;

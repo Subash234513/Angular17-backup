@@ -7,7 +7,7 @@ export const environment = {
   //  apiURL: 'http://13.200.50.27:8192/',
    //Final _Live
   // apiURL:'http://3.108.200.134:8208/',
-  // apiURL: 'http://192.168.1.13:8002/',
+  // apiURL: 'http://192.168.5.223:8089/',
 
   nacFEURL:'',
   EmemoURL: '',

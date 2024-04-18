@@ -16,10 +16,15 @@
   // text-decoration: underline;
   cursor: pointer;
   font-weight: 700;
+  border-bottom:3px solid #044063 !important;
+
 }
+// .nav-tabs{
+//   border-bottom: 3px solid #adadad36;
+// }
 
 .nav-tabs .nav-link:hover {
-  border: none !important;
+  // border: none !important;
   cursor: pointer;
 }
 

@@ -761,8 +761,7 @@ export class TaskviewsComponent implements OnInit {
   storyTaskView(story_taskID) {
     this.storyrId = story_taskID
     this.SpinnerService.show()
-    this.TaskManagerService.getStories_taskView(story_taskID)
-      .subscribe(result => {
+    this.TaskManagerService.getStories_taskView(story_taskID).subscribe(result => {
         this.SpinnerService.hide()
 
 

@@ -841,6 +841,12 @@ table td {
 .TaskTextArea .mat-mdc-text-field-wrapper{
   height: auto !important;
 }
+.Rupee .mat-mdc-form-field-icon-prefix{
+  width: 20% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* .input-group{
   position: relative;
   display: flex;

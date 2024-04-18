@@ -509,6 +509,7 @@ export class AttendanceFullReportComponent implements OnInit {
  NotIn_Data = { name: 'NOT IN', display: 'NP' , title: 'Not In / Yet To Check' }
  Updated_Attendance_Data = { name: ' ', display: '!' , title: 'edited' }
  PartiallyPresent_Data = { name: 'Partially Present', display: 'PP' , title: 'Partially present' } 
+ 
 
  getToolTip(dataSummary, data, datascheck){ 
   console.log("Loop data attendance", dataSummary, data, dataSummary[datascheck] )

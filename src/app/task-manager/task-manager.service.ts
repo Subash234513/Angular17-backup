@@ -1356,12 +1356,12 @@ public getmeetingSummary(page): Observable<any> {
       headers: headers,responseType: "blob" as "json"
     });
   }
-  TaskSheetMonthReport(month,year):Observable<any>{
+  TaskSheetMonthReport(month,year,Team,Lead,EmployeeId):Observable<any>{
     this.reset();
     const getToken = localStorage.getItem("sessionData")
     let tokenValue = JSON.parse(getToken);
     let token = tokenValue.token
     const headers = { 'Authorization': 'Token ' + token }
-    return this.http.get<any>(this.apiUrl +'taskserv/task_reports?month='+month+'&year='+year, { 'headers': headers })
+    return this.http.get<any>(this.apiUrl +'taskserv/task_reports?month='+month+'&year='+year+'&team_id='+Team+'&lead_id='+Lead+'&employee_id='+EmployeeId+"&action=1", { 'headers': headers })
   }
 }

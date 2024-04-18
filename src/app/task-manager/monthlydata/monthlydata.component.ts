@@ -27,6 +27,14 @@ export const MY_FORMATS = {
     monthYearA11yLabel: 'MMMM YYYY',
   },
 };
+export interface tClient {
+  id: string;
+  name: string;
+}
+export interface developclient {
+  id: string;
+  name: string;
+}
 
 
 @Component({
@@ -45,6 +53,10 @@ export const MY_FORMATS = {
 export class MonthlydataComponent implements OnInit {
     Summary: any=[];
     HeadDate: any=[];
+  trclientList: any=[];
+  isLoading: boolean;
+  trclientTeamLead: any=[];
+  develop: any=[];
 
   constructor(private TaskManagerService:TaskManagerService,private SpinnerService: NgxSpinnerService,
     private fb: FormBuilder, private router: Router, private toastr: ToastrService,
@@ -58,6 +70,9 @@ export class MonthlydataComponent implements OnInit {
   ngOnInit(): void {
     this.ReportMonthly = this.fb.group({
       monthyear: [moment()],
+      Team:'',
+      TeamLead:'',
+      developer_id:''
     });
   }
 
@@ -108,7 +123,34 @@ export class MonthlydataComponent implements OnInit {
         }
       );
     }
-
+    taskrclient(value){
+      this.isLoading=true
+      this.TaskManagerService.teamget(value).subscribe(data=>{
+        this.isLoading=false
+        this.trclientList=data['data'];
+      });
+    }
+    taskTeamLead(value){
+      this.isLoading=true
+      this.TaskManagerService.getteams(value).subscribe(data=>{
+        this.isLoading=false
+        this.trclientTeamLead=data['data'];
+      });
+    }
+    public displaydevelopclient(clt?: developclient): string | undefined {
+      // console.log(`Client testing data - ${clt.name}`);
+      return clt ? clt.name : undefined;
+    }
+    getDeveloperdrop(data) {
+      this.TaskManagerService.getdeveloper(data).subscribe(res=>{
+        this.develop = res['data']
+      })
+    }
+  
+    
+    public displaytrclt(clt?: tClient): string | undefined {
+      return clt ? clt.name : undefined;
+    }
     resetTasks(){
       this.ReportMonthly.reset();
       
@@ -576,8 +618,20 @@ export class MonthlydataComponent implements OnInit {
     const month=this.datePipe.transform(date,'MM')
     const year=this.datePipe.transform(date,'yyyy')
     console.log('year',this.datePipe.transform(date,'yyyy'))
+    let Team=this.ReportMonthly.get('Team').value.id
+    let Lead=this.ReportMonthly.get('TeamLead').value.id
+    let EmployeeId=this.ReportMonthly.get('developer_id').value.id
+    if(!Team){
+      Team=''
+    }
+    if(!Lead){
+      Lead=''
+    }
+    if(!EmployeeId){
+      EmployeeId=''
+    }
 
-    this.TaskManagerService.TaskSheetMonthReport(month,year).subscribe(data=>{
+    this.TaskManagerService.TaskSheetMonthReport(month,year,Team,Lead,EmployeeId).subscribe(data=>{
       this.Summary=data['data']
       this.HeadDate=this.Summary[0]['INFO']
       console.log(this.HeadDate)

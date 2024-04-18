@@ -106,7 +106,16 @@
   border: 2px solid black;
   border-collapse: collapse;
 }
-
+.Rupee .mat-mdc-form-field-icon-prefix{
+  width: 20% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rupeeColor{
+  color: red;
+  background-color: green;
+}
 @media print {
     body {
       margin: 0;

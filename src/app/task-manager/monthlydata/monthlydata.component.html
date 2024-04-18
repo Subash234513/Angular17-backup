@@ -18,6 +18,56 @@
             
             </mat-form-field>
         </div>
+        <!-- <div>
+            <mat-form-field style="width:100%;"(click)="taskrclient('')"  >
+                <mat-label>Team </mat-label>
+                <input matInput formControlName="Team" #taskrcltInput autocomplete="off" [matAutocomplete]="clt1" (keyup)="taskrclient($event.target.value)"  />
+                <mat-autocomplete #clt1="matAutocomplete" [displayWith]="displaytrclt" > -->
+                    <!-- <mat-option *ngIf="isLoading">Loading..</mat-option> -->
+                    <!-- <ng-container >
+                        <mat-option *ngFor="let clt of trclientList"   [value]="clt" title="{{clt.name}}">{{clt.name}}
+                        </mat-option>
+                    </ng-container>
+                    <mat-option *ngIf="!trclientList ||!trclientList.length">
+                        No Record Found
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width:100%;"(click)="taskTeamLead('')"  >
+                <mat-label>Team Lead </mat-label>
+                <input matInput  formControlName="TeamLead" #taskrcltInput autocomplete="off" [matAutocomplete]="clt2" (keyup)="taskTeamLead($event.target.value)"  />
+                <mat-autocomplete #clt2="matAutocomplete" [displayWith]="displaytrclt" > -->
+                    <!-- <mat-option *ngIf="isLoading">Loading..</mat-option> -->
+                    <!-- <ng-container >
+                        <mat-option *ngFor="let clt of trclientTeamLead"   [value]="clt" title="{{clt.name}}">{{clt.name}}
+                        </mat-option>
+                    </ng-container>
+                    <mat-option *ngIf="!trclientTeamLead ||!trclientTeamLead.length">
+                        No Record Found
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div> -->
+        <div (click)="getDeveloperdrop('')">
+            <mat-form-field class="WidthMaxEigth">
+                <mat-label> Employee</mat-label>
+                <input #developerinput placeholder="Select Employee" matInput
+                    formControlName="developer_id" [matAutocomplete]="developerrole"
+                    (keyup)="getDeveloperdrop($event.target.value)">
+                <mat-autocomplete #developerrole="matAutocomplete" [displayWith]="displaydevelopclient">
+                    <ng-container>
+                        <mat-option *ngFor="let opt of develop" [value]="opt" title="{{opt.name}}">
+                            {{opt.name}}
+                        </mat-option>
+                    </ng-container>
+                    <mat-option *ngIf="!develop ||!develop.length">
+                        No Records Found
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
         <div>
             <button class="btn btn-primary searchBtn" (click)="SummaryFunc()">
                 <i class="fa-solid fa-magnifying-glass" ></i>

@@ -414,6 +414,14 @@
 .absentcolor{
   color:#dc3545d1;
 }
+.LeavePending{
+  background-color: #f0ad4e;
+  border: 1px solid #ffffff;
+}
+.LeaveApproved{
+  background-color: #99ff99;
+  border: 1px solid #ffffff;
+}
 
 .weekend {
   background-color: #6c757d;
@@ -560,6 +568,13 @@
 }
 .badge-success{
   background-color: #28a745;
+}
+.CloseFlex{
+  display: flex;
+  justify-content: right;
+}
+.close:hover{
+  color: black !important;
 }
 // .alignleft{
 //   margin-left: 20px;
