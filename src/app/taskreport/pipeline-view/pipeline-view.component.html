@@ -194,7 +194,7 @@
                                             <mat-label>Name</mat-label>
                                             <input matInput formControlName="name">
                                         </mat-form-field>
-                                        <mat-form-field style="width: 459px; margin-top: -4px;" (click)="PipeLineDropdown('')">
+                                        <mat-form-field style="width: 459px; margin-top: -4px;" (click)="PipeLineDropdown('')" class="TaskTextArea">
                                             <mat-label>Pipeline</mat-label>
                                             <mat-chip-grid #chiplist>
                                                 <mat-chip-row *ngFor="let member of chipselectemember"  [removable]="true" (removed)="removedmember(member)">

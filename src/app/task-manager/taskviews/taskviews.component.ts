@@ -568,6 +568,7 @@ export class TaskviewsComponent implements OnInit {
   planEndDate: string;
   checkAssignee: any;
   getLastAssigned: string;
+  dataHours: any;
 
 
 
@@ -1029,11 +1030,42 @@ export class TaskviewsComponent implements OnInit {
 
   }
 
+  // updateHourValues() {
+    
+  // }
+
 
   UpdateTask(data) {
     this.SpinnerService.show()
+    console.log("hours data", data.employee_hours);
 
-    console.log("MY Task Data", data)
+    // if (data && data.employee_hours) {
+    //   console.log("hours data", data.employee_hours);
+  
+    //   this.dataHours =  data.employee_hours.forEach(employeeData => {
+    //     if (employeeData.hour_data) {
+    //       employeeData.hour_data.forEach(hourData => {
+    //         const [hour, minute] = hourData.hour.split(':').map(Number);
+    //         hourData.hour = hour + minute / 60.0;
+    //       });
+    //     }
+    //   });
+    // }
+
+    for (let i = 0; i < data.employee_hours.length; i++) {
+      const hourData = data.employee_hours[i].hour_data;
+      for (let j = 0; j < hourData.length; j++) {
+        hourData[j].hour = hourData[j].hour.replace(':', '.');
+      }
+    }
+
+    // let datahoursval = data.employee_hours.hour_data.forEach(employee => {
+    //   employee.hour_data.forEach(hour => {
+    //     hour.hour = hour.hour.replace(':', '.');
+    //   });
+    // });
+      
+    // console.log("MY Task Data", datahoursval)
     for (let i = 0; i < data.employee_hours.length; i++) {
       data.employee_hours[i].employee_id = data.employee_hours[i].employee_id;
     }
@@ -1044,7 +1076,7 @@ export class TaskviewsComponent implements OnInit {
       actual_start_date: startsdate,
       actual_end_date: endsdate,
       // task_status: data.task_status_id,
-      emp_hr: data?.employee_hours,
+      emp_hr: data.employee_hours,
       delay_days: data.DynamicDelayDaysCount,
       reason_for_delay: data.reason_for_delay
     }

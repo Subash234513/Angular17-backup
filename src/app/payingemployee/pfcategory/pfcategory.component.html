@@ -125,7 +125,7 @@
                     </td> -->
                     <td>
                         <mat-label class="pay" >Pay Component<label class="pay2" >*</label></mat-label><br>
-                        <mat-form-field class="matformfieldstyle2" (click)="paycomponent_search('')">  
+                        <mat-form-field class="matformfieldstyle2" (click)="paycomponent_search('')" class="TaskTextArea">  
                             <mat-chip-grid #chiplist>
                                 <mat-chip-row *ngFor="let employee of chipSelectedemployee"  [removable]="true" (removed)="removedemployee(employee)">
                                 {{employee.name}}

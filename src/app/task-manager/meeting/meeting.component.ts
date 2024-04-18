@@ -118,8 +118,9 @@ export class MeetingComponent implements OnInit {
   editid: any;
   resechduleform: FormGroup;
   // meetingnote: any;
-  startDate = new FormControl();
-  endDate = new FormControl();
+  startDate: FormControl;
+  endDate: FormControl;
+ 
 
   constructor( private fb: FormBuilder, private router: Router, private toastr: ToastrService,
     private SpinnerService: NgxSpinnerService, private errorHandler: ErrorHandlingServiceService,
@@ -152,7 +153,9 @@ export class MeetingComponent implements OnInit {
       // enddate :  ''
     })
 
-    this.meetingSummary(1)
+    this.meetingSummary(1);
+    this.startDate = new FormControl();
+    this.endDate = new FormControl();
     
     // this.meetingView()
 
@@ -526,11 +529,11 @@ previouspage(){
       this.toastr.error("Please Enter Meeting Description");
       return false;
     }
-    if (this.meetingsubmit.value.from_dates === "") {
+    if (this.startDate.value === "") {
       this.toastr.error("Please Choose From date");
       return false;
     }
-    if (this.meetingsubmit.value.to_dates === "") {
+    if (this.endDate.value === "") {
       this.toastr.error("Please Choose To date");
       return false;
     }
@@ -544,13 +547,15 @@ previouspage(){
     }
    
     let formvalue=this.meetingsubmit.value
-    formvalue.from_dates=this.datePipe.transform(formvalue.from_dates,'yyyy-MM-dd HH:mm:ss');
-    formvalue.to_dates=this.datePipe.transform(formvalue.to_dates,'yyyy-MM-dd HH:mm:ss');
+    let sfrom_dates=this.datePipe.transform(this.startDate.value,'yyyy-MM-dd HH:mm:ss');
+    let sto_dates=this.datePipe.transform(this.endDate.value,'yyyy-MM-dd HH:mm:ss');
     // this.meetingdataarray.push({empid,this.posdata})
+    // const startDateTimeValue = this.startDate.value;
+    // const endDateTimeValue = this.endDate.value;
     let obj = {
       "description":formvalue.name,
-      "from_date":formvalue.from_dates,
-      "to_date":formvalue.to_dates,
+      "from_date":sfrom_dates,
+      "to_date": sto_dates,
        "user_arr":this.meetingdataarray
     }
     this.taskmanagerservice.projectteamsubmit(obj).subscribe(result => {
@@ -796,6 +801,11 @@ previouspage(){
   clearToDate()
   {
     this.meetingpopup.value.to_dates == '';
+  }
+
+  clearEndDate()
+  {
+    this.endDate.reset();
   }
 
 }

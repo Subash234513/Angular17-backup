@@ -247,14 +247,16 @@
         </mat-form-field>
       </div>
 
-      <div class="row">
+      <div class="row" style="width: 150%;">
         <div class="col-md-6">
+          <!-- <mat-form-field appearance="outline"> -->
           <mat-label>Start Date / Time</mat-label><br><br>
-          <input matInput type="datetime-local" [formControlName]="startDate" />
+          <input matInput class="mat-input-element" type="datetime-local" [formControl]="startDate" (change)="clearEndDate()" />
+          <!-- </mat-form-field> -->
         </div>
         <div class="col-md-6">
           <mat-label>End Date / Time</mat-label><br><br>
-          <input matInput  type="datetime-local" [formControlName]="endDate" />
+          <input matInput class="mat-input-element"  type="datetime-local" [formControl]="endDate"  [min]="startDate.value"  />
         </div>
       </div>
        

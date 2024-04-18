@@ -69,13 +69,28 @@
             </tr>
           </tbody>
         </table>
-        <div class="col-sm-12" id="prevpage">
+        <!-- <div class="col-sm-12" id="prevpage">
           <button (click)="prevpage()" mat-icon-button [disabled]="pagination.has_previous === false" color="primary">
             <mat-icon class="customIconSize">arrow_back</mat-icon>
           </button>
           {{pagination.index}}
           <button (click)="nextpage()" mat-icon-button [disabled]="pagination.has_next === false" color="primary">
             <mat-icon class="customIconSize">arrow_forward</mat-icon>
+          </button>
+        </div> -->
+
+        <div class="cus-taskPageBtnsDiv">
+ 
+          <button mat-icon-button [disabled]="pagination.has_previous === false" (click)="prevpage()">
+            <mat-icon>arrow_backward</mat-icon>
+          </button>
+          <div class="cus-pageNumbers">
+    
+            <p class="cus-btnActive">{{pagination.index}}</p>
+  
+          </div>
+          <button mat-icon-button [disabled]="pagination.has_next === false" (click)="nextpage()">
+            <mat-icon>arrow_forward</mat-icon>
           </button>
         </div>
       </div>
@@ -122,7 +137,7 @@
         <tr>
           <td>
            
-            <mat-form-field style="width: 303px;  height: 60px;" id="un"  (click)="getSegments()">
+            <mat-form-field style="width: 303px;  height: 60px;" id="un"  (click)="getSegments()" class="TaskTextArea">
               <mat-label>Segment<label style="color: red;">*</label></mat-label>
               <mat-chip-grid #chiplist>
                 <mat-chip-row *ngFor="let segment of chipSelectedsegment" [removable]="true"
@@ -193,7 +208,7 @@ color: white;">Submit</button>
         <tr>
           <td>
             
-            <mat-form-field style="width: 303px; height: 60px;" id="un" (click)="getSegments()">
+            <mat-form-field style="width: 303px; height: 60px;" id="un" (click)="getSegments()" class="TaskTextArea">
               <mat-label>Segment<label style="color: red;">*</label></mat-label>
               <mat-chip-grid #chiplist formControlName="segment">
                 <mat-chip-row *ngFor="let segment of chipeditselectedsegment" [removable]="true"
